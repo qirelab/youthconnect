@@ -13,8 +13,6 @@ export const QUESTION_DURATION = 15;
 /** Индекс пробного вопроса в событиях question/answer/reveal. */
 export const PRACTICE_INDEX = -1;
 
-/** Пауза показа правильного ответа между вопросами, сек. */
-export const REVEAL_DURATION = 6;
 
 /** Текст, который видит игрок/экран для конкретного вопроса. */
 export function questionPrompt(quiz: Quiz, question: Question): string {

@@ -485,3 +485,53 @@ input.name:focus {
   border-color: rgba(157, 184, 116, 0.6);
   color: var(--cream);
 }
+
+/* Селфи на экране ведущего: только фото, максимально крупно */
+.selfie-img.big {
+  width: auto;
+  height: min(calc(100vh - 210px), 94vw);
+  max-width: 100%;
+  aspect-ratio: 1;
+  margin-top: 6px;
+  border-radius: 28px;
+}
+.selfie-img.big.revealed {
+  height: min(calc(100vh - 360px), 94vw);
+}
+.big-question.selfie-q {
+  margin: 0 0 14px;
+}
+.hero-name {
+  color: var(--amber);
+}
+
+/* Кнопка перехода к следующему вопросу (пауза после ответа) */
+.next-btn {
+  margin-top: 22px;
+  font-size: 22px;
+  padding: 16px 34px;
+}
+
+/* Телефон: буква + имя варианта (варианты селфи видны только на телефоне) */
+.phone-answer {
+  flex-direction: column;
+  gap: 6px;
+  padding: 12px 10px;
+}
+.phone-answer .letter {
+  font-size: min(13vw, 64px);
+  line-height: 1;
+}
+.phone-answer .opt {
+  font-family: var(--font-body);
+  font-size: clamp(16px, 5.2vw, 24px);
+  font-weight: 800;
+  line-height: 1.15;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+.picked-name {
+  font-weight: 800;
+  color: var(--amber);
+  margin-bottom: 6px;
+}

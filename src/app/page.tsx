@@ -225,17 +225,21 @@ function PlayerApp() {
             <h2 className="title" style={{ fontSize: 30 }}>
               {picked !== null ? `Ответ ${LETTERS[picked]} принят!` : "Время вышло"}
             </h2>
+            {picked !== null && question?.options[picked] && (
+              <p className="subtitle picked-name">{question.options[picked]}</p>
+            )}
             <p className="subtitle">Смотрите на главный экран…</p>
           </div>
         ) : (
           <div className="phone-answers" style={{ marginTop: 18 }}>
-            {(question?.options ?? [0, 1, 2, 3]).map((_, i) => (
+            {(question?.options ?? ["", "", "", ""]).map((opt, i) => (
               <button
                 key={i}
                 className={`phone-answer ${CLASSES[i]}`}
                 onClick={() => choose(i)}
               >
-                {LETTERS[i]}
+                <span className="letter">{LETTERS[i]}</span>
+                {opt && <span className="opt">{opt}</span>}
               </button>
             ))}
           </div>
@@ -254,11 +258,16 @@ function PlayerApp() {
         <h1 className="title">
           {correct ? "Верно!" : picked === null ? "Не успели" : "Неверно"}
         </h1>
+        {!correct && question?.options[reveal.correct] && (
+          <p className="subtitle">
+            Правильный ответ: <b>{LETTERS[reveal.correct]} — {question.options[reveal.correct]}</b>
+          </p>
+        )}
         {reveal.practice && (
           <p className="subtitle">
             Это была пробная попытка — очки не начислялись.
             <br />
-            Сейчас начнётся викторина!
+            Ждём, когда ведущий начнёт викторину!
           </p>
         )}
         {me && (

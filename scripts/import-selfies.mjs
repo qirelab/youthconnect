@@ -1,8 +1,10 @@
 // Импорт селфи героев из src/selfie (файлы вида "01_Адам.png").
 // Имя файла = имя героя = правильный ответ.
 // 1) Сжимает картинки в public/images/selfie/sNN.webp
-// 2) Пересобирает 5 селфи-викторин в src/data/quizzes.json: по 10 героев
-//    в порядке номеров, 3 неверных варианта — герои того же пола из той же эпохи.
+// 2) Пересобирает 5 селфи-викторин в src/data/quizzes.json: по 10 героев,
+//    разложенных вперемешку (не по порядку Библии); 2 неверных варианта —
+//    «похожие» герои, третий — герой того же пола из той же эпохи.
+//    Порядок вопросов дополнительно перемешивается в каждой игре (экран ведущего).
 //
 // Запуск: node scripts/import-selfies.mjs
 import { readFile, writeFile, readdir, mkdir } from "node:fs/promises";
@@ -19,18 +21,15 @@ const dataFile = join(root, "src/data/quizzes.json");
 const PARTS = 5;
 const PER_PART = 10;
 
-// Подзаголовки частей (по эпохам)
-const DESCRIPTIONS = [
-  "Угадай героя по селфи: от Эдема до Исхода",
-  "Угадай героя по селфи: от пустыни до Самуила",
-  "Угадай героя по селфи: цари и пророки",
-  "Угадай героя по селфи: пророки, плен и Рождество",
-  "Угадай героя по селфи: Иисус и апостолы",
-];
+const DESCRIPTION = "Угадай библейского героя по селфи — Ветхий и Новый Завет вперемешку";
 
 // Пробный вопрос части k — узнаваемый герой из предыдущей части (по кругу),
 // чтобы при игре по порядку пробный вопрос не раскрывал ответы текущей части.
-const PRACTICE_NUMS = [42, 9, 15, 22, 27];
+const FAMOUS = [
+  "Ной", "Моисей", "Давид", "Иона", "Самсон", "Пётр", "Адам", "Авраам",
+  "Даниил", "Илия", "Соломон", "Павел", "Ева", "Мария", "Иосиф", "Фома",
+  "Иоанн Креститель", "Есфирь", "Руфь",
+];
 
 // Пол героя нужен, чтобы неверные варианты не были очевидными
 const FEMALE = new Set([
@@ -165,13 +164,17 @@ const line = (o) =>
 
 // Правим JSON построчно, чтобы сохранить компактный формат файла
 let text = (await readFile(dataFile, "utf8")).replace(/\r\n/g, "\n");
+// герои раскладываются по частям случайно, а не по порядку Библии
+const mixed = shuffle(heroes);
+const parts = Array.from({ length: PARTS }, (_, p) => mixed.slice(p * PER_PART, (p + 1) * PER_PART));
 for (let p = 0; p < PARTS; p++) {
   const id = `selfie-${p + 1}`;
-  const part = heroes.slice(p * PER_PART, (p + 1) * PER_PART);
+  const part = parts[p];
   // правильный ответ равномерно по позициям A–D
   const positions = shuffle([0, 1, 2, 3, 0, 1, 2, 3, ...shuffle([0, 1, 2, 3]).slice(0, 2)]);
   const qs = part.map((h, i) => "        " + line(question(h, positions[i])));
-  const practiceHero = heroes.find((h) => h.num === PRACTICE_NUMS[p]);
+  const prev = parts[(p + PARTS - 1) % PARTS];
+  const practiceHero = prev.find((h) => FAMOUS.includes(h.raw)) ?? prev[0];
   const practice = question(practiceHero, Math.floor(rnd() * 4));
 
   const re = new RegExp(
@@ -181,7 +184,7 @@ for (let p = 0; p < PARTS; p++) {
   text = text.replace(
     re,
     (_, head, mid) =>
-      `${head}${JSON.stringify(DESCRIPTIONS[p])},\n${mid}      "practice": ${line(practice)},\n      "questions": [\n${qs.join(",\n")}\n      ]`
+      `${head}${JSON.stringify(DESCRIPTION)},\n${mid}      "practice": ${line(practice)},\n      "questions": [\n${qs.join(",\n")}\n      ]`
   );
 }
 JSON.parse(text);

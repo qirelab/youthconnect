@@ -6,7 +6,6 @@ import {
   QUIZZES,
   getQuiz,
   QUESTION_DURATION,
-  REVEAL_DURATION,
   PRACTICE_INDEX,
   questionPrompt,
 } from "@/lib/quizzes";
@@ -34,6 +33,13 @@ function genCode(): string {
   return s;
 }
 
+function shuffleInPlace(a: number[]): void {
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+}
+
 function points(timeLeft: number, duration: number): number {
   return 500 + Math.round((500 * Math.max(0, timeLeft)) / duration);
 }
@@ -56,6 +62,9 @@ export default function HostPage() {
   const currentIndexRef = useRef(-1);
   const phaseRef = useRef<Phase>("config");
   const runRef = useRef(0);
+  // после показа ответа игра ждёт, пока ведущий нажмёт «Далее»
+  const nextRef = useRef<(() => void) | null>(null);
+  const orderRef = useRef<number[]>([]);
 
   const quiz = useMemo(() => getQuiz(selectedId), [selectedId]);
   const total = quiz?.questions.length ?? 0;
@@ -160,6 +169,12 @@ export default function HostPage() {
 
     await postHost(gameId, EVENTS.gameStarted, { total });
 
+    // Селфи-викторины: порядок героев случайный в каждой игре.
+    // i — номер шага (его видят игроки), orderRef[i] — индекс вопроса в викторине.
+    const order = Array.from({ length: total }, (_, k) => k);
+    if (quiz.type === "selfie") shuffleInPlace(order);
+    orderRef.current = order;
+
     // Пробный вопрос (индекс -1) идёт первым и не влияет на очки.
     const rounds = quiz.practice ? [PRACTICE_INDEX] : [];
     for (let i = 0; i < total; i++) rounds.push(i);
@@ -167,7 +182,7 @@ export default function HostPage() {
     for (const i of rounds) {
       if (runRef.current !== myRun) return;
       const practice = i === PRACTICE_INDEX;
-      const q = practice ? quiz.practice! : quiz.questions[i];
+      const q = practice ? quiz.practice! : quiz.questions[order[i]];
 
       currentIndexRef.current = i;
       answersRef.current = {};
@@ -193,13 +208,15 @@ export default function HostPage() {
       await sleep(QUESTION_DURATION * 1000);
       if (runRef.current !== myRun) return;
 
-      const board = practice ? [] : computeStandings(i);
+      const board = practice ? [] : computeStandings(order[i]);
       setStandings(board);
       setRevealCorrect(q.correct);
       setPhase("reveal");
       await postHost(gameId, EVENTS.reveal, { index: i, correct: q.correct, standings: board, practice });
 
-      await sleep(REVEAL_DURATION * 1000);
+      await new Promise<void>((resolve) => {
+        nextRef.current = resolve;
+      });
       if (runRef.current !== myRun) return;
     }
 
@@ -209,8 +226,15 @@ export default function HostPage() {
     await postHost(gameId, EVENTS.ended, { standings: finalBoard });
   }, [quiz, players.length, total, gameId, computeStandings]);
 
+  const goNext = useCallback(() => {
+    const resolve = nextRef.current;
+    nextRef.current = null;
+    resolve?.();
+  }, []);
+
   const restart = useCallback(() => {
     runRef.current++;
+    goNext(); // отпустить ожидающий цикл — он выйдет по runRef
     playersRef.current = new Map();
     scoresRef.current = new Map();
     answersRef.current = {};
@@ -219,13 +243,23 @@ export default function HostPage() {
     setCurrent(null);
     setGameId(genCode());
     setPhase("config");
-  }, []);
+  }, [goNext]);
 
   // ── Рендер ────────────────────────────────────────────────
 
   const isPractice = current?.i === PRACTICE_INDEX;
   const curQuestion =
-    quiz && current ? (isPractice ? quiz.practice ?? null : quiz.questions[current.i]) : null;
+    quiz && current
+      ? isPractice
+        ? quiz.practice ?? null
+        : quiz.questions[orderRef.current[current.i] ?? current.i]
+      : null;
+  const isSelfie = quiz?.type === "selfie" && !!curQuestion?.image;
+  const nextLabel = isPractice
+    ? "Начать викторину ▶"
+    : current?.i === total - 1
+      ? "Показать итоги 🏆"
+      : "Следующий вопрос ▶";
 
   return (
     <div className="wrap">
@@ -331,15 +365,30 @@ export default function HostPage() {
             )}
           </div>
 
-          <h1 className="big-question">{questionPrompt(quiz, curQuestion)}</h1>
-
-          {quiz.type === "selfie" && curQuestion.image ? (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img className="selfie-img" src={curQuestion.image} alt="Селфи героя" />
+          {isSelfie ? (
+            <>
+              {/* Селфи: на экране только фото, варианты — на телефонах.
+                  Имя героя появляется только при показе ответа. */}
+              {phase === "reveal" && (
+                <h1 className="big-question selfie-q">
+                  Это <span className="hero-name">{curQuestion.options[revealCorrect ?? curQuestion.correct]}</span>!
+                </h1>
+              )}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                className={`selfie-img big ${phase === "reveal" ? "revealed" : ""}`}
+                src={curQuestion.image}
+                alt="Селфи героя"
+              />
+            </>
           ) : (
-            <div className="emoji-big">{curQuestion.emoji ?? "📖"}</div>
+            <>
+              <h1 className="big-question">{questionPrompt(quiz, curQuestion)}</h1>
+              <div className="emoji-big">{curQuestion.emoji ?? "📖"}</div>
+            </>
           )}
 
+          {!isSelfie && (
           <div className="answers" style={{ maxWidth: 900, marginTop: 24 }}>
             {curQuestion.options.map((opt, i) => {
               const isCorrect = phase === "reveal" && i === revealCorrect;
@@ -353,23 +402,19 @@ export default function HostPage() {
               );
             })}
           </div>
+          )}
 
           {phase === "reveal" && isPractice && (
             <p className="subtitle" style={{ marginTop: 26 }}>
-              Пробный раунд окончен — теперь всё по-настоящему. Начинаем!
+              Пробный раунд окончен — дальше всё по-настоящему!
             </p>
           )}
 
-          {phase === "reveal" && standings.length > 0 && (
-            <div className="board" style={{ marginTop: 26, maxWidth: 520 }}>
-              {standings.slice(0, 5).map((s, i) => (
-                <div key={s.id} className="row">
-                  <span className="rank">{i + 1}</span>
-                  <span className="nm">{s.name}</span>
-                  <span className="sc">{s.score}</span>
-                </div>
-              ))}
-            </div>
+          {/* Пауза: следующий вопрос — только по кнопке ведущего */}
+          {phase === "reveal" && (
+            <button className="btn next-btn" onClick={goNext}>
+              {nextLabel}
+            </button>
           )}
         </div>
       )}
