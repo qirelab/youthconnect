@@ -15,11 +15,12 @@
   --amber: #e8a955; /* янтарный свет лого — CTA */
   --gold: #f3e39a; /* жёлтый блик лого */
 
-  /* Варианты ответа A/B/C/D — тона палитры, белый текст */
-  --a: #b8792e; /* янтарь */
-  --b: #4f6e6e; /* шалфей */
-  --c: #66763a; /* олива */
-  --d: #6e6488; /* лаванда */
+  /* Варианты ответа A/B/C/D — насыщенные тона палитры, белый текст
+     (контраст с белым ≥ 4:1, чтобы хорошо читалось на телефоне) */
+  --a: #c0661a; /* янтарь */
+  --b: #1f7a82; /* шалфей-бирюза */
+  --c: #4f8a1f; /* олива */
+  --d: #6a4fc0; /* лаванда */
 
   --font-display: var(--font-unbounded), "Segoe UI", system-ui, sans-serif;
   --font-body: var(--font-manrope), "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
@@ -496,7 +497,13 @@ input.name:focus {
   border-radius: 28px;
 }
 .selfie-img.big.revealed {
-  height: min(calc(100vh - 360px), 94vw);
+  height: min(calc(100vh - 300px), 94vw);
+}
+.selfie-img.big.revealed.with-btn {
+  height: min(calc(100vh - 380px), 94vw);
+}
+.auto-next {
+  margin: 16px 0 0;
 }
 .big-question.selfie-q {
   margin: 0 0 14px;
@@ -515,16 +522,20 @@ input.name:focus {
 /* Телефон: буква + имя варианта (варианты селфи видны только на телефоне) */
 .phone-answer {
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
   padding: 12px 10px;
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.22);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
 }
 .phone-answer .letter {
-  font-size: min(13vw, 64px);
+  font-size: min(11vw, 56px);
   line-height: 1;
+  opacity: 0.9;
 }
 .phone-answer .opt {
   font-family: var(--font-body);
-  font-size: clamp(16px, 5.2vw, 24px);
+  font-size: clamp(18px, 6vw, 28px);
   font-weight: 800;
   line-height: 1.15;
   text-align: center;

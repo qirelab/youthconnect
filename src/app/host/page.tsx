@@ -6,6 +6,7 @@ import {
   QUIZZES,
   getQuiz,
   QUESTION_DURATION,
+  REVEAL_DURATION,
   PRACTICE_INDEX,
   questionPrompt,
 } from "@/lib/quizzes";
@@ -130,7 +131,7 @@ export default function HostPage() {
 
   // таймер
   useEffect(() => {
-    if (phase !== "question" || !current) return;
+    if ((phase !== "question" && phase !== "reveal") || !current) return;
     const tick = () => setRemaining(Math.max(0, (current.endsAt - Date.now()) / 1000));
     tick();
     const t = setInterval(tick, 100);
@@ -214,9 +215,17 @@ export default function HostPage() {
       setPhase("reveal");
       await postHost(gameId, EVENTS.reveal, { index: i, correct: q.correct, standings: board, practice });
 
-      await new Promise<void>((resolve) => {
-        nextRef.current = resolve;
-      });
+      if (practice) {
+        // после пробного вопроса — пауза, викторина начинается по кнопке ведущего
+        await new Promise<void>((resolve) => {
+          nextRef.current = resolve;
+        });
+      } else {
+        // обычные вопросы переключаются сами
+        const revealEndsAt = Date.now() + REVEAL_DURATION * 1000;
+        setCurrent({ i, endsAt: revealEndsAt });
+        await sleep(REVEAL_DURATION * 1000);
+      }
       if (runRef.current !== myRun) return;
     }
 
@@ -255,11 +264,8 @@ export default function HostPage() {
         : quiz.questions[orderRef.current[current.i] ?? current.i]
       : null;
   const isSelfie = quiz?.type === "selfie" && !!curQuestion?.image;
-  const nextLabel = isPractice
-    ? "Начать викторину ▶"
-    : current?.i === total - 1
-      ? "Показать итоги 🏆"
-      : "Следующий вопрос ▶";
+  const autoNextText =
+    current?.i === total - 1 ? "Итоги через" : "Следующий вопрос через";
 
   return (
     <div className="wrap">
@@ -376,7 +382,7 @@ export default function HostPage() {
               )}
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                className={`selfie-img big ${phase === "reveal" ? "revealed" : ""}`}
+                className={`selfie-img big ${phase === "reveal" ? "revealed" : ""} ${phase === "reveal" && isPractice ? "with-btn" : ""}`}
                 src={curQuestion.image}
                 alt="Селфи героя"
               />
@@ -410,11 +416,18 @@ export default function HostPage() {
             </p>
           )}
 
-          {/* Пауза: следующий вопрос — только по кнопке ведущего */}
-          {phase === "reveal" && (
+          {/* После пробного вопроса — пауза до кнопки ведущего */}
+          {phase === "reveal" && isPractice && (
             <button className="btn next-btn" onClick={goNext}>
-              {nextLabel}
+              Начать викторину ▶
             </button>
+          )}
+
+          {/* Обычные вопросы переключаются автоматически */}
+          {phase === "reveal" && !isPractice && (
+            <p className="subtitle auto-next">
+              {autoNextText} {Math.max(1, Math.ceil(remaining))} сек…
+            </p>
           )}
         </div>
       )}

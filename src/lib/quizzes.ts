@@ -10,6 +10,9 @@ export function getQuiz(id: string): Quiz | undefined {
 /** Длительность ответа на один вопрос, сек. */
 export const QUESTION_DURATION = 15;
 
+/** Сколько показывается правильный ответ перед автопереходом, сек. */
+export const REVEAL_DURATION = 5;
+
 /** Индекс пробного вопроса в событиях question/answer/reveal. */
 export const PRACTICE_INDEX = -1;
 
