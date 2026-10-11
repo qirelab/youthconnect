@@ -7,6 +7,7 @@ import {
   getQuiz,
   QUESTION_DURATION,
   REVEAL_DURATION,
+  PRACTICE_INDEX,
   questionPrompt,
 } from "@/lib/quizzes";
 import { getPusherClient, isPusherConfigured } from "@/lib/pusher-client";
@@ -159,9 +160,14 @@ export default function HostPage() {
 
     await postHost(gameId, EVENTS.gameStarted, { total });
 
-    for (let i = 0; i < total; i++) {
+    // Пробный вопрос (индекс -1) идёт первым и не влияет на очки.
+    const rounds = quiz.practice ? [PRACTICE_INDEX] : [];
+    for (let i = 0; i < total; i++) rounds.push(i);
+
+    for (const i of rounds) {
       if (runRef.current !== myRun) return;
-      const q = quiz.questions[i];
+      const practice = i === PRACTICE_INDEX;
+      const q = practice ? quiz.practice! : quiz.questions[i];
 
       currentIndexRef.current = i;
       answersRef.current = {};
@@ -181,16 +187,17 @@ export default function HostPage() {
         options: q.options,
         endsAt,
         duration: QUESTION_DURATION,
+        practice,
       });
 
       await sleep(QUESTION_DURATION * 1000);
       if (runRef.current !== myRun) return;
 
-      const board = computeStandings(i);
+      const board = practice ? [] : computeStandings(i);
       setStandings(board);
       setRevealCorrect(q.correct);
       setPhase("reveal");
-      await postHost(gameId, EVENTS.reveal, { index: i, correct: q.correct, standings: board });
+      await postHost(gameId, EVENTS.reveal, { index: i, correct: q.correct, standings: board, practice });
 
       await sleep(REVEAL_DURATION * 1000);
       if (runRef.current !== myRun) return;
@@ -216,7 +223,9 @@ export default function HostPage() {
 
   // ── Рендер ────────────────────────────────────────────────
 
-  const curQuestion = quiz && current ? quiz.questions[current.i] : null;
+  const isPractice = current?.i === PRACTICE_INDEX;
+  const curQuestion =
+    quiz && current ? (isPractice ? quiz.practice ?? null : quiz.questions[current.i]) : null;
 
   return (
     <div className="wrap">
@@ -228,7 +237,10 @@ export default function HostPage() {
         </div>
       )}
       <div className="host-top">
-        <span className="title" style={{ fontSize: 26 }}>📖 Библейская викторина</span>
+        <div className="brand">
+          <img src="/logo.webp" alt="Connect youth" className="logo sm" />
+          <span className="title" style={{ fontSize: 22, margin: 0 }}>Библейская викторина</span>
+        </div>
         <div className="flex">
           {gameId && <span className="pill">Код: {gameId}</span>}
           {players.length > 0 && <span className="pill">Игроков: {players.length}</span>}
@@ -290,11 +302,11 @@ export default function HostPage() {
 
           <div className="flex" style={{ marginTop: 28 }}>
             <button className="btn" onClick={start} disabled={players.length === 0}>
-              ▶ Начать викторину ({players.length})
+              ▶ {quiz?.practice ? "Начать с пробного вопроса" : "Начать викторину"} ({players.length})
             </button>
             <button
               className="btn"
-              style={{ background: "rgba(255,255,255,0.2)", color: "#fff" }}
+              style={{ background: "rgba(48,48,48,0.8)", color: "var(--mist)", border: "1px solid rgba(240,240,255,0.15)" }}
               onClick={() => setPhase("config")}
             >
               ← Назад
@@ -307,7 +319,11 @@ export default function HostPage() {
       {(phase === "question" || phase === "reveal") && curQuestion && quiz && (
         <div className="center" style={{ minHeight: "78vh" }}>
           <div className="flex" style={{ width: "100%", justifyContent: "space-between" }}>
-            <span className="pill">Вопрос {current!.i + 1} / {total}</span>
+            {isPractice ? (
+              <span className="pill practice">Пробный вопрос · без очков</span>
+            ) : (
+              <span className="pill">Вопрос {current!.i + 1} / {total}</span>
+            )}
             {phase === "question" ? (
               <span className={`timer ${remaining <= 5 ? "low" : ""}`}>{Math.ceil(remaining)}</span>
             ) : (
@@ -337,6 +353,12 @@ export default function HostPage() {
               );
             })}
           </div>
+
+          {phase === "reveal" && isPractice && (
+            <p className="subtitle" style={{ marginTop: 26 }}>
+              Пробный раунд окончен — теперь всё по-настоящему. Начинаем!
+            </p>
+          )}
 
           {phase === "reveal" && standings.length > 0 && (
             <div className="board" style={{ marginTop: 26, maxWidth: 520 }}>

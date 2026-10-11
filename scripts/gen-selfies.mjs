@@ -12,12 +12,13 @@ const data = JSON.parse(await readFile(join(root, "src/data/quizzes.json"), "utf
 const outDir = join(root, "public/images/selfie");
 await mkdir(outDir, { recursive: true });
 
+// Палитра connect_lw: тёмный лесной/графитовый фон с тёплым и оливковым светом
 const PALETTES = [
-  ["#3b1d6b", "#7b4bd6"],
-  ["#0b3d61", "#2b8fd6"],
-  ["#5a3200", "#d89e00"],
-  ["#0d4a1f", "#2fb65a"],
-  ["#5a0f2b", "#d6366b"],
+  ["#1b2622", "#9db874"],
+  ["#181818", "#e8a955"],
+  ["#2a3b35", "#90a8a8"],
+  ["#303018", "#f3e39a"],
+  ["#202020", "#907860"],
 ];
 
 function esc(s) {
@@ -27,12 +28,15 @@ function esc(s) {
 let count = 0;
 for (const quiz of data.quizzes) {
   if (quiz.type !== "selfie") continue;
-  for (const q of quiz.questions) {
+  // пробный вопрос — файлы spN.svg
+  const all = quiz.practice ? [quiz.practice, ...quiz.questions] : quiz.questions;
+  for (const q of all) {
     if (!q.image) continue;
     const file = q.image.split("/").pop();
     const n = parseInt(file.replace(/\D/g, ""), 10) || 0;
     const [c1, c2] = PALETTES[n % PALETTES.length];
     const scene = q.scene || [];
+    const isPractice = q === quiz.practice;
 
     // раскладываем эмодзи сцены по «фону» фотографии
     const positions = [
@@ -57,7 +61,7 @@ for (const quiz of data.quizzes) {
   ${sceneEls}
   <circle cx="250" cy="250" r="96" fill="rgba(0,0,0,0.25)"/>
   <text x="250" y="290" font-size="130" text-anchor="middle">🤳</text>
-  <text x="250" y="475" font-size="26" text-anchor="middle" fill="#ffffff" opacity="0.85" font-family="sans-serif" font-weight="bold">СЕЛФИ #${String(n).padStart(2, "0")}</text>
+  <text x="250" y="475" font-size="26" text-anchor="middle" fill="#ffffff" opacity="0.85" font-family="sans-serif" font-weight="bold">${isPractice ? "ПРОБНОЕ СЕЛФИ" : `СЕЛФИ #${String(n).padStart(2, "0")}`}</text>
 </svg>`;
 
     await writeFile(join(outDir, file), svg, "utf8");

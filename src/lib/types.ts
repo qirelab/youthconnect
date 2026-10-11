@@ -18,6 +18,8 @@ export interface Quiz {
   title: string;
   description: string;
   type: QuizType;
+  /** Пробный вопрос перед викториной — без очков, чтобы освоиться. */
+  practice?: Question;
   questions: Question[];
 }
 
@@ -32,6 +34,8 @@ export interface PublicQuestion {
   options: string[];
   endsAt: number; // Date.now() + длительность, мс
   duration: number; // секунды
+  /** Пробный вопрос: очки не начисляются. */
+  practice?: boolean;
 }
 
 export interface Player {
@@ -78,6 +82,8 @@ export interface RevealMessage {
   index: number;
   correct: number;
   standings: Standing[];
+  /** Показ ответа на пробный вопрос. */
+  practice?: boolean;
 }
 
 /** Ведущий → все: игра завершена, финальный рейтинг. */

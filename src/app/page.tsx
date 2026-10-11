@@ -158,6 +158,7 @@ function PlayerApp() {
     return (
       <div className="center">
         <div className="card" style={{ maxWidth: 420 }}>
+          <img src="/logo.webp" alt="Connect youth" className="logo" />
           <h1 className="title">Библейская викторина</h1>
           <p className="subtitle">
             Отсканируйте QR-код на экране, чтобы присоединиться к игре.
@@ -171,6 +172,7 @@ function PlayerApp() {
     return (
       <div className="center">
         <div className="card" style={{ maxWidth: 440, width: "100%" }}>
+          <img src="/logo.webp" alt="Connect youth" className="logo" />
           <h1 className="title">Как вас зовут?</h1>
           <p className="subtitle">Код игры: {gameId}</p>
           <input
@@ -207,7 +209,11 @@ function PlayerApp() {
     return (
       <div className="center" style={{ justifyContent: "flex-start", paddingTop: 20 }}>
         <div className="flex" style={{ width: "100%", justifyContent: "space-between" }}>
-          <span className="pill">Вопрос {question ? question.index + 1 : 0} из {question?.total ?? 0}</span>
+          {question?.practice ? (
+            <span className="pill practice">Пробный вопрос</span>
+          ) : (
+            <span className="pill">Вопрос {question ? question.index + 1 : 0} из {question?.total ?? 0}</span>
+          )}
           <span className="pill">{Math.ceil(remaining)} сек</span>
         </div>
         <div className="bar" style={{ maxWidth: 560 }}>
@@ -248,6 +254,13 @@ function PlayerApp() {
         <h1 className="title">
           {correct ? "Верно!" : picked === null ? "Не успели" : "Неверно"}
         </h1>
+        {reveal.practice && (
+          <p className="subtitle">
+            Это была пробная попытка — очки не начислялись.
+            <br />
+            Сейчас начнётся викторина!
+          </p>
+        )}
         {me && (
           <p className="subtitle">
             Очки: <b>{me.score}</b> · Правильных: <b>{me.correct}</b> · Место: <b>{place}</b>
