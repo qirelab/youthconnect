@@ -9,3 +9,6 @@ next-env.d.ts
 
 .vercel
 .env*
+
+# Исходники селфи (132 МБ) — в проект попадают сжатые копии из public/images/selfie
+src/selfie/

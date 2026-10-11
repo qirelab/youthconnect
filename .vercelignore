@@ -1,0 +1,3 @@
+# Исходники, не нужные на Vercel
+src/selfie/
+img/
