@@ -11,4 +11,4 @@ next-env.d.ts
 .env*
 
 # Исходники селфи (132 МБ) — в проект попадают сжатые копии из public/images/selfie
-src/selfie/
+#src/selfie/
