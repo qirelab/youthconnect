@@ -1,17 +1,11 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useTranslations } from "next-intl";
 import QRCode from "react-qr-code";
-import {
-  QUIZZES,
-  getQuiz,
-  QUESTION_DURATION,
-  REVEAL_DURATION,
-  PRACTICE_INDEX,
-  questionPrompt,
-} from "@/lib/quizzes";
 import { getPusherClient, isPusherConfigured } from "@/lib/pusher-client";
 import { postHost } from "@/lib/api";
+import { generateRandomQuiz, QUESTION_DURATION, REVEAL_DURATION, PRACTICE_INDEX } from "@/lib/quiz-generator";
 import {
   CHANNEL,
   EVENTS,
@@ -19,6 +13,7 @@ import {
   type AnswerMessage,
   type Standing,
 } from "@/lib/types";
+import type { DifficultyLevel } from "@/data/characters";
 
 const LETTERS = ["A", "B", "C", "D"];
 const CLASSES = ["a", "b", "c", "d"];
@@ -34,28 +29,36 @@ function genCode(): string {
   return s;
 }
 
-function shuffleInPlace(a: number[]): void {
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
-  }
-}
-
 function points(timeLeft: number, duration: number): number {
   return 500 + Math.round((500 * Math.max(0, timeLeft)) / duration);
 }
 
+interface GeneratedQuestion {
+  character: string;
+  options: string[];
+  correct: number;
+  image: string;
+  visualCue?: string;
+}
+
 export default function HostPage() {
+  const t = useTranslations("host");
+  const g = useTranslations("game");
+  const d = useTranslations("difficulty");
+
   const [gameId, setGameId] = useState("");
   const [origin, setOrigin] = useState("");
   const [phase, setPhase] = useState<Phase>("config");
-  const [selectedId, setSelectedId] = useState<string>("");
+  const [difficulty, setDifficulty] = useState<DifficultyLevel | "mixed">("easy");
+  const [questionsCount, setQuestionsCount] = useState(10);
   const [players, setPlayers] = useState<{ id: string; name: string }[]>([]);
   const [current, setCurrent] = useState<{ i: number; endsAt: number } | null>(null);
   const [remaining, setRemaining] = useState(0);
   const [revealCorrect, setRevealCorrect] = useState<number | null>(null);
   const [standings, setStandings] = useState<Standing[]>([]);
   const [answerCount, setAnswerCount] = useState(0);
+  const [questions, setQuestions] = useState<GeneratedQuestion[]>([]);
+  const [practiceQuestion, setPracticeQuestion] = useState<GeneratedQuestion | null>(null);
 
   const playersRef = useRef<Map<string, string>>(new Map());
   const answersRef = useRef<Record<string, { answer: number; timeLeft: number }>>({});
@@ -63,26 +66,19 @@ export default function HostPage() {
   const currentIndexRef = useRef(-1);
   const phaseRef = useRef<Phase>("config");
   const runRef = useRef(0);
-  // после показа ответа игра ждёт, пока ведущий нажмёт «Далее»
   const nextRef = useRef<(() => void) | null>(null);
-  const orderRef = useRef<number[]>([]);
-
-  const quiz = useMemo(() => getQuiz(selectedId), [selectedId]);
-  const total = quiz?.questions.length ?? 0;
 
   useEffect(() => {
     phaseRef.current = phase;
   }, [phase]);
 
-  // создать код игры и определить адрес для QR
   useEffect(() => {
     setGameId(genCode());
     setOrigin(window.location.origin);
   }, []);
 
-  const joinUrl = origin && gameId ? `${origin}/?game=${gameId}` : "";
+  const joinUrl = origin && gameId ? `${origin}/play?game=${gameId}` : "";
 
-  // подписка на канал
   useEffect(() => {
     if (!gameId || !isPusherConfigured()) return;
     const pusher = getPusherClient();
@@ -92,17 +88,14 @@ export default function HostPage() {
       const { tempId, name } = req;
       const existing = playersRef.current;
 
-      // реконнект того же игрока — всегда пускаем
       if (existing.has(tempId)) {
         postHost(gameId, EVENTS.joinResult, { tempId, ok: true });
         return;
       }
-      // лобби ещё не открыто или игра уже идёт
       if (phaseRef.current !== "lobby") {
         postHost(gameId, EVENTS.joinResult, { tempId, ok: false, error: "closed" });
         return;
       }
-      // проверка уникальности имени (без учёта регистра)
       const lower = name.trim().toLowerCase();
       for (const nm of existing.values()) {
         if (nm.trim().toLowerCase() === lower) {
@@ -118,7 +111,7 @@ export default function HostPage() {
     channel.bind(EVENTS.answer, (a: AnswerMessage) => {
       if (phaseRef.current !== "question") return;
       if (a.index !== currentIndexRef.current) return;
-      if (answersRef.current[a.playerId]) return; // засчитываем первый ответ
+      if (answersRef.current[a.playerId]) return;
       answersRef.current[a.playerId] = { answer: a.answer, timeLeft: a.timeLeft };
       setAnswerCount(Object.keys(answersRef.current).length);
     });
@@ -129,17 +122,17 @@ export default function HostPage() {
     };
   }, [gameId]);
 
-  // таймер
   useEffect(() => {
     if ((phase !== "question" && phase !== "reveal") || !current) return;
     const tick = () => setRemaining(Math.max(0, (current.endsAt - Date.now()) / 1000));
     tick();
-    const t = setInterval(tick, 100);
-    return () => clearInterval(t);
+    const interval = setInterval(tick, 100);
+    return () => clearInterval(interval);
   }, [phase, current]);
 
   const computeStandings = useCallback((qIndex: number): Standing[] => {
-    const q = quiz!.questions[qIndex];
+    const q = questions[qIndex];
+    if (!q) return [];
     for (const [id, ans] of Object.entries(answersRef.current)) {
       const s = scoresRef.current.get(id);
       if (!s) continue;
@@ -149,41 +142,39 @@ export default function HostPage() {
       }
     }
     return Array.from(scoresRef.current.values()).sort((a, b) => b.score - a.score);
-  }, [quiz]);
+  }, [questions]);
 
   const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
   const openLobby = useCallback(() => {
-    if (!quiz) return;
+    // Generate random questions when opening lobby
+    const { questions: qs, practice } = generateRandomQuiz(
+      difficulty === "mixed" ? undefined : difficulty,
+      questionsCount
+    );
+    setQuestions(qs);
+    setPracticeQuestion(practice);
     setPhase("lobby");
-  }, [quiz]);
+  }, [difficulty, questionsCount]);
 
   const start = useCallback(async () => {
-    if (!quiz || players.length === 0) return;
+    if (questions.length === 0 || players.length === 0) return;
     const myRun = ++runRef.current;
 
-    // инициализация очков для всех вошедших игроков
     scoresRef.current = new Map();
     for (const [id, name] of playersRef.current) {
       scoresRef.current.set(id, { id, name, score: 0, correct: 0 });
     }
 
-    await postHost(gameId, EVENTS.gameStarted, { total });
+    await postHost(gameId, EVENTS.gameStarted, { total: questions.length });
 
-    // Селфи-викторины: порядок героев случайный в каждой игре.
-    // i — номер шага (его видят игроки), orderRef[i] — индекс вопроса в викторине.
-    const order = Array.from({ length: total }, (_, k) => k);
-    if (quiz.type === "selfie") shuffleInPlace(order);
-    orderRef.current = order;
-
-    // Пробный вопрос (индекс -1) идёт первым и не влияет на очки.
-    const rounds = quiz.practice ? [PRACTICE_INDEX] : [];
-    for (let i = 0; i < total; i++) rounds.push(i);
+    const rounds = practiceQuestion ? [PRACTICE_INDEX] : [];
+    for (let i = 0; i < questions.length; i++) rounds.push(i);
 
     for (const i of rounds) {
       if (runRef.current !== myRun) return;
       const practice = i === PRACTICE_INDEX;
-      const q = practice ? quiz.practice! : quiz.questions[order[i]];
+      const q = practice ? practiceQuestion! : questions[i];
 
       currentIndexRef.current = i;
       answersRef.current = {};
@@ -195,11 +186,11 @@ export default function HostPage() {
 
       await postHost(gameId, EVENTS.question, {
         index: i,
-        total,
-        type: quiz.type,
-        q: questionPrompt(quiz, q),
-        emoji: q.emoji ?? null,
-        image: q.image ?? null,
+        total: questions.length,
+        type: "selfie",
+        q: g("whoMadeSelfie"),
+        emoji: null,
+        image: q.image,
         options: q.options,
         endsAt,
         duration: QUESTION_DURATION,
@@ -209,19 +200,17 @@ export default function HostPage() {
       await sleep(QUESTION_DURATION * 1000);
       if (runRef.current !== myRun) return;
 
-      const board = practice ? [] : computeStandings(order[i]);
+      const board = practice ? [] : computeStandings(i);
       setStandings(board);
       setRevealCorrect(q.correct);
       setPhase("reveal");
       await postHost(gameId, EVENTS.reveal, { index: i, correct: q.correct, standings: board, practice });
 
       if (practice) {
-        // после пробного вопроса — пауза, викторина начинается по кнопке ведущего
         await new Promise<void>((resolve) => {
           nextRef.current = resolve;
         });
       } else {
-        // обычные вопросы переключаются сами
         const revealEndsAt = Date.now() + REVEAL_DURATION * 1000;
         setCurrent({ i, endsAt: revealEndsAt });
         await sleep(REVEAL_DURATION * 1000);
@@ -233,7 +222,7 @@ export default function HostPage() {
     setStandings(finalBoard);
     setPhase("ended");
     await postHost(gameId, EVENTS.ended, { standings: finalBoard });
-  }, [quiz, players.length, total, gameId, computeStandings]);
+  }, [questions, practiceQuestion, players.length, gameId, computeStandings, g]);
 
   const goNext = useCallback(() => {
     const resolve = nextRef.current;
@@ -243,88 +232,101 @@ export default function HostPage() {
 
   const restart = useCallback(() => {
     runRef.current++;
-    goNext(); // отпустить ожидающий цикл — он выйдет по runRef
+    goNext();
     playersRef.current = new Map();
     scoresRef.current = new Map();
     answersRef.current = {};
     setPlayers([]);
     setStandings([]);
     setCurrent(null);
+    setQuestions([]);
+    setPracticeQuestion(null);
     setGameId(genCode());
     setPhase("config");
   }, [goNext]);
 
-  // ── Рендер ────────────────────────────────────────────────
-
   const isPractice = current?.i === PRACTICE_INDEX;
-  const curQuestion =
-    quiz && current
-      ? isPractice
-        ? quiz.practice ?? null
-        : quiz.questions[orderRef.current[current.i] ?? current.i]
-      : null;
-  const isSelfie = quiz?.type === "selfie" && !!curQuestion?.image;
-  const autoNextText =
-    current?.i === total - 1 ? "Итоги через" : "Следующий вопрос через";
+  const curQuestion = current
+    ? isPractice
+      ? practiceQuestion
+      : questions[current.i]
+    : null;
+  const autoNextText = current?.i === questions.length - 1 ? g("resultsIn") : g("nextIn");
 
   return (
     <div className="wrap">
       {!isPusherConfigured() && (
         <div className="error" style={{ marginBottom: 16 }}>
-          ⚠ Не заданы ключи Pusher. Добавьте переменные окружения
-          (NEXT_PUBLIC_PUSHER_KEY, NEXT_PUBLIC_PUSHER_CLUSTER, PUSHER_APP_ID,
-          PUSHER_SECRET) — см. README. Без них real-time не работает.
+          ⚠ {t("noPusher")}
         </div>
       )}
       <div className="host-top">
         <div className="brand">
-          <img src="/logo.webp" alt="Connect youth" className="logo sm" />
-          <span className="title" style={{ fontSize: 22, margin: 0 }}>Библейская викторина</span>
+          <img src="/logo.webp" alt="YouthConnect" className="logo sm" />
+          <span className="title" style={{ fontSize: 22, margin: 0 }}>{t("title")}</span>
         </div>
         <div className="flex">
-          {gameId && <span className="pill">Код: {gameId}</span>}
-          {players.length > 0 && <span className="pill">Игроков: {players.length}</span>}
+          {gameId && <span className="pill">{g("code")}: {gameId}</span>}
+          {players.length > 0 && <span className="pill">{g("players")}: {players.length}</span>}
           {(phase === "ended" || phase === "reveal" || phase === "question") && (
             <button className="btn" style={{ fontSize: 16, padding: "8px 16px" }} onClick={restart}>
-              Новая игра
+              {t("newGame")}
             </button>
           )}
         </div>
       </div>
 
-      {/* ВЫБОР ВИКТОРИНЫ */}
+      {/* DIFFICULTY SELECTION */}
       {phase === "config" && (
         <div>
-          <p className="subtitle">Выберите викторину и откройте лобби для участников.</p>
+          <p className="subtitle">{t("selectQuiz")}</p>
           <div className="quiz-grid">
-            {QUIZZES.map((qz) => (
+            {(["easy", "medium", "hard", "mixed"] as const).map((lvl) => (
               <button
-                key={qz.id}
-                className={`quiz-tile ${selectedId === qz.id ? "sel" : ""}`}
-                onClick={() => setSelectedId(qz.id)}
+                key={lvl}
+                className={`quiz-tile ${difficulty === lvl ? "sel" : ""}`}
+                onClick={() => setDifficulty(lvl)}
               >
-                <span className={`badge ${qz.type}`}>
-                  {qz.type === "selfie" ? "СЕЛФИ" : "ВОПРОСЫ"}
+                <span className={`badge ${lvl === "mixed" ? "selfie" : lvl === "easy" ? "text" : "selfie"}`}>
+                  {d(lvl).toUpperCase()}
                 </span>
-                <h3>{qz.title}</h3>
-                <p>{qz.description}</p>
-                <p style={{ marginTop: 8, opacity: 0.6 }}>{qz.questions.length} вопросов</p>
+                <h3>{d(lvl)}</h3>
+                <p>
+                  {lvl === "easy" && "Моисей, Давид, Ной, Мария…"}
+                  {lvl === "medium" && "Исайя, Варнава, Тит…"}
+                  {lvl === "hard" && "Ахитофел, Епафрас, Нимфа…"}
+                  {lvl === "mixed" && "4 лёгких + 4 средних + 2 сложных"}
+                </p>
               </button>
             ))}
           </div>
+          <div style={{ marginTop: 24 }}>
+            <label style={{ display: "block", marginBottom: 8 }}>
+              Вопросов: {questionsCount}
+            </label>
+            <input
+              type="range"
+              min={5}
+              max={20}
+              step={5}
+              value={questionsCount}
+              onChange={(e) => setQuestionsCount(Number(e.target.value))}
+              style={{ width: "100%", maxWidth: 300 }}
+            />
+          </div>
           <div className="flex" style={{ marginTop: 24 }}>
-            <button className="btn" onClick={openLobby} disabled={!quiz}>
-              Открыть лобби →
+            <button className="btn" onClick={openLobby}>
+              {t("openLobby")} →
             </button>
           </div>
         </div>
       )}
 
-      {/* ЛОББИ С QR */}
+      {/* LOBBY WITH QR */}
       {phase === "lobby" && (
         <div className="center" style={{ minHeight: "70vh" }}>
-          <h1 className="title">{quiz?.title}</h1>
-          <p className="subtitle">Отсканируйте QR-код телефоном, чтобы присоединиться</p>
+          <h1 className="title">{d(difficulty)}</h1>
+          <p className="subtitle">{t("scanQR")}</p>
           {joinUrl && (
             <div className="qr-box">
               <QRCode value={joinUrl} size={240} />
@@ -334,7 +336,7 @@ export default function HostPage() {
 
           <div className="players">
             {players.length === 0 ? (
-              <span className="muted">Пока никто не присоединился…</span>
+              <span className="muted">{t("noPlayers")}</span>
             ) : (
               players.map((p) => <span key={p.id} className="chip">{p.name}</span>)
             )}
@@ -342,101 +344,71 @@ export default function HostPage() {
 
           <div className="flex" style={{ marginTop: 28 }}>
             <button className="btn" onClick={start} disabled={players.length === 0}>
-              ▶ {quiz?.practice ? "Начать с пробного вопроса" : "Начать викторину"} ({players.length})
+              ▶ {practiceQuestion ? t("startPractice") : t("startGame")} ({players.length})
             </button>
             <button
               className="btn"
               style={{ background: "rgba(48,48,48,0.8)", color: "var(--mist)", border: "1px solid rgba(240,240,255,0.15)" }}
               onClick={() => setPhase("config")}
             >
-              ← Назад
+              ← {t("back")}
             </button>
           </div>
         </div>
       )}
 
-      {/* ВОПРОС / ПОКАЗ ОТВЕТА */}
-      {(phase === "question" || phase === "reveal") && curQuestion && quiz && (
+      {/* QUESTION / REVEAL */}
+      {(phase === "question" || phase === "reveal") && curQuestion && (
         <div className="center" style={{ minHeight: "78vh" }}>
           <div className="flex" style={{ width: "100%", justifyContent: "space-between" }}>
             {isPractice ? (
-              <span className="pill practice">Пробный вопрос · без очков</span>
+              <span className="pill practice">{g("practice")} · {g("practiceNote")}</span>
             ) : (
-              <span className="pill">Вопрос {current!.i + 1} / {total}</span>
+              <span className="pill">{g("question")} {current!.i + 1} / {questions.length}</span>
             )}
             {phase === "question" ? (
               <span className={`timer ${remaining <= 5 ? "low" : ""}`}>{Math.ceil(remaining)}</span>
             ) : (
-              <span className="pill">Ответили: {answerCount} из {players.length}</span>
+              <span className="pill">{g("answered")}: {answerCount} / {players.length}</span>
             )}
           </div>
 
-          {isSelfie ? (
-            <>
-              {/* Селфи: на экране только фото, варианты — на телефонах.
-                  Имя героя появляется только при показе ответа. */}
-              {phase === "reveal" && (
-                <h1 className="big-question selfie-q">
-                  Это <span className="hero-name">{curQuestion.options[revealCorrect ?? curQuestion.correct]}</span>!
-                </h1>
-              )}
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                className={`selfie-img big ${phase === "reveal" ? "revealed" : ""} ${phase === "reveal" && isPractice ? "with-btn" : ""}`}
-                src={curQuestion.image}
-                alt="Селфи героя"
-              />
-            </>
-          ) : (
-            <>
-              <h1 className="big-question">{questionPrompt(quiz, curQuestion)}</h1>
-              <div className="emoji-big">{curQuestion.emoji ?? "📖"}</div>
-            </>
+          {phase === "reveal" && (
+            <h1 className="big-question selfie-q">
+              {g("itIs")} <span className="hero-name">{curQuestion.options[revealCorrect ?? curQuestion.correct]}</span>!
+            </h1>
           )}
-
-          {!isSelfie && (
-          <div className="answers" style={{ maxWidth: 900, marginTop: 24 }}>
-            {curQuestion.options.map((opt, i) => {
-              const isCorrect = phase === "reveal" && i === revealCorrect;
-              const dim = phase === "reveal" && i !== revealCorrect;
-              return (
-                <div key={i} className={`answer ${CLASSES[i]} ${dim ? "dim" : ""} ${isCorrect ? "picked" : ""}`}>
-                  <span className="letter">{LETTERS[i]}</span>
-                  <span>{opt}</span>
-                  {isCorrect && <span style={{ marginLeft: "auto", fontSize: "1.4em" }}>✔</span>}
-                </div>
-              );
-            })}
-          </div>
-          )}
+          <img
+            className={`selfie-img big ${phase === "reveal" ? "revealed" : ""} ${phase === "reveal" && isPractice ? "with-btn" : ""}`}
+            src={curQuestion.image}
+            alt="Selfie"
+          />
 
           {phase === "reveal" && isPractice && (
             <p className="subtitle" style={{ marginTop: 26 }}>
-              Пробный раунд окончен — дальше всё по-настоящему!
+              {t("practiceComplete")}
             </p>
           )}
 
-          {/* После пробного вопроса — пауза до кнопки ведущего */}
           {phase === "reveal" && isPractice && (
             <button className="btn next-btn" onClick={goNext}>
-              Начать викторину ▶
+              {t("startQuiz")} ▶
             </button>
           )}
 
-          {/* Обычные вопросы переключаются автоматически */}
           {phase === "reveal" && !isPractice && (
             <p className="subtitle auto-next">
-              {autoNextText} {Math.max(1, Math.ceil(remaining))} сек…
+              {autoNextText} {Math.max(1, Math.ceil(remaining))} {g("seconds")}…
             </p>
           )}
         </div>
       )}
 
-      {/* ФИНАЛЬНЫЙ РЕЙТИНГ */}
+      {/* FINAL RESULTS */}
       {phase === "ended" && (
         <div className="center" style={{ minHeight: "78vh" }}>
           <div className="result-big">🏆</div>
-          <h1 className="title">Итоги викторины</h1>
+          <h1 className="title">{t("results")}</h1>
           <div className="board">
             {standings.map((s, i) => {
               const cls = i === 0 ? "gold" : i === 1 ? "silver" : i === 2 ? "bronze" : "";
@@ -446,14 +418,14 @@ export default function HostPage() {
                   <span className="rank">{medal}</span>
                   <span className="nm">{s.name}</span>
                   <span className={`sc ${i < 3 ? "dark" : ""}`}>
-                    {s.score} · {s.correct}/{total}
+                    {s.score} · {s.correct}/{questions.length}
                   </span>
                 </div>
               );
             })}
           </div>
           <div className="flex" style={{ marginTop: 28 }}>
-            <button className="btn" onClick={restart}>Новая игра</button>
+            <button className="btn" onClick={restart}>{t("newGame")}</button>
           </div>
         </div>
       )}
