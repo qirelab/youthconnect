@@ -1,0 +1,284 @@
+{
+  "meta": {
+    "title": "Bible Quiz · Guess the Hero from Selfie",
+    "description": "Interactive quiz for youth and churches — guess Bible characters from AI-generated selfies",
+    "domain": "youthconnect.church"
+  },
+  "nav": {
+    "play": "Play",
+    "host": "Host",
+    "donate": "Donate",
+    "signIn": "Sign In",
+    "signOut": "Sign Out",
+    "profile": "Profile",
+    "settings": "Settings",
+    "history": "Game History"
+  },
+  "landing": {
+    "hero": {
+      "title": "Bible Quiz",
+      "subtitle": "Guess the Hero from Selfie",
+      "description": "Interactive game for youth meetings, Sunday schools, and family nights. Scan the QR code — and you're in!",
+      "ctaHost": "Start Game (Host)",
+      "ctaJoin": "Join with Code"
+    },
+    "howItWorks": {
+      "title": "How It Works",
+      "step1": {
+        "title": "Host opens the game",
+        "description": "Open /host on a laptop with projector and choose difficulty"
+      },
+      "step2": {
+        "title": "Players scan QR",
+        "description": "Phone, QR code — and in 5 seconds you're in the lobby"
+      },
+      "step3": {
+        "title": "Play and compete",
+        "description": "10 questions, 15 seconds each, points for speed, live leaderboard"
+      }
+    },
+    "features": {
+      "title": "Features",
+      "selfie": {
+        "title": "Bible Character Selfies",
+        "description": "Unique AI images: guess the character from the scene"
+      },
+      "realtime": {
+        "title": "Real-time Multiplayer",
+        "description": "Up to 100 players simultaneously, instant sync"
+      },
+      "levels": {
+        "title": "3 Difficulty Levels",
+        "description": "From Adam to Tychicus — choose your level"
+      },
+      "noSignup": {
+        "title": "No Registration",
+        "description": "Guests play instantly, sign in for history and settings"
+      },
+      "free": {
+        "title": "Free",
+        "description": "No subscriptions, runs on free tier"
+      },
+      "mobile": {
+        "title": "Mobile-first",
+        "description": "Optimized for phones and any screen"
+      }
+    },
+    "levels": {
+      "title": "Difficulty Levels",
+      "easy": {
+        "title": "Easy",
+        "description": "Famous heroes: Moses, David, Noah, Mary"
+      },
+      "medium": {
+        "title": "Medium",
+        "description": "Prophets and apostles: Isaiah, Barnabas, Titus"
+      },
+      "hard": {
+        "title": "Hard",
+        "description": "For experts: Ahithophel, Epaphras, Nympha"
+      }
+    },
+    "forWhom": {
+      "title": "Who Is This For",
+      "youth": "Youth ministries",
+      "sunday": "Sunday schools",
+      "camps": "Christian camps",
+      "family": "Family nights",
+      "small": "Small groups"
+    },
+    "gallery": {
+      "title": "Selfie Gallery",
+      "hint": "Can you guess who this is?"
+    },
+    "donate": {
+      "title": "Support the Project",
+      "description": "The game is free for everyone. Your donations help develop the project, add new images and languages.",
+      "oneTime": "One-time Donation",
+      "monthly": "Monthly",
+      "crypto": "Cryptocurrency",
+      "boosty": "Boosty (for Russia)"
+    },
+    "faq": {
+      "title": "FAQ",
+      "q1": {
+        "q": "Is this free?",
+        "a": "Yes, completely free. We use free tiers of Vercel and Pusher."
+      },
+      "q2": {
+        "q": "How many players can participate?",
+        "a": "Up to 100 simultaneously (Pusher limit). For larger events, contact us."
+      },
+      "q3": {
+        "q": "Is registration required?",
+        "a": "No! Guests play instantly via QR code. Sign in with Google/Yandex only for saving history and settings."
+      },
+      "q4": {
+        "q": "Which Bible translation is used?",
+        "a": "Character names follow standard translations for each language."
+      },
+      "q5": {
+        "q": "What's the denominational stance?",
+        "a": "The game is for all Protestant churches. Questions are based on canonical Bible text."
+      },
+      "q6": {
+        "q": "Can this be used with children?",
+        "a": "Yes! Content is safe for all ages. Easy level works great for Sunday school."
+      }
+    },
+    "footer": {
+      "contact": "Contact",
+      "email": "hello@youthconnect.church",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Use",
+      "copyright": "© 2024 YouthConnect. All rights reserved."
+    }
+  },
+  "game": {
+    "code": "Game Code",
+    "players": "Players",
+    "question": "Question",
+    "of": "of",
+    "seconds": "sec",
+    "practice": "Practice Question",
+    "practiceNote": "no points",
+    "whoMadeSelfie": "Who made this selfie?",
+    "itIs": "It's",
+    "correct": "Correct!",
+    "incorrect": "Incorrect",
+    "timeout": "Time's up",
+    "noAnswer": "No answer",
+    "correctAnswer": "Correct answer",
+    "points": "points",
+    "correctAnswers": "Correct",
+    "place": "place",
+    "nextIn": "Next question in",
+    "resultsIn": "Results in",
+    "waitingHost": "Waiting for host to start the quiz…",
+    "answerAccepted": "Answer accepted!",
+    "lookAtScreen": "Look at the main screen…",
+    "answered": "Answered"
+  },
+  "host": {
+    "title": "Host Screen",
+    "selectQuiz": "Select Difficulty",
+    "openLobby": "Open Lobby",
+    "back": "Back",
+    "startGame": "Start Quiz",
+    "startPractice": "Start with Practice",
+    "newGame": "New Game",
+    "scanQR": "Scan QR code with your phone to join",
+    "noPlayers": "No one has joined yet…",
+    "results": "Quiz Results",
+    "noPusher": "Pusher keys not set. Add environment variables — see README.",
+    "practiceComplete": "Practice round complete — now it's for real!",
+    "startQuiz": "Start Quiz"
+  },
+  "player": {
+    "enterName": "What's your name?",
+    "namePlaceholder": "Your name or nickname",
+    "join": "Join",
+    "checking": "Checking…",
+    "youAreIn": "You're in the game",
+    "scanQR": "Scan the QR code on screen to join the game.",
+    "errors": {
+      "nameMin": "Enter a name (at least 2 characters).",
+      "nameTaken": "This name is taken. Choose another.",
+      "gameClosed": "Game is in progress or closed for entry.",
+      "hostOffline": "Host not responding. Make sure the quiz is open on screen.",
+      "network": "Network error. Try again."
+    }
+  },
+  "settings": {
+    "title": "Settings",
+    "autoAdvance": {
+      "label": "Next Question Transition",
+      "auto": "Automatic",
+      "manual": "Manual (button)"
+    },
+    "questionTime": {
+      "label": "Time per Question",
+      "seconds": "seconds"
+    },
+    "questionsPerQuiz": {
+      "label": "Questions per Game"
+    },
+    "difficulty": {
+      "label": "Difficulty",
+      "easy": "Easy",
+      "medium": "Medium",
+      "hard": "Hard",
+      "mixed": "Mixed"
+    },
+    "theme": {
+      "label": "Theme",
+      "light": "Light",
+      "dark": "Dark",
+      "system": "System"
+    },
+    "sound": {
+      "label": "Sound",
+      "enabled": "On",
+      "disabled": "Off"
+    },
+    "showExplanation": {
+      "label": "Show explanation after answer"
+    },
+    "showCorrectAnswer": {
+      "label": "Show correct answer"
+    },
+    "practiceQuestion": {
+      "label": "Practice question before game"
+    },
+    "speedBonus": {
+      "label": "Points for speed"
+    },
+    "language": {
+      "label": "Language"
+    },
+    "save": "Save",
+    "saved": "Settings saved"
+  },
+  "profile": {
+    "title": "Profile",
+    "gamesPlayed": "Games Played",
+    "totalScore": "Total Score",
+    "correctAnswers": "Correct Answers",
+    "bestRank": "Best Rank",
+    "recentGames": "Recent Games",
+    "noGames": "You haven't played yet. Start your first game!",
+    "date": "Date",
+    "difficulty": "Difficulty",
+    "score": "Score",
+    "rank": "Rank"
+  },
+  "auth": {
+    "signIn": "Sign In",
+    "signInWith": "Sign in with",
+    "signOut": "Sign Out",
+    "google": "Google",
+    "yandex": "Yandex",
+    "guestNote": "Guests can play 1 game without signing in",
+    "signInBenefits": "Sign in to save game history and settings",
+    "error": {
+      "title": "Sign In Error",
+      "default": "Could not sign in. Try another method.",
+      "accessDenied": "Access denied.",
+      "tryAgain": "Try Again"
+    }
+  },
+  "difficulty": {
+    "easy": "Easy",
+    "medium": "Medium",
+    "hard": "Hard",
+    "mixed": "Mixed"
+  },
+  "common": {
+    "loading": "Loading…",
+    "error": "Error",
+    "retry": "Try Again",
+    "cancel": "Cancel",
+    "save": "Save",
+    "close": "Close"
+  }
+}

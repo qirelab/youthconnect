@@ -2,6 +2,7 @@
 
 import { Suspense, useCallback, useEffect, useRef, useState } from "react";
 import { useSearchParams } from "next/navigation";
+import { useTranslations } from "next-intl";
 import { getPusherClient, isPusherConfigured } from "@/lib/pusher-client";
 import { postJoin, postAnswer } from "@/lib/api";
 import {
@@ -22,6 +23,8 @@ type Phase = "name" | "waiting" | "question" | "answered" | "reveal" | "ended";
 function PlayerApp() {
   const params = useSearchParams();
   const gameId = (params.get("game") || "").toUpperCase();
+  const t = useTranslations("player");
+  const g = useTranslations("game");
 
   const [phase, setPhase] = useState<Phase>("name");
   const [name, setName] = useState("");
@@ -37,7 +40,6 @@ function PlayerApp() {
   const nameRef = useRef<string>("");
   const pickedRef = useRef<number | null>(null);
 
-  // восстановление идентификатора игрока из localStorage (переживает перезагрузку)
   useEffect(() => {
     if (!gameId) return;
     const key = `bq-player-${gameId}`;
@@ -51,7 +53,6 @@ function PlayerApp() {
     if (savedName) setName(savedName);
   }, [gameId]);
 
-  // подписка на канал игры
   useEffect(() => {
     if (!gameId || !isPusherConfigured()) return;
     const pusher = getPusherClient();
@@ -65,9 +66,9 @@ function PlayerApp() {
         setError("");
         setPhase((p) => (p === "name" ? "waiting" : p));
       } else if (data.error === "name-taken") {
-        setError("Это имя уже занято. Выберите другое.");
+        setError(t("errors.nameTaken"));
       } else {
-        setError("Игра уже идёт или закрыта для входа.");
+        setError(t("errors.gameClosed"));
       }
     });
 
@@ -93,9 +94,8 @@ function PlayerApp() {
       channel.unbind_all();
       pusher.unsubscribe(CHANNEL(gameId));
     };
-  }, [gameId]);
+  }, [gameId, t]);
 
-  // таймер обратного отсчёта на основе endsAt
   useEffect(() => {
     if (phase !== "question" && phase !== "answered") return;
     if (!question) return;
@@ -104,14 +104,14 @@ function PlayerApp() {
       setRemaining(left);
     };
     tick();
-    const t = setInterval(tick, 100);
-    return () => clearInterval(t);
+    const interval = setInterval(tick, 100);
+    return () => clearInterval(interval);
   }, [phase, question]);
 
   const submitName = useCallback(async () => {
     const n = name.trim();
     if (n.length < 2) {
-      setError("Введите имя (минимум 2 символа).");
+      setError(t("errors.nameMin"));
       return;
     }
     setError("");
@@ -119,18 +119,17 @@ function PlayerApp() {
     nameRef.current = n;
     try {
       await postJoin(gameId, tempIdRef.current, n);
-      // ждём join-result от ведущего; таймаут на случай, если ведущий не в сети
       setTimeout(() => {
         setChecking((c) => {
-          if (c) setError("Ведущий не отвечает. Убедитесь, что викторина открыта на экране.");
+          if (c) setError(t("errors.hostOffline"));
           return false;
         });
       }, 6000);
     } catch {
       setChecking(false);
-      setError("Ошибка сети. Попробуйте ещё раз.");
+      setError(t("errors.network"));
     }
-  }, [name, gameId]);
+  }, [name, gameId, t]);
 
   const choose = useCallback(
     (i: number) => {
@@ -152,17 +151,13 @@ function PlayerApp() {
     [question, gameId]
   );
 
-  // ── Рендер ────────────────────────────────────────────────
-
   if (!gameId) {
     return (
       <div className="center">
         <div className="card" style={{ maxWidth: 420 }}>
-          <img src="/logo.webp" alt="Connect youth" className="logo" />
-          <h1 className="title">Библейская викторина</h1>
-          <p className="subtitle">
-            Отсканируйте QR-код на экране, чтобы присоединиться к игре.
-          </p>
+          <img src="/logo.webp" alt="YouthConnect" className="logo" />
+          <h1 className="title">{g("code")}</h1>
+          <p className="subtitle">{t("scanQR")}</p>
         </div>
       </div>
     );
@@ -172,12 +167,12 @@ function PlayerApp() {
     return (
       <div className="center">
         <div className="card" style={{ maxWidth: 440, width: "100%" }}>
-          <img src="/logo.webp" alt="Connect youth" className="logo" />
-          <h1 className="title">Как вас зовут?</h1>
-          <p className="subtitle">Код игры: {gameId}</p>
+          <img src="/logo.webp" alt="YouthConnect" className="logo" />
+          <h1 className="title">{t("enterName")}</h1>
+          <p className="subtitle">{g("code")}: {gameId}</p>
           <input
             className="name"
-            placeholder="Ваше имя или никнейм"
+            placeholder={t("namePlaceholder")}
             value={name}
             maxLength={24}
             onChange={(e) => setName(e.target.value)}
@@ -185,7 +180,7 @@ function PlayerApp() {
             autoFocus
           />
           <button className="btn block" onClick={submitName} disabled={checking}>
-            {checking ? "Проверяем…" : "Войти"}
+            {checking ? t("checking") : t("join")}
           </button>
           {error && <div className="error">{error}</div>}
         </div>
@@ -197,8 +192,8 @@ function PlayerApp() {
     return (
       <div className="center">
         <div className="emoji-big">⏳</div>
-        <h1 className="title">Вы в игре, {nameRef.current}!</h1>
-        <p className="subtitle">Ждём, пока ведущий запустит викторину…</p>
+        <h1 className="title">{t("youAreIn")}, {nameRef.current}!</h1>
+        <p className="subtitle">{g("waitingHost")}</p>
       </div>
     );
   }
@@ -210,11 +205,11 @@ function PlayerApp() {
       <div className="center" style={{ justifyContent: "flex-start", paddingTop: 20 }}>
         <div className="flex" style={{ width: "100%", justifyContent: "space-between" }}>
           {question?.practice ? (
-            <span className="pill practice">Пробный вопрос</span>
+            <span className="pill practice">{g("practice")}</span>
           ) : (
-            <span className="pill">Вопрос {question ? question.index + 1 : 0} из {question?.total ?? 0}</span>
+            <span className="pill">{g("question")} {question ? question.index + 1 : 0} {g("of")} {question?.total ?? 0}</span>
           )}
-          <span className="pill">{Math.ceil(remaining)} сек</span>
+          <span className="pill">{Math.ceil(remaining)} {g("seconds")}</span>
         </div>
         <div className="bar" style={{ maxWidth: 560 }}>
           <span style={{ width: `${(remaining / (question?.duration ?? 15)) * 100}%` }} />
@@ -223,12 +218,12 @@ function PlayerApp() {
           <div style={{ flex: 1, display: "flex", flexDirection: "column", justifyContent: "center" }}>
             <div className="emoji-big">{picked !== null ? "✅" : "⌛"}</div>
             <h2 className="title" style={{ fontSize: 30 }}>
-              {picked !== null ? `Ответ ${LETTERS[picked]} принят!` : "Время вышло"}
+              {picked !== null ? `${g("answerAccepted")}` : g("timeout")}
             </h2>
             {picked !== null && question?.options[picked] && (
-              <p className="subtitle picked-name">{question.options[picked]}</p>
+              <p className="subtitle picked-name">{LETTERS[picked]}: {question.options[picked]}</p>
             )}
-            <p className="subtitle">Смотрите на главный экран…</p>
+            <p className="subtitle">{g("lookAtScreen")}</p>
           </div>
         ) : (
           <div className="phone-answers" style={{ marginTop: 18 }}>
@@ -256,23 +251,21 @@ function PlayerApp() {
       <div className="center">
         <div className="result-big">{correct ? "✅" : picked === null ? "⌛" : "❌"}</div>
         <h1 className="title">
-          {correct ? "Верно!" : picked === null ? "Не успели" : "Неверно"}
+          {correct ? g("correct") : picked === null ? g("noAnswer") : g("incorrect")}
         </h1>
         {!correct && question?.options[reveal.correct] && (
           <p className="subtitle">
-            Правильный ответ: <b>{LETTERS[reveal.correct]} — {question.options[reveal.correct]}</b>
+            {g("correctAnswer")}: <b>{LETTERS[reveal.correct]} — {question.options[reveal.correct]}</b>
           </p>
         )}
         {reveal.practice && (
           <p className="subtitle">
-            Это была пробная попытка — очки не начислялись.
-            <br />
-            Ждём, когда ведущий начнёт викторину!
+            {g("practice")} — {g("practiceNote")}
           </p>
         )}
         {me && (
           <p className="subtitle">
-            Очки: <b>{me.score}</b> · Правильных: <b>{me.correct}</b> · Место: <b>{place}</b>
+            {g("points")}: <b>{me.score}</b> · {g("correctAnswers")}: <b>{me.correct}</b> · {g("place")}: <b>{place}</b>
           </p>
         )}
       </div>
@@ -287,11 +280,11 @@ function PlayerApp() {
       <div className="center">
         <div className="result-big">{medal}</div>
         <h1 className="title">
-          {place > 0 ? `${place} место` : "Игра окончена"}
+          {place > 0 ? `${place} ${g("place")}` : g("timeout")}
         </h1>
         {me && (
           <p className="subtitle">
-            {me.name}, у вас <b>{me.score}</b> очков и <b>{me.correct}</b> правильных ответов!
+            {me.name}, {me.score} {g("points")} · {me.correct} {g("correctAnswers")}!
           </p>
         )}
       </div>
@@ -301,9 +294,9 @@ function PlayerApp() {
   return null;
 }
 
-export default function Page() {
+export default function PlayPage() {
   return (
-    <Suspense fallback={<div className="center">Загрузка…</div>}>
+    <Suspense fallback={<div className="center">Loading…</div>}>
       <PlayerApp />
     </Suspense>
   );
