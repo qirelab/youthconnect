@@ -59,6 +59,7 @@ export default function HostPage() {
   const [answerCount, setAnswerCount] = useState(0);
   const [questions, setQuestions] = useState<GeneratedQuestion[]>([]);
   const [practiceQuestion, setPracticeQuestion] = useState<GeneratedQuestion | null>(null);
+  const [error, setError] = useState<string | null>(null);
 
   const playersRef = useRef<Map<string, string>>(new Map());
   const answersRef = useRef<Record<string, { answer: number; timeLeft: number }>>({});
@@ -154,74 +155,81 @@ export default function HostPage() {
     );
     setQuestions(qs);
     setPracticeQuestion(practice);
+    setError(qs.length === 0 ? "Нет вопросов для этого уровня сложности" : null);
     setPhase("lobby");
   }, [difficulty, questionsCount]);
 
   const start = useCallback(async () => {
     if (questions.length === 0 || players.length === 0) return;
+    setError(null);
     const myRun = ++runRef.current;
 
-    scoresRef.current = new Map();
-    for (const [id, name] of playersRef.current) {
-      scoresRef.current.set(id, { id, name, score: 0, correct: 0 });
-    }
-
-    await postHost(gameId, EVENTS.gameStarted, { total: questions.length });
-
-    const rounds = practiceQuestion ? [PRACTICE_INDEX] : [];
-    for (let i = 0; i < questions.length; i++) rounds.push(i);
-
-    for (const i of rounds) {
-      if (runRef.current !== myRun) return;
-      const practice = i === PRACTICE_INDEX;
-      const q = practice ? practiceQuestion! : questions[i];
-
-      currentIndexRef.current = i;
-      answersRef.current = {};
-      setAnswerCount(0);
-      const endsAt = Date.now() + QUESTION_DURATION * 1000;
-      setRevealCorrect(null);
-      setCurrent({ i, endsAt });
-      setPhase("question");
-
-      await postHost(gameId, EVENTS.question, {
-        index: i,
-        total: questions.length,
-        type: "selfie",
-        q: g("whoMadeSelfie"),
-        emoji: null,
-        image: q.image,
-        options: q.options,
-        endsAt,
-        duration: QUESTION_DURATION,
-        practice,
-      });
-
-      await sleep(QUESTION_DURATION * 1000);
-      if (runRef.current !== myRun) return;
-
-      const board = practice ? [] : computeStandings(i);
-      setStandings(board);
-      setRevealCorrect(q.correct);
-      setPhase("reveal");
-      await postHost(gameId, EVENTS.reveal, { index: i, correct: q.correct, standings: board, practice });
-
-      if (practice) {
-        await new Promise<void>((resolve) => {
-          nextRef.current = resolve;
-        });
-      } else {
-        const revealEndsAt = Date.now() + REVEAL_DURATION * 1000;
-        setCurrent({ i, endsAt: revealEndsAt });
-        await sleep(REVEAL_DURATION * 1000);
+    try {
+      scoresRef.current = new Map();
+      for (const [id, name] of playersRef.current) {
+        scoresRef.current.set(id, { id, name, score: 0, correct: 0 });
       }
-      if (runRef.current !== myRun) return;
-    }
 
-    const finalBoard = Array.from(scoresRef.current.values()).sort((a, b) => b.score - a.score);
-    setStandings(finalBoard);
-    setPhase("ended");
-    await postHost(gameId, EVENTS.ended, { standings: finalBoard });
+      await postHost(gameId, EVENTS.gameStarted, { total: questions.length });
+
+      const rounds = practiceQuestion ? [PRACTICE_INDEX] : [];
+      for (let i = 0; i < questions.length; i++) rounds.push(i);
+
+      for (const i of rounds) {
+        if (runRef.current !== myRun) return;
+        const practice = i === PRACTICE_INDEX;
+        const q = practice ? practiceQuestion! : questions[i];
+
+        currentIndexRef.current = i;
+        answersRef.current = {};
+        setAnswerCount(0);
+        const endsAt = Date.now() + QUESTION_DURATION * 1000;
+        setRevealCorrect(null);
+        setCurrent({ i, endsAt });
+        setPhase("question");
+
+        await postHost(gameId, EVENTS.question, {
+          index: i,
+          total: questions.length,
+          type: "selfie",
+          q: g("whoMadeSelfie"),
+          emoji: null,
+          image: q.image,
+          options: q.options,
+          endsAt,
+          duration: QUESTION_DURATION,
+          practice,
+        });
+
+        await sleep(QUESTION_DURATION * 1000);
+        if (runRef.current !== myRun) return;
+
+        const board = practice ? [] : computeStandings(i);
+        setStandings(board);
+        setRevealCorrect(q.correct);
+        setPhase("reveal");
+        await postHost(gameId, EVENTS.reveal, { index: i, correct: q.correct, standings: board, practice });
+
+        if (practice) {
+          await new Promise<void>((resolve) => {
+            nextRef.current = resolve;
+          });
+        } else {
+          const revealEndsAt = Date.now() + REVEAL_DURATION * 1000;
+          setCurrent({ i, endsAt: revealEndsAt });
+          await sleep(REVEAL_DURATION * 1000);
+        }
+        if (runRef.current !== myRun) return;
+      }
+
+      const finalBoard = Array.from(scoresRef.current.values()).sort((a, b) => b.score - a.score);
+      setStandings(finalBoard);
+      setPhase("ended");
+      await postHost(gameId, EVENTS.ended, { standings: finalBoard });
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Ошибка соединения");
+      setPhase("lobby");
+    }
   }, [questions, practiceQuestion, players.length, gameId, computeStandings, g]);
 
   const goNext = useCallback(() => {
@@ -241,6 +249,7 @@ export default function HostPage() {
     setCurrent(null);
     setQuestions([]);
     setPracticeQuestion(null);
+    setError(null);
     setGameId(genCode());
     setPhase("config");
   }, [goNext]);
@@ -342,8 +351,14 @@ export default function HostPage() {
             )}
           </div>
 
+          {error && (
+            <div className="error" style={{ marginTop: 16 }}>
+              ⚠ {error}
+            </div>
+          )}
+
           <div className="flex" style={{ marginTop: 28 }}>
-            <button className="btn" onClick={start} disabled={players.length === 0}>
+            <button className="btn" onClick={start} disabled={players.length === 0 || questions.length === 0}>
               ▶ {practiceQuestion ? t("startPractice") : t("startGame")} ({players.length})
             </button>
             <button

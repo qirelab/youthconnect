@@ -26,9 +26,14 @@ export async function postAnswer(payload: {
 }
 
 export async function postHost(gameId: string, event: string, data: unknown) {
-  return fetch("/api/host", {
+  const res = await fetch("/api/host", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ gameId, event, data }),
   });
+  if (!res.ok) {
+    const body = await res.json().catch(() => ({}));
+    throw new Error(body.error || `API error: ${res.status}`);
+  }
+  return res;
 }
