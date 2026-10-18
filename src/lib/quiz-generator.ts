@@ -5,6 +5,7 @@ import {
   CHARACTERS, 
   SIMILAR_CHARACTERS, 
   FEMALE_CHARACTERS,
+  generateSlug,
   type CharacterEntry,
   type DifficultyLevel 
 } from "@/data/characters";
@@ -68,6 +69,26 @@ const EXISTING_SELFIES: Record<string, string> = {
   "Timothy": "s50.webp",
 };
 
+// Build lookup maps for character resolution
+const CHARACTER_BY_EN = new Map<string, CharacterEntry>();
+const CHARACTER_BY_SLUG = new Map<string, CharacterEntry>();
+for (const c of CHARACTERS) {
+  if (c.kind === "unique") {
+    if (!CHARACTER_BY_EN.has(c.en)) {
+      CHARACTER_BY_EN.set(c.en, c);
+    }
+    const slug = generateSlug(c.en);
+    if (!CHARACTER_BY_SLUG.has(slug)) {
+      CHARACTER_BY_SLUG.set(slug, c);
+    }
+  }
+}
+
+// Resolve a name (English or slug) to a CharacterEntry
+function resolveCharacter(nameOrSlug: string): CharacterEntry | undefined {
+  return CHARACTER_BY_EN.get(nameOrSlug) || CHARACTER_BY_SLUG.get(nameOrSlug);
+}
+
 // Get characters that have existing images
 function getCharactersWithImages(level?: DifficultyLevel): CharacterEntry[] {
   const seen = new Set<string>();
@@ -90,62 +111,88 @@ function getCharactersWithImages(level?: DifficultyLevel): CharacterEntry[] {
   return chars;
 }
 
-// Generate slug from name
-function slug(name: string): string {
-  return name.toLowerCase()
-    .replace(/[^a-z0-9\s-]/g, "")
-    .replace(/\s+/g, "-");
-}
-
-// Get similar characters for distractors
-function getSimilarCharacters(char: CharacterEntry): string[] {
-  const charSlug = slug(char.en);
-  const similar = SIMILAR_CHARACTERS[charSlug];
-  
-  if (similar && similar.length > 0) {
-    return similar;
+// Get available question count for a difficulty (exported for UI)
+export function getAvailableQuestionCount(difficulty?: DifficultyLevel | "mixed"): number {
+  if (!difficulty || difficulty === "mixed") {
+    return Object.keys(EXISTING_SELFIES).length;
   }
-  
-  // Fallback: find characters of same gender and testament
-  const isFemale = FEMALE_CHARACTERS.has(slug(char.en));
-  const sameCriteria = CHARACTERS.filter(c => {
-    if (c.en === char.en) return false;
-    const cIsFemale = FEMALE_CHARACTERS.has(slug(c.en));
-    return cIsFemale === isFemale && c.testament === char.testament;
-  });
-  
-  return sameCriteria.slice(0, 3).map(c => c.en);
+  return getCharactersWithImages(difficulty).length;
 }
 
-// Generate distractor options (wrong answers)
-function generateDistractors(char: CharacterEntry, exclude: Set<string>): string[] {
-  const similar = getSimilarCharacters(char);
-  const distractors: string[] = [];
+// Get counts per difficulty level (exported for UI)
+export function getQuestionCountsByDifficulty(): Record<DifficultyLevel | "mixed", number> {
+  return {
+    easy: getCharactersWithImages("easy").length,
+    medium: getCharactersWithImages("medium").length,
+    hard: getCharactersWithImages("hard").length,
+    mixed: Object.keys(EXISTING_SELFIES).length,
+  };
+}
+
+// Get similar characters for distractors (returns CharacterEntry objects, not names)
+function getSimilarCharacters(char: CharacterEntry): CharacterEntry[] {
+  const charSlug = generateSlug(char.en);
+  const similarSlugs = SIMILAR_CHARACTERS[charSlug];
+  const result: CharacterEntry[] = [];
   
-  // Add similar characters first
-  for (const name of similar) {
-    if (!exclude.has(name) && distractors.length < 3) {
-      distractors.push(name);
-      exclude.add(name);
+  if (similarSlugs && similarSlugs.length > 0) {
+    for (const slug of similarSlugs) {
+      const resolved = resolveCharacter(slug);
+      if (resolved && resolved.en !== char.en) {
+        result.push(resolved);
+      }
     }
   }
   
-  // Fill remaining with characters of same gender
+  return result;
+}
+
+// Generate distractor options (wrong answers) - returns CharacterEntry objects
+function generateDistractors(char: CharacterEntry, excludeEn: Set<string>): CharacterEntry[] {
+  const distractors: CharacterEntry[] = [];
+  const usedEn = new Set<string>(excludeEn);
+  usedEn.add(char.en);
+  
+  // First try similar characters
+  const similar = getSimilarCharacters(char);
+  for (const c of similar) {
+    if (!usedEn.has(c.en) && distractors.length < 3) {
+      distractors.push(c);
+      usedEn.add(c.en);
+    }
+  }
+  
+  // Fill remaining with characters of same gender and testament
   if (distractors.length < 3) {
-    const isFemale = FEMALE_CHARACTERS.has(slug(char.en));
+    const isFemale = char.gender === "female";
     const pool = CHARACTERS.filter(c => {
-      if (c.en === char.en) return false;
-      if (exclude.has(c.en)) return false;
-      const cIsFemale = FEMALE_CHARACTERS.has(slug(c.en));
-      return cIsFemale === isFemale;
+      if (c.kind !== "unique") return false;
+      if (usedEn.has(c.en)) return false;
+      return c.gender === (isFemale ? "female" : "male") && c.testament === char.testament;
     });
     
-    // Shuffle and take what we need
     const shuffled = pool.sort(() => Math.random() - 0.5);
     for (const c of shuffled) {
       if (distractors.length >= 3) break;
-      distractors.push(c.en);
-      exclude.add(c.en);
+      distractors.push(c);
+      usedEn.add(c.en);
+    }
+  }
+  
+  // Last resort: any character of same gender
+  if (distractors.length < 3) {
+    const isFemale = char.gender === "female";
+    const pool = CHARACTERS.filter(c => {
+      if (c.kind !== "unique") return false;
+      if (usedEn.has(c.en)) return false;
+      return c.gender === (isFemale ? "female" : "male");
+    });
+    
+    const shuffled = pool.sort(() => Math.random() - 0.5);
+    for (const c of shuffled) {
+      if (distractors.length >= 3) break;
+      distractors.push(c);
+      usedEn.add(c.en);
     }
   }
   
@@ -171,85 +218,99 @@ function shuffle<T>(array: T[]): T[] {
   return result;
 }
 
+// Helper to create a question from a character
+function createQuestion(
+  char: CharacterEntry, 
+  usedNames: Set<string>
+): GeneratedQuestion {
+  const distractorChars = generateDistractors(char, usedNames);
+  const correctPosition = Math.floor(Math.random() * 4);
+  
+  // Build options array with Russian names
+  const options: string[] = distractorChars.map(c => c.ru);
+  options.splice(correctPosition, 0, char.ru);
+  
+  return {
+    character: char.en,
+    characterRu: char.ru,
+    options,
+    correct: correctPosition,
+    image: `/images/selfie/${EXISTING_SELFIES[char.en]}`,
+    visualCue: char.visualCue,
+  };
+}
+
 // Generate a random quiz with specified difficulty and count
 export function generateRandomQuiz(
   difficulty?: DifficultyLevel,
   questionCount: number = 10
 ): { questions: GeneratedQuestion[]; practice: GeneratedQuestion | null } {
-  let availableChars = getCharactersWithImages(difficulty);
+  const allWithImages = CHARACTERS.filter(
+    c => c.kind === "unique" && EXISTING_SELFIES[c.en] !== undefined
+  );
   
-  // If mixed difficulty, get proportional distribution
+  let selectedChars: CharacterEntry[] = [];
+  
   if (!difficulty) {
-    const easy = getCharactersWithImages("easy");
-    const medium = getCharactersWithImages("medium");
-    const hard = getCharactersWithImages("hard");
+    // Mixed: ~40% easy, ~40% medium, ~20% hard, with backfill
+    const easy = shuffle(allWithImages.filter(c => c.level === "easy"));
+    const medium = shuffle(allWithImages.filter(c => c.level === "medium"));
+    const hard = shuffle(allWithImages.filter(c => c.level === "hard"));
     
-    // Mix: ~40% easy, ~40% medium, ~20% hard
-    const easyCount = Math.ceil(questionCount * 0.4);
-    const mediumCount = Math.ceil(questionCount * 0.4);
-    const hardCount = questionCount - easyCount - mediumCount;
+    const targetEasy = Math.ceil(questionCount * 0.4);
+    const targetMedium = Math.ceil(questionCount * 0.4);
+    const targetHard = questionCount - targetEasy - targetMedium;
     
-    availableChars = [
-      ...shuffle(easy).slice(0, easyCount),
-      ...shuffle(medium).slice(0, mediumCount),
-      ...shuffle(hard).slice(0, hardCount),
-    ];
+    // Take what we can from each level
+    const fromEasy = easy.slice(0, targetEasy);
+    const fromMedium = medium.slice(0, targetMedium);
+    const fromHard = hard.slice(0, targetHard);
+    
+    selectedChars = [...fromEasy, ...fromMedium, ...fromHard];
+    
+    // Backfill if we don't have enough
+    if (selectedChars.length < questionCount) {
+      const used = new Set(selectedChars.map(c => c.en));
+      const remaining = shuffle(allWithImages.filter(c => !used.has(c.en)));
+      const needed = questionCount - selectedChars.length;
+      selectedChars.push(...remaining.slice(0, needed));
+    }
+  } else {
+    // Single difficulty with backfill from other levels
+    const primary = shuffle(allWithImages.filter(c => c.level === difficulty));
+    selectedChars = primary.slice(0, questionCount);
+    
+    // Backfill from other levels if needed
+    if (selectedChars.length < questionCount) {
+      const used = new Set(selectedChars.map(c => c.en));
+      const others = shuffle(allWithImages.filter(c => c.level !== difficulty && !used.has(c.en)));
+      const needed = questionCount - selectedChars.length;
+      selectedChars.push(...others.slice(0, needed));
+    }
   }
   
-  // Shuffle and limit to question count
-  const selectedChars = shuffle(availableChars).slice(0, questionCount);
+  // Final shuffle and cap
+  selectedChars = shuffle(selectedChars).slice(0, questionCount);
   const usedNames = new Set<string>(selectedChars.map(c => c.en));
   
-  const questions: GeneratedQuestion[] = selectedChars.map(char => {
-    const distractors = generateDistractors(char, new Set(usedNames));
-    const correctPosition = Math.floor(Math.random() * 4);
-    
-    const options = [...distractors];
-    options.splice(correctPosition, 0, char.ru);
-    
-    // Convert distractors to Russian names
-    const finalOptions = options.map((opt, i) => {
-      if (i === correctPosition) return char.ru;
-      const found = CHARACTERS.find(c => c.en === opt);
-      return found?.ru || opt;
-    });
-    
-    return {
-      character: char.en,
-      characterRu: char.ru,
-      options: finalOptions,
-      correct: correctPosition,
-      image: `/images/selfie/${EXISTING_SELFIES[char.en]}`,
-      visualCue: char.visualCue,
-    };
-  });
+  const questions: GeneratedQuestion[] = selectedChars.map(char => 
+    createQuestion(char, usedNames)
+  );
   
-  // Generate practice question from a different character
-  const practiceChars = getCharactersWithImages("easy").filter(c => !usedNames.has(c.en));
+  // Generate practice question from an easy character not in the quiz
+  const practicePool = allWithImages.filter(c => c.level === "easy" && !usedNames.has(c.en));
   let practice: GeneratedQuestion | null = null;
   
-  if (practiceChars.length > 0) {
-    const practiceChar = practiceChars[Math.floor(Math.random() * practiceChars.length)];
-    const distractors = generateDistractors(practiceChar, new Set(usedNames));
-    const correctPosition = Math.floor(Math.random() * 4);
-    
-    const options = [...distractors];
-    options.splice(correctPosition, 0, practiceChar.ru);
-    
-    const finalOptions = options.map((opt, i) => {
-      if (i === correctPosition) return practiceChar.ru;
-      const found = CHARACTERS.find(c => c.en === opt);
-      return found?.ru || opt;
-    });
-    
-    practice = {
-      character: practiceChar.en,
-      characterRu: practiceChar.ru,
-      options: finalOptions,
-      correct: correctPosition,
-      image: `/images/selfie/${EXISTING_SELFIES[practiceChar.en]}`,
-      visualCue: practiceChar.visualCue,
-    };
+  if (practicePool.length > 0) {
+    const practiceChar = practicePool[Math.floor(Math.random() * practicePool.length)];
+    practice = createQuestion(practiceChar, usedNames);
+  } else if (allWithImages.length > 0) {
+    // Fallback: use any character not in quiz
+    const fallbackPool = allWithImages.filter(c => !usedNames.has(c.en));
+    if (fallbackPool.length > 0) {
+      const practiceChar = fallbackPool[Math.floor(Math.random() * fallbackPool.length)];
+      practice = createQuestion(practiceChar, usedNames);
+    }
   }
   
   return { questions, practice };

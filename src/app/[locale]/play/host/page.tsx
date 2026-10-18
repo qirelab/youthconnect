@@ -5,7 +5,13 @@ import { useTranslations } from "next-intl";
 import QRCode from "react-qr-code";
 import { getPusherClient, isPusherConfigured } from "@/lib/pusher-client";
 import { postHost } from "@/lib/api";
-import { generateRandomQuiz, QUESTION_DURATION, REVEAL_DURATION, PRACTICE_INDEX } from "@/lib/quiz-generator";
+import { 
+  generateRandomQuiz, 
+  getAvailableQuestionCount,
+  QUESTION_DURATION, 
+  REVEAL_DURATION, 
+  PRACTICE_INDEX 
+} from "@/lib/quiz-generator";
 import {
   CHANNEL,
   EVENTS,
@@ -49,8 +55,21 @@ export default function HostPage() {
   const [gameId, setGameId] = useState("");
   const [origin, setOrigin] = useState("");
   const [phase, setPhase] = useState<Phase>("config");
-  const [difficulty, setDifficulty] = useState<DifficultyLevel | "mixed">("easy");
+  const [difficulty, setDifficulty] = useState<DifficultyLevel | "mixed">("mixed");
   const [questionsCount, setQuestionsCount] = useState(10);
+  
+  // Max questions available for current difficulty
+  const maxQuestions = useMemo(() => {
+    const available = getAvailableQuestionCount(difficulty === "mixed" ? undefined : difficulty);
+    return Math.min(available, 50); // Cap at 50 for UI
+  }, [difficulty]);
+  
+  // Adjust questionsCount when difficulty changes if it exceeds max
+  useEffect(() => {
+    if (questionsCount > maxQuestions) {
+      setQuestionsCount(Math.min(10, maxQuestions));
+    }
+  }, [maxQuestions, questionsCount]);
   const [players, setPlayers] = useState<{ id: string; name: string }[]>([]);
   const [current, setCurrent] = useState<{ i: number; endsAt: number } | null>(null);
   const [remaining, setRemaining] = useState(0);
@@ -311,14 +330,14 @@ export default function HostPage() {
           </div>
           <div style={{ marginTop: 24 }}>
             <label style={{ display: "block", marginBottom: 8 }}>
-              Вопросов: {questionsCount}
+              Вопросов: {questionsCount} (макс. {maxQuestions})
             </label>
             <input
               type="range"
               min={5}
-              max={20}
+              max={maxQuestions}
               step={5}
-              value={questionsCount}
+              value={Math.min(questionsCount, maxQuestions)}
               onChange={(e) => setQuestionsCount(Number(e.target.value))}
               style={{ width: "100%", maxWidth: 300 }}
             />
