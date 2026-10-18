@@ -70,19 +70,22 @@ const EXISTING_SELFIES: Record<string, string> = {
 
 // Get characters that have existing images
 function getCharactersWithImages(level?: DifficultyLevel): CharacterEntry[] {
-  const chars = CHARACTERS.filter(c => {
+  const seen = new Set<string>();
+  const chars: CharacterEntry[] = [];
+  
+  for (const c of CHARACTERS) {
     // Check if we have an image for this character
-    const hasImage = EXISTING_SELFIES[c.en] !== undefined;
-    if (!hasImage) return false;
+    if (!EXISTING_SELFIES[c.en]) continue;
     
     // Filter by level if specified
-    if (level && c.level !== level) return false;
+    if (level && c.level !== level) continue;
     
-    // Only include unique characters (not variants) for now
-    if (c.kind !== "unique") return false;
+    // De-duplicate by name (variants have same name with different scenes)
+    if (seen.has(c.en)) continue;
+    seen.add(c.en);
     
-    return true;
-  });
+    chars.push(c);
+  }
   
   return chars;
 }
