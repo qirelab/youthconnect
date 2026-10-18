@@ -245,6 +245,7 @@ export default function HostPage() {
     setPhase("config");
   }, [goNext]);
 
+  const pusherOk = isPusherConfigured();
   const isPractice = current?.i === PRACTICE_INDEX;
   const curQuestion = current
     ? isPractice
@@ -255,7 +256,7 @@ export default function HostPage() {
 
   return (
     <div className="wrap">
-      {!isPusherConfigured() && (
+      {!pusherOk && (
         <div className="error" style={{ marginBottom: 16 }}>
           ⚠ {t("noPusher")}
         </div>
@@ -315,7 +316,7 @@ export default function HostPage() {
             />
           </div>
           <div className="flex" style={{ marginTop: 24 }}>
-            <button className="btn" onClick={openLobby}>
+            <button className="btn" onClick={openLobby} disabled={!pusherOk}>
               {t("openLobby")} →
             </button>
           </div>
@@ -343,7 +344,7 @@ export default function HostPage() {
           </div>
 
           <div className="flex" style={{ marginTop: 28 }}>
-            <button className="btn" onClick={start} disabled={players.length === 0}>
+            <button className="btn" onClick={start} disabled={!pusherOk || players.length === 0}>
               ▶ {practiceQuestion ? t("startPractice") : t("startGame")} ({players.length})
             </button>
             <button
