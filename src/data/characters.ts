@@ -91,7 +91,72 @@ export const FEMALE_CHARACTERS = new Set([
 // Characters data parsed from CSV
 // Format: [ru_name, en_name, level, visual_cue, kind, testament, era]
 export const CHARACTERS: CharacterEntry[] = [
-  // EASY level characters (61 characters)
+  // ============================================================
+  // SELFIE CHARACTERS (these 50 have images in /public/images/selfie/)
+  // Distributed across difficulty levels for balanced gameplay
+  // ============================================================
+  
+  // --- EASY selfie characters (20) ---
+  { ru: "Адам", en: "Adam", level: "easy", visualCue: "первый человек, Эдемский сад", kind: "unique", gender: "male", testament: "OT", era: 1 },
+  { ru: "Ева", en: "Eve", level: "easy", visualCue: "запретный плод, змей", kind: "unique", gender: "female", testament: "OT", era: 1 },
+  { ru: "Ной", en: "Noah", level: "easy", visualCue: "ковчег, потоп, животные", kind: "unique", gender: "male", testament: "OT", era: 3 },
+  { ru: "Авраам", en: "Abraham", level: "easy", visualCue: "звёзды, обетование, шатёр", kind: "unique", gender: "male", testament: "OT", era: 4 },
+  { ru: "Иосиф", en: "Joseph", level: "easy", visualCue: "разноцветная одежда, сны", kind: "unique", gender: "male", testament: "OT", era: 8 },
+  { ru: "Моисей", en: "Moses", level: "easy", visualCue: "горящий куст, скрижали", kind: "unique", gender: "male", testament: "OT", era: 11 },
+  { ru: "Гедеон", en: "Gideon", level: "easy", visualCue: "руно с росой, факелы", kind: "unique", gender: "male", testament: "OT", era: 17 },
+  { ru: "Самсон", en: "Samson", level: "easy", visualCue: "длинные волосы, лев", kind: "unique", gender: "male", testament: "OT", era: 18 },
+  { ru: "Руфь", en: "Ruth", level: "easy", visualCue: "колосья, поле Вооза", kind: "unique", gender: "female", testament: "OT", era: 20 },
+  { ru: "Давид", en: "David", level: "easy", visualCue: "праща, арфа, Голиаф", kind: "unique", gender: "male", testament: "OT", era: 25 },
+  { ru: "Соломон", en: "Solomon", level: "easy", visualCue: "храм, мудрость, корона", kind: "unique", gender: "male", testament: "OT", era: 30 },
+  { ru: "Илия", en: "Elijah", level: "easy", visualCue: "огненная колесница, вороны", kind: "unique", gender: "male", testament: "OT", era: 35 },
+  { ru: "Иона", en: "Jonah", level: "easy", visualCue: "внутри рыбы, Ниневия", kind: "unique", gender: "male", testament: "OT", era: 38 },
+  { ru: "Даниил", en: "Daniel", level: "easy", visualCue: "львиный ров, видения", kind: "unique", gender: "male", testament: "OT", era: 47 },
+  { ru: "Есфирь", en: "Esther", level: "easy", visualCue: "царица, скипетр, пир", kind: "unique", gender: "female", testament: "OT", era: 50 },
+  { ru: "Мария", en: "Mary", level: "easy", visualCue: "Благовещение, ясли", kind: "unique", gender: "female", testament: "NT", era: 70 },
+  { ru: "Иоанн Креститель", en: "John the Baptist", level: "easy", visualCue: "река Иордан, крещение", kind: "unique", gender: "male", testament: "NT", era: 72 },
+  { ru: "Иисус Христос", en: "Jesus Christ", level: "easy", visualCue: "крест, воскресение", kind: "unique", gender: "male", testament: "NT", era: 75 },
+  { ru: "Пётр", en: "Peter", level: "easy", visualCue: "ключи, рыбак, отречение", kind: "unique", gender: "male", testament: "NT", era: 73 },
+  { ru: "Павел", en: "Paul", level: "easy", visualCue: "дорога в Дамаск, послания", kind: "unique", gender: "male", testament: "NT", era: 81 },
+
+  // --- MEDIUM selfie characters (20) ---
+  { ru: "Сарра", en: "Sarah", level: "medium", visualCue: "шатёр, смех, сын в старости", kind: "unique", gender: "female", testament: "OT", era: 5 },
+  { ru: "Исаак", en: "Isaac", level: "medium", visualCue: "жертвенник, благословение", kind: "unique", gender: "male", testament: "OT", era: 5 },
+  { ru: "Иаков", en: "Jacob", level: "medium", visualCue: "лестница, борьба с ангелом", kind: "unique", gender: "male", testament: "OT", era: 6 },
+  { ru: "Аарон", en: "Aaron", level: "medium", visualCue: "первосвященник, жезл расцвёл", kind: "unique", gender: "male", testament: "OT", era: 11 },
+  { ru: "Мариам", en: "Miriam", level: "medium", visualCue: "тимпан, песнь у моря", kind: "unique", gender: "female", testament: "OT", era: 12 },
+  { ru: "Иисус Навин", en: "Joshua", level: "medium", visualCue: "Иерихон, солнце остановилось", kind: "unique", gender: "male", testament: "OT", era: 15 },
+  { ru: "Раав", en: "Rahab", level: "medium", visualCue: "красная верёвка, соглядатаи", kind: "unique", gender: "female", testament: "OT", era: 16 },
+  { ru: "Далида", en: "Delilah", level: "medium", visualCue: "ножницы, секрет силы", kind: "unique", gender: "female", testament: "OT", era: 19 },
+  { ru: "Вооз", en: "Boaz", level: "medium", visualCue: "жнецы, гумно, выкупитель", kind: "unique", gender: "male", testament: "OT", era: 20 },
+  { ru: "Анна", en: "Hannah", level: "medium", visualCue: "молитва в храме, обет", kind: "unique", gender: "female", testament: "OT", era: 22 },
+  { ru: "Самуил", en: "Samuel", level: "medium", visualCue: "голос Божий ночью, помазание", kind: "unique", gender: "male", testament: "OT", era: 23 },
+  { ru: "Саул", en: "Saul", level: "medium", visualCue: "первый царь, высокий", kind: "unique", gender: "male", testament: "OT", era: 24 },
+  { ru: "Ионафан", en: "Jonathan", level: "medium", visualCue: "дружба с Давидом, лук", kind: "unique", gender: "male", testament: "OT", era: 25 },
+  { ru: "Елисей", en: "Elisha", level: "medium", visualCue: "плащ Илии, медведи", kind: "unique", gender: "male", testament: "OT", era: 37 },
+  { ru: "Иов", en: "Job", level: "medium", visualCue: "страдания, пепел, друзья", kind: "unique", gender: "male", testament: "OT", era: 5 },
+  { ru: "Исаия", en: "Isaiah", level: "medium", visualCue: "пророк, угли, Мессия", kind: "unique", gender: "male", testament: "OT", era: 40 },
+  { ru: "Елисавета", en: "Elizabeth", level: "medium", visualCue: "мать Иоанна Крестителя", kind: "unique", gender: "female", testament: "NT", era: 70 },
+  { ru: "Андрей", en: "Andrew", level: "medium", visualCue: "брат Петра, рыбак", kind: "unique", gender: "male", testament: "NT", era: 73 },
+  { ru: "Матфей", en: "Matthew", level: "medium", visualCue: "мытарь, Евангелие", kind: "unique", gender: "male", testament: "NT", era: 73 },
+  { ru: "Мария Магдалина", en: "Mary Magdalene", level: "medium", visualCue: "первая у гроба, миро", kind: "unique", gender: "female", testament: "NT", era: 79 },
+
+  // --- HARD selfie characters (10) ---
+  { ru: "Иеремия", en: "Jeremiah", level: "hard", visualCue: "плачущий пророк, яма", kind: "unique", gender: "male", testament: "OT", era: 44 },
+  { ru: "Иезекииль", en: "Ezekiel", level: "hard", visualCue: "видение колёс, сухие кости", kind: "unique", gender: "male", testament: "OT", era: 46 },
+  { ru: "Седрах", en: "Shadrach", level: "hard", visualCue: "печь огненная, трое юношей", kind: "unique", gender: "male", testament: "OT", era: 46 },
+  { ru: "Неемия", en: "Nehemiah", level: "hard", visualCue: "стены Иерусалима, виночерпий", kind: "unique", gender: "male", testament: "OT", era: 51 },
+  { ru: "Захария", en: "Zechariah", level: "hard", visualCue: "отец Иоанна, немота", kind: "unique", gender: "male", testament: "NT", era: 70 },
+  { ru: "Иосиф Обручник", en: "Joseph, husband of Mary", level: "hard", visualCue: "плотник, сны, бегство в Египет", kind: "unique", gender: "male", testament: "NT", era: 70 },
+  { ru: "Иоанн Богослов", en: "John apostle", level: "hard", visualCue: "возлюбленный ученик, Откровение", kind: "unique", gender: "male", testament: "NT", era: 73 },
+  { ru: "Фома", en: "Thomas", level: "hard", visualCue: "неверие, раны Христа", kind: "unique", gender: "male", testament: "NT", era: 73 },
+  { ru: "Сила", en: "Silas", level: "hard", visualCue: "темница в Филиппах, пение", kind: "unique", gender: "male", testament: "NT", era: 84 },
+  { ru: "Тимофей", en: "Timothy", level: "hard", visualCue: "ученик Павла, юность", kind: "unique", gender: "male", testament: "NT", era: 84 },
+
+  // ============================================================
+  // OTHER CHARACTERS (no selfie images, used for distractors)
+  // ============================================================
+  
+  // EASY level characters
   { ru: "Каин", en: "Cain", level: "easy", visualCue: "убитый брат, поле, жертвенник с плодами", kind: "unique", gender: "male", testament: "OT", era: 2 },
   { ru: "Авель", en: "Abel", level: "easy", visualCue: "ягнёнок на руках, жертвенник с дымом", kind: "unique", gender: "male", testament: "OT", era: 2 },
   { ru: "Ревекка", en: "Rebekah", level: "easy", visualCue: "кувшин у колодца, верблюды", kind: "unique", gender: "female", testament: "OT", era: 5 },
