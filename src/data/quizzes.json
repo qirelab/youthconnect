@@ -101,18 +101,18 @@
       "title": "Селфи героев — часть 1",
       "description": "Угадай библейского героя по селфи — Ветхий и Новый Завет вперемешку",
       "type": "selfie",
-      "practice": { "character": "Мария", "options": ["Мария", "Елисавета", "Марфа", "Ева"], "correct": 0, "image": "/images/selfie/s38.webp" },
+      "practice": { "character": "Мария", "options": ["Мария Магдалина", "Марфа", "Мария", "Руфь"], "correct": 2, "image": "/images/selfie/s38.webp" },
       "questions": [
-        { "character": "Елисавета", "options": ["Сарра", "Елисавета", "Мария", "Мариам"], "correct": 1, "image": "/images/selfie/s37.webp" },
-        { "character": "Иаков", "options": ["Исаак", "Иаков", "Исав", "Иосиф"], "correct": 1, "image": "/images/selfie/s07.webp" },
-        { "character": "Сарра", "options": ["Ревекка", "Елисавета", "Сарра", "Далида"], "correct": 2, "image": "/images/selfie/s05.webp" },
-        { "character": "Мария Магдалина", "options": ["Мария Магдалина", "Мария", "Марфа", "Далида"], "correct": 0, "image": "/images/selfie/s47.webp" },
-        { "character": "Исайя", "options": ["Иеремия", "Иезекииль", "Иов", "Исайя"], "correct": 3, "image": "/images/selfie/s29.webp" },
-        { "character": "Иеремия", "options": ["Варух", "Исайя", "Иеремия", "Седрах"], "correct": 2, "image": "/images/selfie/s30.webp" },
-        { "character": "Иисус Навин", "options": ["Иисус Навин", "Гедеон", "Моисей", "Самуил"], "correct": 0, "image": "/images/selfie/s12.webp" },
-        { "character": "Ной", "options": ["Иона", "Мафусаил", "Иисус Навин", "Ной"], "correct": 3, "image": "/images/selfie/s03.webp" },
-        { "character": "Адам", "options": ["Адам", "Каин", "Авель", "Иаков"], "correct": 0, "image": "/images/selfie/s01.webp" },
-        { "character": "Ева", "options": ["Ревекка", "Ева", "Рахиль", "Руфь"], "correct": 1, "image": "/images/selfie/s02.webp" }
+        { "character": "Мариам", "options": ["Мариам", "Анна", "Иохаведа", "Мария"], "correct": 0, "image": "/images/selfie/s11.webp" },
+        { "character": "Иоанн Креститель", "options": ["Илия", "Иоанн Креститель", "Андрей", "Фома"], "correct": 1, "image": "/images/selfie/s40.webp" },
+        { "character": "Иисус Навин", "options": ["Халев", "Гедеон", "Иисус Навин", "Авраам"], "correct": 2, "image": "/images/selfie/s12.webp" },
+        { "character": "Ева", "options": ["Рахиль", "Ревекка", "Ева", "Руфь"], "correct": 2, "image": "/images/selfie/s02.webp" },
+        { "character": "Иов", "options": ["Елиуй", "Иов", "Иеремия", "Ионафан"], "correct": 1, "image": "/images/selfie/s28.webp" },
+        { "character": "Иаков", "options": ["Иаков", "Исав", "Исаак", "Гедеон"], "correct": 0, "image": "/images/selfie/s07.webp" },
+        { "character": "Саул", "options": ["Ионафан", "Авессалом", "Саул", "Самсон"], "correct": 2, "image": "/images/selfie/s21.webp" },
+        { "character": "Анна", "options": ["Сарра", "Феннана", "Далида", "Анна"], "correct": 3, "image": "/images/selfie/s19.webp" },
+        { "character": "Адам", "options": ["Авель", "Ной", "Иаков", "Адам"], "correct": 3, "image": "/images/selfie/s01.webp" },
+        { "character": "Есфирь", "options": ["Руфь", "Астинь", "Мария", "Есфирь"], "correct": 3, "image": "/images/selfie/s34.webp" }
       ]
     },
     {
@@ -120,18 +120,18 @@
       "title": "Селфи героев — часть 2",
       "description": "Угадай библейского героя по селфи — Ветхий и Новый Завет вперемешку",
       "type": "selfie",
-      "practice": { "character": "Ной", "options": ["Мафусаил", "Ной", "Моисей", "Авраам"], "correct": 1, "image": "/images/selfie/s03.webp" },
+      "practice": { "character": "Иоанн Креститель", "options": ["Андрей", "Илия", "Иоанн Креститель", "Иосиф, муж Марии"], "correct": 2, "image": "/images/selfie/s40.webp" },
       "questions": [
-        { "character": "Есфирь", "options": ["Далида", "Руфь", "Есфирь", "Раав"], "correct": 2, "image": "/images/selfie/s34.webp" },
-        { "character": "Иона", "options": ["Наум", "Ной", "Ионафан", "Иона"], "correct": 3, "image": "/images/selfie/s27.webp" },
-        { "character": "Мариам", "options": ["Иохаведа", "Мариам", "Девора", "Руфь"], "correct": 1, "image": "/images/selfie/s11.webp" },
-        { "character": "Пётр", "options": ["Апостол Иоанн", "Пётр", "Иаков Зеведеев", "Андрей"], "correct": 1, "image": "/images/selfie/s42.webp" },
-        { "character": "Авраам", "options": ["Мелхиседек", "Лот", "Исаак", "Авраам"], "correct": 3, "image": "/images/selfie/s04.webp" },
-        { "character": "Саул", "options": ["Давид", "Авессалом", "Саул", "Ионафан"], "correct": 2, "image": "/images/selfie/s21.webp" },
-        { "character": "Иов", "options": ["Иов", "Елиуй", "Авраам", "Иона"], "correct": 0, "image": "/images/selfie/s28.webp" },
-        { "character": "Анна", "options": ["Феннана", "Анна", "Сарра", "Мария"], "correct": 1, "image": "/images/selfie/s19.webp" },
-        { "character": "Руфь", "options": ["Руфь", "Есфирь", "Орфа", "Анна"], "correct": 0, "image": "/images/selfie/s17.webp" },
-        { "character": "Давид", "options": ["Соломон", "Самсон", "Саул", "Давид"], "correct": 3, "image": "/images/selfie/s22.webp" }
+        { "character": "Авраам", "options": ["Мелхиседек", "Исаак", "Авраам", "Иаков"], "correct": 2, "image": "/images/selfie/s04.webp" },
+        { "character": "Иона", "options": ["Ной", "Наум", "Иов", "Иона"], "correct": 3, "image": "/images/selfie/s27.webp" },
+        { "character": "Самсон", "options": ["Самсон", "Давид", "Голиаф", "Иосиф"], "correct": 0, "image": "/images/selfie/s15.webp" },
+        { "character": "Ной", "options": ["Мафусаил", "Иона", "Ной", "Авраам"], "correct": 2, "image": "/images/selfie/s03.webp" },
+        { "character": "Руфь", "options": ["Орфа", "Руфь", "Ноеминь", "Есфирь"], "correct": 1, "image": "/images/selfie/s17.webp" },
+        { "character": "Моисей", "options": ["Иисус Навин", "Илия", "Иаков", "Моисей"], "correct": 3, "image": "/images/selfie/s09.webp" },
+        { "character": "Пётр", "options": ["Иаков Зеведеев", "Пётр", "Апостол Иоанн", "Иосиф, муж Марии"], "correct": 1, "image": "/images/selfie/s42.webp" },
+        { "character": "Исайя", "options": ["Исайя", "Иезекииль", "Иеремия", "Илия"], "correct": 0, "image": "/images/selfie/s29.webp" },
+        { "character": "Мария Магдалина", "options": ["Саломия", "Марфа", "Мария Магдалина", "Мариам"], "correct": 2, "image": "/images/selfie/s47.webp" },
+        { "character": "Елисавета", "options": ["Сарра", "Елисавета", "Анна", "Ева"], "correct": 1, "image": "/images/selfie/s37.webp" }
       ]
     },
     {
@@ -139,18 +139,18 @@
       "title": "Селфи героев — часть 3",
       "description": "Угадай библейского героя по селфи — Ветхий и Новый Завет вперемешку",
       "type": "selfie",
-      "practice": { "character": "Есфирь", "options": ["Далида", "Есфирь", "Руфь", "Анна"], "correct": 1, "image": "/images/selfie/s34.webp" },
+      "practice": { "character": "Авраам", "options": ["Лот", "Авраам", "Мелхиседек", "Иаков"], "correct": 1, "image": "/images/selfie/s04.webp" },
       "questions": [
-        { "character": "Моисей", "options": ["Аарон", "Илия", "Авраам", "Моисей"], "correct": 3, "image": "/images/selfie/s09.webp" },
-        { "character": "Илия", "options": ["Енох", "Елисей", "Иона", "Илия"], "correct": 3, "image": "/images/selfie/s25.webp" },
-        { "character": "Иоанн Креститель", "options": ["Апостол Иоанн", "Иоанн Креститель", "Андрей", "Фома"], "correct": 1, "image": "/images/selfie/s40.webp" },
-        { "character": "Самуил", "options": ["Самуил", "Нафан", "Илий", "Ионафан"], "correct": 0, "image": "/images/selfie/s20.webp" },
-        { "character": "Иосиф, муж Марии", "options": ["Захария", "Иосиф, муж Марии", "Симеон", "Даниил"], "correct": 1, "image": "/images/selfie/s39.webp" },
-        { "character": "Захария", "options": ["Илий", "Аарон", "Захария", "Иезекииль"], "correct": 2, "image": "/images/selfie/s36.webp" },
-        { "character": "Самсон", "options": ["Давид", "Голиаф", "Самсон", "Вооз"], "correct": 2, "image": "/images/selfie/s15.webp" },
-        { "character": "Аарон", "options": ["Аарон", "Елеазар", "Моисей", "Исаак"], "correct": 0, "image": "/images/selfie/s10.webp" },
-        { "character": "Соломон", "options": ["Давид", "Соломон", "Ровоам", "Илия"], "correct": 1, "image": "/images/selfie/s24.webp" },
-        { "character": "Далида", "options": ["Далида", "Иезавель", "Раав", "Есфирь"], "correct": 0, "image": "/images/selfie/s16.webp" }
+        { "character": "Соломон", "options": ["Соломон", "Давид", "Ровоам", "Саул"], "correct": 0, "image": "/images/selfie/s24.webp" },
+        { "character": "Сарра", "options": ["Анна", "Сарра", "Елисавета", "Мария"], "correct": 1, "image": "/images/selfie/s05.webp" },
+        { "character": "Самуил", "options": ["Елисей", "Илий", "Самуил", "Илия"], "correct": 2, "image": "/images/selfie/s20.webp" },
+        { "character": "Иосиф, муж Марии", "options": ["Захария", "Иосиф, муж Марии", "Иосиф Аримафейский", "Матфей"], "correct": 1, "image": "/images/selfie/s39.webp" },
+        { "character": "Фома", "options": ["Филипп", "Фаддей", "Фома", "Тимофей"], "correct": 2, "image": "/images/selfie/s46.webp" },
+        { "character": "Гедеон", "options": ["Иеффай", "Гедеон", "Самсон", "Вооз"], "correct": 1, "image": "/images/selfie/s14.webp" },
+        { "character": "Аарон", "options": ["Аарон", "Елеазар", "Мелхиседек", "Исаак"], "correct": 0, "image": "/images/selfie/s10.webp" },
+        { "character": "Ионафан", "options": ["Давид", "Саул", "Елисей", "Ионафан"], "correct": 3, "image": "/images/selfie/s23.webp" },
+        { "character": "Далида", "options": ["Далида", "Иезавель", "Раав", "Анна"], "correct": 0, "image": "/images/selfie/s16.webp" },
+        { "character": "Тимофей", "options": ["Лука", "Тит", "Андрей", "Тимофей"], "correct": 3, "image": "/images/selfie/s50.webp" }
       ]
     },
     {
@@ -158,18 +158,18 @@
       "title": "Селфи героев — часть 4",
       "description": "Угадай библейского героя по селфи — Ветхий и Новый Завет вперемешку",
       "type": "selfie",
-      "practice": { "character": "Моисей", "options": ["Моисей", "Иисус Навин", "Аарон", "Иосиф"], "correct": 0, "image": "/images/selfie/s09.webp" },
+      "practice": { "character": "Соломон", "options": ["Езекия", "Ровоам", "Соломон", "Ионафан"], "correct": 2, "image": "/images/selfie/s24.webp" },
       "questions": [
-        { "character": "Тимофей", "options": ["Тит", "Сила", "Тимофей", "Пётр"], "correct": 2, "image": "/images/selfie/s50.webp" },
-        { "character": "Сила", "options": ["Варнава", "Лука", "Сила", "Фома"], "correct": 2, "image": "/images/selfie/s49.webp" },
-        { "character": "Матфей", "options": ["Матфей", "Марк", "Закхей", "Андрей"], "correct": 0, "image": "/images/selfie/s45.webp" },
-        { "character": "Иезекииль", "options": ["Иезекииль", "Исайя", "Иеремия", "Седрах"], "correct": 0, "image": "/images/selfie/s31.webp" },
-        { "character": "Андрей", "options": ["Иаков Зеведеев", "Андрей", "Филипп", "Сила"], "correct": 1, "image": "/images/selfie/s43.webp" },
-        { "character": "Гедеон", "options": ["Иеффай", "Варак", "Вооз", "Гедеон"], "correct": 3, "image": "/images/selfie/s14.webp" },
-        { "character": "Иосиф", "options": ["Рувим", "Иосиф", "Даниил", "Иисус Навин"], "correct": 1, "image": "/images/selfie/s08.webp" },
-        { "character": "Неемия", "options": ["Ездра", "Мардохей", "Неемия", "Седрах"], "correct": 2, "image": "/images/selfie/s35.webp" },
-        { "character": "Фома", "options": ["Нафанаил", "Филипп", "Сила", "Фома"], "correct": 3, "image": "/images/selfie/s46.webp" },
-        { "character": "Иисус Христос", "options": ["Иоанн Креститель", "Иисус Христос", "Апостол Иоанн", "Пётр"], "correct": 1, "image": "/images/selfie/s41.webp" }
+        { "character": "Захария", "options": ["Симеон", "Илий", "Иезекииль", "Захария"], "correct": 3, "image": "/images/selfie/s36.webp" },
+        { "character": "Матфей", "options": ["Закхей", "Матфей", "Лука", "Фома"], "correct": 1, "image": "/images/selfie/s45.webp" },
+        { "character": "Иеремия", "options": ["Иеремия", "Варух", "Исайя", "Иов"], "correct": 0, "image": "/images/selfie/s30.webp" },
+        { "character": "Андрей", "options": ["Филипп", "Пётр", "Фома", "Андрей"], "correct": 3, "image": "/images/selfie/s43.webp" },
+        { "character": "Сила", "options": ["Тимофей", "Лука", "Сила", "Матфей"], "correct": 2, "image": "/images/selfie/s49.webp" },
+        { "character": "Иосиф", "options": ["Иосиф", "Даниил", "Рувим", "Моисей"], "correct": 0, "image": "/images/selfie/s08.webp" },
+        { "character": "Неемия", "options": ["Неемия", "Ездра", "Зоровавель", "Иов"], "correct": 0, "image": "/images/selfie/s35.webp" },
+        { "character": "Илия", "options": ["Елисей", "Енох", "Илия", "Самуил"], "correct": 2, "image": "/images/selfie/s25.webp" },
+        { "character": "Иисус Христос", "options": ["Иоанн Креститель", "Иисус Христос", "Апостол Иоанн", "Матфей"], "correct": 1, "image": "/images/selfie/s41.webp" },
+        { "character": "Исаак", "options": ["Исав", "Иаков", "Авраам", "Исаак"], "correct": 3, "image": "/images/selfie/s06.webp" }
       ]
     },
     {
@@ -177,18 +177,17 @@
       "title": "Селфи героев — часть 5",
       "description": "Угадай библейского героя по селфи — Ветхий и Новый Завет вперемешку",
       "type": "selfie",
-      "practice": { "character": "Иосиф", "options": ["Рувим", "Иосиф", "Даниил", "Ной"], "correct": 1, "image": "/images/selfie/s08.webp" },
+      "practice": { "character": "Иосиф", "options": ["Вениамин", "Даниил", "Иосиф", "Иаков"], "correct": 2, "image": "/images/selfie/s08.webp" },
       "questions": [
-        { "character": "Исаак", "options": ["Исав", "Исаак", "Авраам", "Иисус Навин"], "correct": 1, "image": "/images/selfie/s06.webp" },
-        { "character": "Апостол Иоанн", "options": ["Апостол Иоанн", "Иаков Зеведеев", "Пётр", "Тимофей"], "correct": 0, "image": "/images/selfie/s44.webp" },
-        { "character": "Мария", "options": ["Мария Магдалина", "Елисавета", "Анна", "Мария"], "correct": 3, "image": "/images/selfie/s38.webp" },
-        { "character": "Вооз", "options": ["Иессей", "Иосиф", "Вооз", "Давид"], "correct": 2, "image": "/images/selfie/s18.webp" },
-        { "character": "Седрах", "options": ["Седрах", "Мисах", "Даниил", "Исайя"], "correct": 0, "image": "/images/selfie/s33.webp" },
-        { "character": "Елисей", "options": ["Илия", "Гиезий", "Саул", "Елисей"], "correct": 3, "image": "/images/selfie/s26.webp" },
-        { "character": "Павел", "options": ["Сила", "Стефан", "Павел", "Андрей"], "correct": 2, "image": "/images/selfie/s48.webp" },
-        { "character": "Даниил", "options": ["Даниил", "Давид", "Самсон", "Седрах"], "correct": 0, "image": "/images/selfie/s32.webp" },
-        { "character": "Раав", "options": ["Далида", "Руфь", "Раав", "Мариам"], "correct": 2, "image": "/images/selfie/s13.webp" },
-        { "character": "Ионафан", "options": ["Авенир", "Ионафан", "Саул", "Соломон"], "correct": 1, "image": "/images/selfie/s23.webp" }
+        { "character": "Апостол Иоанн", "options": ["Иоанн Креститель", "Иаков Зеведеев", "Апостол Иоанн", "Сила"], "correct": 2, "image": "/images/selfie/s44.webp" },
+        { "character": "Мария", "options": ["Марфа", "Мария Магдалина", "Сарра", "Мария"], "correct": 3, "image": "/images/selfie/s38.webp" },
+        { "character": "Вооз", "options": ["Вооз", "Иессей", "Иосиф", "Давид"], "correct": 0, "image": "/images/selfie/s18.webp" },
+        { "character": "Даниил", "options": ["Давид", "Иезекииль", "Даниил", "Исайя"], "correct": 2, "image": "/images/selfie/s32.webp" },
+        { "character": "Елисей", "options": ["Илия", "Елисей", "Нееман", "Ионафан"], "correct": 1, "image": "/images/selfie/s26.webp" },
+        { "character": "Павел", "options": ["Варнава", "Сила", "Андрей", "Павел"], "correct": 3, "image": "/images/selfie/s48.webp" },
+        { "character": "Иезекииль", "options": ["Иеремия", "Иезекииль", "Даниил", "Илия"], "correct": 1, "image": "/images/selfie/s31.webp" },
+        { "character": "Раав", "options": ["Раав", "Руфь", "Фамарь", "Мариам"], "correct": 0, "image": "/images/selfie/s13.webp" },
+        { "character": "Давид", "options": ["Голиаф", "Соломон", "Давид", "Илия"], "correct": 2, "image": "/images/selfie/s22.webp" }
       ]
     }
   ]
