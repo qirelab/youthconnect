@@ -19,7 +19,10 @@ const outDir = join(root, "public/images/selfie");
 const dataFile = join(root, "src/data/quizzes.json");
 
 const PARTS = 5;
-const PER_PART = 10;
+// 49 героев: первые 4 части по 10, последняя — 9
+const TOTAL_HEROES = 49;
+const PER_PART_DEFAULT = 10;
+const LAST_PART_SIZE = TOTAL_HEROES - (PARTS - 1) * PER_PART_DEFAULT; // 9
 
 const DESCRIPTION = "Угадай библейского героя по селфи — Ветхий и Новый Завет вперемешку";
 
@@ -78,8 +81,7 @@ const SIMILAR = {
   "Исайя": ["Иеремия", "Иезекииль", "Михей"],
   "Иеремия": ["Варух", "Исайя", "Иезекииль"],
   "Иезекииль": ["Даниил", "Иеремия", "Исайя"],
-  "Даниил": ["Седрах", "Давид", "Самсон"], // друг Даниила, львы
-  "Седрах": ["Мисах", "Авденаго", "Даниил"],
+  "Даниил": ["Иезекииль", "Давид", "Самсон"], // львиный ров, видения
   "Есфирь": ["Астинь", "Руфь", "Далида"],
   "Неемия": ["Ездра", "Зоровавель", "Мардохей"],
   "Захария": ["Симеон", "Аарон", "Илий"], // священники в храме
@@ -115,8 +117,8 @@ function shuffle(arr) {
 }
 
 const files = (await readdir(srcDir)).filter((f) => /^\d+_.+\.(png|jpe?g|webp)$/i.test(f)).sort();
-if (files.length !== PARTS * PER_PART) {
-  throw new Error(`Ожидалось ${PARTS * PER_PART} файлов в src/selfie, найдено ${files.length}`);
+if (files.length !== TOTAL_HEROES) {
+  throw new Error(`Ожидалось ${TOTAL_HEROES} файлов в src/selfie, найдено ${files.length}`);
 }
 
 await mkdir(outDir, { recursive: true });
@@ -166,12 +168,25 @@ const line = (o) =>
 let text = (await readFile(dataFile, "utf8")).replace(/\r\n/g, "\n");
 // герои раскладываются по частям случайно, а не по порядку Библии
 const mixed = shuffle(heroes);
-const parts = Array.from({ length: PARTS }, (_, p) => mixed.slice(p * PER_PART, (p + 1) * PER_PART));
+// первые (PARTS-1) частей по PER_PART_DEFAULT, последняя — остаток (LAST_PART_SIZE)
+const parts = [];
+let offset = 0;
+for (let p = 0; p < PARTS; p++) {
+  const size = p < PARTS - 1 ? PER_PART_DEFAULT : LAST_PART_SIZE;
+  parts.push(mixed.slice(offset, offset + size));
+  offset += size;
+}
 for (let p = 0; p < PARTS; p++) {
   const id = `selfie-${p + 1}`;
   const part = parts[p];
-  // правильный ответ равномерно по позициям A–D
-  const positions = shuffle([0, 1, 2, 3, 0, 1, 2, 3, ...shuffle([0, 1, 2, 3]).slice(0, 2)]);
+  // правильный ответ равномерно по позициям A–D (генерируем нужное кол-во)
+  const count = part.length;
+  const fullCycles = Math.floor(count / 4);
+  const remainder = count % 4;
+  const positions = shuffle([
+    ...Array(fullCycles).fill([0, 1, 2, 3]).flat(),
+    ...shuffle([0, 1, 2, 3]).slice(0, remainder)
+  ]);
   const qs = part.map((h, i) => "        " + line(question(h, positions[i])));
   const prev = parts[(p + PARTS - 1) % PARTS];
   const practiceHero = prev.find((h) => FAMOUS.includes(h.raw)) ?? prev[0];

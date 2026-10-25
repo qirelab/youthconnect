@@ -49,7 +49,6 @@ const EXISTING_SELFIES: Record<string, string> = {
   "Jeremiah": "s30.webp",
   "Ezekiel": "s31.webp",
   "Daniel": "s32.webp",
-  "Shadrach": "s33.webp",
   "Esther": "s34.webp",
   "Nehemiah": "s35.webp",
   "Zechariah": "s36.webp",
