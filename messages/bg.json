@@ -1,284 +1,408 @@
 {
   "meta": {
-    "title": "Bible Quiz · Guess the Hero from Selfie",
-    "description": "Interactive quiz for youth and churches — guess Bible characters from AI-generated selfies",
+    "title": "Библейска Викторина · Познай Героя от Селфи",
+    "description": "Интерактивна викторина за младежи и църкви — познай библейски герои от AI селфита",
     "domain": "youthconnect.church"
   },
   "nav": {
-    "play": "Play",
-    "host": "Host",
-    "donate": "Donate",
-    "signIn": "Sign In",
-    "signOut": "Sign Out",
-    "profile": "Profile",
-    "settings": "Settings",
-    "history": "Game History"
+    "play": "Играй",
+    "host": "Водещ",
+    "help": "Помощ",
+    "donate": "Дарение",
+    "signIn": "Вход",
+    "signOut": "Изход",
+    "profile": "Профил",
+    "settings": "Настройки",
+    "history": "История на игрите"
   },
   "landing": {
     "hero": {
-      "title": "Bible Quiz",
-      "subtitle": "Guess the Hero from Selfie",
-      "description": "Interactive game for youth meetings, Sunday schools, and family nights. Scan the QR code — and you're in!",
-      "ctaHost": "Start Game (Host)",
-      "ctaJoin": "Join with Code"
+      "title": "Библейска Викторина",
+      "subtitle": "Познай Героя от Селфи",
+      "description": "Интерактивна игра за младежки срещи, неделни училища и семейни вечери. Сканирай QR кода — и си вътре!",
+      "ctaHost": "Започни Игра (Водещ)",
+      "ctaJoin": "Присъедини се с Код"
+    },
+    "quickStart": {
+      "title": "Бърз Старт",
+      "host": "Водещ: отвори",
+      "player": "Играчи: сканирайте QR и въведете име",
+      "play": "Играй: натисни правилния отговор!",
+      "helpLink": "Нужни са повече детайли? Виж пълното ръководство"
     },
     "howItWorks": {
-      "title": "How It Works",
+      "title": "Как Работи",
       "step1": {
-        "title": "Host opens the game",
-        "description": "Open /host on a laptop with projector and choose difficulty"
+        "title": "Водещият отваря играта",
+        "description": "Отворете /host на лаптоп с проектор и изберете трудност"
       },
       "step2": {
-        "title": "Players scan QR",
-        "description": "Phone, QR code — and in 5 seconds you're in the lobby"
+        "title": "Играчите сканират QR",
+        "description": "Телефон, QR код — и за 5 секунди сте в лобито"
       },
       "step3": {
-        "title": "Play and compete",
-        "description": "10 questions, 15 seconds each, points for speed, live leaderboard"
+        "title": "Играйте и се състезавайте",
+        "description": "10 въпроса, 15 секунди всеки, точки за бързина, класация на живо"
       }
     },
     "features": {
-      "title": "Features",
+      "title": "Функции",
       "selfie": {
-        "title": "Bible Character Selfies",
-        "description": "Unique AI images: guess the character from the scene"
+        "title": "Селфита на Библейски Герои",
+        "description": "Уникални AI изображения: познай героя от сцената"
       },
       "realtime": {
-        "title": "Real-time Multiplayer",
-        "description": "Up to 100 players simultaneously, instant sync"
+        "title": "Мултиплейър в Реално Време",
+        "description": "До 100 играчи едновременно, мигновена синхронизация"
       },
       "levels": {
-        "title": "3 Difficulty Levels",
-        "description": "From Adam to Tychicus — choose your level"
+        "title": "3 Нива на Трудност",
+        "description": "От Адам до Тихик — изберете нивото си"
       },
       "noSignup": {
-        "title": "No Registration",
-        "description": "Guests play instantly, sign in for history and settings"
+        "title": "Без Регистрация",
+        "description": "Гостите играят веднага, влезте за история и настройки"
       },
       "free": {
-        "title": "Free",
-        "description": "No subscriptions, runs on free tier"
+        "title": "Безплатно",
+        "description": "Без абонаменти, работи на безплатни планове"
       },
       "mobile": {
-        "title": "Mobile-first",
-        "description": "Optimized for phones and any screen"
+        "title": "За Мобилни",
+        "description": "Оптимизирано за телефони и всеки екран"
       }
     },
     "levels": {
-      "title": "Difficulty Levels",
+      "title": "Нива на Трудност",
       "easy": {
-        "title": "Easy",
-        "description": "Famous heroes: Moses, David, Noah, Mary"
+        "title": "Лесно",
+        "description": "Известни герои: Мойсей, Давид, Ной, Мария"
       },
       "medium": {
-        "title": "Medium",
-        "description": "Prophets and apostles: Isaiah, Barnabas, Titus"
+        "title": "Средно",
+        "description": "Пророци и апостоли: Исая, Варнава, Тит"
       },
       "hard": {
-        "title": "Hard",
-        "description": "For experts: Ahithophel, Epaphras, Nympha"
+        "title": "Трудно",
+        "description": "За експерти: Ахитофел, Епафрас, Нимфа"
       }
     },
     "forWhom": {
-      "title": "Who Is This For",
-      "youth": "Youth ministries",
-      "sunday": "Sunday schools",
-      "camps": "Christian camps",
-      "family": "Family nights",
-      "small": "Small groups"
+      "title": "За Кого е Това",
+      "youth": "Младежки служения",
+      "sunday": "Неделни училища",
+      "camps": "Християнски лагери",
+      "family": "Семейни вечери",
+      "small": "Малки групи"
     },
     "gallery": {
-      "title": "Selfie Gallery",
-      "hint": "Can you guess who this is?"
+      "title": "Галерия със Селфита",
+      "hint": "Можеш ли да познаеш кой е това?"
     },
     "donate": {
-      "title": "Support the Project",
-      "description": "The game is free for everyone. Your donations help develop the project, add new images and languages.",
-      "oneTime": "One-time Donation",
-      "monthly": "Monthly",
-      "crypto": "Cryptocurrency",
-      "boosty": "Boosty (for Russia)"
+      "title": "Подкрепи Проекта",
+      "description": "Играта е безплатна за всички. Вашите дарения помагат за развитието на проекта, добавяне на нови изображения и езици.",
+      "oneTime": "Еднократно Дарение",
+      "monthly": "Месечно",
+      "crypto": "Криптовалута",
+      "boosty": "Boosty (за Русия)"
     },
     "faq": {
-      "title": "FAQ",
+      "title": "ЧЗВ",
       "q1": {
-        "q": "Is this free?",
-        "a": "Yes, completely free. We use free tiers of Vercel and Pusher."
+        "q": "Това безплатно ли е?",
+        "a": "Да, напълно безплатно. Използваме безплатните планове на Vercel и Pusher."
       },
       "q2": {
-        "q": "How many players can participate?",
-        "a": "Up to 100 simultaneously (Pusher limit). For larger events, contact us."
+        "q": "Колко играчи могат да участват?",
+        "a": "До 100 едновременно (лимит на Pusher). За по-големи събития се свържете с нас."
       },
       "q3": {
-        "q": "Is registration required?",
-        "a": "No! Guests play instantly via QR code. Sign in with Google/Yandex only for saving history and settings."
+        "q": "Нужна ли е регистрация?",
+        "a": "Не! Гостите играят веднага чрез QR код. Влезте с Google/Yandex само за запазване на история и настройки."
       },
       "q4": {
-        "q": "Which Bible translation is used?",
-        "a": "Character names follow standard translations for each language."
+        "q": "Кой превод на Библията се използва?",
+        "a": "Имената на героите следват стандартните преводи за всеки език."
       },
       "q5": {
-        "q": "What's the denominational stance?",
-        "a": "The game is for all Protestant churches. Questions are based on canonical Bible text."
+        "q": "Каква е деноминационната позиция?",
+        "a": "Играта е за всички протестантски църкви. Въпросите се базират на каноничния библейски текст."
       },
       "q6": {
-        "q": "Can this be used with children?",
-        "a": "Yes! Content is safe for all ages. Easy level works great for Sunday school."
+        "q": "Може ли да се използва с деца?",
+        "a": "Да! Съдържанието е безопасно за всички възрасти. Лесното ниво е отлично за неделно училище."
       }
     },
     "footer": {
-      "contact": "Contact",
+      "contact": "Контакт",
       "email": "hello@youthconnect.church",
-      "privacy": "Privacy Policy",
-      "terms": "Terms of Use",
-      "copyright": "© 2024 YouthConnect. All rights reserved."
+      "privacy": "Политика за Поверителност",
+      "terms": "Условия за Ползване",
+      "copyright": "© 2024 YouthConnect. Всички права запазени."
     }
   },
   "game": {
-    "code": "Game Code",
-    "players": "Players",
-    "question": "Question",
-    "of": "of",
-    "seconds": "sec",
-    "practice": "Practice Question",
-    "practiceNote": "no points",
-    "whoMadeSelfie": "Who made this selfie?",
-    "itIs": "It's",
-    "correct": "Correct!",
-    "incorrect": "Incorrect",
-    "timeout": "Time's up",
-    "noAnswer": "No answer",
-    "correctAnswer": "Correct answer",
-    "points": "points",
-    "correctAnswers": "Correct",
-    "place": "place",
-    "nextIn": "Next question in",
-    "resultsIn": "Results in",
-    "waitingHost": "Waiting for host to start the quiz…",
-    "answerAccepted": "Answer accepted!",
-    "lookAtScreen": "Look at the main screen…",
-    "answered": "Answered"
+    "code": "Код на Играта",
+    "players": "Играчи",
+    "question": "Въпрос",
+    "of": "от",
+    "seconds": "сек",
+    "practice": "Пробен Въпрос",
+    "practiceNote": "без точки",
+    "whoMadeSelfie": "Кой направи това селфи?",
+    "itIs": "Това е",
+    "correct": "Правилно!",
+    "incorrect": "Грешно",
+    "timeout": "Времето изтече",
+    "noAnswer": "Няма отговор",
+    "correctAnswer": "Правилен отговор",
+    "points": "точки",
+    "correctAnswers": "Правилни",
+    "place": "място",
+    "nextIn": "Следващ въпрос след",
+    "resultsIn": "Резултати след",
+    "waitingHost": "Чакаме водещият да започне викторината…",
+    "answerAccepted": "Отговорът е приет!",
+    "lookAtScreen": "Гледайте главния екран…",
+    "answered": "Отговорено"
   },
   "host": {
-    "title": "Host Screen",
-    "selectQuiz": "Select Difficulty",
-    "openLobby": "Open Lobby",
-    "back": "Back",
-    "startGame": "Start Quiz",
-    "startPractice": "Start with Practice",
-    "newGame": "New Game",
-    "scanQR": "Scan QR code with your phone to join",
-    "noPlayers": "No one has joined yet…",
-    "results": "Quiz Results",
-    "noPusher": "Pusher keys not set. Add environment variables — see README.",
-    "practiceComplete": "Practice round complete — now it's for real!",
-    "startQuiz": "Start Quiz"
+    "title": "Екран на Водещия",
+    "selectQuiz": "Избери Трудност",
+    "openLobby": "Отвори Лобито",
+    "back": "Назад",
+    "startGame": "Започни Викторината",
+    "startPractice": "Започни с Практика",
+    "newGame": "Нова Игра",
+    "scanQR": "Сканирайте QR кода с телефона си, за да се присъедините",
+    "noPlayers": "Все още никой не се е присъединил…",
+    "results": "Резултати от Викторината",
+    "noPusher": "Ключовете на Pusher не са зададени. Добавете променливи на средата — вижте README.",
+    "practiceComplete": "Пробният рунд приключи — сега е истинската игра!",
+    "startQuiz": "Започни Викторината",
+    "playerHint": "Вие сте играч? Сканирайте QR кода по-горе с телефона си, не отваряйте тази страница!"
   },
   "player": {
-    "enterName": "What's your name?",
-    "namePlaceholder": "Your name or nickname",
-    "join": "Join",
-    "checking": "Checking…",
-    "youAreIn": "You're in the game",
-    "scanQR": "Scan the QR code on screen to join the game.",
+    "enterName": "Как се казваш?",
+    "namePlaceholder": "Твоето име или псевдоним",
+    "join": "Присъедини се",
+    "checking": "Проверка…",
+    "youAreIn": "Вътре сте в играта",
+    "scanQR": "Сканирайте QR кода на екрана, за да се присъедините към играта.",
+    "hint": {
+      "lookForQR": "Погледнете големия екран — водещият трябва да показва QR код с 5-символен код на играта.",
+      "areYouHost": "Вие сте водещият?",
+      "hostLink": "Отворете страницата на водещия вместо това →"
+    },
     "errors": {
-      "nameMin": "Enter a name (at least 2 characters).",
-      "nameTaken": "This name is taken. Choose another.",
-      "gameClosed": "Game is in progress or closed for entry.",
-      "hostOffline": "Host not responding. Make sure the quiz is open on screen.",
-      "network": "Network error. Try again."
+      "nameMin": "Въведете име (поне 2 символа).",
+      "nameTaken": "Това име е заето. Изберете друго.",
+      "gameClosed": "Играта е в ход или е затворена за влизане.",
+      "hostOffline": "Водещият не отговаря. Уверете се, че викторината е отворена на екрана.",
+      "network": "Мрежова грешка. Опитайте отново."
     }
   },
   "settings": {
-    "title": "Settings",
+    "title": "Настройки",
     "autoAdvance": {
-      "label": "Next Question Transition",
-      "auto": "Automatic",
-      "manual": "Manual (button)"
+      "label": "Преход към Следващ Въпрос",
+      "auto": "Автоматичен",
+      "manual": "Ръчен (бутон)"
     },
     "questionTime": {
-      "label": "Time per Question",
-      "seconds": "seconds"
+      "label": "Време за Въпрос",
+      "seconds": "секунди"
     },
     "questionsPerQuiz": {
-      "label": "Questions per Game"
+      "label": "Въпроси на Игра"
     },
     "difficulty": {
-      "label": "Difficulty",
-      "easy": "Easy",
-      "medium": "Medium",
-      "hard": "Hard",
-      "mixed": "Mixed"
+      "label": "Трудност",
+      "easy": "Лесно",
+      "medium": "Средно",
+      "hard": "Трудно",
+      "mixed": "Смесено"
     },
     "theme": {
-      "label": "Theme",
-      "light": "Light",
-      "dark": "Dark",
-      "system": "System"
+      "label": "Тема",
+      "light": "Светла",
+      "dark": "Тъмна",
+      "system": "Системна"
     },
     "sound": {
-      "label": "Sound",
-      "enabled": "On",
-      "disabled": "Off"
+      "label": "Звук",
+      "enabled": "Включен",
+      "disabled": "Изключен"
     },
     "showExplanation": {
-      "label": "Show explanation after answer"
+      "label": "Покажи обяснение след отговор"
     },
     "showCorrectAnswer": {
-      "label": "Show correct answer"
+      "label": "Покажи правилен отговор"
     },
     "practiceQuestion": {
-      "label": "Practice question before game"
+      "label": "Пробен въпрос преди игра"
     },
     "speedBonus": {
-      "label": "Points for speed"
+      "label": "Точки за бързина"
     },
     "language": {
-      "label": "Language"
+      "label": "Език"
     },
-    "save": "Save",
-    "saved": "Settings saved"
+    "save": "Запази",
+    "saved": "Настройките са запазени"
   },
   "profile": {
-    "title": "Profile",
-    "gamesPlayed": "Games Played",
-    "totalScore": "Total Score",
-    "correctAnswers": "Correct Answers",
-    "bestRank": "Best Rank",
-    "recentGames": "Recent Games",
-    "noGames": "You haven't played yet. Start your first game!",
-    "date": "Date",
-    "difficulty": "Difficulty",
-    "score": "Score",
-    "rank": "Rank"
+    "title": "Профил",
+    "gamesPlayed": "Изиграни Игри",
+    "totalScore": "Общ Резултат",
+    "correctAnswers": "Правилни Отговори",
+    "bestRank": "Най-добро Място",
+    "recentGames": "Скорошни Игри",
+    "noGames": "Все още не сте играли. Започнете първата си игра!",
+    "date": "Дата",
+    "difficulty": "Трудност",
+    "score": "Резултат",
+    "rank": "Място"
   },
   "auth": {
-    "signIn": "Sign In",
-    "signInWith": "Sign in with",
-    "signOut": "Sign Out",
+    "signIn": "Вход",
+    "signInWith": "Вход с",
+    "signOut": "Изход",
     "google": "Google",
     "yandex": "Yandex",
-    "guestNote": "Guests can play 1 game without signing in",
-    "signInBenefits": "Sign in to save game history and settings",
+    "guestNote": "Гостите могат да играят 1 игра без вход",
+    "signInBenefits": "Влезте, за да запазите история на игрите и настройки",
     "error": {
-      "title": "Sign In Error",
-      "default": "Could not sign in. Try another method.",
-      "accessDenied": "Access denied.",
-      "tryAgain": "Try Again"
+      "title": "Грешка при Вход",
+      "default": "Не можахме да влезем. Опитайте друг метод.",
+      "accessDenied": "Достъпът е отказан.",
+      "tryAgain": "Опитайте Отново"
     }
   },
   "difficulty": {
-    "easy": "Easy",
-    "medium": "Medium",
-    "hard": "Hard",
-    "mixed": "Mixed"
+    "easy": "Лесно",
+    "medium": "Средно",
+    "hard": "Трудно",
+    "mixed": "Смесено"
   },
   "common": {
-    "loading": "Loading…",
-    "error": "Error",
-    "retry": "Try Again",
-    "cancel": "Cancel",
-    "save": "Save",
-    "close": "Close"
+    "loading": "Зареждане…",
+    "error": "Грешка",
+    "retry": "Опитай Отново",
+    "cancel": "Отказ",
+    "save": "Запази",
+    "close": "Затвори"
+  },
+  "help": {
+    "title": "Как да Играете",
+    "subtitle": "Пълно ръководство за водещи и играчи",
+    "backToHome": "Обратно към Началната Страница",
+    "forHost": {
+      "title": "За Водещия (Проектор)",
+      "intro": "Водещият управлява играта на голям екран или проектор. Един човек от екипа се нуждае от лаптоп или компютър.",
+      "step1": {
+        "title": "1. Отворете Страницата на Водещия",
+        "description": "Отидете на сайта и кликнете \"Започни Игра (Водещ)\" или отворете /play/host директно. Ще видите екрана за избор на трудност."
+      },
+      "step2": {
+        "title": "2. Изберете Трудност",
+        "description": "Изберете ниво на трудност: Лесно (известни герои като Мойсей, Давид), Средно (пророци и апостоли), Трудно (само за експерти) или Смесено (комбинация от всички нива)."
+      },
+      "step3": {
+        "title": "3. Отворете Лобито",
+        "description": "Кликнете \"Отвори Лобито\". Ще се появи QR код и код на играта (5 символа). Покажете този екран на проектора."
+      },
+      "step4": {
+        "title": "4. Изчакайте Играчите",
+        "description": "Докато играчите сканират QR кода и въвеждат имената си, ще ги видите да се появяват в лобито. Изчакайте всички да се присъединят."
+      },
+      "step5": {
+        "title": "5. Започнете Играта",
+        "description": "Кликнете \"Започни Викторината\". Първият въпрос е пробен рунд (без точки), след това следват 10 въпроса, по 15 секунди всеки."
+      },
+      "step6": {
+        "title": "6. След Играта",
+        "description": "Резултатите се показват автоматично. Кликнете \"Нова Игра\", за да започнете друг рунд със същите или различни играчи."
+      }
+    },
+    "forPlayer": {
+      "title": "За Играчите (Телефон)",
+      "intro": "Играчите се присъединяват от телефоните си. Не е нужно приложение — само браузър и интернет.",
+      "step1": {
+        "title": "1. Сканирайте QR Кода",
+        "description": "Насочете камерата на телефона си към QR кода на големия екран. Натиснете известието, за да отворите линка."
+      },
+      "step2": {
+        "title": "2. Въведете Името Си",
+        "description": "Напишете името или псевдонима си (поне 2 символа). Така ще се показвате в класацията."
+      },
+      "step3": {
+        "title": "3. Изчакайте в Лобито",
+        "description": "Ще видите \"Вътре сте в играта\" и ще чакате водещият да започне. Дръжте телефона си готов!"
+      },
+      "step4": {
+        "title": "4. Отговаряйте на Въпросите",
+        "description": "Когато се появи въпрос, натиснете един от четирите цветни бутона (A, B, C, D). По-бързи правилни отговори = повече точки!"
+      },
+      "step5": {
+        "title": "5. Вижте Резултатите Си",
+        "description": "След всеки въпрос ще видите дали сте отговорили правилно и текущото си място. Крайните резултати се показват накрая."
+      }
+    },
+    "scoring": {
+      "title": "Точкуване",
+      "description": "Точките зависят от правилността и бързината:",
+      "correct": "Правилен отговор: 500 точки",
+      "speed": "Бонус за бързина: до 500 допълнителни точки (колкото по-бързо, толкова повече)",
+      "wrong": "Грешен или без отговор: 0 точки",
+      "practice": "Пробен въпрос: без точки"
+    },
+    "levels": {
+      "title": "Нива на Трудност",
+      "easy": {
+        "title": "Лесно",
+        "description": "Известни библейски герои, които всички познават: Адам, Ева, Ной, Мойсей, Давид, Мария, Исус и други."
+      },
+      "medium": {
+        "title": "Средно",
+        "description": "Изисква известни библейски познания: пророци, апостоли и второстепенни герои от добре познати истории."
+      },
+      "hard": {
+        "title": "Трудно",
+        "description": "За библейски експерти: второстепенни герои, по-малко известни фигури и нужда от детайлни познания."
+      },
+      "mixed": {
+        "title": "Смесено",
+        "description": "Комбинация от всички нива: 40% лесни, 40% средни, 20% трудни въпроси."
+      }
+    },
+    "tips": {
+      "title": "Съвети",
+      "tip1": "Уверете се, че всички са свързани към една и съща WiFi мрежа или имат мобилен интернет.",
+      "tip2": "Устройството на водещия не трябва да заспива по време на играта.",
+      "tip3": "Въпросите не се повтарят 24 часа — играйте няколко рунда без да виждате едни и същи изображения!",
+      "tip4": "Ако се разкачите, сканирайте QR кода отново — ще се присъедините със същото име."
+    },
+    "troubleshooting": {
+      "title": "Отстраняване на Проблеми",
+      "q1": {
+        "q": "Сканирах QR кода, но виждам екран с QR код",
+        "a": "Може да сте отворили страницата на Водещия. Играчите трябва да сканират QR кода, показан на проектора, който води към страницата за Игра. URL-ът трябва да съдържа \"?game=\" с 5-символен код."
+      },
+      "q2": {
+        "q": "Името ми е заето",
+        "a": "Някой вече се е присъединил с това име. Изберете различно име или добавете число (като \"Иван2\")."
+      },
+      "q3": {
+        "q": "Водещият не отговаря",
+        "a": "Уверете се, че страницата на водещия е отворена и не е заспала. Кодът на играта трябва да съвпада с този на екрана."
+      },
+      "q4": {
+        "q": "Разкачих се",
+        "a": "Сканирайте QR кода отново. Ако сте използвали същото име, автоматично ще се присъедините отново към играта."
+      }
+    }
   }
 }

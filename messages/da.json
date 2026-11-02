@@ -1,284 +1,408 @@
 {
   "meta": {
-    "title": "Bible Quiz · Guess the Hero from Selfie",
-    "description": "Interactive quiz for youth and churches — guess Bible characters from AI-generated selfies",
+    "title": "Bibel Quiz · Gæt Helten fra Selfie",
+    "description": "Interaktiv quiz for unge og kirker — gæt bibelske personer fra AI-selfies",
     "domain": "youthconnect.church"
   },
   "nav": {
-    "play": "Play",
-    "host": "Host",
-    "donate": "Donate",
-    "signIn": "Sign In",
-    "signOut": "Sign Out",
-    "profile": "Profile",
-    "settings": "Settings",
-    "history": "Game History"
+    "play": "Spil",
+    "host": "Vært",
+    "help": "Hjælp",
+    "donate": "Donér",
+    "signIn": "Log ind",
+    "signOut": "Log ud",
+    "profile": "Profil",
+    "settings": "Indstillinger",
+    "history": "Spilhistorik"
   },
   "landing": {
     "hero": {
-      "title": "Bible Quiz",
-      "subtitle": "Guess the Hero from Selfie",
-      "description": "Interactive game for youth meetings, Sunday schools, and family nights. Scan the QR code — and you're in!",
-      "ctaHost": "Start Game (Host)",
-      "ctaJoin": "Join with Code"
+      "title": "Bibel Quiz",
+      "subtitle": "Gæt Helten fra Selfie",
+      "description": "Interaktivt spil til ungdomsmøder, søndagsskoler og familieaftener. Scan QR-koden — og du er med!",
+      "ctaHost": "Start Spil (Vært)",
+      "ctaJoin": "Deltag med Kode"
+    },
+    "quickStart": {
+      "title": "Hurtig Start",
+      "host": "Vært: åbn",
+      "player": "Spillere: scan QR og indtast navn",
+      "play": "Spil: tryk på det rigtige svar!",
+      "helpLink": "Brug for flere detaljer? Se den fulde guide"
     },
     "howItWorks": {
-      "title": "How It Works",
+      "title": "Sådan Virker Det",
       "step1": {
-        "title": "Host opens the game",
-        "description": "Open /host on a laptop with projector and choose difficulty"
+        "title": "Værten åbner spillet",
+        "description": "Åbn /host på en bærbar med projektor og vælg sværhedsgrad"
       },
       "step2": {
-        "title": "Players scan QR",
-        "description": "Phone, QR code — and in 5 seconds you're in the lobby"
+        "title": "Spillere scanner QR",
+        "description": "Telefon, QR-kode — og på 5 sekunder er du i lobbyen"
       },
       "step3": {
-        "title": "Play and compete",
-        "description": "10 questions, 15 seconds each, points for speed, live leaderboard"
+        "title": "Spil og konkurrér",
+        "description": "10 spørgsmål, 15 sekunder hver, point for hurtighed, live rangliste"
       }
     },
     "features": {
-      "title": "Features",
+      "title": "Funktioner",
       "selfie": {
-        "title": "Bible Character Selfies",
-        "description": "Unique AI images: guess the character from the scene"
+        "title": "Bibelske Karakter Selfies",
+        "description": "Unikke AI-billeder: gæt karakteren fra scenen"
       },
       "realtime": {
-        "title": "Real-time Multiplayer",
-        "description": "Up to 100 players simultaneously, instant sync"
+        "title": "Multiplayer i Realtid",
+        "description": "Op til 100 spillere samtidigt, øjeblikkelig synkronisering"
       },
       "levels": {
-        "title": "3 Difficulty Levels",
-        "description": "From Adam to Tychicus — choose your level"
+        "title": "3 Sværhedsgrader",
+        "description": "Fra Adam til Tykikus — vælg dit niveau"
       },
       "noSignup": {
-        "title": "No Registration",
-        "description": "Guests play instantly, sign in for history and settings"
+        "title": "Ingen Tilmelding",
+        "description": "Gæster spiller med det samme, log ind for historik og indstillinger"
       },
       "free": {
-        "title": "Free",
-        "description": "No subscriptions, runs on free tier"
+        "title": "Gratis",
+        "description": "Ingen abonnementer, kører på gratis planer"
       },
       "mobile": {
-        "title": "Mobile-first",
-        "description": "Optimized for phones and any screen"
+        "title": "Mobil-først",
+        "description": "Optimeret til telefoner og enhver skærm"
       }
     },
     "levels": {
-      "title": "Difficulty Levels",
+      "title": "Sværhedsgrader",
       "easy": {
-        "title": "Easy",
-        "description": "Famous heroes: Moses, David, Noah, Mary"
+        "title": "Let",
+        "description": "Berømte helte: Moses, David, Noah, Maria"
       },
       "medium": {
         "title": "Medium",
-        "description": "Prophets and apostles: Isaiah, Barnabas, Titus"
+        "description": "Profeter og apostle: Esajas, Barnabas, Titus"
       },
       "hard": {
-        "title": "Hard",
-        "description": "For experts: Ahithophel, Epaphras, Nympha"
+        "title": "Svær",
+        "description": "For eksperter: Akitofel, Epafras, Nymfa"
       }
     },
     "forWhom": {
-      "title": "Who Is This For",
-      "youth": "Youth ministries",
-      "sunday": "Sunday schools",
-      "camps": "Christian camps",
-      "family": "Family nights",
-      "small": "Small groups"
+      "title": "Hvem er Dette For",
+      "youth": "Ungdomsgrupper",
+      "sunday": "Søndagsskoler",
+      "camps": "Kristne lejre",
+      "family": "Familieaftener",
+      "small": "Små grupper"
     },
     "gallery": {
-      "title": "Selfie Gallery",
-      "hint": "Can you guess who this is?"
+      "title": "Selfie Galleri",
+      "hint": "Kan du gætte hvem dette er?"
     },
     "donate": {
-      "title": "Support the Project",
-      "description": "The game is free for everyone. Your donations help develop the project, add new images and languages.",
-      "oneTime": "One-time Donation",
-      "monthly": "Monthly",
-      "crypto": "Cryptocurrency",
-      "boosty": "Boosty (for Russia)"
+      "title": "Støt Projektet",
+      "description": "Spillet er gratis for alle. Dine donationer hjælper med at udvikle projektet, tilføje nye billeder og sprog.",
+      "oneTime": "Engangsdonation",
+      "monthly": "Månedlig",
+      "crypto": "Kryptovaluta",
+      "boosty": "Boosty (for Rusland)"
     },
     "faq": {
       "title": "FAQ",
       "q1": {
-        "q": "Is this free?",
-        "a": "Yes, completely free. We use free tiers of Vercel and Pusher."
+        "q": "Er dette gratis?",
+        "a": "Ja, helt gratis. Vi bruger gratis planer fra Vercel og Pusher."
       },
       "q2": {
-        "q": "How many players can participate?",
-        "a": "Up to 100 simultaneously (Pusher limit). For larger events, contact us."
+        "q": "Hvor mange spillere kan deltage?",
+        "a": "Op til 100 samtidigt (Pusher-grænse). For større events, kontakt os."
       },
       "q3": {
-        "q": "Is registration required?",
-        "a": "No! Guests play instantly via QR code. Sign in with Google/Yandex only for saving history and settings."
+        "q": "Kræves der tilmelding?",
+        "a": "Nej! Gæster spiller med det samme via QR-kode. Log kun ind med Google/Yandex for at gemme historik og indstillinger."
       },
       "q4": {
-        "q": "Which Bible translation is used?",
-        "a": "Character names follow standard translations for each language."
+        "q": "Hvilken bibeloversættelse bruges?",
+        "a": "Karakternavne følger standardoversættelser for hvert sprog."
       },
       "q5": {
-        "q": "What's the denominational stance?",
-        "a": "The game is for all Protestant churches. Questions are based on canonical Bible text."
+        "q": "Hvad er den kirkelige position?",
+        "a": "Spillet er for alle protestantiske kirker. Spørgsmål er baseret på kanonisk bibeltekst."
       },
       "q6": {
-        "q": "Can this be used with children?",
-        "a": "Yes! Content is safe for all ages. Easy level works great for Sunday school."
+        "q": "Kan dette bruges med børn?",
+        "a": "Ja! Indholdet er sikkert for alle aldre. Let niveau fungerer godt til søndagsskole."
       }
     },
     "footer": {
-      "contact": "Contact",
+      "contact": "Kontakt",
       "email": "hello@youthconnect.church",
-      "privacy": "Privacy Policy",
-      "terms": "Terms of Use",
-      "copyright": "© 2024 YouthConnect. All rights reserved."
+      "privacy": "Privatlivspolitik",
+      "terms": "Vilkår for Brug",
+      "copyright": "© 2024 YouthConnect. Alle rettigheder forbeholdes."
     }
   },
   "game": {
-    "code": "Game Code",
-    "players": "Players",
-    "question": "Question",
-    "of": "of",
-    "seconds": "sec",
-    "practice": "Practice Question",
-    "practiceNote": "no points",
-    "whoMadeSelfie": "Who made this selfie?",
-    "itIs": "It's",
-    "correct": "Correct!",
-    "incorrect": "Incorrect",
-    "timeout": "Time's up",
-    "noAnswer": "No answer",
-    "correctAnswer": "Correct answer",
-    "points": "points",
-    "correctAnswers": "Correct",
-    "place": "place",
-    "nextIn": "Next question in",
-    "resultsIn": "Results in",
-    "waitingHost": "Waiting for host to start the quiz…",
-    "answerAccepted": "Answer accepted!",
-    "lookAtScreen": "Look at the main screen…",
-    "answered": "Answered"
+    "code": "Spilkode",
+    "players": "Spillere",
+    "question": "Spørgsmål",
+    "of": "af",
+    "seconds": "sek",
+    "practice": "Øvelsesspørgsmål",
+    "practiceNote": "ingen point",
+    "whoMadeSelfie": "Hvem tog denne selfie?",
+    "itIs": "Det er",
+    "correct": "Rigtigt!",
+    "incorrect": "Forkert",
+    "timeout": "Tiden er udløbet",
+    "noAnswer": "Intet svar",
+    "correctAnswer": "Rigtigt svar",
+    "points": "point",
+    "correctAnswers": "Rigtige",
+    "place": "plads",
+    "nextIn": "Næste spørgsmål om",
+    "resultsIn": "Resultater om",
+    "waitingHost": "Venter på at værten starter quizzen…",
+    "answerAccepted": "Svar accepteret!",
+    "lookAtScreen": "Se på hovedskærmen…",
+    "answered": "Besvaret"
   },
   "host": {
-    "title": "Host Screen",
-    "selectQuiz": "Select Difficulty",
-    "openLobby": "Open Lobby",
-    "back": "Back",
+    "title": "Værtsskærm",
+    "selectQuiz": "Vælg Sværhedsgrad",
+    "openLobby": "Åbn Lobby",
+    "back": "Tilbage",
     "startGame": "Start Quiz",
-    "startPractice": "Start with Practice",
-    "newGame": "New Game",
-    "scanQR": "Scan QR code with your phone to join",
-    "noPlayers": "No one has joined yet…",
-    "results": "Quiz Results",
-    "noPusher": "Pusher keys not set. Add environment variables — see README.",
-    "practiceComplete": "Practice round complete — now it's for real!",
-    "startQuiz": "Start Quiz"
+    "startPractice": "Start med Øvelse",
+    "newGame": "Nyt Spil",
+    "scanQR": "Scan QR-koden med din telefon for at deltage",
+    "noPlayers": "Ingen har tilsluttet sig endnu…",
+    "results": "Quiz Resultater",
+    "noPusher": "Pusher-nøgler ikke sat. Tilføj miljøvariabler — se README.",
+    "practiceComplete": "Øvelsesrunde færdig — nu er det alvor!",
+    "startQuiz": "Start Quiz",
+    "playerHint": "Er du en spiller? Scan QR-koden ovenfor med din telefon, åbn ikke denne side!"
   },
   "player": {
-    "enterName": "What's your name?",
-    "namePlaceholder": "Your name or nickname",
-    "join": "Join",
-    "checking": "Checking…",
-    "youAreIn": "You're in the game",
-    "scanQR": "Scan the QR code on screen to join the game.",
+    "enterName": "Hvad hedder du?",
+    "namePlaceholder": "Dit navn eller kaldenavn",
+    "join": "Deltag",
+    "checking": "Tjekker…",
+    "youAreIn": "Du er med i spillet",
+    "scanQR": "Scan QR-koden på skærmen for at deltage i spillet.",
+    "hint": {
+      "lookForQR": "Se på den store skærm — værten bør vise en QR-kode med en 5-tegns spilkode.",
+      "areYouHost": "Er du værten?",
+      "hostLink": "Åbn værtssiden i stedet →"
+    },
     "errors": {
-      "nameMin": "Enter a name (at least 2 characters).",
-      "nameTaken": "This name is taken. Choose another.",
-      "gameClosed": "Game is in progress or closed for entry.",
-      "hostOffline": "Host not responding. Make sure the quiz is open on screen.",
-      "network": "Network error. Try again."
+      "nameMin": "Indtast et navn (mindst 2 tegn).",
+      "nameTaken": "Dette navn er taget. Vælg et andet.",
+      "gameClosed": "Spillet er i gang eller lukket for tilmelding.",
+      "hostOffline": "Værten svarer ikke. Sørg for at quizzen er åben på skærmen.",
+      "network": "Netværksfejl. Prøv igen."
     }
   },
   "settings": {
-    "title": "Settings",
+    "title": "Indstillinger",
     "autoAdvance": {
-      "label": "Next Question Transition",
-      "auto": "Automatic",
-      "manual": "Manual (button)"
+      "label": "Overgang til Næste Spørgsmål",
+      "auto": "Automatisk",
+      "manual": "Manuel (knap)"
     },
     "questionTime": {
-      "label": "Time per Question",
-      "seconds": "seconds"
+      "label": "Tid per Spørgsmål",
+      "seconds": "sekunder"
     },
     "questionsPerQuiz": {
-      "label": "Questions per Game"
+      "label": "Spørgsmål per Spil"
     },
     "difficulty": {
-      "label": "Difficulty",
-      "easy": "Easy",
+      "label": "Sværhedsgrad",
+      "easy": "Let",
       "medium": "Medium",
-      "hard": "Hard",
-      "mixed": "Mixed"
+      "hard": "Svær",
+      "mixed": "Blandet"
     },
     "theme": {
-      "label": "Theme",
-      "light": "Light",
-      "dark": "Dark",
+      "label": "Tema",
+      "light": "Lyst",
+      "dark": "Mørkt",
       "system": "System"
     },
     "sound": {
-      "label": "Sound",
-      "enabled": "On",
-      "disabled": "Off"
+      "label": "Lyd",
+      "enabled": "Til",
+      "disabled": "Fra"
     },
     "showExplanation": {
-      "label": "Show explanation after answer"
+      "label": "Vis forklaring efter svar"
     },
     "showCorrectAnswer": {
-      "label": "Show correct answer"
+      "label": "Vis rigtigt svar"
     },
     "practiceQuestion": {
-      "label": "Practice question before game"
+      "label": "Øvelsesspørgsmål før spil"
     },
     "speedBonus": {
-      "label": "Points for speed"
+      "label": "Point for hurtighed"
     },
     "language": {
-      "label": "Language"
+      "label": "Sprog"
     },
-    "save": "Save",
-    "saved": "Settings saved"
+    "save": "Gem",
+    "saved": "Indstillinger gemt"
   },
   "profile": {
-    "title": "Profile",
-    "gamesPlayed": "Games Played",
-    "totalScore": "Total Score",
-    "correctAnswers": "Correct Answers",
-    "bestRank": "Best Rank",
-    "recentGames": "Recent Games",
-    "noGames": "You haven't played yet. Start your first game!",
-    "date": "Date",
-    "difficulty": "Difficulty",
+    "title": "Profil",
+    "gamesPlayed": "Spillede Spil",
+    "totalScore": "Samlet Score",
+    "correctAnswers": "Rigtige Svar",
+    "bestRank": "Bedste Placering",
+    "recentGames": "Seneste Spil",
+    "noGames": "Du har ikke spillet endnu. Start dit første spil!",
+    "date": "Dato",
+    "difficulty": "Sværhedsgrad",
     "score": "Score",
-    "rank": "Rank"
+    "rank": "Placering"
   },
   "auth": {
-    "signIn": "Sign In",
-    "signInWith": "Sign in with",
-    "signOut": "Sign Out",
+    "signIn": "Log ind",
+    "signInWith": "Log ind med",
+    "signOut": "Log ud",
     "google": "Google",
     "yandex": "Yandex",
-    "guestNote": "Guests can play 1 game without signing in",
-    "signInBenefits": "Sign in to save game history and settings",
+    "guestNote": "Gæster kan spille 1 spil uden at logge ind",
+    "signInBenefits": "Log ind for at gemme spilhistorik og indstillinger",
     "error": {
-      "title": "Sign In Error",
-      "default": "Could not sign in. Try another method.",
-      "accessDenied": "Access denied.",
-      "tryAgain": "Try Again"
+      "title": "Login Fejl",
+      "default": "Kunne ikke logge ind. Prøv en anden metode.",
+      "accessDenied": "Adgang nægtet.",
+      "tryAgain": "Prøv Igen"
     }
   },
   "difficulty": {
-    "easy": "Easy",
+    "easy": "Let",
     "medium": "Medium",
-    "hard": "Hard",
-    "mixed": "Mixed"
+    "hard": "Svær",
+    "mixed": "Blandet"
   },
   "common": {
-    "loading": "Loading…",
-    "error": "Error",
-    "retry": "Try Again",
-    "cancel": "Cancel",
-    "save": "Save",
-    "close": "Close"
+    "loading": "Indlæser…",
+    "error": "Fejl",
+    "retry": "Prøv Igen",
+    "cancel": "Annuller",
+    "save": "Gem",
+    "close": "Luk"
+  },
+  "help": {
+    "title": "Sådan Spiller Du",
+    "subtitle": "Komplet guide for værter og spillere",
+    "backToHome": "Tilbage til Forsiden",
+    "forHost": {
+      "title": "For Værten (Projektor)",
+      "intro": "Værten styrer spillet på en stor skærm eller projektor. Én person fra teamet skal bruge en bærbar eller computer.",
+      "step1": {
+        "title": "1. Åbn Værtssiden",
+        "description": "Gå til siden og klik på \"Start Spil (Vært)\" eller åbn /play/host direkte. Du vil se skærmen til valg af sværhedsgrad."
+      },
+      "step2": {
+        "title": "2. Vælg Sværhedsgrad",
+        "description": "Vælg sværhedsgrad: Let (berømte karakterer som Moses, David), Medium (profeter og apostle), Svær (kun for eksperter), eller Blandet (kombination af alle niveauer)."
+      },
+      "step3": {
+        "title": "3. Åbn Lobbyen",
+        "description": "Klik på \"Åbn Lobby\". En QR-kode og spilkode (5 tegn) vil vises. Vis denne skærm på projektoren."
+      },
+      "step4": {
+        "title": "4. Vent på Spillere",
+        "description": "Når spillere scanner QR-koden og indtaster deres navne, vil du se dem dukke op i lobbyen. Vent til alle har tilsluttet sig."
+      },
+      "step5": {
+        "title": "5. Start Spillet",
+        "description": "Klik på \"Start Quiz\". Det første spørgsmål er en øvelsesrunde (ingen point), derefter følger 10 spørgsmål, 15 sekunder hver."
+      },
+      "step6": {
+        "title": "6. Efter Spillet",
+        "description": "Resultater vises automatisk. Klik på \"Nyt Spil\" for at starte en ny runde med de samme eller andre spillere."
+      }
+    },
+    "forPlayer": {
+      "title": "For Spillere (Telefon)",
+      "intro": "Spillere tilslutter sig fra deres telefoner. Ingen app nødvendig — bare en browser og internet.",
+      "step1": {
+        "title": "1. Scan QR-koden",
+        "description": "Peg din telefonkamera mod QR-koden på den store skærm. Tryk på notifikationen for at åbne linket."
+      },
+      "step2": {
+        "title": "2. Indtast Dit Navn",
+        "description": "Skriv dit navn eller kaldenavn (mindst 2 tegn). Sådan vil du blive vist på ranglisten."
+      },
+      "step3": {
+        "title": "3. Vent i Lobbyen",
+        "description": "Du vil se \"Du er med i spillet\" og vente på at værten starter. Hold din telefon klar!"
+      },
+      "step4": {
+        "title": "4. Besvar Spørgsmål",
+        "description": "Når et spørgsmål vises, tryk på en af de fire farvede knapper (A, B, C, D). Hurtigere rigtige svar = flere point!"
+      },
+      "step5": {
+        "title": "5. Se Dine Resultater",
+        "description": "Efter hvert spørgsmål vil du se om du svarede rigtigt og din nuværende placering. Endelige resultater vises til sidst."
+      }
+    },
+    "scoring": {
+      "title": "Pointsystem",
+      "description": "Point afhænger af rigtighed og hurtighed:",
+      "correct": "Rigtigt svar: 500 point",
+      "speed": "Hurtighedsbonus: op til 500 ekstra point (jo hurtigere, jo mere)",
+      "wrong": "Forkert eller intet svar: 0 point",
+      "practice": "Øvelsesspørgsmål: ingen point"
+    },
+    "levels": {
+      "title": "Sværhedsgrader",
+      "easy": {
+        "title": "Let",
+        "description": "Berømte bibelske karakterer som alle kender: Adam, Eva, Noah, Moses, David, Maria, Jesus og andre."
+      },
+      "medium": {
+        "title": "Medium",
+        "description": "Kræver noget bibelkendskab: profeter, apostle og bikarakterer fra velkendte historier."
+      },
+      "hard": {
+        "title": "Svær",
+        "description": "For bibeleksperter: mindre karakterer, mindre kendte personer og detaljeret viden kræves."
+      },
+      "mixed": {
+        "title": "Blandet",
+        "description": "Kombination af alle niveauer: 40% lette, 40% medium, 20% svære spørgsmål."
+      }
+    },
+    "tips": {
+      "title": "Tips",
+      "tip1": "Sørg for at alle er forbundet til det samme WiFi eller har mobilinternet.",
+      "tip2": "Værtens enhed bør ikke gå i dvale under spillet.",
+      "tip3": "Spørgsmål gentages ikke i 24 timer — spil flere runder uden at se de samme billeder!",
+      "tip4": "Hvis du bliver afbrudt, scan QR-koden igen — du vil tilslutte dig igen med det samme navn."
+    },
+    "troubleshooting": {
+      "title": "Fejlfinding",
+      "q1": {
+        "q": "Jeg scannede QR-koden men ser en QR-kode skærm",
+        "a": "Du har muligvis åbnet Værtssiden. Spillere bør scanne QR-koden vist på projektoren, som fører til Spilsiden. URL'en bør indeholde \"?game=\" med en 5-tegns kode."
+      },
+      "q2": {
+        "q": "Mit navn er taget",
+        "a": "Nogen har allerede tilsluttet sig med det navn. Vælg et andet navn eller tilføj et tal (som \"John2\")."
+      },
+      "q3": {
+        "q": "Værten svarer ikke",
+        "a": "Sørg for at værtssiden er åben og ikke er gået i dvale. Spilkoden bør matche det du ser på skærmen."
+      },
+      "q4": {
+        "q": "Jeg blev afbrudt",
+        "a": "Scan QR-koden igen. Hvis du brugte det samme navn, vil du automatisk tilslutte dig spillet igen."
+      }
+    }
   }
 }

@@ -1,284 +1,408 @@
 {
   "meta": {
-    "title": "Bible Quiz · Guess the Hero from Selfie",
-    "description": "Interactive quiz for youth and churches — guess Bible characters from AI-generated selfies",
+    "title": "Quiz Bíblico · Adivina al Héroe por su Selfie",
+    "description": "Quiz interactivo para jóvenes e iglesias — adivina personajes bíblicos a partir de selfies generados por IA",
     "domain": "youthconnect.church"
   },
   "nav": {
-    "play": "Play",
-    "host": "Host",
-    "donate": "Donate",
-    "signIn": "Sign In",
-    "signOut": "Sign Out",
-    "profile": "Profile",
-    "settings": "Settings",
-    "history": "Game History"
+    "play": "Jugar",
+    "host": "Anfitrión",
+    "help": "Ayuda",
+    "donate": "Donar",
+    "signIn": "Iniciar sesión",
+    "signOut": "Cerrar sesión",
+    "profile": "Perfil",
+    "settings": "Configuración",
+    "history": "Historial de juegos"
   },
   "landing": {
+    "quickStart": {
+      "title": "Inicio rápido",
+      "host": "Anfitrión: abre",
+      "player": "Jugadores: escanea el QR e ingresa tu nombre",
+      "play": "¡Juega: toca la respuesta correcta!",
+      "helpLink": "¿Necesitas más detalles? Consulta la guía completa"
+    },
     "hero": {
-      "title": "Bible Quiz",
-      "subtitle": "Guess the Hero from Selfie",
-      "description": "Interactive game for youth meetings, Sunday schools, and family nights. Scan the QR code — and you're in!",
-      "ctaHost": "Start Game (Host)",
-      "ctaJoin": "Join with Code"
+      "title": "Quiz Bíblico",
+      "subtitle": "Adivina al Héroe por su Selfie",
+      "description": "Juego interactivo para reuniones de jóvenes, escuelas dominicales y noches familiares. ¡Escanea el código QR y únete!",
+      "ctaHost": "Iniciar juego (Anfitrión)",
+      "ctaJoin": "Unirse con código"
     },
     "howItWorks": {
-      "title": "How It Works",
+      "title": "Cómo funciona",
       "step1": {
-        "title": "Host opens the game",
-        "description": "Open /host on a laptop with projector and choose difficulty"
+        "title": "El anfitrión abre el juego",
+        "description": "Abre /host en un portátil con proyector y elige la dificultad"
       },
       "step2": {
-        "title": "Players scan QR",
-        "description": "Phone, QR code — and in 5 seconds you're in the lobby"
+        "title": "Los jugadores escanean el QR",
+        "description": "Teléfono, código QR — y en 5 segundos estás en el lobby"
       },
       "step3": {
-        "title": "Play and compete",
-        "description": "10 questions, 15 seconds each, points for speed, live leaderboard"
+        "title": "Juega y compite",
+        "description": "10 preguntas, 15 segundos cada una, puntos por rapidez, clasificación en vivo"
       }
     },
     "features": {
-      "title": "Features",
+      "title": "Características",
       "selfie": {
-        "title": "Bible Character Selfies",
-        "description": "Unique AI images: guess the character from the scene"
+        "title": "Selfies de personajes bíblicos",
+        "description": "Imágenes únicas de IA: adivina el personaje por la escena"
       },
       "realtime": {
-        "title": "Real-time Multiplayer",
-        "description": "Up to 100 players simultaneously, instant sync"
+        "title": "Multijugador en tiempo real",
+        "description": "Hasta 100 jugadores simultáneamente, sincronización instantánea"
       },
       "levels": {
-        "title": "3 Difficulty Levels",
-        "description": "From Adam to Tychicus — choose your level"
+        "title": "3 niveles de dificultad",
+        "description": "De Adán a Tíquico — elige tu nivel"
       },
       "noSignup": {
-        "title": "No Registration",
-        "description": "Guests play instantly, sign in for history and settings"
+        "title": "Sin registro",
+        "description": "Los invitados juegan instantáneamente, inicia sesión para historial y configuración"
       },
       "free": {
-        "title": "Free",
-        "description": "No subscriptions, runs on free tier"
+        "title": "Gratis",
+        "description": "Sin suscripciones, funciona con plan gratuito"
       },
       "mobile": {
         "title": "Mobile-first",
-        "description": "Optimized for phones and any screen"
+        "description": "Optimizado para teléfonos y cualquier pantalla"
       }
     },
     "levels": {
-      "title": "Difficulty Levels",
+      "title": "Niveles de dificultad",
       "easy": {
-        "title": "Easy",
-        "description": "Famous heroes: Moses, David, Noah, Mary"
+        "title": "Fácil",
+        "description": "Héroes famosos: Moisés, David, Noé, María"
       },
       "medium": {
-        "title": "Medium",
-        "description": "Prophets and apostles: Isaiah, Barnabas, Titus"
+        "title": "Medio",
+        "description": "Profetas y apóstoles: Isaías, Bernabé, Tito"
       },
       "hard": {
-        "title": "Hard",
-        "description": "For experts: Ahithophel, Epaphras, Nympha"
+        "title": "Difícil",
+        "description": "Para expertos: Ahitofel, Epafras, Ninfa"
       }
     },
     "forWhom": {
-      "title": "Who Is This For",
-      "youth": "Youth ministries",
-      "sunday": "Sunday schools",
-      "camps": "Christian camps",
-      "family": "Family nights",
-      "small": "Small groups"
+      "title": "¿Para quién es este juego?",
+      "youth": "Ministerios juveniles",
+      "sunday": "Escuelas dominicales",
+      "camps": "Campamentos cristianos",
+      "family": "Noches familiares",
+      "small": "Grupos pequeños"
     },
     "gallery": {
-      "title": "Selfie Gallery",
-      "hint": "Can you guess who this is?"
+      "title": "Galería de selfies",
+      "hint": "¿Puedes adivinar quién es?"
     },
     "donate": {
-      "title": "Support the Project",
-      "description": "The game is free for everyone. Your donations help develop the project, add new images and languages.",
-      "oneTime": "One-time Donation",
-      "monthly": "Monthly",
-      "crypto": "Cryptocurrency",
-      "boosty": "Boosty (for Russia)"
+      "title": "Apoya el proyecto",
+      "description": "El juego es gratis para todos. Tus donaciones ayudan a desarrollar el proyecto, añadir nuevas imágenes e idiomas.",
+      "oneTime": "Donación única",
+      "monthly": "Mensual",
+      "crypto": "Criptomoneda",
+      "boosty": "Boosty (para Rusia)"
     },
     "faq": {
-      "title": "FAQ",
+      "title": "Preguntas frecuentes",
       "q1": {
-        "q": "Is this free?",
-        "a": "Yes, completely free. We use free tiers of Vercel and Pusher."
+        "q": "¿Es gratis?",
+        "a": "Sí, completamente gratis. Usamos planes gratuitos de Vercel y Pusher."
       },
       "q2": {
-        "q": "How many players can participate?",
-        "a": "Up to 100 simultaneously (Pusher limit). For larger events, contact us."
+        "q": "¿Cuántos jugadores pueden participar?",
+        "a": "Hasta 100 simultáneamente (límite de Pusher). Para eventos más grandes, contáctanos."
       },
       "q3": {
-        "q": "Is registration required?",
-        "a": "No! Guests play instantly via QR code. Sign in with Google/Yandex only for saving history and settings."
+        "q": "¿Es necesario registrarse?",
+        "a": "¡No! Los invitados juegan instantáneamente con el código QR. Iniciar sesión con Google/Yandex solo para guardar historial y configuración."
       },
       "q4": {
-        "q": "Which Bible translation is used?",
-        "a": "Character names follow standard translations for each language."
+        "q": "¿Qué traducción de la Biblia se usa?",
+        "a": "Los nombres de los personajes siguen las traducciones estándar para cada idioma."
       },
       "q5": {
-        "q": "What's the denominational stance?",
-        "a": "The game is for all Protestant churches. Questions are based on canonical Bible text."
+        "q": "¿Cuál es la posición confesional?",
+        "a": "El juego es para todas las iglesias protestantes. Las preguntas se basan en el texto bíblico canónico."
       },
       "q6": {
-        "q": "Can this be used with children?",
-        "a": "Yes! Content is safe for all ages. Easy level works great for Sunday school."
+        "q": "¿Se puede usar con niños?",
+        "a": "¡Sí! El contenido es seguro para todas las edades. El nivel fácil funciona muy bien para escuelas dominicales."
       }
     },
     "footer": {
-      "contact": "Contact",
+      "contact": "Contacto",
       "email": "hello@youthconnect.church",
-      "privacy": "Privacy Policy",
-      "terms": "Terms of Use",
-      "copyright": "© 2024 YouthConnect. All rights reserved."
+      "privacy": "Política de privacidad",
+      "terms": "Términos de uso",
+      "copyright": "© 2024 YouthConnect. Todos los derechos reservados."
     }
   },
   "game": {
-    "code": "Game Code",
-    "players": "Players",
-    "question": "Question",
-    "of": "of",
-    "seconds": "sec",
-    "practice": "Practice Question",
-    "practiceNote": "no points",
-    "whoMadeSelfie": "Who made this selfie?",
-    "itIs": "It's",
-    "correct": "Correct!",
-    "incorrect": "Incorrect",
-    "timeout": "Time's up",
-    "noAnswer": "No answer",
-    "correctAnswer": "Correct answer",
-    "points": "points",
-    "correctAnswers": "Correct",
-    "place": "place",
-    "nextIn": "Next question in",
-    "resultsIn": "Results in",
-    "waitingHost": "Waiting for host to start the quiz…",
-    "answerAccepted": "Answer accepted!",
-    "lookAtScreen": "Look at the main screen…",
-    "answered": "Answered"
+    "code": "Código del juego",
+    "players": "Jugadores",
+    "question": "Pregunta",
+    "of": "de",
+    "seconds": "seg",
+    "practice": "Pregunta de práctica",
+    "practiceNote": "sin puntos",
+    "whoMadeSelfie": "¿Quién se hizo este selfie?",
+    "itIs": "Es",
+    "correct": "¡Correcto!",
+    "incorrect": "Incorrecto",
+    "timeout": "Se acabó el tiempo",
+    "noAnswer": "Sin respuesta",
+    "correctAnswer": "Respuesta correcta",
+    "points": "puntos",
+    "correctAnswers": "Correctas",
+    "place": "lugar",
+    "nextIn": "Siguiente pregunta en",
+    "resultsIn": "Resultados en",
+    "waitingHost": "Esperando a que el anfitrión inicie el quiz…",
+    "answerAccepted": "¡Respuesta aceptada!",
+    "lookAtScreen": "Mira la pantalla principal…",
+    "answered": "Respondieron"
   },
   "host": {
-    "title": "Host Screen",
-    "selectQuiz": "Select Difficulty",
-    "openLobby": "Open Lobby",
-    "back": "Back",
-    "startGame": "Start Quiz",
-    "startPractice": "Start with Practice",
-    "newGame": "New Game",
-    "scanQR": "Scan QR code with your phone to join",
-    "noPlayers": "No one has joined yet…",
-    "results": "Quiz Results",
-    "noPusher": "Pusher keys not set. Add environment variables — see README.",
-    "practiceComplete": "Practice round complete — now it's for real!",
-    "startQuiz": "Start Quiz"
+    "title": "Pantalla del anfitrión",
+    "selectQuiz": "Seleccionar dificultad",
+    "openLobby": "Abrir lobby",
+    "back": "Atrás",
+    "startGame": "Iniciar quiz",
+    "startPractice": "Empezar con práctica",
+    "newGame": "Nuevo juego",
+    "scanQR": "Escanea el código QR con tu teléfono para unirte",
+    "noPlayers": "Nadie se ha unido todavía…",
+    "results": "Resultados del quiz",
+    "noPusher": "Claves de Pusher no configuradas. Añade las variables de entorno — ver README.",
+    "practiceComplete": "¡Práctica completada — ahora es de verdad!",
+    "startQuiz": "Iniciar quiz",
+    "playerHint": "¿Eres jugador? ¡Escanea el código QR de arriba con tu teléfono, no abras esta página!"
   },
   "player": {
-    "enterName": "What's your name?",
-    "namePlaceholder": "Your name or nickname",
-    "join": "Join",
-    "checking": "Checking…",
-    "youAreIn": "You're in the game",
-    "scanQR": "Scan the QR code on screen to join the game.",
+    "enterName": "¿Cómo te llamas?",
+    "namePlaceholder": "Tu nombre o apodo",
+    "join": "Unirse",
+    "checking": "Verificando…",
+    "youAreIn": "Estás en el juego",
+    "scanQR": "Escanea el código QR en la pantalla para unirte al juego.",
+    "hint": {
+      "lookForQR": "Mira la pantalla grande — el anfitrión debería mostrar un código QR con un código de juego de 5 caracteres.",
+      "areYouHost": "¿Eres el anfitrión?",
+      "hostLink": "Abre la página del anfitrión →"
+    },
     "errors": {
-      "nameMin": "Enter a name (at least 2 characters).",
-      "nameTaken": "This name is taken. Choose another.",
-      "gameClosed": "Game is in progress or closed for entry.",
-      "hostOffline": "Host not responding. Make sure the quiz is open on screen.",
-      "network": "Network error. Try again."
+      "nameMin": "Ingresa un nombre (al menos 2 caracteres).",
+      "nameTaken": "Este nombre ya está ocupado. Elige otro.",
+      "gameClosed": "El juego está en progreso o cerrado para nuevos jugadores.",
+      "hostOffline": "El anfitrión no responde. Asegúrate de que el quiz está abierto en la pantalla.",
+      "network": "Error de red. Inténtalo de nuevo."
     }
   },
   "settings": {
-    "title": "Settings",
+    "title": "Configuración",
     "autoAdvance": {
-      "label": "Next Question Transition",
-      "auto": "Automatic",
-      "manual": "Manual (button)"
+      "label": "Transición a la siguiente pregunta",
+      "auto": "Automática",
+      "manual": "Manual (botón)"
     },
     "questionTime": {
-      "label": "Time per Question",
-      "seconds": "seconds"
+      "label": "Tiempo por pregunta",
+      "seconds": "segundos"
     },
     "questionsPerQuiz": {
-      "label": "Questions per Game"
+      "label": "Preguntas por juego"
     },
     "difficulty": {
-      "label": "Difficulty",
-      "easy": "Easy",
-      "medium": "Medium",
-      "hard": "Hard",
-      "mixed": "Mixed"
+      "label": "Dificultad",
+      "easy": "Fácil",
+      "medium": "Medio",
+      "hard": "Difícil",
+      "mixed": "Mixto"
     },
     "theme": {
-      "label": "Theme",
-      "light": "Light",
-      "dark": "Dark",
-      "system": "System"
+      "label": "Tema",
+      "light": "Claro",
+      "dark": "Oscuro",
+      "system": "Sistema"
     },
     "sound": {
-      "label": "Sound",
-      "enabled": "On",
-      "disabled": "Off"
+      "label": "Sonido",
+      "enabled": "Activado",
+      "disabled": "Desactivado"
     },
     "showExplanation": {
-      "label": "Show explanation after answer"
+      "label": "Mostrar explicación después de responder"
     },
     "showCorrectAnswer": {
-      "label": "Show correct answer"
+      "label": "Mostrar respuesta correcta"
     },
     "practiceQuestion": {
-      "label": "Practice question before game"
+      "label": "Pregunta de práctica antes del juego"
     },
     "speedBonus": {
-      "label": "Points for speed"
+      "label": "Puntos por rapidez"
     },
     "language": {
-      "label": "Language"
+      "label": "Idioma"
     },
-    "save": "Save",
-    "saved": "Settings saved"
+    "save": "Guardar",
+    "saved": "Configuración guardada"
   },
   "profile": {
-    "title": "Profile",
-    "gamesPlayed": "Games Played",
-    "totalScore": "Total Score",
-    "correctAnswers": "Correct Answers",
-    "bestRank": "Best Rank",
-    "recentGames": "Recent Games",
-    "noGames": "You haven't played yet. Start your first game!",
-    "date": "Date",
-    "difficulty": "Difficulty",
-    "score": "Score",
-    "rank": "Rank"
+    "title": "Perfil",
+    "gamesPlayed": "Juegos jugados",
+    "totalScore": "Puntuación total",
+    "correctAnswers": "Respuestas correctas",
+    "bestRank": "Mejor clasificación",
+    "recentGames": "Juegos recientes",
+    "noGames": "Todavía no has jugado. ¡Empieza tu primer juego!",
+    "date": "Fecha",
+    "difficulty": "Dificultad",
+    "score": "Puntuación",
+    "rank": "Clasificación"
   },
   "auth": {
-    "signIn": "Sign In",
-    "signInWith": "Sign in with",
-    "signOut": "Sign Out",
+    "signIn": "Iniciar sesión",
+    "signInWith": "Iniciar sesión con",
+    "signOut": "Cerrar sesión",
     "google": "Google",
     "yandex": "Yandex",
-    "guestNote": "Guests can play 1 game without signing in",
-    "signInBenefits": "Sign in to save game history and settings",
+    "guestNote": "Los invitados pueden jugar 1 juego sin iniciar sesión",
+    "signInBenefits": "Inicia sesión para guardar historial y configuración",
     "error": {
-      "title": "Sign In Error",
-      "default": "Could not sign in. Try another method.",
-      "accessDenied": "Access denied.",
-      "tryAgain": "Try Again"
+      "title": "Error de inicio de sesión",
+      "default": "No se pudo iniciar sesión. Prueba otro método.",
+      "accessDenied": "Acceso denegado.",
+      "tryAgain": "Intentar de nuevo"
     }
   },
   "difficulty": {
-    "easy": "Easy",
-    "medium": "Medium",
-    "hard": "Hard",
-    "mixed": "Mixed"
+    "easy": "Fácil",
+    "medium": "Medio",
+    "hard": "Difícil",
+    "mixed": "Mixto"
   },
   "common": {
-    "loading": "Loading…",
+    "loading": "Cargando…",
     "error": "Error",
-    "retry": "Try Again",
-    "cancel": "Cancel",
-    "save": "Save",
-    "close": "Close"
+    "retry": "Reintentar",
+    "cancel": "Cancelar",
+    "save": "Guardar",
+    "close": "Cerrar"
+  },
+  "help": {
+    "title": "Cómo jugar",
+    "subtitle": "Guía completa para anfitriones y jugadores",
+    "backToHome": "Volver al inicio",
+    "forHost": {
+      "title": "Para el anfitrión (Proyector)",
+      "intro": "El anfitrión ejecuta el juego en una pantalla grande o proyector. Una persona del equipo necesita un portátil o computadora.",
+      "step1": {
+        "title": "1. Abrir la página del anfitrión",
+        "description": "Ve al sitio y haz clic en \"Iniciar juego (Anfitrión)\" o abre /play/host directamente. Verás la pantalla de selección de dificultad."
+      },
+      "step2": {
+        "title": "2. Elegir dificultad",
+        "description": "Selecciona el nivel: Fácil (personajes famosos como Moisés, David), Medio (profetas y apóstoles), Difícil (solo expertos) o Mixto (combinación de todos los niveles)."
+      },
+      "step3": {
+        "title": "3. Abrir el lobby",
+        "description": "Haz clic en \"Abrir lobby\". Aparecerá un código QR y un código de juego (5 caracteres). Muestra esta pantalla en el proyector."
+      },
+      "step4": {
+        "title": "4. Esperar a los jugadores",
+        "description": "Cuando los jugadores escaneen el código QR e ingresen sus nombres, los verás aparecer en el lobby. Espera a que todos se unan."
+      },
+      "step5": {
+        "title": "5. Iniciar el juego",
+        "description": "Haz clic en \"Iniciar quiz\". La primera pregunta es de práctica (sin puntos), luego siguen 10 preguntas de 15 segundos cada una."
+      },
+      "step6": {
+        "title": "6. Después del juego",
+        "description": "Los resultados se muestran automáticamente. Haz clic en \"Nuevo juego\" para otra ronda con los mismos u otros jugadores."
+      }
+    },
+    "forPlayer": {
+      "title": "Para jugadores (Teléfono)",
+      "intro": "Los jugadores se unen desde sus teléfonos. No necesitas app — solo un navegador e internet.",
+      "step1": {
+        "title": "1. Escanear el código QR",
+        "description": "Apunta la cámara de tu teléfono al código QR en la pantalla grande. Toca la notificación para abrir el enlace."
+      },
+      "step2": {
+        "title": "2. Ingresar tu nombre",
+        "description": "Escribe tu nombre o apodo (al menos 2 caracteres). Así aparecerás en la clasificación."
+      },
+      "step3": {
+        "title": "3. Esperar en el lobby",
+        "description": "Verás \"Estás en el juego\" y esperarás a que el anfitrión inicie. ¡Mantén tu teléfono listo!"
+      },
+      "step4": {
+        "title": "4. Responder preguntas",
+        "description": "Cuando aparezca una pregunta, toca uno de los cuatro botones de colores (A, B, C, D). ¡Respuestas correctas más rápidas = más puntos!"
+      },
+      "step5": {
+        "title": "5. Ver tus resultados",
+        "description": "Después de cada pregunta, verás si acertaste y tu clasificación actual. Los resultados finales aparecen al final."
+      }
+    },
+    "scoring": {
+      "title": "Sistema de puntos",
+      "description": "Los puntos dependen de la corrección y la rapidez:",
+      "correct": "Respuesta correcta: 500 puntos",
+      "speed": "Bonus de rapidez: hasta 500 puntos extra (más rápido = más puntos)",
+      "wrong": "Respuesta incorrecta o sin respuesta: 0 puntos",
+      "practice": "Pregunta de práctica: sin puntos"
+    },
+    "levels": {
+      "title": "Niveles de dificultad",
+      "easy": {
+        "title": "Fácil",
+        "description": "Personajes bíblicos famosos que todos conocen: Adán, Eva, Noé, Moisés, David, María, Jesús y otros."
+      },
+      "medium": {
+        "title": "Medio",
+        "description": "Requiere algo de conocimiento bíblico: profetas, apóstoles y personajes secundarios de historias conocidas."
+      },
+      "hard": {
+        "title": "Difícil",
+        "description": "Para expertos en la Biblia: personajes menores, figuras menos conocidas, se requiere conocimiento detallado."
+      },
+      "mixed": {
+        "title": "Mixto",
+        "description": "Combinación de todos los niveles: 40% fácil, 40% medio, 20% difícil."
+      }
+    },
+    "tips": {
+      "title": "Consejos",
+      "tip1": "Asegúrate de que todos estén conectados al mismo WiFi o tengan internet móvil.",
+      "tip2": "El dispositivo del anfitrión no debe entrar en modo de suspensión durante el juego.",
+      "tip3": "Las preguntas no se repiten durante 24 horas — ¡juega varias rondas sin ver las mismas imágenes!",
+      "tip4": "Si te desconectas, escanea el código QR de nuevo — volverás a unirte con el mismo nombre."
+    },
+    "troubleshooting": {
+      "title": "Solución de problemas",
+      "q1": {
+        "q": "Escaneé el código QR pero veo una pantalla con código QR",
+        "a": "Puede que hayas abierto la página del anfitrión. Los jugadores deben escanear el código QR mostrado en el proyector, que lleva a la página del jugador. La URL debe contener \"?game=\" con un código de 5 caracteres."
+      },
+      "q2": {
+        "q": "Mi nombre está ocupado",
+        "a": "Alguien ya se unió con ese nombre. Elige otro nombre o añade un número (como \"Juan2\")."
+      },
+      "q3": {
+        "q": "El anfitrión no responde",
+        "a": "Asegúrate de que la página del anfitrión está abierta y no está en modo de suspensión. El código del juego debe coincidir con el que se muestra en pantalla."
+      },
+      "q4": {
+        "q": "Me desconecté",
+        "a": "Escanea el código QR de nuevo. Con el mismo nombre, volverás a unirte automáticamente al juego."
+      }
+    }
   }
 }

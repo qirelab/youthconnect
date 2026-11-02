@@ -1,284 +1,408 @@
 {
   "meta": {
-    "title": "Bible Quiz · Guess the Hero from Selfie",
-    "description": "Interactive quiz for youth and churches — guess Bible characters from AI-generated selfies",
+    "title": "Βιβλικό Κουίζ · Μάντεψε τον Ήρωα από τη Selfie",
+    "description": "Διαδραστικό κουίζ για νέους και εκκλησίες — μάντεψε βιβλικούς χαρακτήρες από AI selfies",
     "domain": "youthconnect.church"
   },
   "nav": {
-    "play": "Play",
-    "host": "Host",
-    "donate": "Donate",
-    "signIn": "Sign In",
-    "signOut": "Sign Out",
-    "profile": "Profile",
-    "settings": "Settings",
-    "history": "Game History"
+    "play": "Παίξε",
+    "host": "Διοργανωτής",
+    "help": "Βοήθεια",
+    "donate": "Δωρεά",
+    "signIn": "Σύνδεση",
+    "signOut": "Αποσύνδεση",
+    "profile": "Προφίλ",
+    "settings": "Ρυθμίσεις",
+    "history": "Ιστορικό Παιχνιδιών"
   },
   "landing": {
     "hero": {
-      "title": "Bible Quiz",
-      "subtitle": "Guess the Hero from Selfie",
-      "description": "Interactive game for youth meetings, Sunday schools, and family nights. Scan the QR code — and you're in!",
-      "ctaHost": "Start Game (Host)",
-      "ctaJoin": "Join with Code"
+      "title": "Βιβλικό Κουίζ",
+      "subtitle": "Μάντεψε τον Ήρωα από τη Selfie",
+      "description": "Διαδραστικό παιχνίδι για συναντήσεις νέων, κατηχητικά και οικογενειακές βραδιές. Σκανάρετε τον κωδικό QR — και είστε μέσα!",
+      "ctaHost": "Ξεκίνα Παιχνίδι (Διοργανωτής)",
+      "ctaJoin": "Συμμετοχή με Κωδικό"
+    },
+    "quickStart": {
+      "title": "Γρήγορη Εκκίνηση",
+      "host": "Διοργανωτής: άνοιξε",
+      "player": "Παίκτες: σκανάρετε QR και εισάγετε όνομα",
+      "play": "Παίξε: πάτα τη σωστή απάντηση!",
+      "helpLink": "Χρειάζεστε περισσότερες λεπτομέρειες; Δείτε τον πλήρη οδηγό"
     },
     "howItWorks": {
-      "title": "How It Works",
+      "title": "Πώς Λειτουργεί",
       "step1": {
-        "title": "Host opens the game",
-        "description": "Open /host on a laptop with projector and choose difficulty"
+        "title": "Ο διοργανωτής ανοίγει το παιχνίδι",
+        "description": "Ανοίξτε /host σε laptop με προβολέα και επιλέξτε δυσκολία"
       },
       "step2": {
-        "title": "Players scan QR",
-        "description": "Phone, QR code — and in 5 seconds you're in the lobby"
+        "title": "Οι παίκτες σκανάρουν QR",
+        "description": "Τηλέφωνο, κωδικός QR — και σε 5 δευτερόλεπτα είστε στο lobby"
       },
       "step3": {
-        "title": "Play and compete",
-        "description": "10 questions, 15 seconds each, points for speed, live leaderboard"
+        "title": "Παίξτε και ανταγωνιστείτε",
+        "description": "10 ερωτήσεις, 15 δευτερόλεπτα η καθεμία, πόντοι για ταχύτητα, ζωντανή κατάταξη"
       }
     },
     "features": {
-      "title": "Features",
+      "title": "Χαρακτηριστικά",
       "selfie": {
-        "title": "Bible Character Selfies",
-        "description": "Unique AI images: guess the character from the scene"
+        "title": "Selfies Βιβλικών Χαρακτήρων",
+        "description": "Μοναδικές εικόνες AI: μάντεψε τον χαρακτήρα από τη σκηνή"
       },
       "realtime": {
-        "title": "Real-time Multiplayer",
-        "description": "Up to 100 players simultaneously, instant sync"
+        "title": "Multiplayer σε Πραγματικό Χρόνο",
+        "description": "Έως 100 παίκτες ταυτόχρονα, άμεσος συγχρονισμός"
       },
       "levels": {
-        "title": "3 Difficulty Levels",
-        "description": "From Adam to Tychicus — choose your level"
+        "title": "3 Επίπεδα Δυσκολίας",
+        "description": "Από τον Αδάμ στον Τύχικο — επιλέξτε το επίπεδό σας"
       },
       "noSignup": {
-        "title": "No Registration",
-        "description": "Guests play instantly, sign in for history and settings"
+        "title": "Χωρίς Εγγραφή",
+        "description": "Οι επισκέπτες παίζουν αμέσως, συνδεθείτε για ιστορικό και ρυθμίσεις"
       },
       "free": {
-        "title": "Free",
-        "description": "No subscriptions, runs on free tier"
+        "title": "Δωρεάν",
+        "description": "Χωρίς συνδρομές, λειτουργεί με δωρεάν πλάνα"
       },
       "mobile": {
-        "title": "Mobile-first",
-        "description": "Optimized for phones and any screen"
+        "title": "Για Κινητά",
+        "description": "Βελτιστοποιημένο για τηλέφωνα και κάθε οθόνη"
       }
     },
     "levels": {
-      "title": "Difficulty Levels",
+      "title": "Επίπεδα Δυσκολίας",
       "easy": {
-        "title": "Easy",
-        "description": "Famous heroes: Moses, David, Noah, Mary"
+        "title": "Εύκολο",
+        "description": "Διάσημοι ήρωες: Μωυσής, Δαβίδ, Νώε, Μαρία"
       },
       "medium": {
-        "title": "Medium",
-        "description": "Prophets and apostles: Isaiah, Barnabas, Titus"
+        "title": "Μέτριο",
+        "description": "Προφήτες και απόστολοι: Ησαΐας, Βαρνάβας, Τίτος"
       },
       "hard": {
-        "title": "Hard",
-        "description": "For experts: Ahithophel, Epaphras, Nympha"
+        "title": "Δύσκολο",
+        "description": "Για ειδικούς: Αχιτόφελ, Επαφράς, Νύμφα"
       }
     },
     "forWhom": {
-      "title": "Who Is This For",
-      "youth": "Youth ministries",
-      "sunday": "Sunday schools",
-      "camps": "Christian camps",
-      "family": "Family nights",
-      "small": "Small groups"
+      "title": "Για Ποιους Είναι",
+      "youth": "Ομάδες νέων",
+      "sunday": "Κατηχητικά",
+      "camps": "Χριστιανικές κατασκηνώσεις",
+      "family": "Οικογενειακές βραδιές",
+      "small": "Μικρές ομάδες"
     },
     "gallery": {
-      "title": "Selfie Gallery",
-      "hint": "Can you guess who this is?"
+      "title": "Γκαλερί Selfie",
+      "hint": "Μπορείτε να μαντέψετε ποιος είναι;"
     },
     "donate": {
-      "title": "Support the Project",
-      "description": "The game is free for everyone. Your donations help develop the project, add new images and languages.",
-      "oneTime": "One-time Donation",
-      "monthly": "Monthly",
-      "crypto": "Cryptocurrency",
-      "boosty": "Boosty (for Russia)"
+      "title": "Υποστηρίξτε το Έργο",
+      "description": "Το παιχνίδι είναι δωρεάν για όλους. Οι δωρεές σας βοηθούν στην ανάπτυξη του έργου, προσθήκη νέων εικόνων και γλωσσών.",
+      "oneTime": "Εφάπαξ Δωρεά",
+      "monthly": "Μηνιαία",
+      "crypto": "Κρυπτονόμισμα",
+      "boosty": "Boosty (για Ρωσία)"
     },
     "faq": {
       "title": "FAQ",
       "q1": {
-        "q": "Is this free?",
-        "a": "Yes, completely free. We use free tiers of Vercel and Pusher."
+        "q": "Είναι δωρεάν;",
+        "a": "Ναι, εντελώς δωρεάν. Χρησιμοποιούμε δωρεάν πλάνα Vercel και Pusher."
       },
       "q2": {
-        "q": "How many players can participate?",
-        "a": "Up to 100 simultaneously (Pusher limit). For larger events, contact us."
+        "q": "Πόσοι παίκτες μπορούν να συμμετέχουν;",
+        "a": "Έως 100 ταυτόχρονα (όριο Pusher). Για μεγαλύτερες εκδηλώσεις, επικοινωνήστε μαζί μας."
       },
       "q3": {
-        "q": "Is registration required?",
-        "a": "No! Guests play instantly via QR code. Sign in with Google/Yandex only for saving history and settings."
+        "q": "Απαιτείται εγγραφή;",
+        "a": "Όχι! Οι επισκέπτες παίζουν αμέσως μέσω κωδικού QR. Συνδεθείτε με Google/Yandex μόνο για αποθήκευση ιστορικού και ρυθμίσεων."
       },
       "q4": {
-        "q": "Which Bible translation is used?",
-        "a": "Character names follow standard translations for each language."
+        "q": "Ποια μετάφραση της Βίβλου χρησιμοποιείται;",
+        "a": "Τα ονόματα χαρακτήρων ακολουθούν τυπικές μεταφράσεις για κάθε γλώσσα."
       },
       "q5": {
-        "q": "What's the denominational stance?",
-        "a": "The game is for all Protestant churches. Questions are based on canonical Bible text."
+        "q": "Ποια είναι η δογματική θέση;",
+        "a": "Το παιχνίδι είναι για όλες τις προτεσταντικές εκκλησίες. Οι ερωτήσεις βασίζονται στο κανονικό βιβλικό κείμενο."
       },
       "q6": {
-        "q": "Can this be used with children?",
-        "a": "Yes! Content is safe for all ages. Easy level works great for Sunday school."
+        "q": "Μπορεί να χρησιμοποιηθεί με παιδιά;",
+        "a": "Ναι! Το περιεχόμενο είναι ασφαλές για όλες τις ηλικίες. Το εύκολο επίπεδο λειτουργεί εξαιρετικά για το κατηχητικό."
       }
     },
     "footer": {
-      "contact": "Contact",
+      "contact": "Επικοινωνία",
       "email": "hello@youthconnect.church",
-      "privacy": "Privacy Policy",
-      "terms": "Terms of Use",
-      "copyright": "© 2024 YouthConnect. All rights reserved."
+      "privacy": "Πολιτική Απορρήτου",
+      "terms": "Όροι Χρήσης",
+      "copyright": "© 2024 YouthConnect. Όλα τα δικαιώματα κατοχυρωμένα."
     }
   },
   "game": {
-    "code": "Game Code",
-    "players": "Players",
-    "question": "Question",
-    "of": "of",
-    "seconds": "sec",
-    "practice": "Practice Question",
-    "practiceNote": "no points",
-    "whoMadeSelfie": "Who made this selfie?",
-    "itIs": "It's",
-    "correct": "Correct!",
-    "incorrect": "Incorrect",
-    "timeout": "Time's up",
-    "noAnswer": "No answer",
-    "correctAnswer": "Correct answer",
-    "points": "points",
-    "correctAnswers": "Correct",
-    "place": "place",
-    "nextIn": "Next question in",
-    "resultsIn": "Results in",
-    "waitingHost": "Waiting for host to start the quiz…",
-    "answerAccepted": "Answer accepted!",
-    "lookAtScreen": "Look at the main screen…",
-    "answered": "Answered"
+    "code": "Κωδικός Παιχνιδιού",
+    "players": "Παίκτες",
+    "question": "Ερώτηση",
+    "of": "από",
+    "seconds": "δευτ",
+    "practice": "Ερώτηση Εξάσκησης",
+    "practiceNote": "χωρίς πόντους",
+    "whoMadeSelfie": "Ποιος έβγαλε αυτή τη selfie;",
+    "itIs": "Είναι ο/η",
+    "correct": "Σωστά!",
+    "incorrect": "Λάθος",
+    "timeout": "Τέλος χρόνου",
+    "noAnswer": "Χωρίς απάντηση",
+    "correctAnswer": "Σωστή απάντηση",
+    "points": "πόντοι",
+    "correctAnswers": "Σωστές",
+    "place": "θέση",
+    "nextIn": "Επόμενη ερώτηση σε",
+    "resultsIn": "Αποτελέσματα σε",
+    "waitingHost": "Περιμένουμε τον διοργανωτή να ξεκινήσει το κουίζ…",
+    "answerAccepted": "Η απάντηση έγινε δεκτή!",
+    "lookAtScreen": "Κοιτάξτε την κύρια οθόνη…",
+    "answered": "Απαντήθηκε"
   },
   "host": {
-    "title": "Host Screen",
-    "selectQuiz": "Select Difficulty",
-    "openLobby": "Open Lobby",
-    "back": "Back",
-    "startGame": "Start Quiz",
-    "startPractice": "Start with Practice",
-    "newGame": "New Game",
-    "scanQR": "Scan QR code with your phone to join",
-    "noPlayers": "No one has joined yet…",
-    "results": "Quiz Results",
-    "noPusher": "Pusher keys not set. Add environment variables — see README.",
-    "practiceComplete": "Practice round complete — now it's for real!",
-    "startQuiz": "Start Quiz"
+    "title": "Οθόνη Διοργανωτή",
+    "selectQuiz": "Επιλέξτε Δυσκολία",
+    "openLobby": "Άνοιγμα Lobby",
+    "back": "Πίσω",
+    "startGame": "Έναρξη Κουίζ",
+    "startPractice": "Έναρξη με Εξάσκηση",
+    "newGame": "Νέο Παιχνίδι",
+    "scanQR": "Σκανάρετε τον κωδικό QR με το τηλέφωνό σας για να συμμετέχετε",
+    "noPlayers": "Κανείς δεν έχει συνδεθεί ακόμα…",
+    "results": "Αποτελέσματα Κουίζ",
+    "noPusher": "Τα κλειδιά Pusher δεν έχουν οριστεί. Προσθέστε μεταβλητές περιβάλλοντος — δείτε README.",
+    "practiceComplete": "Ο γύρος εξάσκησης ολοκληρώθηκε — τώρα παίζουμε στα σοβαρά!",
+    "startQuiz": "Έναρξη Κουίζ",
+    "playerHint": "Είστε παίκτης; Σκανάρετε τον κωδικό QR παραπάνω με το τηλέφωνό σας, μην ανοίγετε αυτή τη σελίδα!"
   },
   "player": {
-    "enterName": "What's your name?",
-    "namePlaceholder": "Your name or nickname",
-    "join": "Join",
-    "checking": "Checking…",
-    "youAreIn": "You're in the game",
-    "scanQR": "Scan the QR code on screen to join the game.",
+    "enterName": "Πώς σε λένε;",
+    "namePlaceholder": "Το όνομα ή ψευδώνυμό σου",
+    "join": "Συμμετοχή",
+    "checking": "Έλεγχος…",
+    "youAreIn": "Είσαι στο παιχνίδι",
+    "scanQR": "Σκανάρετε τον κωδικό QR στην οθόνη για να συμμετέχετε στο παιχνίδι.",
+    "hint": {
+      "lookForQR": "Κοιτάξτε τη μεγάλη οθόνη — ο διοργανωτής πρέπει να δείχνει έναν κωδικό QR με 5-ψήφιο κωδικό παιχνιδιού.",
+      "areYouHost": "Είστε ο διοργανωτής;",
+      "hostLink": "Ανοίξτε τη σελίδα διοργανωτή αντί αυτού →"
+    },
     "errors": {
-      "nameMin": "Enter a name (at least 2 characters).",
-      "nameTaken": "This name is taken. Choose another.",
-      "gameClosed": "Game is in progress or closed for entry.",
-      "hostOffline": "Host not responding. Make sure the quiz is open on screen.",
-      "network": "Network error. Try again."
+      "nameMin": "Εισάγετε όνομα (τουλάχιστον 2 χαρακτήρες).",
+      "nameTaken": "Αυτό το όνομα είναι κατειλημμένο. Επιλέξτε άλλο.",
+      "gameClosed": "Το παιχνίδι είναι σε εξέλιξη ή κλειστό για είσοδο.",
+      "hostOffline": "Ο διοργανωτής δεν απαντά. Βεβαιωθείτε ότι το κουίζ είναι ανοιχτό στην οθόνη.",
+      "network": "Σφάλμα δικτύου. Δοκιμάστε ξανά."
     }
   },
   "settings": {
-    "title": "Settings",
+    "title": "Ρυθμίσεις",
     "autoAdvance": {
-      "label": "Next Question Transition",
-      "auto": "Automatic",
-      "manual": "Manual (button)"
+      "label": "Μετάβαση στην Επόμενη Ερώτηση",
+      "auto": "Αυτόματη",
+      "manual": "Χειροκίνητη (κουμπί)"
     },
     "questionTime": {
-      "label": "Time per Question",
-      "seconds": "seconds"
+      "label": "Χρόνος ανά Ερώτηση",
+      "seconds": "δευτερόλεπτα"
     },
     "questionsPerQuiz": {
-      "label": "Questions per Game"
+      "label": "Ερωτήσεις ανά Παιχνίδι"
     },
     "difficulty": {
-      "label": "Difficulty",
-      "easy": "Easy",
-      "medium": "Medium",
-      "hard": "Hard",
-      "mixed": "Mixed"
+      "label": "Δυσκολία",
+      "easy": "Εύκολο",
+      "medium": "Μέτριο",
+      "hard": "Δύσκολο",
+      "mixed": "Μικτό"
     },
     "theme": {
-      "label": "Theme",
-      "light": "Light",
-      "dark": "Dark",
-      "system": "System"
+      "label": "Θέμα",
+      "light": "Φωτεινό",
+      "dark": "Σκοτεινό",
+      "system": "Συστήματος"
     },
     "sound": {
-      "label": "Sound",
-      "enabled": "On",
-      "disabled": "Off"
+      "label": "Ήχος",
+      "enabled": "Ενεργός",
+      "disabled": "Ανενεργός"
     },
     "showExplanation": {
-      "label": "Show explanation after answer"
+      "label": "Εμφάνιση επεξήγησης μετά την απάντηση"
     },
     "showCorrectAnswer": {
-      "label": "Show correct answer"
+      "label": "Εμφάνιση σωστής απάντησης"
     },
     "practiceQuestion": {
-      "label": "Practice question before game"
+      "label": "Ερώτηση εξάσκησης πριν το παιχνίδι"
     },
     "speedBonus": {
-      "label": "Points for speed"
+      "label": "Πόντοι για ταχύτητα"
     },
     "language": {
-      "label": "Language"
+      "label": "Γλώσσα"
     },
-    "save": "Save",
-    "saved": "Settings saved"
+    "save": "Αποθήκευση",
+    "saved": "Οι ρυθμίσεις αποθηκεύτηκαν"
   },
   "profile": {
-    "title": "Profile",
-    "gamesPlayed": "Games Played",
-    "totalScore": "Total Score",
-    "correctAnswers": "Correct Answers",
-    "bestRank": "Best Rank",
-    "recentGames": "Recent Games",
-    "noGames": "You haven't played yet. Start your first game!",
-    "date": "Date",
-    "difficulty": "Difficulty",
-    "score": "Score",
-    "rank": "Rank"
+    "title": "Προφίλ",
+    "gamesPlayed": "Παιχνίδια που Παίχτηκαν",
+    "totalScore": "Συνολικό Σκορ",
+    "correctAnswers": "Σωστές Απαντήσεις",
+    "bestRank": "Καλύτερη Θέση",
+    "recentGames": "Πρόσφατα Παιχνίδια",
+    "noGames": "Δεν έχετε παίξει ακόμα. Ξεκινήστε το πρώτο σας παιχνίδι!",
+    "date": "Ημερομηνία",
+    "difficulty": "Δυσκολία",
+    "score": "Σκορ",
+    "rank": "Θέση"
   },
   "auth": {
-    "signIn": "Sign In",
-    "signInWith": "Sign in with",
-    "signOut": "Sign Out",
+    "signIn": "Σύνδεση",
+    "signInWith": "Σύνδεση με",
+    "signOut": "Αποσύνδεση",
     "google": "Google",
     "yandex": "Yandex",
-    "guestNote": "Guests can play 1 game without signing in",
-    "signInBenefits": "Sign in to save game history and settings",
+    "guestNote": "Οι επισκέπτες μπορούν να παίξουν 1 παιχνίδι χωρίς σύνδεση",
+    "signInBenefits": "Συνδεθείτε για να αποθηκεύσετε το ιστορικό παιχνιδιών και τις ρυθμίσεις",
     "error": {
-      "title": "Sign In Error",
-      "default": "Could not sign in. Try another method.",
-      "accessDenied": "Access denied.",
-      "tryAgain": "Try Again"
+      "title": "Σφάλμα Σύνδεσης",
+      "default": "Δεν ήταν δυνατή η σύνδεση. Δοκιμάστε άλλη μέθοδο.",
+      "accessDenied": "Η πρόσβαση απορρίφθηκε.",
+      "tryAgain": "Δοκιμάστε Ξανά"
     }
   },
   "difficulty": {
-    "easy": "Easy",
-    "medium": "Medium",
-    "hard": "Hard",
-    "mixed": "Mixed"
+    "easy": "Εύκολο",
+    "medium": "Μέτριο",
+    "hard": "Δύσκολο",
+    "mixed": "Μικτό"
   },
   "common": {
-    "loading": "Loading…",
-    "error": "Error",
-    "retry": "Try Again",
-    "cancel": "Cancel",
-    "save": "Save",
-    "close": "Close"
+    "loading": "Φόρτωση…",
+    "error": "Σφάλμα",
+    "retry": "Δοκιμάστε Ξανά",
+    "cancel": "Ακύρωση",
+    "save": "Αποθήκευση",
+    "close": "Κλείσιμο"
+  },
+  "help": {
+    "title": "Πώς να Παίξετε",
+    "subtitle": "Πλήρης οδηγός για διοργανωτές και παίκτες",
+    "backToHome": "Επιστροφή στην Αρχική",
+    "forHost": {
+      "title": "Για τον Διοργανωτή (Προβολέας)",
+      "intro": "Ο διοργανωτής διαχειρίζεται το παιχνίδι σε μεγάλη οθόνη ή προβολέα. Ένα άτομο από την ομάδα χρειάζεται laptop ή υπολογιστή.",
+      "step1": {
+        "title": "1. Ανοίξτε τη Σελίδα Διοργανωτή",
+        "description": "Πηγαίνετε στον ιστότοπο και κάντε κλικ στο \"Ξεκίνα Παιχνίδι (Διοργανωτής)\" ή ανοίξτε απευθείας /play/host. Θα δείτε την οθόνη επιλογής δυσκολίας."
+      },
+      "step2": {
+        "title": "2. Επιλέξτε Δυσκολία",
+        "description": "Επιλέξτε επίπεδο δυσκολίας: Εύκολο (διάσημοι χαρακτήρες όπως Μωυσής, Δαβίδ), Μέτριο (προφήτες και απόστολοι), Δύσκολο (μόνο για ειδικούς), ή Μικτό (συνδυασμός όλων των επιπέδων)."
+      },
+      "step3": {
+        "title": "3. Ανοίξτε το Lobby",
+        "description": "Κάντε κλικ στο \"Άνοιγμα Lobby\". Θα εμφανιστεί κωδικός QR και κωδικός παιχνιδιού (5 χαρακτήρες). Δείξτε αυτή την οθόνη στον προβολέα."
+      },
+      "step4": {
+        "title": "4. Περιμένετε τους Παίκτες",
+        "description": "Καθώς οι παίκτες σκανάρουν τον κωδικό QR και εισάγουν τα ονόματά τους, θα τους βλέπετε να εμφανίζονται στο lobby. Περιμένετε μέχρι να συνδεθούν όλοι."
+      },
+      "step5": {
+        "title": "5. Ξεκινήστε το Παιχνίδι",
+        "description": "Κάντε κλικ στο \"Έναρξη Κουίζ\". Η πρώτη ερώτηση είναι γύρος εξάσκησης (χωρίς πόντους), μετά ακολουθούν 10 ερωτήσεις, 15 δευτερόλεπτα η καθεμία."
+      },
+      "step6": {
+        "title": "6. Μετά το Παιχνίδι",
+        "description": "Τα αποτελέσματα εμφανίζονται αυτόματα. Κάντε κλικ στο \"Νέο Παιχνίδι\" για να ξεκινήσετε άλλο γύρο με τους ίδιους ή διαφορετικούς παίκτες."
+      }
+    },
+    "forPlayer": {
+      "title": "Για τους Παίκτες (Τηλέφωνο)",
+      "intro": "Οι παίκτες συνδέονται από τα τηλέφωνά τους. Δεν χρειάζεται εφαρμογή — μόνο browser και internet.",
+      "step1": {
+        "title": "1. Σκανάρετε τον Κωδικό QR",
+        "description": "Στρέψτε την κάμερα του τηλεφώνου σας στον κωδικό QR στη μεγάλη οθόνη. Πατήστε την ειδοποίηση για να ανοίξετε τον σύνδεσμο."
+      },
+      "step2": {
+        "title": "2. Εισάγετε το Όνομά σας",
+        "description": "Γράψτε το όνομα ή ψευδώνυμό σας (τουλάχιστον 2 χαρακτήρες). Έτσι θα εμφανίζεστε στην κατάταξη."
+      },
+      "step3": {
+        "title": "3. Περιμένετε στο Lobby",
+        "description": "Θα δείτε \"Είσαι στο παιχνίδι\" και θα περιμένετε τον διοργανωτή να ξεκινήσει. Κρατήστε το τηλέφωνό σας έτοιμο!"
+      },
+      "step4": {
+        "title": "4. Απαντήστε σε Ερωτήσεις",
+        "description": "Όταν εμφανιστεί ερώτηση, πατήστε ένα από τα τέσσερα χρωματιστά κουμπιά (A, B, C, D). Ταχύτερες σωστές απαντήσεις = περισσότεροι πόντοι!"
+      },
+      "step5": {
+        "title": "5. Δείτε τα Αποτελέσματά σας",
+        "description": "Μετά από κάθε ερώτηση θα βλέπετε αν απαντήσατε σωστά και την τρέχουσα θέση σας. Τα τελικά αποτελέσματα εμφανίζονται στο τέλος."
+      }
+    },
+    "scoring": {
+      "title": "Βαθμολόγηση",
+      "description": "Οι πόντοι εξαρτώνται από την ορθότητα και την ταχύτητα:",
+      "correct": "Σωστή απάντηση: 500 πόντοι",
+      "speed": "Μπόνους ταχύτητας: έως 500 επιπλέον πόντοι (όσο πιο γρήγορα, τόσο περισσότεροι)",
+      "wrong": "Λάθος ή χωρίς απάντηση: 0 πόντοι",
+      "practice": "Ερώτηση εξάσκησης: χωρίς πόντους"
+    },
+    "levels": {
+      "title": "Επίπεδα Δυσκολίας",
+      "easy": {
+        "title": "Εύκολο",
+        "description": "Διάσημοι βιβλικοί χαρακτήρες που όλοι γνωρίζουν: Αδάμ, Εύα, Νώε, Μωυσής, Δαβίδ, Μαρία, Ιησούς και άλλοι."
+      },
+      "medium": {
+        "title": "Μέτριο",
+        "description": "Απαιτεί κάποια βιβλική γνώση: προφήτες, απόστολοι και δευτερεύοντες χαρακτήρες από γνωστές ιστορίες."
+      },
+      "hard": {
+        "title": "Δύσκολο",
+        "description": "Για ειδικούς της Βίβλου: δευτερεύοντες χαρακτήρες, λιγότερο γνωστά πρόσωπα και λεπτομερείς γνώσεις απαιτούνται."
+      },
+      "mixed": {
+        "title": "Μικτό",
+        "description": "Συνδυασμός όλων των επιπέδων: 40% εύκολες, 40% μέτριες, 20% δύσκολες ερωτήσεις."
+      }
+    },
+    "tips": {
+      "title": "Συμβουλές",
+      "tip1": "Βεβαιωθείτε ότι όλοι είναι συνδεδεμένοι στο ίδιο WiFi ή έχουν κινητό internet.",
+      "tip2": "Η συσκευή του διοργανωτή δεν πρέπει να πέσει σε αναστολή λειτουργίας κατά τη διάρκεια του παιχνιδιού.",
+      "tip3": "Οι ερωτήσεις δεν επαναλαμβάνονται για 24 ώρες — παίξτε πολλούς γύρους χωρίς να βλέπετε τις ίδιες εικόνες!",
+      "tip4": "Αν αποσυνδεθείτε, σκανάρετε ξανά τον κωδικό QR — θα επανασυνδεθείτε με το ίδιο όνομα."
+    },
+    "troubleshooting": {
+      "title": "Αντιμετώπιση Προβλημάτων",
+      "q1": {
+        "q": "Σκάναρα τον κωδικό QR αλλά βλέπω οθόνη με κωδικό QR",
+        "a": "Ίσως ανοίξατε τη σελίδα Διοργανωτή. Οι παίκτες πρέπει να σκανάρουν τον κωδικό QR που εμφανίζεται στον προβολέα, ο οποίος οδηγεί στη σελίδα Παιχνιδιού. Η διεύθυνση URL πρέπει να περιέχει \"?game=\" με 5-ψήφιο κωδικό."
+      },
+      "q2": {
+        "q": "Το όνομά μου είναι κατειλημμένο",
+        "a": "Κάποιος έχει ήδη συνδεθεί με αυτό το όνομα. Επιλέξτε διαφορετικό όνομα ή προσθέστε αριθμό (όπως \"Γιάννης2\")."
+      },
+      "q3": {
+        "q": "Ο διοργανωτής δεν απαντά",
+        "a": "Βεβαιωθείτε ότι η σελίδα του διοργανωτή είναι ανοιχτή και δεν έχει πέσει σε αναστολή. Ο κωδικός παιχνιδιού πρέπει να ταιριάζει με αυτόν που βλέπετε στην οθόνη."
+      },
+      "q4": {
+        "q": "Αποσυνδέθηκα",
+        "a": "Σκανάρετε ξανά τον κωδικό QR. Αν χρησιμοποιήσατε το ίδιο όνομα, θα επανασυνδεθείτε αυτόματα στο παιχνίδι."
+      }
+    }
   }
 }

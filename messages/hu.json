@@ -1,284 +1,408 @@
 {
   "meta": {
-    "title": "Bible Quiz · Guess the Hero from Selfie",
-    "description": "Interactive quiz for youth and churches — guess Bible characters from AI-generated selfies",
+    "title": "Bibliai Kvíz · Találd ki a Hőst a Selfie-ről",
+    "description": "Interaktív kvíz fiataloknak és gyülekezeteknek — találd ki a bibliai szereplőket AI selfie-kről",
     "domain": "youthconnect.church"
   },
   "nav": {
-    "play": "Play",
-    "host": "Host",
-    "donate": "Donate",
-    "signIn": "Sign In",
-    "signOut": "Sign Out",
-    "profile": "Profile",
-    "settings": "Settings",
-    "history": "Game History"
+    "play": "Játék",
+    "host": "Játékvezető",
+    "help": "Segítség",
+    "donate": "Támogatás",
+    "signIn": "Bejelentkezés",
+    "signOut": "Kijelentkezés",
+    "profile": "Profil",
+    "settings": "Beállítások",
+    "history": "Játékelőzmények"
   },
   "landing": {
     "hero": {
-      "title": "Bible Quiz",
-      "subtitle": "Guess the Hero from Selfie",
-      "description": "Interactive game for youth meetings, Sunday schools, and family nights. Scan the QR code — and you're in!",
-      "ctaHost": "Start Game (Host)",
-      "ctaJoin": "Join with Code"
+      "title": "Bibliai Kvíz",
+      "subtitle": "Találd ki a Hőst a Selfie-ről",
+      "description": "Interaktív játék ifjúsági találkozókra, vasárnapi iskolákba és családi estékre. Szkenneld be a QR-kódot — és máris játszol!",
+      "ctaHost": "Játék Indítása (Játékvezető)",
+      "ctaJoin": "Csatlakozás Kóddal"
+    },
+    "quickStart": {
+      "title": "Gyors Indítás",
+      "host": "Játékvezető: nyisd meg",
+      "player": "Játékosok: szkenneljétek a QR-t és írjátok be a neveteket",
+      "play": "Játék: koppints a helyes válaszra!",
+      "helpLink": "Több részletet szeretnél? Nézd meg a teljes útmutatót"
     },
     "howItWorks": {
-      "title": "How It Works",
+      "title": "Hogyan Működik",
       "step1": {
-        "title": "Host opens the game",
-        "description": "Open /host on a laptop with projector and choose difficulty"
+        "title": "A játékvezető megnyitja a játékot",
+        "description": "Nyisd meg a /host oldalt projektoros laptopon és válaszd ki a nehézséget"
       },
       "step2": {
-        "title": "Players scan QR",
-        "description": "Phone, QR code — and in 5 seconds you're in the lobby"
+        "title": "Játékosok szkennelnek",
+        "description": "Telefon, QR-kód — és 5 másodperc alatt az előszobában vagytok"
       },
       "step3": {
-        "title": "Play and compete",
-        "description": "10 questions, 15 seconds each, points for speed, live leaderboard"
+        "title": "Játssz és versenyezz",
+        "description": "10 kérdés, egyenként 15 másodperc, pontok a gyorsaságért, élő ranglista"
       }
     },
     "features": {
-      "title": "Features",
+      "title": "Funkciók",
       "selfie": {
-        "title": "Bible Character Selfies",
-        "description": "Unique AI images: guess the character from the scene"
+        "title": "Bibliai Szereplők Selfie-i",
+        "description": "Egyedi AI képek: találd ki a szereplőt a jelenetből"
       },
       "realtime": {
-        "title": "Real-time Multiplayer",
-        "description": "Up to 100 players simultaneously, instant sync"
+        "title": "Valós Idejű Többjátékos",
+        "description": "Akár 100 játékos egyszerre, azonnali szinkronizálás"
       },
       "levels": {
-        "title": "3 Difficulty Levels",
-        "description": "From Adam to Tychicus — choose your level"
+        "title": "3 Nehézségi Szint",
+        "description": "Ádámtól Tichikuszig — válaszd ki a szintedet"
       },
       "noSignup": {
-        "title": "No Registration",
-        "description": "Guests play instantly, sign in for history and settings"
+        "title": "Regisztráció Nélkül",
+        "description": "Vendégek azonnal játszanak, jelentkezz be az előzményekért és beállításokért"
       },
       "free": {
-        "title": "Free",
-        "description": "No subscriptions, runs on free tier"
+        "title": "Ingyenes",
+        "description": "Nincs előfizetés, ingyenes csomagokon fut"
       },
       "mobile": {
-        "title": "Mobile-first",
-        "description": "Optimized for phones and any screen"
+        "title": "Mobilbarát",
+        "description": "Telefonokra és bármilyen képernyőre optimalizálva"
       }
     },
     "levels": {
-      "title": "Difficulty Levels",
+      "title": "Nehézségi Szintek",
       "easy": {
-        "title": "Easy",
-        "description": "Famous heroes: Moses, David, Noah, Mary"
+        "title": "Könnyű",
+        "description": "Híres hősök: Mózes, Dávid, Noé, Mária"
       },
       "medium": {
-        "title": "Medium",
-        "description": "Prophets and apostles: Isaiah, Barnabas, Titus"
+        "title": "Közepes",
+        "description": "Próféták és apostolok: Ézsaiás, Barnabás, Titusz"
       },
       "hard": {
-        "title": "Hard",
-        "description": "For experts: Ahithophel, Epaphras, Nympha"
+        "title": "Nehéz",
+        "description": "Szakértőknek: Ahitófel, Epafrász, Nimfa"
       }
     },
     "forWhom": {
-      "title": "Who Is This For",
-      "youth": "Youth ministries",
-      "sunday": "Sunday schools",
-      "camps": "Christian camps",
-      "family": "Family nights",
-      "small": "Small groups"
+      "title": "Kinek Szól",
+      "youth": "Ifjúsági csoportok",
+      "sunday": "Vasárnapi iskolák",
+      "camps": "Keresztény táborok",
+      "family": "Családi esték",
+      "small": "Kiscsoportok"
     },
     "gallery": {
-      "title": "Selfie Gallery",
-      "hint": "Can you guess who this is?"
+      "title": "Selfie Galéria",
+      "hint": "Ki tudod találni, ki ez?"
     },
     "donate": {
-      "title": "Support the Project",
-      "description": "The game is free for everyone. Your donations help develop the project, add new images and languages.",
-      "oneTime": "One-time Donation",
-      "monthly": "Monthly",
-      "crypto": "Cryptocurrency",
-      "boosty": "Boosty (for Russia)"
+      "title": "Támogasd a Projektet",
+      "description": "A játék mindenki számára ingyenes. Adományaid segítenek a projekt fejlesztésében, új képek és nyelvek hozzáadásában.",
+      "oneTime": "Egyszeri Adomány",
+      "monthly": "Havi",
+      "crypto": "Kriptovaluta",
+      "boosty": "Boosty (Oroszországnak)"
     },
     "faq": {
-      "title": "FAQ",
+      "title": "GYIK",
       "q1": {
-        "q": "Is this free?",
-        "a": "Yes, completely free. We use free tiers of Vercel and Pusher."
+        "q": "Ez ingyenes?",
+        "a": "Igen, teljesen ingyenes. A Vercel és Pusher ingyenes csomagjait használjuk."
       },
       "q2": {
-        "q": "How many players can participate?",
-        "a": "Up to 100 simultaneously (Pusher limit). For larger events, contact us."
+        "q": "Hány játékos vehet részt?",
+        "a": "Akár 100 egyszerre (Pusher limit). Nagyobb eseményekhez vedd fel velünk a kapcsolatot."
       },
       "q3": {
-        "q": "Is registration required?",
-        "a": "No! Guests play instantly via QR code. Sign in with Google/Yandex only for saving history and settings."
+        "q": "Kell regisztrálni?",
+        "a": "Nem! Vendégek azonnal játszanak QR-kóddal. Csak akkor jelentkezz be Google/Yandex-szel, ha menteni akarod az előzményeket és beállításokat."
       },
       "q4": {
-        "q": "Which Bible translation is used?",
-        "a": "Character names follow standard translations for each language."
+        "q": "Milyen bibliafordítást használ?",
+        "a": "A szereplők nevei az egyes nyelvek standard fordításait követik."
       },
       "q5": {
-        "q": "What's the denominational stance?",
-        "a": "The game is for all Protestant churches. Questions are based on canonical Bible text."
+        "q": "Milyen felekezeti álláspontot képvisel?",
+        "a": "A játék minden protestáns gyülekezetnek szól. A kérdések a kanonikus bibliai szövegen alapulnak."
       },
       "q6": {
-        "q": "Can this be used with children?",
-        "a": "Yes! Content is safe for all ages. Easy level works great for Sunday school."
+        "q": "Használható gyerekekkel?",
+        "a": "Igen! A tartalom minden korosztály számára biztonságos. A könnyű szint kiválóan működik vasárnapi iskolában."
       }
     },
     "footer": {
-      "contact": "Contact",
+      "contact": "Kapcsolat",
       "email": "hello@youthconnect.church",
-      "privacy": "Privacy Policy",
-      "terms": "Terms of Use",
-      "copyright": "© 2024 YouthConnect. All rights reserved."
+      "privacy": "Adatvédelmi Irányelvek",
+      "terms": "Használati Feltételek",
+      "copyright": "© 2024 YouthConnect. Minden jog fenntartva."
     }
   },
   "game": {
-    "code": "Game Code",
-    "players": "Players",
-    "question": "Question",
-    "of": "of",
-    "seconds": "sec",
-    "practice": "Practice Question",
-    "practiceNote": "no points",
-    "whoMadeSelfie": "Who made this selfie?",
-    "itIs": "It's",
-    "correct": "Correct!",
-    "incorrect": "Incorrect",
-    "timeout": "Time's up",
-    "noAnswer": "No answer",
-    "correctAnswer": "Correct answer",
-    "points": "points",
-    "correctAnswers": "Correct",
-    "place": "place",
-    "nextIn": "Next question in",
-    "resultsIn": "Results in",
-    "waitingHost": "Waiting for host to start the quiz…",
-    "answerAccepted": "Answer accepted!",
-    "lookAtScreen": "Look at the main screen…",
-    "answered": "Answered"
+    "code": "Játékkód",
+    "players": "Játékosok",
+    "question": "Kérdés",
+    "of": "/",
+    "seconds": "mp",
+    "practice": "Gyakorló Kérdés",
+    "practiceNote": "pont nélkül",
+    "whoMadeSelfie": "Ki készítette ezt a selfie-t?",
+    "itIs": "Ő",
+    "correct": "Helyes!",
+    "incorrect": "Helytelen",
+    "timeout": "Lejárt az idő",
+    "noAnswer": "Nincs válasz",
+    "correctAnswer": "Helyes válasz",
+    "points": "pont",
+    "correctAnswers": "Helyes",
+    "place": "helyezés",
+    "nextIn": "Következő kérdés",
+    "resultsIn": "Eredmények",
+    "waitingHost": "Várjuk, hogy a játékvezető elindítsa a kvízt…",
+    "answerAccepted": "Válasz elfogadva!",
+    "lookAtScreen": "Nézd a főképernyőt…",
+    "answered": "Megválaszolva"
   },
   "host": {
-    "title": "Host Screen",
-    "selectQuiz": "Select Difficulty",
-    "openLobby": "Open Lobby",
-    "back": "Back",
-    "startGame": "Start Quiz",
-    "startPractice": "Start with Practice",
-    "newGame": "New Game",
-    "scanQR": "Scan QR code with your phone to join",
-    "noPlayers": "No one has joined yet…",
-    "results": "Quiz Results",
-    "noPusher": "Pusher keys not set. Add environment variables — see README.",
-    "practiceComplete": "Practice round complete — now it's for real!",
-    "startQuiz": "Start Quiz"
+    "title": "Játékvezető Képernyő",
+    "selectQuiz": "Válassz Nehézséget",
+    "openLobby": "Előszoba Megnyitása",
+    "back": "Vissza",
+    "startGame": "Kvíz Indítása",
+    "startPractice": "Kezdés Gyakorlással",
+    "newGame": "Új Játék",
+    "scanQR": "Szkenneld be a QR-kódot telefonoddal a csatlakozáshoz",
+    "noPlayers": "Még senki sem csatlakozott…",
+    "results": "Kvíz Eredmények",
+    "noPusher": "Pusher kulcsok nincsenek beállítva. Add hozzá a környezeti változókat — lásd README.",
+    "practiceComplete": "Gyakorló kör kész — most komolyan!",
+    "startQuiz": "Kvíz Indítása",
+    "playerHint": "Te játékos vagy? Szkenneld be a fenti QR-kódot a telefonoddal, ne nyisd meg ezt az oldalt!"
   },
   "player": {
-    "enterName": "What's your name?",
-    "namePlaceholder": "Your name or nickname",
-    "join": "Join",
-    "checking": "Checking…",
-    "youAreIn": "You're in the game",
-    "scanQR": "Scan the QR code on screen to join the game.",
+    "enterName": "Hogy hívnak?",
+    "namePlaceholder": "Neved vagy beceneved",
+    "join": "Csatlakozás",
+    "checking": "Ellenőrzés…",
+    "youAreIn": "Bent vagy a játékban",
+    "scanQR": "Szkenneld be a QR-kódot a képernyőn a játékhoz csatlakozáshoz.",
+    "hint": {
+      "lookForQR": "Nézd a nagy képernyőt — a játékvezetőnek QR-kódot kell mutatnia 5 karakteres játékkóddal.",
+      "areYouHost": "Te vagy a játékvezető?",
+      "hostLink": "Nyisd meg helyette a játékvezető oldalt →"
+    },
     "errors": {
-      "nameMin": "Enter a name (at least 2 characters).",
-      "nameTaken": "This name is taken. Choose another.",
-      "gameClosed": "Game is in progress or closed for entry.",
-      "hostOffline": "Host not responding. Make sure the quiz is open on screen.",
-      "network": "Network error. Try again."
+      "nameMin": "Írj be egy nevet (legalább 2 karakter).",
+      "nameTaken": "Ez a név foglalt. Válassz másikat.",
+      "gameClosed": "A játék folyamatban van vagy lezárult a belépés.",
+      "hostOffline": "A játékvezető nem válaszol. Ellenőrizd, hogy a kvíz nyitva van-e a képernyőn.",
+      "network": "Hálózati hiba. Próbáld újra."
     }
   },
   "settings": {
-    "title": "Settings",
+    "title": "Beállítások",
     "autoAdvance": {
-      "label": "Next Question Transition",
-      "auto": "Automatic",
-      "manual": "Manual (button)"
+      "label": "Következő Kérdésre Váltás",
+      "auto": "Automatikus",
+      "manual": "Kézi (gomb)"
     },
     "questionTime": {
-      "label": "Time per Question",
-      "seconds": "seconds"
+      "label": "Idő Kérdésenként",
+      "seconds": "másodperc"
     },
     "questionsPerQuiz": {
-      "label": "Questions per Game"
+      "label": "Kérdések Játékonként"
     },
     "difficulty": {
-      "label": "Difficulty",
-      "easy": "Easy",
-      "medium": "Medium",
-      "hard": "Hard",
-      "mixed": "Mixed"
+      "label": "Nehézség",
+      "easy": "Könnyű",
+      "medium": "Közepes",
+      "hard": "Nehéz",
+      "mixed": "Vegyes"
     },
     "theme": {
-      "label": "Theme",
-      "light": "Light",
-      "dark": "Dark",
-      "system": "System"
+      "label": "Téma",
+      "light": "Világos",
+      "dark": "Sötét",
+      "system": "Rendszer"
     },
     "sound": {
-      "label": "Sound",
-      "enabled": "On",
-      "disabled": "Off"
+      "label": "Hang",
+      "enabled": "Bekapcsolva",
+      "disabled": "Kikapcsolva"
     },
     "showExplanation": {
-      "label": "Show explanation after answer"
+      "label": "Magyarázat megjelenítése válasz után"
     },
     "showCorrectAnswer": {
-      "label": "Show correct answer"
+      "label": "Helyes válasz megjelenítése"
     },
     "practiceQuestion": {
-      "label": "Practice question before game"
+      "label": "Gyakorló kérdés játék előtt"
     },
     "speedBonus": {
-      "label": "Points for speed"
+      "label": "Pontok gyorsaságért"
     },
     "language": {
-      "label": "Language"
+      "label": "Nyelv"
     },
-    "save": "Save",
-    "saved": "Settings saved"
+    "save": "Mentés",
+    "saved": "Beállítások mentve"
   },
   "profile": {
-    "title": "Profile",
-    "gamesPlayed": "Games Played",
-    "totalScore": "Total Score",
-    "correctAnswers": "Correct Answers",
-    "bestRank": "Best Rank",
-    "recentGames": "Recent Games",
-    "noGames": "You haven't played yet. Start your first game!",
-    "date": "Date",
-    "difficulty": "Difficulty",
-    "score": "Score",
-    "rank": "Rank"
+    "title": "Profil",
+    "gamesPlayed": "Lejátszott Játékok",
+    "totalScore": "Összpontszám",
+    "correctAnswers": "Helyes Válaszok",
+    "bestRank": "Legjobb Helyezés",
+    "recentGames": "Legutóbbi Játékok",
+    "noGames": "Még nem játszottál. Indítsd el az első játékodat!",
+    "date": "Dátum",
+    "difficulty": "Nehézség",
+    "score": "Pontszám",
+    "rank": "Helyezés"
   },
   "auth": {
-    "signIn": "Sign In",
-    "signInWith": "Sign in with",
-    "signOut": "Sign Out",
+    "signIn": "Bejelentkezés",
+    "signInWith": "Bejelentkezés:",
+    "signOut": "Kijelentkezés",
     "google": "Google",
     "yandex": "Yandex",
-    "guestNote": "Guests can play 1 game without signing in",
-    "signInBenefits": "Sign in to save game history and settings",
+    "guestNote": "Vendégek 1 játékot játszhatnak bejelentkezés nélkül",
+    "signInBenefits": "Jelentkezz be a játékelőzmények és beállítások mentéséhez",
     "error": {
-      "title": "Sign In Error",
-      "default": "Could not sign in. Try another method.",
-      "accessDenied": "Access denied.",
-      "tryAgain": "Try Again"
+      "title": "Bejelentkezési Hiba",
+      "default": "Nem sikerült bejelentkezni. Próbálj meg egy másik módszert.",
+      "accessDenied": "Hozzáférés megtagadva.",
+      "tryAgain": "Próbáld Újra"
     }
   },
   "difficulty": {
-    "easy": "Easy",
-    "medium": "Medium",
-    "hard": "Hard",
-    "mixed": "Mixed"
+    "easy": "Könnyű",
+    "medium": "Közepes",
+    "hard": "Nehéz",
+    "mixed": "Vegyes"
   },
   "common": {
-    "loading": "Loading…",
-    "error": "Error",
-    "retry": "Try Again",
-    "cancel": "Cancel",
-    "save": "Save",
-    "close": "Close"
+    "loading": "Betöltés…",
+    "error": "Hiba",
+    "retry": "Újra",
+    "cancel": "Mégse",
+    "save": "Mentés",
+    "close": "Bezárás"
+  },
+  "help": {
+    "title": "Hogyan Játssz",
+    "subtitle": "Teljes útmutató játékvezetőknek és játékosoknak",
+    "backToHome": "Vissza a Főoldalra",
+    "forHost": {
+      "title": "Játékvezetőnek (Projektor)",
+      "intro": "A játékvezető irányítja a játékot nagy képernyőn vagy projektoron. Egy csapattagnak szüksége van laptopra vagy számítógépre.",
+      "step1": {
+        "title": "1. Nyisd meg a Játékvezető Oldalt",
+        "description": "Menj a weboldalra és kattints a \"Játék Indítása (Játékvezető)\" gombra vagy nyisd meg közvetlenül a /play/host oldalt. Megjelenik a nehézség kiválasztásának képernyője."
+      },
+      "step2": {
+        "title": "2. Válassz Nehézséget",
+        "description": "Válaszd ki a nehézségi szintet: Könnyű (híres szereplők mint Mózes, Dávid), Közepes (próféták és apostolok), Nehéz (csak szakértőknek), vagy Vegyes (minden szint kombinációja)."
+      },
+      "step3": {
+        "title": "3. Nyisd meg az Előszobát",
+        "description": "Kattints az \"Előszoba Megnyitása\" gombra. Megjelenik egy QR-kód és játékkód (5 karakter). Mutasd ezt a képernyőt a projektoron."
+      },
+      "step4": {
+        "title": "4. Várd meg a Játékosokat",
+        "description": "Ahogy a játékosok beszkennelnek és beírják a nevüket, látni fogod őket megjelenni az előszobában. Várj, amíg mindenki csatlakozik."
+      },
+      "step5": {
+        "title": "5. Indítsd el a Játékot",
+        "description": "Kattints a \"Kvíz Indítása\" gombra. Az első kérdés gyakorló kör (pont nélkül), majd 10 kérdés következik, egyenként 15 másodperc."
+      },
+      "step6": {
+        "title": "6. Játék Után",
+        "description": "Az eredmények automatikusan megjelennek. Kattints az \"Új Játék\" gombra új kör indításához ugyanazokkal vagy más játékosokkal."
+      }
+    },
+    "forPlayer": {
+      "title": "Játékosoknak (Telefon)",
+      "intro": "A játékosok telefonjukról csatlakoznak. Nincs szükség alkalmazásra — csak böngésző és internet.",
+      "step1": {
+        "title": "1. Szkenneld be a QR-kódot",
+        "description": "Irányítsd a telefonod kameráját a nagy képernyőn lévő QR-kódra. Koppints az értesítésre a link megnyitásához."
+      },
+      "step2": {
+        "title": "2. Írd be a Neved",
+        "description": "Írd be a neved vagy beceneved (legalább 2 karakter). Így fogsz megjelenni a ranglistán."
+      },
+      "step3": {
+        "title": "3. Várj az Előszobában",
+        "description": "Látni fogod \"Bent vagy a játékban\" és várd meg, amíg a játékvezető elindítja. Tartsd készenlétben a telefonod!"
+      },
+      "step4": {
+        "title": "4. Válaszolj a Kérdésekre",
+        "description": "Amikor megjelenik egy kérdés, koppints a négy színes gomb egyikére (A, B, C, D). Gyorsabb helyes válaszok = több pont!"
+      },
+      "step5": {
+        "title": "5. Nézd meg az Eredményeidet",
+        "description": "Minden kérdés után látod, helyesen válaszoltál-e és az aktuális helyezésedet. A végső eredmények a végén jelennek meg."
+      }
+    },
+    "scoring": {
+      "title": "Pontozás",
+      "description": "A pontok a helyességtől és gyorsaságtól függnek:",
+      "correct": "Helyes válasz: 500 pont",
+      "speed": "Gyorsasági bónusz: akár 500 extra pont (minél gyorsabb, annál több)",
+      "wrong": "Helytelen vagy nincs válasz: 0 pont",
+      "practice": "Gyakorló kérdés: pont nélkül"
+    },
+    "levels": {
+      "title": "Nehézségi Szintek",
+      "easy": {
+        "title": "Könnyű",
+        "description": "Híres bibliai szereplők, akiket mindenki ismer: Ádám, Éva, Noé, Mózes, Dávid, Mária, Jézus és mások."
+      },
+      "medium": {
+        "title": "Közepes",
+        "description": "Némi bibliai tudást igényel: próféták, apostolok és mellékszereplők ismert történetekből."
+      },
+      "hard": {
+        "title": "Nehéz",
+        "description": "Biblia szakértőknek: mellékszereplők, kevésbé ismert személyek és részletes tudás szükséges."
+      },
+      "mixed": {
+        "title": "Vegyes",
+        "description": "Minden szint kombinációja: 40% könnyű, 40% közepes, 20% nehéz kérdés."
+      }
+    },
+    "tips": {
+      "title": "Tippek",
+      "tip1": "Győződj meg róla, hogy mindenki ugyanahhoz a WiFi-hoz csatlakozik vagy van mobilinternete.",
+      "tip2": "A játékvezető eszköze ne aludjon el a játék alatt.",
+      "tip3": "A kérdések 24 óráig nem ismétlődnek — játssz több kört anélkül, hogy ugyanazokat a képeket látnád!",
+      "tip4": "Ha megszakad a kapcsolat, szkenneld újra a QR-kódot — ugyanazzal a névvel újra csatlakozol."
+    },
+    "troubleshooting": {
+      "title": "Hibaelhárítás",
+      "q1": {
+        "q": "Beszkenneltem a QR-kódot, de QR-kódos képernyőt látok",
+        "a": "Lehet, hogy a Játékvezető oldalt nyitottad meg. A játékosoknak a projektoron megjelenő QR-kódot kell beszkennelniük, ami a Játék oldalra vezet. Az URL-nek tartalmaznia kell a \"?game=\" részt 5 karakteres kóddal."
+      },
+      "q2": {
+        "q": "A nevem foglalt",
+        "a": "Valaki már csatlakozott ezzel a névvel. Válassz másik nevet vagy adj hozzá számot (pl. \"János2\")."
+      },
+      "q3": {
+        "q": "A játékvezető nem válaszol",
+        "a": "Ellenőrizd, hogy a játékvezető oldal nyitva van-e és nem aludt el. A játékkódnak egyeznie kell a képernyőn láthatóval."
+      },
+      "q4": {
+        "q": "Megszakadt a kapcsolat",
+        "a": "Szkenneld újra a QR-kódot. Ha ugyanazt a nevet használtad, automatikusan visszacsatlakozol a játékba."
+      }
+    }
   }
 }

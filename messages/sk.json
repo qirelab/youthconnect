@@ -1,284 +1,408 @@
 {
   "meta": {
-    "title": "Bible Quiz · Guess the Hero from Selfie",
-    "description": "Interactive quiz for youth and churches — guess Bible characters from AI-generated selfies",
+    "title": "Biblický Kvíz · Uhádni Hrdinu zo Selfie",
+    "description": "Interaktívny kvíz pre mládež a cirkvi — uhádni biblické postavy z AI selfie",
     "domain": "youthconnect.church"
   },
   "nav": {
-    "play": "Play",
-    "host": "Host",
-    "donate": "Donate",
-    "signIn": "Sign In",
-    "signOut": "Sign Out",
-    "profile": "Profile",
-    "settings": "Settings",
-    "history": "Game History"
+    "play": "Hrať",
+    "host": "Moderátor",
+    "help": "Pomoc",
+    "donate": "Darovať",
+    "signIn": "Prihlásiť sa",
+    "signOut": "Odhlásiť sa",
+    "profile": "Profil",
+    "settings": "Nastavenia",
+    "history": "História hier"
   },
   "landing": {
     "hero": {
-      "title": "Bible Quiz",
-      "subtitle": "Guess the Hero from Selfie",
-      "description": "Interactive game for youth meetings, Sunday schools, and family nights. Scan the QR code — and you're in!",
-      "ctaHost": "Start Game (Host)",
-      "ctaJoin": "Join with Code"
+      "title": "Biblický Kvíz",
+      "subtitle": "Uhádni Hrdinu zo Selfie",
+      "description": "Interaktívna hra pre mládežnícke stretnutia, nedeľné školy a rodinné večery. Naskenuj QR kód — a si v hre!",
+      "ctaHost": "Spustiť Hru (Moderátor)",
+      "ctaJoin": "Pripojiť sa Kódom"
+    },
+    "quickStart": {
+      "title": "Rýchly Štart",
+      "host": "Moderátor: otvor",
+      "player": "Hráči: naskenujte QR a zadajte meno",
+      "play": "Hraj: klikni na správnu odpoveď!",
+      "helpLink": "Potrebujete viac detailov? Pozrite si úplný návod"
     },
     "howItWorks": {
-      "title": "How It Works",
+      "title": "Ako to Funguje",
       "step1": {
-        "title": "Host opens the game",
-        "description": "Open /host on a laptop with projector and choose difficulty"
+        "title": "Moderátor otvorí hru",
+        "description": "Otvorte /host na notebooku s projektorom a vyberte obtiažnosť"
       },
       "step2": {
-        "title": "Players scan QR",
-        "description": "Phone, QR code — and in 5 seconds you're in the lobby"
+        "title": "Hráči naskenujú QR",
+        "description": "Telefón, QR kód — a za 5 sekúnd ste v lobby"
       },
       "step3": {
-        "title": "Play and compete",
-        "description": "10 questions, 15 seconds each, points for speed, live leaderboard"
+        "title": "Hrajte a súťažte",
+        "description": "10 otázok, 15 sekúnd každá, body za rýchlosť, živé skóre"
       }
     },
     "features": {
-      "title": "Features",
+      "title": "Funkcie",
       "selfie": {
-        "title": "Bible Character Selfies",
-        "description": "Unique AI images: guess the character from the scene"
+        "title": "Selfie Biblických Postáv",
+        "description": "Unikátne AI obrázky: uhádni postavu zo scény"
       },
       "realtime": {
-        "title": "Real-time Multiplayer",
-        "description": "Up to 100 players simultaneously, instant sync"
+        "title": "Multiplayer v Reálnom Čase",
+        "description": "Až 100 hráčov súčasne, okamžitá synchronizácia"
       },
       "levels": {
-        "title": "3 Difficulty Levels",
-        "description": "From Adam to Tychicus — choose your level"
+        "title": "3 Úrovne Obtiažnosti",
+        "description": "Od Adama po Tychika — vyberte si svoju úroveň"
       },
       "noSignup": {
-        "title": "No Registration",
-        "description": "Guests play instantly, sign in for history and settings"
+        "title": "Bez Registrácie",
+        "description": "Hostia hrajú okamžite, prihláste sa pre históriu a nastavenia"
       },
       "free": {
-        "title": "Free",
-        "description": "No subscriptions, runs on free tier"
+        "title": "Zadarmo",
+        "description": "Žiadne predplatné, beží na bezplatných tarifoch"
       },
       "mobile": {
-        "title": "Mobile-first",
-        "description": "Optimized for phones and any screen"
+        "title": "Pre Mobily",
+        "description": "Optimalizované pre telefóny a akúkoľvek obrazovku"
       }
     },
     "levels": {
-      "title": "Difficulty Levels",
+      "title": "Úrovne Obtiažnosti",
       "easy": {
-        "title": "Easy",
-        "description": "Famous heroes: Moses, David, Noah, Mary"
+        "title": "Ľahká",
+        "description": "Slávni hrdinovia: Mojžiš, Dávid, Noe, Mária"
       },
       "medium": {
-        "title": "Medium",
-        "description": "Prophets and apostles: Isaiah, Barnabas, Titus"
+        "title": "Stredná",
+        "description": "Proroci a apoštoli: Izaiáš, Barnabáš, Títus"
       },
       "hard": {
-        "title": "Hard",
-        "description": "For experts: Ahithophel, Epaphras, Nympha"
+        "title": "Ťažká",
+        "description": "Pre expertov: Achitófel, Epafras, Nymfa"
       }
     },
     "forWhom": {
-      "title": "Who Is This For",
-      "youth": "Youth ministries",
-      "sunday": "Sunday schools",
-      "camps": "Christian camps",
-      "family": "Family nights",
-      "small": "Small groups"
+      "title": "Pre Koho je to",
+      "youth": "Mládežnícke skupiny",
+      "sunday": "Nedeľné školy",
+      "camps": "Kresťanské tábory",
+      "family": "Rodinné večery",
+      "small": "Malé skupinky"
     },
     "gallery": {
-      "title": "Selfie Gallery",
-      "hint": "Can you guess who this is?"
+      "title": "Galéria Selfie",
+      "hint": "Uhádnete, kto to je?"
     },
     "donate": {
-      "title": "Support the Project",
-      "description": "The game is free for everyone. Your donations help develop the project, add new images and languages.",
-      "oneTime": "One-time Donation",
-      "monthly": "Monthly",
-      "crypto": "Cryptocurrency",
-      "boosty": "Boosty (for Russia)"
+      "title": "Podporte Projekt",
+      "description": "Hra je zadarmo pre všetkých. Vaše dary pomáhajú rozvíjať projekt, pridávať nové obrázky a jazyky.",
+      "oneTime": "Jednorazový Dar",
+      "monthly": "Mesačne",
+      "crypto": "Kryptomena",
+      "boosty": "Boosty (pre Rusko)"
     },
     "faq": {
       "title": "FAQ",
       "q1": {
-        "q": "Is this free?",
-        "a": "Yes, completely free. We use free tiers of Vercel and Pusher."
+        "q": "Je to zadarmo?",
+        "a": "Áno, úplne zadarmo. Používame bezplatné tarify Vercel a Pusher."
       },
       "q2": {
-        "q": "How many players can participate?",
-        "a": "Up to 100 simultaneously (Pusher limit). For larger events, contact us."
+        "q": "Koľko hráčov môže hrať?",
+        "a": "Až 100 súčasne (limit Pusher). Pre väčšie akcie nás kontaktujte."
       },
       "q3": {
-        "q": "Is registration required?",
-        "a": "No! Guests play instantly via QR code. Sign in with Google/Yandex only for saving history and settings."
+        "q": "Je nutná registrácia?",
+        "a": "Nie! Hostia hrajú okamžite cez QR kód. Prihláste sa s Google/Yandex iba pre uloženie histórie a nastavení."
       },
       "q4": {
-        "q": "Which Bible translation is used?",
-        "a": "Character names follow standard translations for each language."
+        "q": "Aký preklad Biblie sa používa?",
+        "a": "Mená postáv zodpovedajú štandardným prekladom pre každý jazyk."
       },
       "q5": {
-        "q": "What's the denominational stance?",
-        "a": "The game is for all Protestant churches. Questions are based on canonical Bible text."
+        "q": "Aká je denominačná pozícia?",
+        "a": "Hra je pre všetky protestantské cirkvi. Otázky sú založené na kanonickom biblickom texte."
       },
       "q6": {
-        "q": "Can this be used with children?",
-        "a": "Yes! Content is safe for all ages. Easy level works great for Sunday school."
+        "q": "Môže sa to hrať s deťmi?",
+        "a": "Áno! Obsah je bezpečný pre všetky vekové kategórie. Ľahká úroveň je skvelá pre nedeľnú školu."
       }
     },
     "footer": {
-      "contact": "Contact",
+      "contact": "Kontakt",
       "email": "hello@youthconnect.church",
-      "privacy": "Privacy Policy",
-      "terms": "Terms of Use",
-      "copyright": "© 2024 YouthConnect. All rights reserved."
+      "privacy": "Ochrana Súkromia",
+      "terms": "Podmienky Použitia",
+      "copyright": "© 2024 YouthConnect. Všetky práva vyhradené."
     }
   },
   "game": {
-    "code": "Game Code",
-    "players": "Players",
-    "question": "Question",
-    "of": "of",
-    "seconds": "sec",
-    "practice": "Practice Question",
-    "practiceNote": "no points",
-    "whoMadeSelfie": "Who made this selfie?",
-    "itIs": "It's",
-    "correct": "Correct!",
-    "incorrect": "Incorrect",
-    "timeout": "Time's up",
-    "noAnswer": "No answer",
-    "correctAnswer": "Correct answer",
-    "points": "points",
-    "correctAnswers": "Correct",
-    "place": "place",
-    "nextIn": "Next question in",
-    "resultsIn": "Results in",
-    "waitingHost": "Waiting for host to start the quiz…",
-    "answerAccepted": "Answer accepted!",
-    "lookAtScreen": "Look at the main screen…",
-    "answered": "Answered"
+    "code": "Kód Hry",
+    "players": "Hráči",
+    "question": "Otázka",
+    "of": "z",
+    "seconds": "sek",
+    "practice": "Cvičná Otázka",
+    "practiceNote": "bez bodov",
+    "whoMadeSelfie": "Kto urobil toto selfie?",
+    "itIs": "Je to",
+    "correct": "Správne!",
+    "incorrect": "Nesprávne",
+    "timeout": "Čas vypršal",
+    "noAnswer": "Bez odpovede",
+    "correctAnswer": "Správna odpoveď",
+    "points": "bodov",
+    "correctAnswers": "Správne",
+    "place": "miesto",
+    "nextIn": "Ďalšia otázka za",
+    "resultsIn": "Výsledky za",
+    "waitingHost": "Čakáme, kým moderátor spustí kvíz…",
+    "answerAccepted": "Odpoveď prijatá!",
+    "lookAtScreen": "Pozrite sa na hlavnú obrazovku…",
+    "answered": "Odpovedané"
   },
   "host": {
-    "title": "Host Screen",
-    "selectQuiz": "Select Difficulty",
-    "openLobby": "Open Lobby",
-    "back": "Back",
-    "startGame": "Start Quiz",
-    "startPractice": "Start with Practice",
-    "newGame": "New Game",
-    "scanQR": "Scan QR code with your phone to join",
-    "noPlayers": "No one has joined yet…",
-    "results": "Quiz Results",
-    "noPusher": "Pusher keys not set. Add environment variables — see README.",
-    "practiceComplete": "Practice round complete — now it's for real!",
-    "startQuiz": "Start Quiz"
+    "title": "Obrazovka Moderátora",
+    "selectQuiz": "Vyberte Obtiažnosť",
+    "openLobby": "Otvoriť Lobby",
+    "back": "Späť",
+    "startGame": "Spustiť Kvíz",
+    "startPractice": "Začať s Cvičením",
+    "newGame": "Nová Hra",
+    "scanQR": "Naskenujte QR kód telefónom pre pripojenie",
+    "noPlayers": "Zatiaľ sa nikto nepripojil…",
+    "results": "Výsledky Kvízu",
+    "noPusher": "Kľúče Pusher nie sú nastavené. Pridajte premenné prostredia — pozri README.",
+    "practiceComplete": "Cvičné kolo dokončené — teraz naostro!",
+    "startQuiz": "Spustiť Kvíz",
+    "playerHint": "Ste hráč? Naskenujte QR kód vyššie telefónom, neotvárajte túto stránku!"
   },
   "player": {
-    "enterName": "What's your name?",
-    "namePlaceholder": "Your name or nickname",
-    "join": "Join",
-    "checking": "Checking…",
-    "youAreIn": "You're in the game",
-    "scanQR": "Scan the QR code on screen to join the game.",
+    "enterName": "Ako sa voláte?",
+    "namePlaceholder": "Vaše meno alebo prezývka",
+    "join": "Pripojiť sa",
+    "checking": "Kontrolujem…",
+    "youAreIn": "Ste v hre",
+    "scanQR": "Naskenujte QR kód na obrazovke pre pripojenie k hre.",
+    "hint": {
+      "lookForQR": "Pozrite sa na veľkú obrazovku — moderátor by mal zobrazovať QR kód s 5-miestnym kódom hry.",
+      "areYouHost": "Ste moderátor?",
+      "hostLink": "Otvorte miesto toho stránku moderátora →"
+    },
     "errors": {
-      "nameMin": "Enter a name (at least 2 characters).",
-      "nameTaken": "This name is taken. Choose another.",
-      "gameClosed": "Game is in progress or closed for entry.",
-      "hostOffline": "Host not responding. Make sure the quiz is open on screen.",
-      "network": "Network error. Try again."
+      "nameMin": "Zadajte meno (aspoň 2 znaky).",
+      "nameTaken": "Toto meno je obsadené. Vyberte iné.",
+      "gameClosed": "Hra prebieha alebo je uzavretá pre vstup.",
+      "hostOffline": "Moderátor neodpovedá. Uistite sa, že kvíz je otvorený na obrazovke.",
+      "network": "Chyba siete. Skúste to znova."
     }
   },
   "settings": {
-    "title": "Settings",
+    "title": "Nastavenia",
     "autoAdvance": {
-      "label": "Next Question Transition",
-      "auto": "Automatic",
-      "manual": "Manual (button)"
+      "label": "Prechod na Ďalšiu Otázku",
+      "auto": "Automaticky",
+      "manual": "Ručne (tlačidlo)"
     },
     "questionTime": {
-      "label": "Time per Question",
-      "seconds": "seconds"
+      "label": "Čas na Otázku",
+      "seconds": "sekúnd"
     },
     "questionsPerQuiz": {
-      "label": "Questions per Game"
+      "label": "Otázok na Hru"
     },
     "difficulty": {
-      "label": "Difficulty",
-      "easy": "Easy",
-      "medium": "Medium",
-      "hard": "Hard",
-      "mixed": "Mixed"
+      "label": "Obtiažnosť",
+      "easy": "Ľahká",
+      "medium": "Stredná",
+      "hard": "Ťažká",
+      "mixed": "Zmiešaná"
     },
     "theme": {
-      "label": "Theme",
-      "light": "Light",
-      "dark": "Dark",
-      "system": "System"
+      "label": "Motív",
+      "light": "Svetlý",
+      "dark": "Tmavý",
+      "system": "Systémový"
     },
     "sound": {
-      "label": "Sound",
-      "enabled": "On",
-      "disabled": "Off"
+      "label": "Zvuk",
+      "enabled": "Zapnutý",
+      "disabled": "Vypnutý"
     },
     "showExplanation": {
-      "label": "Show explanation after answer"
+      "label": "Zobraziť vysvetlenie po odpovedi"
     },
     "showCorrectAnswer": {
-      "label": "Show correct answer"
+      "label": "Zobraziť správnu odpoveď"
     },
     "practiceQuestion": {
-      "label": "Practice question before game"
+      "label": "Cvičná otázka pred hrou"
     },
     "speedBonus": {
-      "label": "Points for speed"
+      "label": "Body za rýchlosť"
     },
     "language": {
-      "label": "Language"
+      "label": "Jazyk"
     },
-    "save": "Save",
-    "saved": "Settings saved"
+    "save": "Uložiť",
+    "saved": "Nastavenia uložené"
   },
   "profile": {
-    "title": "Profile",
-    "gamesPlayed": "Games Played",
-    "totalScore": "Total Score",
-    "correctAnswers": "Correct Answers",
-    "bestRank": "Best Rank",
-    "recentGames": "Recent Games",
-    "noGames": "You haven't played yet. Start your first game!",
-    "date": "Date",
-    "difficulty": "Difficulty",
-    "score": "Score",
-    "rank": "Rank"
+    "title": "Profil",
+    "gamesPlayed": "Odohraných Hier",
+    "totalScore": "Celkové Skóre",
+    "correctAnswers": "Správnych Odpovedí",
+    "bestRank": "Najlepšie Umiestnenie",
+    "recentGames": "Nedávne Hry",
+    "noGames": "Ešte ste nehrali. Začnite svoju prvú hru!",
+    "date": "Dátum",
+    "difficulty": "Obtiažnosť",
+    "score": "Skóre",
+    "rank": "Miesto"
   },
   "auth": {
-    "signIn": "Sign In",
-    "signInWith": "Sign in with",
-    "signOut": "Sign Out",
+    "signIn": "Prihlásiť sa",
+    "signInWith": "Prihlásiť sa cez",
+    "signOut": "Odhlásiť sa",
     "google": "Google",
     "yandex": "Yandex",
-    "guestNote": "Guests can play 1 game without signing in",
-    "signInBenefits": "Sign in to save game history and settings",
+    "guestNote": "Hostia môžu hrať 1 hru bez prihlásenia",
+    "signInBenefits": "Prihláste sa pre uloženie histórie hier a nastavení",
     "error": {
-      "title": "Sign In Error",
-      "default": "Could not sign in. Try another method.",
-      "accessDenied": "Access denied.",
-      "tryAgain": "Try Again"
+      "title": "Chyba Prihlásenia",
+      "default": "Nepodarilo sa prihlásiť. Skúste iný spôsob.",
+      "accessDenied": "Prístup zamietnutý.",
+      "tryAgain": "Skúsiť Znova"
     }
   },
   "difficulty": {
-    "easy": "Easy",
-    "medium": "Medium",
-    "hard": "Hard",
-    "mixed": "Mixed"
+    "easy": "Ľahká",
+    "medium": "Stredná",
+    "hard": "Ťažká",
+    "mixed": "Zmiešaná"
   },
   "common": {
-    "loading": "Loading…",
-    "error": "Error",
-    "retry": "Try Again",
-    "cancel": "Cancel",
-    "save": "Save",
-    "close": "Close"
+    "loading": "Načítava sa…",
+    "error": "Chyba",
+    "retry": "Skúsiť Znova",
+    "cancel": "Zrušiť",
+    "save": "Uložiť",
+    "close": "Zavrieť"
+  },
+  "help": {
+    "title": "Ako Hrať",
+    "subtitle": "Kompletný návod pre moderátorov a hráčov",
+    "backToHome": "Späť na Hlavnú Stránku",
+    "forHost": {
+      "title": "Pre Moderátora (Projektor)",
+      "intro": "Moderátor riadi hru na veľkej obrazovke alebo projektore. Jeden člen tímu potrebuje notebook alebo počítač.",
+      "step1": {
+        "title": "1. Otvorte Stránku Moderátora",
+        "description": "Choďte na web a kliknite \"Spustiť Hru (Moderátor)\" alebo otvorte priamo /play/host. Uvidíte obrazovku pre výber obtiažnosti."
+      },
+      "step2": {
+        "title": "2. Vyberte Obtiažnosť",
+        "description": "Vyberte úroveň obtiažnosti: Ľahká (slávne postavy ako Mojžiš, Dávid), Stredná (proroci a apoštoli), Ťažká (len pre expertov), alebo Zmiešaná (kombinácia všetkých úrovní)."
+      },
+      "step3": {
+        "title": "3. Otvorte Lobby",
+        "description": "Kliknite \"Otvoriť Lobby\". Zobrazí sa QR kód a kód hry (5 znakov). Zobrazte túto obrazovku na projektore."
+      },
+      "step4": {
+        "title": "4. Počkajte na Hráčov",
+        "description": "Keď hráči skenujú QR kód a zadávajú svoje mená, uvidíte ich v lobby. Počkajte, kým sa všetci pripoja."
+      },
+      "step5": {
+        "title": "5. Spustite Hru",
+        "description": "Kliknite \"Spustiť Kvíz\". Prvá otázka je cvičné kolo (bez bodov), potom nasleduje 10 otázok, 15 sekúnd každá."
+      },
+      "step6": {
+        "title": "6. Po Hre",
+        "description": "Výsledky sa zobrazia automaticky. Kliknite \"Nová Hra\" pre ďalšie kolo s rovnakými alebo inými hráčmi."
+      }
+    },
+    "forPlayer": {
+      "title": "Pre Hráčov (Telefón)",
+      "intro": "Hráči sa pripájajú zo svojich telefónov. Nie je potrebná žiadna aplikácia — len prehliadač a internet.",
+      "step1": {
+        "title": "1. Naskenujte QR Kód",
+        "description": "Namierte kameru telefónu na QR kód na veľkej obrazovke. Klepnite na oznámenie pre otvorenie odkazu."
+      },
+      "step2": {
+        "title": "2. Zadajte Svoje Meno",
+        "description": "Napíšte svoje meno alebo prezývku (aspoň 2 znaky). Tak sa budete zobrazovať v rebríčku."
+      },
+      "step3": {
+        "title": "3. Čakajte v Lobby",
+        "description": "Uvidíte \"Ste v hre\" a budete čakať, kým moderátor začne. Majte telefón pripravený!"
+      },
+      "step4": {
+        "title": "4. Odpovedajte na Otázky",
+        "description": "Keď sa objaví otázka, klepnite na jedno zo štyroch farebných tlačidiel (A, B, C, D). Rýchlejšie správne odpovede = viac bodov!"
+      },
+      "step5": {
+        "title": "5. Sledujte Svoje Výsledky",
+        "description": "Po každej otázke uvidíte, či ste odpovedali správne a svoje aktuálne umiestnenie. Konečné výsledky sa zobrazia na konci."
+      }
+    },
+    "scoring": {
+      "title": "Bodovanie",
+      "description": "Body závisia od správnosti a rýchlosti:",
+      "correct": "Správna odpoveď: 500 bodov",
+      "speed": "Bonus za rýchlosť: až 500 bodov navyše (čím rýchlejšie, tým viac)",
+      "wrong": "Nesprávna alebo žiadna odpoveď: 0 bodov",
+      "practice": "Cvičná otázka: bez bodov"
+    },
+    "levels": {
+      "title": "Úrovne Obtiažnosti",
+      "easy": {
+        "title": "Ľahká",
+        "description": "Slávne biblické postavy, ktoré pozná každý: Adam, Eva, Noe, Mojžiš, Dávid, Mária, Ježiš a ďalší."
+      },
+      "medium": {
+        "title": "Stredná",
+        "description": "Vyžaduje určité biblické znalosti: proroci, apoštoli a vedľajšie postavy zo známych príbehov."
+      },
+      "hard": {
+        "title": "Ťažká",
+        "description": "Pre biblických expertov: vedľajšie postavy, menej známe osoby a potreba detailných znalostí."
+      },
+      "mixed": {
+        "title": "Zmiešaná",
+        "description": "Kombinácia všetkých úrovní: 40% ľahkých, 40% stredných, 20% ťažkých otázok."
+      }
+    },
+    "tips": {
+      "title": "Tipy",
+      "tip1": "Uistite sa, že všetci sú pripojení k rovnakej WiFi alebo majú mobilný internet.",
+      "tip2": "Zariadenie moderátora by nemalo počas hry zaspať.",
+      "tip3": "Otázky sa neopakujú 24 hodín — hrajte viac kôl bez opakujúcich sa obrázkov!",
+      "tip4": "Ak sa odpojíte, naskenujte QR kód znova — pripojíte sa s rovnakým menom."
+    },
+    "troubleshooting": {
+      "title": "Riešenie Problémov",
+      "q1": {
+        "q": "Naskenoval som QR kód, ale vidím obrazovku s QR kódom",
+        "a": "Možno ste otvorili stránku Moderátora. Hráči by mali skenovať QR kód zobrazený na projektore, ktorý vedie na stránku Hry. URL by mala obsahovať \"?game=\" s 5-miestnym kódom."
+      },
+      "q2": {
+        "q": "Moje meno je obsadené",
+        "a": "Niekto sa už pripojil s týmto menom. Vyberte iné meno alebo pridajte číslo (ako \"Ján2\")."
+      },
+      "q3": {
+        "q": "Moderátor neodpovedá",
+        "a": "Uistite sa, že stránka moderátora je otvorená a nie je uspratá. Kód hry by mal zodpovedať tomu na obrazovke."
+      },
+      "q4": {
+        "q": "Odpojil som sa",
+        "a": "Naskenujte QR kód znova. Ak ste použili rovnaké meno, automaticky sa pripojíte späť k hre."
+      }
+    }
   }
 }

@@ -154,10 +154,18 @@ function PlayerApp() {
   if (!gameId) {
     return (
       <div className="center">
-        <div className="card" style={{ maxWidth: 420 }}>
+        <div className="card" style={{ maxWidth: 440 }}>
           <img src="/logo.webp" alt="YouthConnect" className="logo" />
           <h1 className="title">{g("code")}</h1>
           <p className="subtitle">{t("scanQR")}</p>
+          <div className="player-hint">
+            <p style={{ margin: "0 0 8px" }}>
+              {t("hint.lookForQR")}
+            </p>
+            <p style={{ margin: 0 }}>
+              {t("hint.areYouHost")} <a href="/play/host">{t("hint.hostLink")}</a>
+            </p>
+          </div>
         </div>
       </div>
     );

@@ -1,284 +1,408 @@
 {
   "meta": {
-    "title": "Bible Quiz · Guess the Hero from Selfie",
-    "description": "Interactive quiz for youth and churches — guess Bible characters from AI-generated selfies",
+    "title": "Աստվածաշնչի վիկտորինա · Գուշակիր հերոսին սելֆիով",
+    "description": "Ինտերակտիվ վիկտորինա երիտասարդների և եկեղեցիների համար — գուշակիր AI սելֆիներով",
     "domain": "youthconnect.church"
   },
   "nav": {
-    "play": "Play",
-    "host": "Host",
-    "donate": "Donate",
-    "signIn": "Sign In",
-    "signOut": "Sign Out",
-    "profile": "Profile",
-    "settings": "Settings",
-    "history": "Game History"
+    "play": "Խաղալ",
+    "host": "Վարիչ",
+    "help": "Օգնություն",
+    "donate": "Աջակցել",
+    "signIn": "Մուտք գործել",
+    "signOut": "Ելք",
+    "profile": "Անվարի",
+    "settings": "Կարգեդրություններ",
+    "history": "Խաղերի պատմություն"
   },
   "landing": {
     "hero": {
-      "title": "Bible Quiz",
-      "subtitle": "Guess the Hero from Selfie",
-      "description": "Interactive game for youth meetings, Sunday schools, and family nights. Scan the QR code — and you're in!",
-      "ctaHost": "Start Game (Host)",
-      "ctaJoin": "Join with Code"
+      "title": "Աստվածաշնչի վիկտորինա",
+      "subtitle": "Գուշակիր հերոսին սելֆիով",
+      "description": "Ինտերակտիվ խաղ երիտասարդական հավաքների, կիրակի դպրոցների և ընտանեկան երեկոների համար։ Սկանիրեք QR-կոդը — և դուք խաղում եք!",
+      "ctaHost": "Սկսել խաղը (վարիչ)",
+      "ctaJoin": "Միանալ կոդով"
+    },
+    "quickStart": {
+      "title": "Արագ մեկնարկ",
+      "host": "Վարիչ։ բացեք",
+      "player": "Խաղացներ։ սկանիրեք QR և գրեք անուն",
+      "play": "Խաղացեք։ սեղմեք ճիշտ պատասխանը!",
+      "helpLink": "Ավելի մանրամասն։ Տեսեք ուղեցույցը"
     },
     "howItWorks": {
-      "title": "How It Works",
+      "title": "Ինչ պես է աշխատում",
       "step1": {
-        "title": "Host opens the game",
-        "description": "Open /host on a laptop with projector and choose difficulty"
+        "title": "Վարիչը բացում է խաղը",
+        "description": "Բացեք /host նոութբուքում պրոեկտորով և ընտրեք բարդությունը"
       },
       "step2": {
-        "title": "Players scan QR",
-        "description": "Phone, QR code — and in 5 seconds you're in the lobby"
+        "title": "Մասնակիցները սկանիրում են QR-ը",
+        "description": "Հեռախոս, QR-կոդ — և 5 վարկյանից լոբբիում եք"
       },
       "step3": {
-        "title": "Play and compete",
-        "description": "10 questions, 15 seconds each, points for speed, live leaderboard"
+        "title": "Խաղում ենք և մրցակցում",
+        "description": "10 հարց, յուրաքանչյուրը 15 վարկյան, միավորներ արագության համար"
       }
     },
     "features": {
-      "title": "Features",
+      "title": "Հնարավորություններ",
       "selfie": {
-        "title": "Bible Character Selfies",
-        "description": "Unique AI images: guess the character from the scene"
+        "title": "Սելֆիներ աստվածաշնչի հերոսների",
+        "description": "Եզակի AI-պատկերներ։ գուշակեք կերպարը տեսարանից"
       },
       "realtime": {
-        "title": "Real-time Multiplayer",
-        "description": "Up to 100 players simultaneously, instant sync"
+        "title": "Իրական ժամանակ մուլտիպլեյեր",
+        "description": "Մինչև 100 խաղաչ միաժամանակ, ակնթարթային համադրություն"
       },
       "levels": {
-        "title": "3 Difficulty Levels",
-        "description": "From Adam to Tychicus — choose your level"
+        "title": "3 բարդության մակարդակ",
+        "description": "Ադամից մինչև Տիխիկոս — ընտրեք ձեր մակարդակը"
       },
       "noSignup": {
-        "title": "No Registration",
-        "description": "Guests play instantly, sign in for history and settings"
+        "title": "Առանց գրանցման",
+        "description": "Հյուրերը խաղում են անմիջապես, մուտքը պատմության և կարգեդրությունների համար է"
       },
       "free": {
-        "title": "Free",
-        "description": "No subscriptions, runs on free tier"
+        "title": "Անվճար",
+        "description": "Ոչ մի բաժանորդագրություն, աշխատում է անվճար տարիֆով"
       },
       "mobile": {
-        "title": "Mobile-first",
-        "description": "Optimized for phones and any screen"
+        "title": "Մոբիլ-առաջին",
+        "description": "Օպտիմալացված հեռախոսների և ցանկացած էկրանի համար"
       }
     },
     "levels": {
-      "title": "Difficulty Levels",
+      "title": "Բարդության մակարդակներ",
       "easy": {
-        "title": "Easy",
-        "description": "Famous heroes: Moses, David, Noah, Mary"
+        "title": "Հեշտ",
+        "description": "Հայտնի հերոսներ։ Մովսես, Դավիթ, Նոյե, Մարիամ"
       },
       "medium": {
-        "title": "Medium",
-        "description": "Prophets and apostles: Isaiah, Barnabas, Titus"
+        "title": "Միջին",
+        "description": "Մարգարեներ և առաքյալներ։ Եսայա, Բառնաբաս, Տիտոս"
       },
       "hard": {
-        "title": "Hard",
-        "description": "For experts: Ahithophel, Epaphras, Nympha"
+        "title": "Բարդր",
+        "description": "Մասնագետների համար։ Ախիտոֆել, Եպաֆրաս, Նիմֆա"
       }
     },
     "forWhom": {
-      "title": "Who Is This For",
-      "youth": "Youth ministries",
-      "sunday": "Sunday schools",
-      "camps": "Christian camps",
-      "family": "Family nights",
-      "small": "Small groups"
+      "title": "Ում համար է այս խաղը",
+      "youth": "Երիտասարդական ծառայություններ",
+      "sunday": "Կիրակի դպրոցներ",
+      "camps": "Քրիստոնեական ճանավարներ",
+      "family": "Ընտանեկան երեկոներ",
+      "small": "Փոքր խմբեր"
     },
     "gallery": {
-      "title": "Selfie Gallery",
-      "hint": "Can you guess who this is?"
+      "title": "Սելֆի պատկերասրահ",
+      "hint": "Կարող եք գուշակիլ ով է?"
     },
     "donate": {
-      "title": "Support the Project",
-      "description": "The game is free for everyone. Your donations help develop the project, add new images and languages.",
-      "oneTime": "One-time Donation",
-      "monthly": "Monthly",
-      "crypto": "Cryptocurrency",
-      "boosty": "Boosty (for Russia)"
+      "title": "Աջակցել նախագիծին",
+      "description": "Խաղը անվճար է բոլորի համար։ Ձեր նվիրատվությունները օգնում են զարգացնել նախագիծը։",
+      "oneTime": "Միակարճար նվիրատվություն",
+      "monthly": "Ամենամսյա",
+      "crypto": "Կրիպտովալյուտա",
+      "boosty": "Boosty"
     },
     "faq": {
-      "title": "FAQ",
+      "title": "Հարցերի պատասխաններ",
       "q1": {
-        "q": "Is this free?",
-        "a": "Yes, completely free. We use free tiers of Vercel and Pusher."
+        "q": "Այս անվճար է?",
+        "a": "Այո, լիատությամբ անվճար։ Մենք օգտագործում ենք Vercel-ի և Pusher-ի անվճար տարիֆները։"
       },
       "q2": {
-        "q": "How many players can participate?",
-        "a": "Up to 100 simultaneously (Pusher limit). For larger events, contact us."
+        "q": "Քանիս՞ խաղաց կարող է մասնակցել?",
+        "a": "Մինչև 100 միաժամանակ (Pusher սահմանափակություն)։ Ավելի մեծ միջոցառումների համար գրեք մեզ։"
       },
       "q3": {
-        "q": "Is registration required?",
-        "a": "No! Guests play instantly via QR code. Sign in with Google/Yandex only for saving history and settings."
+        "q": "Գրանցման կարիք՞ կա?",
+        "a": "Ոչ! Հյուրերը խաղում են անմիջապես QR-կոդով։ Google/Yandex մուտքը միայն պատմություն և կարգեդրություններ պահպանելու համար է։"
       },
       "q4": {
-        "q": "Which Bible translation is used?",
-        "a": "Character names follow standard translations for each language."
+        "q": "Որ Աստվածաշնչի թարգմանությունն է օգտագործվում?",
+        "a": "Հերոսների անունները հետևում են ստանդարտ թարգմանություններն յուրաքանչյուր լեզվի համար։"
       },
       "q5": {
-        "q": "What's the denominational stance?",
-        "a": "The game is for all Protestant churches. Questions are based on canonical Bible text."
+        "q": "Որն է կոնֆեսիոնալ դիրքորոշումը?",
+        "a": "Խաղը բոլոր բողոքական եկեղեցիների համար է։ Հարցերը հիմնված են կանոնական Աստվածաշնչի տեքստի վրա։"
       },
       "q6": {
-        "q": "Can this be used with children?",
-        "a": "Yes! Content is safe for all ages. Easy level works great for Sunday school."
+        "q": "Կարող է օգտագործվել երեխաներով?",
+        "a": "Այո! Բովանդակությունը անվտանգ է բոլոր տարիքների համար։ Հեշտ մակարդակը հարմար է կիրակի դպրոցների համար։"
       }
     },
     "footer": {
-      "contact": "Contact",
+      "contact": "Կապ",
       "email": "hello@youthconnect.church",
-      "privacy": "Privacy Policy",
-      "terms": "Terms of Use",
-      "copyright": "© 2024 YouthConnect. All rights reserved."
+      "privacy": "Գաղտնիության քաղաքականություն",
+      "terms": "Օգտագործման պայմաններ",
+      "copyright": "© 2024 YouthConnect. Բոլոր իրավունքները պահպանված են։"
     }
   },
   "game": {
-    "code": "Game Code",
-    "players": "Players",
-    "question": "Question",
-    "of": "of",
-    "seconds": "sec",
-    "practice": "Practice Question",
-    "practiceNote": "no points",
-    "whoMadeSelfie": "Who made this selfie?",
-    "itIs": "It's",
-    "correct": "Correct!",
-    "incorrect": "Incorrect",
-    "timeout": "Time's up",
-    "noAnswer": "No answer",
-    "correctAnswer": "Correct answer",
-    "points": "points",
-    "correctAnswers": "Correct",
-    "place": "place",
-    "nextIn": "Next question in",
-    "resultsIn": "Results in",
-    "waitingHost": "Waiting for host to start the quiz…",
-    "answerAccepted": "Answer accepted!",
-    "lookAtScreen": "Look at the main screen…",
-    "answered": "Answered"
+    "code": "Խաղի կոդ",
+    "players": "Խաղացներ",
+    "question": "Հարց",
+    "of": "-ից",
+    "seconds": "վրկ",
+    "practice": "Փորձնական հարց",
+    "practiceNote": "առանց միավորների",
+    "whoMadeSelfie": "Ով է արել այս սելֆին?",
+    "itIs": "Սա",
+    "correct": "Ճիշտ!",
+    "incorrect": "Սխալ",
+    "timeout": "Պամանակը ավարտվել է",
+    "noAnswer": "Պատասխան չկա",
+    "correctAnswer": "Ճիշտ պատասխան",
+    "points": "միավորներ",
+    "correctAnswers": "Ճիշտ",
+    "place": "տեղ",
+    "nextIn": "Հաջորդ հարցը",
+    "resultsIn": "Արդյունքները",
+    "waitingHost": "Սպասում ենք վարիչի սկսի վիկտորինան…",
+    "answerAccepted": "Պատասխանը ընդունվել է!",
+    "lookAtScreen": "Նայեք գլխավոր էկրանին…",
+    "answered": "Պատասխանել է"
   },
   "host": {
-    "title": "Host Screen",
-    "selectQuiz": "Select Difficulty",
-    "openLobby": "Open Lobby",
-    "back": "Back",
-    "startGame": "Start Quiz",
-    "startPractice": "Start with Practice",
-    "newGame": "New Game",
-    "scanQR": "Scan QR code with your phone to join",
-    "noPlayers": "No one has joined yet…",
-    "results": "Quiz Results",
-    "noPusher": "Pusher keys not set. Add environment variables — see README.",
-    "practiceComplete": "Practice round complete — now it's for real!",
-    "startQuiz": "Start Quiz"
+    "title": "Վարիչի էկրան",
+    "selectQuiz": "Ընտրեք բարդությունը",
+    "openLobby": "Բացեք լոբբին",
+    "back": "Հետ",
+    "startGame": "Սկսել վիկտորինան",
+    "startPractice": "Սկսել փորձնական հարցով",
+    "newGame": "Նոր խաղ",
+    "scanQR": "Սկանիրեք QR-կոդը հեռախոսով միանալու համար",
+    "noPlayers": "Դեռևս ոչ ոք չի միանալ…",
+    "results": "Վիկտորինայի արդյունքները",
+    "noPusher": "Pusher բանալիները կարգեդրված չեն։ Ավելացրեք միջավայրի փոփոխականներ — տեսեք README։",
+    "practiceComplete": "Փորձնական րաունդը ավարտվեց — հիմա իրական է!",
+    "startQuiz": "Սկսել վիկտորինան",
+    "playerHint": "Դուք խաղաց եք? Սկանիրեք QR-կոդը վերևում հեռախոսով, մի բացեք այս էջը!"
   },
   "player": {
-    "enterName": "What's your name?",
-    "namePlaceholder": "Your name or nickname",
-    "join": "Join",
-    "checking": "Checking…",
-    "youAreIn": "You're in the game",
-    "scanQR": "Scan the QR code on screen to join the game.",
+    "enterName": "Ինչ է ձեր անունը?",
+    "namePlaceholder": "Ձեր անունը կամ մականունը",
+    "join": "Միանալ",
+    "checking": "Ստուգում ենք…",
+    "youAreIn": "Դուք խաղում եք",
+    "scanQR": "Սկանիրեք QR-կոդը էկրանին միանալու համար խաղում։",
+    "hint": {
+      "lookForQR": "Նայեք մեծ էկրանին — վարիչը պիտք ցույց տա QR-կոդ 5 նիշանով կոդով։",
+      "areYouHost": "Դուք վարիչ եք?",
+      "hostLink": "Բացեք վարիչի էջը →"
+    },
     "errors": {
-      "nameMin": "Enter a name (at least 2 characters).",
-      "nameTaken": "This name is taken. Choose another.",
-      "gameClosed": "Game is in progress or closed for entry.",
-      "hostOffline": "Host not responding. Make sure the quiz is open on screen.",
-      "network": "Network error. Try again."
+      "nameMin": "Գրեք անուն (նվազագույնը 2 նիշան)։",
+      "nameTaken": "Այս անունը արդեն զբաղեցրած է։ Ընտրեք ուրիշը։",
+      "gameClosed": "Խաղը արդեն ընթանում է կամ փակված է մուտքի համար։",
+      "hostOffline": "Վարիչը չի պատասխանում։ Համոզվեք որ վիկտորինան բացված է էկրանին։",
+      "network": "Ցանցի սխալ։ Կրկնեք փորձեք։"
     }
   },
   "settings": {
-    "title": "Settings",
+    "title": "Կարգեդրություններ",
     "autoAdvance": {
-      "label": "Next Question Transition",
-      "auto": "Automatic",
-      "manual": "Manual (button)"
+      "label": "Անցում հաջորդ հարցին",
+      "auto": "Ինքնաշխատ",
+      "manual": "Ձեռքով (կոճակ)"
     },
     "questionTime": {
-      "label": "Time per Question",
-      "seconds": "seconds"
+      "label": "Ժամանակը յուրաքանչյուր հարցի",
+      "seconds": "վարկյաններով"
     },
     "questionsPerQuiz": {
-      "label": "Questions per Game"
+      "label": "Հարցերը յուրաքանչյուր խաղում"
     },
     "difficulty": {
-      "label": "Difficulty",
-      "easy": "Easy",
-      "medium": "Medium",
-      "hard": "Hard",
-      "mixed": "Mixed"
+      "label": "Բարդություն",
+      "easy": "Հեշտ",
+      "medium": "Միջին",
+      "hard": "Բարդր",
+      "mixed": "Խառնախիս"
     },
     "theme": {
-      "label": "Theme",
-      "light": "Light",
-      "dark": "Dark",
-      "system": "System"
+      "label": "Թեմա",
+      "light": "Լուսավոր",
+      "dark": "Մութ",
+      "system": "Համակարգային"
     },
     "sound": {
-      "label": "Sound",
-      "enabled": "On",
-      "disabled": "Off"
+      "label": "Ձայն",
+      "enabled": "Միացված",
+      "disabled": "Անջատված"
     },
     "showExplanation": {
-      "label": "Show explanation after answer"
+      "label": "Ցույց տալ բացատրությունը պատասխանից հետո"
     },
     "showCorrectAnswer": {
-      "label": "Show correct answer"
+      "label": "Ցույց տալ ճիշտ պատասխանը"
     },
     "practiceQuestion": {
-      "label": "Practice question before game"
+      "label": "Փորձնական հարց խաղից առաջ"
     },
     "speedBonus": {
-      "label": "Points for speed"
+      "label": "Միավորներ արագության համար"
     },
     "language": {
-      "label": "Language"
+      "label": "Լեզու"
     },
-    "save": "Save",
-    "saved": "Settings saved"
+    "save": "Պահպանել",
+    "saved": "Կարգեդրությունները պահպանված են"
   },
   "profile": {
-    "title": "Profile",
-    "gamesPlayed": "Games Played",
-    "totalScore": "Total Score",
-    "correctAnswers": "Correct Answers",
-    "bestRank": "Best Rank",
-    "recentGames": "Recent Games",
-    "noGames": "You haven't played yet. Start your first game!",
-    "date": "Date",
-    "difficulty": "Difficulty",
-    "score": "Score",
-    "rank": "Rank"
+    "title": "Անվարի",
+    "gamesPlayed": "Խաղեր խաղացած",
+    "totalScore": "Ընդհանուր միավոր",
+    "correctAnswers": "Ճիշտ պատասխաններ",
+    "bestRank": "Լավագույն տեղ",
+    "recentGames": "Վերջին խաղերը",
+    "noGames": "Դուք դեռ չեք խաղացել։ Սկսեք ձեր առաջին խաղը!",
+    "date": "Ամսաթիվ",
+    "difficulty": "Բարդություն",
+    "score": "Միավոր",
+    "rank": "Տեղ"
   },
   "auth": {
-    "signIn": "Sign In",
-    "signInWith": "Sign in with",
-    "signOut": "Sign Out",
+    "signIn": "Մուտք գործել",
+    "signInWith": "Մուտք գործել",
+    "signOut": "Ելք",
     "google": "Google",
     "yandex": "Yandex",
-    "guestNote": "Guests can play 1 game without signing in",
-    "signInBenefits": "Sign in to save game history and settings",
+    "guestNote": "Հյուրերը կարող են խաղալ 1 խաղ առանց մուտքի",
+    "signInBenefits": "Մուտք գործեք պատմություն և կարգեդրություններ պահպանելու համար",
     "error": {
-      "title": "Sign In Error",
-      "default": "Could not sign in. Try another method.",
-      "accessDenied": "Access denied.",
-      "tryAgain": "Try Again"
+      "title": "Մուտքի սխալ",
+      "default": "Չի հաջողվել մուտք գործել։ Փորձեք ուրիշ ձև։",
+      "accessDenied": "Մուտքը մերժված է։",
+      "tryAgain": "Փորձել կրկից"
     }
   },
   "difficulty": {
-    "easy": "Easy",
-    "medium": "Medium",
-    "hard": "Hard",
-    "mixed": "Mixed"
+    "easy": "Հեշտ",
+    "medium": "Միջին",
+    "hard": "Բարդր",
+    "mixed": "Խառնախիս"
   },
   "common": {
-    "loading": "Loading…",
-    "error": "Error",
-    "retry": "Try Again",
-    "cancel": "Cancel",
-    "save": "Save",
-    "close": "Close"
+    "loading": "Բեռնում է…",
+    "error": "Սխալ",
+    "retry": "Փորձել կրկից",
+    "cancel": "Չեղարկել",
+    "save": "Պահպանել",
+    "close": "Փակել"
+  },
+  "help": {
+    "title": "Ինչ պես խաղալ",
+    "subtitle": "Լիատեքս ուղեցույցը վարիչների և խաղացների համար",
+    "backToHome": "Վերադառնալ գլխավոր",
+    "forHost": {
+      "title": "Վարիչի համար (պրոեկտոր)",
+      "intro": "Վարիչը գործարկում է խաղը մեծ էկրանին կամ պրոեկտորով։ Մեկ ոքին թիմը պետք է նոութբուք կամ համակարգիչ։",
+      "step1": {
+        "title": "1. Բացեք վարիչի էջը",
+        "description": "Անցեք կայքի և սեղմեք «Սկսել խաղը (վարիչ)» կամ ուղղակի բացեք /play/host։ Դուք կտեսնեք բարդության ընտրության էկրանը։"
+      },
+      "step2": {
+        "title": "2. Ընտրեք բարդությունը",
+        "description": "Ընտրեք մակարդակը։ Հեշտ (հայտնի հերոսներ։ Մովսես, Դավիթ), Միջին (մարգարեներ և առաքյալներ), Բարդր (մասնագետների համար), կամ Խառնախիս (բոլոր մակարդակների համադրություն)։"
+      },
+      "step3": {
+        "title": "3. Բացեք լոբբին",
+        "description": "Սեղմեք «Բացեք լոբբին»։ QR-կոդը և խաղի կոդը (5 նիշան) կերհայվի։ Ցույց տվեք այս էկրանը պրոեկտորով։"
+      },
+      "step4": {
+        "title": "4. Սպասեք խաղացներին",
+        "description": "Երբ խաղացները սկանիրում են QR-կոդը և գրում են իրենց անունները, դուք կտեսնեք նրանց լոբբիում։ Սպասեք մինչև բոլորը միանան։"
+      },
+      "step5": {
+        "title": "5. Գործարկեք խաղը",
+        "description": "Սեղմեք «Սկսել վիկտորինան»։ Առաջին հարցը փորձնական է (առանց միավորների), այնուհետև 10 հարց, յուրաքանչյուրը 15 վարկյան։"
+      },
+      "step6": {
+        "title": "6. Խաղից հետո",
+        "description": "Արդյունքները ցույց են տրվում ինքնաշխատ։ Սեղմեք «Նոր խաղ» նոր րաունդի համար նույն կամ այլ խաղացներով։"
+      }
+    },
+    "forPlayer": {
+      "title": "Խաղացների համար (հեռախոս)",
+      "intro": "Խաղացները միանում են իրենց հեռախոսներով։ Հավելված չի պահանջվում — միայն բրաուզեր և ինտերնետ։",
+      "step1": {
+        "title": "1. Սկանիրեք QR-կոդը",
+        "description": "Ուղղորեք ձեր հեռախոսի տեսախցիկը QR-կոդի վրա մեծ էկրանին։ Սեղմեք ծանուցումն ընդառելու համար հղումը։"
+      },
+      "step2": {
+        "title": "2. Գրեք ձեր անունը",
+        "description": "Գրեք ձեր անունը կամ մականունը (նվազագույնը 2 նիշան)։ Այսպես կերևավի ձեզ վարդակասրությունում։"
+      },
+      "step3": {
+        "title": "3. Սպասեք լոբբիում",
+        "description": "Դուք կտեսնեք «Դուք խաղում եք» և կսպասեք մինչև վարիչը սկսի խաղը։ Պահեք ձեր հեռախոսը պատրաստացած!"
+      },
+      "step4": {
+        "title": "4. Պատասխանեք հարցերին",
+        "description": "Երբ հարցը հայտնվի, սեղմեք չորս գունավոր կոճակներից մեկը (A, B, C, D)։ Չիշտ պատասխանը օրքան արագ, այնքան շատ միավոր!"
+      },
+      "step5": {
+        "title": "5. Տեսեք ձեր արդյունքները",
+        "description": "Յուրաքանչյուր հարցից հետո դուք կտեսնեք թե ճիշտ եք պատասխանել և ձեր տեղը վարդակասրությունում։ Վերջնական արդյունքները — վերջում։"
+      }
+    },
+    "scoring": {
+      "title": "Միավորներով համարգարկը",
+      "description": "Միավորները կախված են ճիշտության և արագության հետ։",
+      "correct": "Ճիշտ պատասխան։ 500 միավոր",
+      "speed": "Արագության բոնուս։ մինչև 500 լրացուցիչ միավոր (օրքան արագ, այնքան շատ)",
+      "wrong": "Սխալ կամ բացթողած պատասխան։ 0 միավոր",
+      "practice": "Փորձնական հարց։ առանց միավորների"
+    },
+    "levels": {
+      "title": "Բարդության մակարդակներ",
+      "easy": {
+        "title": "Հեշտ",
+        "description": "Հայտնի աստվածաշնչի կերպարներ, որոնց բոլորը գիտեն։ Ադամ, Եվա, Նոյե, Մովսես, Դավիթ, Մարիամ, Հիսուս և ուրիշներ։"
+      },
+      "medium": {
+        "title": "Միջին",
+        "description": "Պահանջում է Աստվածաշնչի իմացության։ մարգարեներ, առաքյալներ և երկրորդական կերպարներ հայտնի պատմություններից։"
+      },
+      "hard": {
+        "title": "Բարդր",
+        "description": "Աստվածաշնչի մասնագետների համար։ քիչ հայտնի կերպարներ, պահանջում է տեքստի խորդանք իմացության։"
+      },
+      "mixed": {
+        "title": "Խառնախիս",
+        "description": "Բոլոր մակարդակների համադրություն։ 40% հեշտ, 40% միջին, 20% բարդր հարցեր։"
+      }
+    },
+    "tips": {
+      "title": "Խորհուրդներ",
+      "tip1": "Համոզվեք որ բոլորը կապված են նույն WiFi-ին կամ ունեն մոբիլ ինտերնետ։",
+      "tip2": "Վարիչի սարքը չի պետք քնի խաղի ընթացքում։",
+      "tip3": "Հարցերը չեն կրկնվում 24 ժամ — խաղացեք մի քանիսանունդ առանց կրկնումների!",
+      "tip4": "Եթե անջատվեցիք — սկանիրեք QR-կոդը կրկին, դուք կվերադառնաք նույն անունով։"
+    },
+    "troubleshooting": {
+      "title": "Համատշախակությունների լուցում",
+      "q1": {
+        "q": "Սկանիրեցի եմ QR-կոդը, բայց տեսնում եմ էկրան QR-կոդով",
+        "a": "Հավանաբար դուք բացեցիք եք վարիչի էջը։ Խաղացները պետք է սկանիրեն QR-կոդը պրոեկտորին, որը տանում է խաղացի էջին։ URL-ում պետք է լինի «?game=» 5 նիշանով կոդով։"
+      },
+      "q2": {
+        "q": "Անունը արդեն զբաղեցրած է",
+        "a": "Մեկին արդեն միանալ է այս անունով։ Ընտրեք ուրիշ անուն կամ ավելացրեք թիվ (օրինակ։ «Հովհաննես2»)։"
+      },
+      "q3": {
+        "q": "Վարիչը չի պատասխանում",
+        "a": "Համոզվեք որ վարիչի էջը բացված է և չի քնել։ Խաղի կոդը պետք է համապատասխանի էկրանին ցույցվածին։"
+      },
+      "q4": {
+        "q": "Ինձ անջատեցին",
+        "a": "Սկանիրեք QR-կոդը կրկին։ Եթե օգտագործեք նույն անունը, դուք ինքնաշխատ կվերադառնաք խաղ։"
+      }
+    }
   }
 }

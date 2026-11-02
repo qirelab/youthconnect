@@ -1,284 +1,408 @@
 {
   "meta": {
-    "title": "Bible Quiz · Guess the Hero from Selfie",
-    "description": "Interactive quiz for youth and churches — guess Bible characters from AI-generated selfies",
+    "title": "Quiz Biblic · Ghicește Eroul din Selfie",
+    "description": "Quiz interactiv pentru tineri și biserici — ghicește personajele biblice din selfie-uri AI",
     "domain": "youthconnect.church"
   },
   "nav": {
-    "play": "Play",
-    "host": "Host",
-    "donate": "Donate",
-    "signIn": "Sign In",
-    "signOut": "Sign Out",
-    "profile": "Profile",
-    "settings": "Settings",
-    "history": "Game History"
+    "play": "Joacă",
+    "host": "Gazdă",
+    "help": "Ajutor",
+    "donate": "Donează",
+    "signIn": "Conectare",
+    "signOut": "Deconectare",
+    "profile": "Profil",
+    "settings": "Setări",
+    "history": "Istoric Jocuri"
   },
   "landing": {
     "hero": {
-      "title": "Bible Quiz",
-      "subtitle": "Guess the Hero from Selfie",
-      "description": "Interactive game for youth meetings, Sunday schools, and family nights. Scan the QR code — and you're in!",
-      "ctaHost": "Start Game (Host)",
-      "ctaJoin": "Join with Code"
+      "title": "Quiz Biblic",
+      "subtitle": "Ghicește Eroul din Selfie",
+      "description": "Joc interactiv pentru întâlniri de tineret, școli duminicale și seri în familie. Scanează codul QR — și ești în joc!",
+      "ctaHost": "Începe Jocul (Gazdă)",
+      "ctaJoin": "Alătură-te cu Cod"
+    },
+    "quickStart": {
+      "title": "Start Rapid",
+      "host": "Gazdă: deschide",
+      "player": "Jucători: scanați QR și introduceți numele",
+      "play": "Joacă: apasă pe răspunsul corect!",
+      "helpLink": "Ai nevoie de mai multe detalii? Vezi ghidul complet"
     },
     "howItWorks": {
-      "title": "How It Works",
+      "title": "Cum Funcționează",
       "step1": {
-        "title": "Host opens the game",
-        "description": "Open /host on a laptop with projector and choose difficulty"
+        "title": "Gazda deschide jocul",
+        "description": "Deschide /host pe un laptop cu proiector și alege dificultatea"
       },
       "step2": {
-        "title": "Players scan QR",
-        "description": "Phone, QR code — and in 5 seconds you're in the lobby"
+        "title": "Jucătorii scanează QR",
+        "description": "Telefon, cod QR — și în 5 secunde ești în lobby"
       },
       "step3": {
-        "title": "Play and compete",
-        "description": "10 questions, 15 seconds each, points for speed, live leaderboard"
+        "title": "Joacă și concurează",
+        "description": "10 întrebări, 15 secunde fiecare, puncte pentru viteză, clasament live"
       }
     },
     "features": {
-      "title": "Features",
+      "title": "Caracteristici",
       "selfie": {
-        "title": "Bible Character Selfies",
-        "description": "Unique AI images: guess the character from the scene"
+        "title": "Selfie-uri Personaje Biblice",
+        "description": "Imagini AI unice: ghicește personajul din scenă"
       },
       "realtime": {
-        "title": "Real-time Multiplayer",
-        "description": "Up to 100 players simultaneously, instant sync"
+        "title": "Multiplayer în Timp Real",
+        "description": "Până la 100 de jucători simultan, sincronizare instantanee"
       },
       "levels": {
-        "title": "3 Difficulty Levels",
-        "description": "From Adam to Tychicus — choose your level"
+        "title": "3 Niveluri de Dificultate",
+        "description": "De la Adam la Tihic — alege-ți nivelul"
       },
       "noSignup": {
-        "title": "No Registration",
-        "description": "Guests play instantly, sign in for history and settings"
+        "title": "Fără Înregistrare",
+        "description": "Oaspeții joacă instant, conectează-te pentru istoric și setări"
       },
       "free": {
-        "title": "Free",
-        "description": "No subscriptions, runs on free tier"
+        "title": "Gratuit",
+        "description": "Fără abonamente, funcționează pe planuri gratuite"
       },
       "mobile": {
         "title": "Mobile-first",
-        "description": "Optimized for phones and any screen"
+        "description": "Optimizat pentru telefoane și orice ecran"
       }
     },
     "levels": {
-      "title": "Difficulty Levels",
+      "title": "Niveluri de Dificultate",
       "easy": {
-        "title": "Easy",
-        "description": "Famous heroes: Moses, David, Noah, Mary"
+        "title": "Ușor",
+        "description": "Eroi celebri: Moise, David, Noe, Maria"
       },
       "medium": {
-        "title": "Medium",
-        "description": "Prophets and apostles: Isaiah, Barnabas, Titus"
+        "title": "Mediu",
+        "description": "Profeți și apostoli: Isaia, Barnaba, Tit"
       },
       "hard": {
-        "title": "Hard",
-        "description": "For experts: Ahithophel, Epaphras, Nympha"
+        "title": "Greu",
+        "description": "Pentru experți: Ahitofel, Epafras, Nimfa"
       }
     },
     "forWhom": {
-      "title": "Who Is This For",
-      "youth": "Youth ministries",
-      "sunday": "Sunday schools",
-      "camps": "Christian camps",
-      "family": "Family nights",
-      "small": "Small groups"
+      "title": "Pentru Cine Este",
+      "youth": "Grupuri de tineret",
+      "sunday": "Școli duminicale",
+      "camps": "Tabere creștine",
+      "family": "Seri în familie",
+      "small": "Grupuri mici"
     },
     "gallery": {
-      "title": "Selfie Gallery",
-      "hint": "Can you guess who this is?"
+      "title": "Galerie Selfie",
+      "hint": "Poți ghici cine este?"
     },
     "donate": {
-      "title": "Support the Project",
-      "description": "The game is free for everyone. Your donations help develop the project, add new images and languages.",
-      "oneTime": "One-time Donation",
-      "monthly": "Monthly",
-      "crypto": "Cryptocurrency",
-      "boosty": "Boosty (for Russia)"
+      "title": "Susține Proiectul",
+      "description": "Jocul este gratuit pentru toți. Donațiile tale ajută la dezvoltarea proiectului, adăugarea de imagini și limbi noi.",
+      "oneTime": "Donație Unică",
+      "monthly": "Lunar",
+      "crypto": "Criptomonedă",
+      "boosty": "Boosty (pentru Rusia)"
     },
     "faq": {
       "title": "FAQ",
       "q1": {
-        "q": "Is this free?",
-        "a": "Yes, completely free. We use free tiers of Vercel and Pusher."
+        "q": "Este gratuit?",
+        "a": "Da, complet gratuit. Folosim planuri gratuite de la Vercel și Pusher."
       },
       "q2": {
-        "q": "How many players can participate?",
-        "a": "Up to 100 simultaneously (Pusher limit). For larger events, contact us."
+        "q": "Câți jucători pot participa?",
+        "a": "Până la 100 simultan (limita Pusher). Pentru evenimente mai mari, contactează-ne."
       },
       "q3": {
-        "q": "Is registration required?",
-        "a": "No! Guests play instantly via QR code. Sign in with Google/Yandex only for saving history and settings."
+        "q": "Este necesară înregistrarea?",
+        "a": "Nu! Oaspeții joacă instant prin cod QR. Conectează-te cu Google/Yandex doar pentru a salva istoricul și setările."
       },
       "q4": {
-        "q": "Which Bible translation is used?",
-        "a": "Character names follow standard translations for each language."
+        "q": "Ce traducere a Bibliei se folosește?",
+        "a": "Numele personajelor urmează traduceri standard pentru fiecare limbă."
       },
       "q5": {
-        "q": "What's the denominational stance?",
-        "a": "The game is for all Protestant churches. Questions are based on canonical Bible text."
+        "q": "Care este poziția confesională?",
+        "a": "Jocul este pentru toate bisericile protestante. Întrebările se bazează pe textul biblic canonic."
       },
       "q6": {
-        "q": "Can this be used with children?",
-        "a": "Yes! Content is safe for all ages. Easy level works great for Sunday school."
+        "q": "Poate fi folosit cu copii?",
+        "a": "Da! Conținutul este sigur pentru toate vârstele. Nivelul ușor funcționează excelent pentru școala duminicală."
       }
     },
     "footer": {
       "contact": "Contact",
       "email": "hello@youthconnect.church",
-      "privacy": "Privacy Policy",
-      "terms": "Terms of Use",
-      "copyright": "© 2024 YouthConnect. All rights reserved."
+      "privacy": "Politica de Confidențialitate",
+      "terms": "Termeni de Utilizare",
+      "copyright": "© 2024 YouthConnect. Toate drepturile rezervate."
     }
   },
   "game": {
-    "code": "Game Code",
-    "players": "Players",
-    "question": "Question",
-    "of": "of",
+    "code": "Cod Joc",
+    "players": "Jucători",
+    "question": "Întrebare",
+    "of": "din",
     "seconds": "sec",
-    "practice": "Practice Question",
-    "practiceNote": "no points",
-    "whoMadeSelfie": "Who made this selfie?",
-    "itIs": "It's",
-    "correct": "Correct!",
-    "incorrect": "Incorrect",
-    "timeout": "Time's up",
-    "noAnswer": "No answer",
-    "correctAnswer": "Correct answer",
-    "points": "points",
-    "correctAnswers": "Correct",
-    "place": "place",
-    "nextIn": "Next question in",
-    "resultsIn": "Results in",
-    "waitingHost": "Waiting for host to start the quiz…",
-    "answerAccepted": "Answer accepted!",
-    "lookAtScreen": "Look at the main screen…",
-    "answered": "Answered"
+    "practice": "Întrebare de Practică",
+    "practiceNote": "fără puncte",
+    "whoMadeSelfie": "Cine a făcut acest selfie?",
+    "itIs": "Este",
+    "correct": "Corect!",
+    "incorrect": "Incorect",
+    "timeout": "Timpul a expirat",
+    "noAnswer": "Fără răspuns",
+    "correctAnswer": "Răspuns corect",
+    "points": "puncte",
+    "correctAnswers": "Corecte",
+    "place": "loc",
+    "nextIn": "Următoarea întrebare în",
+    "resultsIn": "Rezultate în",
+    "waitingHost": "Așteptăm gazda să înceapă quiz-ul…",
+    "answerAccepted": "Răspuns acceptat!",
+    "lookAtScreen": "Privește ecranul principal…",
+    "answered": "Răspuns dat"
   },
   "host": {
-    "title": "Host Screen",
-    "selectQuiz": "Select Difficulty",
-    "openLobby": "Open Lobby",
-    "back": "Back",
-    "startGame": "Start Quiz",
-    "startPractice": "Start with Practice",
-    "newGame": "New Game",
-    "scanQR": "Scan QR code with your phone to join",
-    "noPlayers": "No one has joined yet…",
-    "results": "Quiz Results",
-    "noPusher": "Pusher keys not set. Add environment variables — see README.",
-    "practiceComplete": "Practice round complete — now it's for real!",
-    "startQuiz": "Start Quiz"
+    "title": "Ecranul Gazdei",
+    "selectQuiz": "Selectează Dificultatea",
+    "openLobby": "Deschide Lobby",
+    "back": "Înapoi",
+    "startGame": "Începe Quiz-ul",
+    "startPractice": "Începe cu Practică",
+    "newGame": "Joc Nou",
+    "scanQR": "Scanează codul QR cu telefonul pentru a te alătura",
+    "noPlayers": "Nimeni nu s-a alăturat încă…",
+    "results": "Rezultatele Quiz-ului",
+    "noPusher": "Cheile Pusher nu sunt setate. Adaugă variabile de mediu — vezi README.",
+    "practiceComplete": "Runda de practică completă — acum e pe bune!",
+    "startQuiz": "Începe Quiz-ul",
+    "playerHint": "Ești jucător? Scanează codul QR de mai sus cu telefonul, nu deschide această pagină!"
   },
   "player": {
-    "enterName": "What's your name?",
-    "namePlaceholder": "Your name or nickname",
-    "join": "Join",
-    "checking": "Checking…",
-    "youAreIn": "You're in the game",
-    "scanQR": "Scan the QR code on screen to join the game.",
+    "enterName": "Cum te numești?",
+    "namePlaceholder": "Numele sau porecla ta",
+    "join": "Alătură-te",
+    "checking": "Verificare…",
+    "youAreIn": "Ești în joc",
+    "scanQR": "Scanează codul QR de pe ecran pentru a te alătura jocului.",
+    "hint": {
+      "lookForQR": "Privește ecranul mare — gazda ar trebui să arate un cod QR cu un cod de joc de 5 caractere.",
+      "areYouHost": "Ești gazda?",
+      "hostLink": "Deschide pagina gazdei în schimb →"
+    },
     "errors": {
-      "nameMin": "Enter a name (at least 2 characters).",
-      "nameTaken": "This name is taken. Choose another.",
-      "gameClosed": "Game is in progress or closed for entry.",
-      "hostOffline": "Host not responding. Make sure the quiz is open on screen.",
-      "network": "Network error. Try again."
+      "nameMin": "Introdu un nume (minim 2 caractere).",
+      "nameTaken": "Acest nume este ocupat. Alege altul.",
+      "gameClosed": "Jocul este în desfășurare sau închis pentru intrare.",
+      "hostOffline": "Gazda nu răspunde. Asigură-te că quiz-ul este deschis pe ecran.",
+      "network": "Eroare de rețea. Încearcă din nou."
     }
   },
   "settings": {
-    "title": "Settings",
+    "title": "Setări",
     "autoAdvance": {
-      "label": "Next Question Transition",
-      "auto": "Automatic",
-      "manual": "Manual (button)"
+      "label": "Tranziție la Următoarea Întrebare",
+      "auto": "Automată",
+      "manual": "Manuală (buton)"
     },
     "questionTime": {
-      "label": "Time per Question",
-      "seconds": "seconds"
+      "label": "Timp per Întrebare",
+      "seconds": "secunde"
     },
     "questionsPerQuiz": {
-      "label": "Questions per Game"
+      "label": "Întrebări per Joc"
     },
     "difficulty": {
-      "label": "Difficulty",
-      "easy": "Easy",
-      "medium": "Medium",
-      "hard": "Hard",
-      "mixed": "Mixed"
+      "label": "Dificultate",
+      "easy": "Ușor",
+      "medium": "Mediu",
+      "hard": "Greu",
+      "mixed": "Mixt"
     },
     "theme": {
-      "label": "Theme",
-      "light": "Light",
-      "dark": "Dark",
-      "system": "System"
+      "label": "Temă",
+      "light": "Deschisă",
+      "dark": "Întunecată",
+      "system": "Sistem"
     },
     "sound": {
-      "label": "Sound",
-      "enabled": "On",
-      "disabled": "Off"
+      "label": "Sunet",
+      "enabled": "Activat",
+      "disabled": "Dezactivat"
     },
     "showExplanation": {
-      "label": "Show explanation after answer"
+      "label": "Arată explicația după răspuns"
     },
     "showCorrectAnswer": {
-      "label": "Show correct answer"
+      "label": "Arată răspunsul corect"
     },
     "practiceQuestion": {
-      "label": "Practice question before game"
+      "label": "Întrebare de practică înainte de joc"
     },
     "speedBonus": {
-      "label": "Points for speed"
+      "label": "Puncte pentru viteză"
     },
     "language": {
-      "label": "Language"
+      "label": "Limbă"
     },
-    "save": "Save",
-    "saved": "Settings saved"
+    "save": "Salvează",
+    "saved": "Setări salvate"
   },
   "profile": {
-    "title": "Profile",
-    "gamesPlayed": "Games Played",
-    "totalScore": "Total Score",
-    "correctAnswers": "Correct Answers",
-    "bestRank": "Best Rank",
-    "recentGames": "Recent Games",
-    "noGames": "You haven't played yet. Start your first game!",
-    "date": "Date",
-    "difficulty": "Difficulty",
-    "score": "Score",
-    "rank": "Rank"
+    "title": "Profil",
+    "gamesPlayed": "Jocuri Jucate",
+    "totalScore": "Scor Total",
+    "correctAnswers": "Răspunsuri Corecte",
+    "bestRank": "Cea Mai Bună Poziție",
+    "recentGames": "Jocuri Recente",
+    "noGames": "Nu ai jucat încă. Începe primul tău joc!",
+    "date": "Data",
+    "difficulty": "Dificultate",
+    "score": "Scor",
+    "rank": "Poziție"
   },
   "auth": {
-    "signIn": "Sign In",
-    "signInWith": "Sign in with",
-    "signOut": "Sign Out",
+    "signIn": "Conectare",
+    "signInWith": "Conectare cu",
+    "signOut": "Deconectare",
     "google": "Google",
     "yandex": "Yandex",
-    "guestNote": "Guests can play 1 game without signing in",
-    "signInBenefits": "Sign in to save game history and settings",
+    "guestNote": "Oaspeții pot juca 1 joc fără a se conecta",
+    "signInBenefits": "Conectează-te pentru a salva istoricul jocurilor și setările",
     "error": {
-      "title": "Sign In Error",
-      "default": "Could not sign in. Try another method.",
-      "accessDenied": "Access denied.",
-      "tryAgain": "Try Again"
+      "title": "Eroare de Conectare",
+      "default": "Nu s-a putut conecta. Încearcă altă metodă.",
+      "accessDenied": "Acces refuzat.",
+      "tryAgain": "Încearcă Din Nou"
     }
   },
   "difficulty": {
-    "easy": "Easy",
-    "medium": "Medium",
-    "hard": "Hard",
-    "mixed": "Mixed"
+    "easy": "Ușor",
+    "medium": "Mediu",
+    "hard": "Greu",
+    "mixed": "Mixt"
   },
   "common": {
-    "loading": "Loading…",
-    "error": "Error",
-    "retry": "Try Again",
-    "cancel": "Cancel",
-    "save": "Save",
-    "close": "Close"
+    "loading": "Se încarcă…",
+    "error": "Eroare",
+    "retry": "Încearcă Din Nou",
+    "cancel": "Anulează",
+    "save": "Salvează",
+    "close": "Închide"
+  },
+  "help": {
+    "title": "Cum Să Joci",
+    "subtitle": "Ghid complet pentru gazde și jucători",
+    "backToHome": "Înapoi la Pagina Principală",
+    "forHost": {
+      "title": "Pentru Gazdă (Proiector)",
+      "intro": "Gazda gestionează jocul pe un ecran mare sau proiector. O persoană din echipă are nevoie de un laptop sau computer.",
+      "step1": {
+        "title": "1. Deschide Pagina Gazdei",
+        "description": "Mergi pe site și apasă \"Începe Jocul (Gazdă)\" sau deschide direct /play/host. Vei vedea ecranul de selectare a dificultății."
+      },
+      "step2": {
+        "title": "2. Alege Dificultatea",
+        "description": "Selectează nivelul de dificultate: Ușor (personaje celebre ca Moise, David), Mediu (profeți și apostoli), Greu (doar pentru experți), sau Mixt (combinație de toate nivelurile)."
+      },
+      "step3": {
+        "title": "3. Deschide Lobby-ul",
+        "description": "Apasă \"Deschide Lobby\". Va apărea un cod QR și cod de joc (5 caractere). Arată acest ecran pe proiector."
+      },
+      "step4": {
+        "title": "4. Așteaptă Jucătorii",
+        "description": "Pe măsură ce jucătorii scanează codul QR și introduc numele, îi vei vedea apărând în lobby. Așteaptă până când toți s-au alăturat."
+      },
+      "step5": {
+        "title": "5. Începe Jocul",
+        "description": "Apasă \"Începe Quiz-ul\". Prima întrebare este o rundă de practică (fără puncte), apoi urmează 10 întrebări, 15 secunde fiecare."
+      },
+      "step6": {
+        "title": "6. După Joc",
+        "description": "Rezultatele sunt afișate automat. Apasă \"Joc Nou\" pentru a începe altă rundă cu aceiași sau alți jucători."
+      }
+    },
+    "forPlayer": {
+      "title": "Pentru Jucători (Telefon)",
+      "intro": "Jucătorii se alătură de pe telefoanele lor. Nu e nevoie de aplicație — doar browser și internet.",
+      "step1": {
+        "title": "1. Scanează Codul QR",
+        "description": "Îndreaptă camera telefonului spre codul QR de pe ecranul mare. Apasă pe notificare pentru a deschide linkul."
+      },
+      "step2": {
+        "title": "2. Introdu Numele Tău",
+        "description": "Scrie numele sau porecla ta (minim 2 caractere). Așa vei apărea pe clasament."
+      },
+      "step3": {
+        "title": "3. Așteaptă în Lobby",
+        "description": "Vei vedea \"Ești în joc\" și vei aștepta ca gazda să înceapă. Ține telefonul pregătit!"
+      },
+      "step4": {
+        "title": "4. Răspunde la Întrebări",
+        "description": "Când apare o întrebare, apasă pe unul dintre cele patru butoane colorate (A, B, C, D). Răspunsuri corecte mai rapide = mai multe puncte!"
+      },
+      "step5": {
+        "title": "5. Vezi Rezultatele",
+        "description": "După fiecare întrebare vei vedea dacă ai răspuns corect și poziția ta actuală. Rezultatele finale apar la sfârșit."
+      }
+    },
+    "scoring": {
+      "title": "Punctaj",
+      "description": "Punctele depind de corectitudine și viteză:",
+      "correct": "Răspuns corect: 500 puncte",
+      "speed": "Bonus de viteză: până la 500 puncte extra (cu cât mai rapid, cu atât mai mult)",
+      "wrong": "Greșit sau fără răspuns: 0 puncte",
+      "practice": "Întrebare de practică: fără puncte"
+    },
+    "levels": {
+      "title": "Niveluri de Dificultate",
+      "easy": {
+        "title": "Ușor",
+        "description": "Personaje biblice celebre pe care toți le cunosc: Adam, Eva, Noe, Moise, David, Maria, Isus și alții."
+      },
+      "medium": {
+        "title": "Mediu",
+        "description": "Necesită cunoștințe biblice: profeți, apostoli și personaje secundare din povești cunoscute."
+      },
+      "hard": {
+        "title": "Greu",
+        "description": "Pentru experți în Biblie: personaje minore, figuri mai puțin cunoscute și cunoștințe detaliate necesare."
+      },
+      "mixed": {
+        "title": "Mixt",
+        "description": "Combinație de toate nivelurile: 40% ușoare, 40% medii, 20% grele."
+      }
+    },
+    "tips": {
+      "title": "Sfaturi",
+      "tip1": "Asigură-te că toți sunt conectați la același WiFi sau au internet mobil.",
+      "tip2": "Dispozitivul gazdei nu ar trebui să intre în standby în timpul jocului.",
+      "tip3": "Întrebările nu se repetă timp de 24 de ore — joacă mai multe runde fără a vedea aceleași imagini!",
+      "tip4": "Dacă te deconectezi, scanează codul QR din nou — te vei alătura cu același nume."
+    },
+    "troubleshooting": {
+      "title": "Depanare",
+      "q1": {
+        "q": "Am scanat codul QR dar văd un ecran cu cod QR",
+        "a": "Probabil ai deschis pagina Gazdei. Jucătorii ar trebui să scaneze codul QR afișat pe proiector, care duce la pagina de Joc. URL-ul ar trebui să conțină \"?game=\" cu un cod de 5 caractere."
+      },
+      "q2": {
+        "q": "Numele meu este ocupat",
+        "a": "Cineva s-a alăturat deja cu acel nume. Alege un nume diferit sau adaugă un număr (ca \"Ion2\")."
+      },
+      "q3": {
+        "q": "Gazda nu răspunde",
+        "a": "Asigură-te că pagina gazdei este deschisă și nu a intrat în standby. Codul de joc ar trebui să corespundă cu cel de pe ecran."
+      },
+      "q4": {
+        "q": "M-am deconectat",
+        "a": "Scanează codul QR din nou. Dacă ai folosit același nume, te vei alătura automat din nou jocului."
+      }
+    }
   }
 }

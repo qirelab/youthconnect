@@ -1,284 +1,408 @@
 {
   "meta": {
-    "title": "Bible Quiz · Guess the Hero from Selfie",
-    "description": "Interactive quiz for youth and churches — guess Bible characters from AI-generated selfies",
+    "title": "Библиялық викторина · Селфи арқылы кейіпкерді тап",
+    "description": "Жастар мен шіркеулерге арналған интерактивті викторина — AI селфилері арқылы Библия кейіпкерлерін тап",
     "domain": "youthconnect.church"
   },
   "nav": {
-    "play": "Play",
-    "host": "Host",
-    "donate": "Donate",
-    "signIn": "Sign In",
-    "signOut": "Sign Out",
-    "profile": "Profile",
-    "settings": "Settings",
-    "history": "Game History"
+    "play": "Ойнау",
+    "host": "Жүргізуші",
+    "help": "Көмек",
+    "donate": "Қолдау",
+    "signIn": "Кіру",
+    "signOut": "Шығу",
+    "profile": "Профиль",
+    "settings": "Параметрлер",
+    "history": "Ойындар тарихы"
   },
   "landing": {
     "hero": {
-      "title": "Bible Quiz",
-      "subtitle": "Guess the Hero from Selfie",
-      "description": "Interactive game for youth meetings, Sunday schools, and family nights. Scan the QR code — and you're in!",
-      "ctaHost": "Start Game (Host)",
-      "ctaJoin": "Join with Code"
+      "title": "Библиялық викторина",
+      "subtitle": "Селфи арқылы кейіпкерді тап",
+      "description": "Жастар кездесулеріне, жексенбі мектептеріне және отбасылық кештерге арналған интерактивті ойын. QR кодын сканерле — және ойындасың!",
+      "ctaHost": "Ойынды бастау (жүргізуші)",
+      "ctaJoin": "Кодпен қосылу"
+    },
+    "quickStart": {
+      "title": "Жылдам бастау",
+      "host": "Жүргізуші: ашыңыз",
+      "player": "Ойыншылар: QR сканерлеп, атыңызды енгізіңіз",
+      "play": "Ойнаңыз: дұрыс жауапты басыңыз!",
+      "helpLink": "Толық ақпарат керек пе? Толық нұсқаулықты қараңыз"
     },
     "howItWorks": {
-      "title": "How It Works",
+      "title": "Қалай жұмыс істейді",
       "step1": {
-        "title": "Host opens the game",
-        "description": "Open /host on a laptop with projector and choose difficulty"
+        "title": "Жүргізуші ойынды ашады",
+        "description": "Проектормен ноутбукта /host ашып, қиындықты таңдаңыз"
       },
       "step2": {
-        "title": "Players scan QR",
-        "description": "Phone, QR code — and in 5 seconds you're in the lobby"
+        "title": "Қатысушылар QR сканерлейді",
+        "description": "Телефон, QR код — 5 секундта лоббидесіз"
       },
       "step3": {
-        "title": "Play and compete",
-        "description": "10 questions, 15 seconds each, points for speed, live leaderboard"
+        "title": "Ойнап, жарысамыз",
+        "description": "10 сұрақ, әрқайсысы 15 секунд, жылдамдыққа ұпай, тірі рейтинг"
       }
     },
     "features": {
-      "title": "Features",
+      "title": "Мүмкіндіктер",
       "selfie": {
-        "title": "Bible Character Selfies",
-        "description": "Unique AI images: guess the character from the scene"
+        "title": "Библия кейіпкерлерінің селфилері",
+        "description": "Бірегей AI-суреттер: сахна бойынша кейіпкерді тапқыз"
       },
       "realtime": {
-        "title": "Real-time Multiplayer",
-        "description": "Up to 100 players simultaneously, instant sync"
+        "title": "Нақты уақыттағы мультиплеер",
+        "description": "100-ге дейін ойыншы бір мезгілде, лезде синхрондау"
       },
       "levels": {
-        "title": "3 Difficulty Levels",
-        "description": "From Adam to Tychicus — choose your level"
+        "title": "3 қиындық деңгейі",
+        "description": "Адамнан Тихикке дейін — өз деңгейіңізді таңдаңыз"
       },
       "noSignup": {
-        "title": "No Registration",
-        "description": "Guests play instantly, sign in for history and settings"
+        "title": "Тіркеусіз",
+        "description": "Қонақтар бірден ойнайды, кіру тарих пен параметрлер үшін"
       },
       "free": {
-        "title": "Free",
-        "description": "No subscriptions, runs on free tier"
+        "title": "Тегін",
+        "description": "Жазылымсыз, тегін тарифте жұмыс істейді"
       },
       "mobile": {
-        "title": "Mobile-first",
-        "description": "Optimized for phones and any screen"
+        "title": "Мобильді бірінші",
+        "description": "Телефондар мен кез келген экран үшін оңтайландырылған"
       }
     },
     "levels": {
-      "title": "Difficulty Levels",
+      "title": "Қиындық деңгейлері",
       "easy": {
-        "title": "Easy",
-        "description": "Famous heroes: Moses, David, Noah, Mary"
+        "title": "Оңай",
+        "description": "Танымал кейіпкерлер: Мұса, Дәуіт, Нұх, Мәриям"
       },
       "medium": {
-        "title": "Medium",
-        "description": "Prophets and apostles: Isaiah, Barnabas, Titus"
+        "title": "Орташа",
+        "description": "Пайғамбарлар мен елшілер: Ишая, Барнаба, Тит"
       },
       "hard": {
-        "title": "Hard",
-        "description": "For experts: Ahithophel, Epaphras, Nympha"
+        "title": "Қиын",
+        "description": "Сарапшылар үшін: Ахитофел, Эпафрас, Нимфа"
       }
     },
     "forWhom": {
-      "title": "Who Is This For",
-      "youth": "Youth ministries",
-      "sunday": "Sunday schools",
-      "camps": "Christian camps",
-      "family": "Family nights",
-      "small": "Small groups"
+      "title": "Бұл ойын кімге арналған",
+      "youth": "Жастар қызметтері",
+      "sunday": "Жексенбі мектептері",
+      "camps": "Христиандық лагерьлер",
+      "family": "Отбасылық кештер",
+      "small": "Шағын топтар"
     },
     "gallery": {
-      "title": "Selfie Gallery",
-      "hint": "Can you guess who this is?"
+      "title": "Селфи галереясы",
+      "hint": "Бұл кім екенін тапа аласыз ба?"
     },
     "donate": {
-      "title": "Support the Project",
-      "description": "The game is free for everyone. Your donations help develop the project, add new images and languages.",
-      "oneTime": "One-time Donation",
-      "monthly": "Monthly",
-      "crypto": "Cryptocurrency",
-      "boosty": "Boosty (for Russia)"
+      "title": "Жобаны қолдау",
+      "description": "Ойын барлығы үшін тегін. Сіздің қайырмалдықтарыңыз жобаны дамытуға, жаңа суреттер мен тілдерді қосуға көмектеседі.",
+      "oneTime": "Бір реттік қайырмалдық",
+      "monthly": "Ай сайын",
+      "crypto": "Криптовалюта",
+      "boosty": "Boosty"
     },
     "faq": {
-      "title": "FAQ",
+      "title": "Жиі қойылатын сұрақтар",
       "q1": {
-        "q": "Is this free?",
-        "a": "Yes, completely free. We use free tiers of Vercel and Pusher."
+        "q": "Бұл тегін бе?",
+        "a": "Иә, толығымен тегін. Біз Vercel мен Pusher-дің тегін тарифтерін қолданамыз."
       },
       "q2": {
-        "q": "How many players can participate?",
-        "a": "Up to 100 simultaneously (Pusher limit). For larger events, contact us."
+        "q": "Қанша ойыншы қатыса алады?",
+        "a": "100-ге дейін бір мезгілде (Pusher шегі). Үлкен іс-шаралар үшін бізге хабарласыңыз."
       },
       "q3": {
-        "q": "Is registration required?",
-        "a": "No! Guests play instantly via QR code. Sign in with Google/Yandex only for saving history and settings."
+        "q": "Тіркелу қажет пе?",
+        "a": "Жоқ! Қонақтар QR код арқылы бірден ойнайды. Google/Yandex арқылы кіру тек тарих пен параметрлерді сақтау үшін."
       },
       "q4": {
-        "q": "Which Bible translation is used?",
-        "a": "Character names follow standard translations for each language."
+        "q": "Қандай Библия аудармасы қолданылады?",
+        "a": "Кейіпкерлердің есімдері әр тіл үшін стандартты аудармаларға сәйкес келеді."
       },
       "q5": {
-        "q": "What's the denominational stance?",
-        "a": "The game is for all Protestant churches. Questions are based on canonical Bible text."
+        "q": "Конфессиялық ұстаным қандай?",
+        "a": "Ойын барлық протестант шіркеулеріне арналған. Сұрақтар канондық Библия мәтініне негізделген."
       },
       "q6": {
-        "q": "Can this be used with children?",
-        "a": "Yes! Content is safe for all ages. Easy level works great for Sunday school."
+        "q": "Балалармен қолдануға бола ма?",
+        "a": "Иә! Мазмұн барлық жас үшін қауіпсіз. Оңай деңгей жексенбі мектебі үшін тамаша."
       }
     },
     "footer": {
-      "contact": "Contact",
+      "contact": "Байланыс",
       "email": "hello@youthconnect.church",
-      "privacy": "Privacy Policy",
-      "terms": "Terms of Use",
-      "copyright": "© 2024 YouthConnect. All rights reserved."
+      "privacy": "Құпиялылық саясаты",
+      "terms": "Пайдалану шарттары",
+      "copyright": "© 2024 YouthConnect. Барлық құқықтар қорғалған."
     }
   },
   "game": {
-    "code": "Game Code",
-    "players": "Players",
-    "question": "Question",
-    "of": "of",
-    "seconds": "sec",
-    "practice": "Practice Question",
-    "practiceNote": "no points",
-    "whoMadeSelfie": "Who made this selfie?",
-    "itIs": "It's",
-    "correct": "Correct!",
-    "incorrect": "Incorrect",
-    "timeout": "Time's up",
-    "noAnswer": "No answer",
-    "correctAnswer": "Correct answer",
-    "points": "points",
-    "correctAnswers": "Correct",
-    "place": "place",
-    "nextIn": "Next question in",
-    "resultsIn": "Results in",
-    "waitingHost": "Waiting for host to start the quiz…",
-    "answerAccepted": "Answer accepted!",
-    "lookAtScreen": "Look at the main screen…",
-    "answered": "Answered"
+    "code": "Ойын коды",
+    "players": "Ойыншылар",
+    "question": "Сұрақ",
+    "of": "-ден",
+    "seconds": "сек",
+    "practice": "Жаттығу сұрағы",
+    "practiceNote": "ұпайсыз",
+    "whoMadeSelfie": "Бұл селфиді кім түсірді?",
+    "itIs": "Бұл",
+    "correct": "Дұрыс!",
+    "incorrect": "Қате",
+    "timeout": "Уақыт бітті",
+    "noAnswer": "Жауап жоқ",
+    "correctAnswer": "Дұрыс жауап",
+    "points": "ұпай",
+    "correctAnswers": "Дұрыс",
+    "place": "орын",
+    "nextIn": "Келесі сұрақ",
+    "resultsIn": "Нәтижелер",
+    "waitingHost": "Жүргізушінің викторинаны бастауын күтеміз…",
+    "answerAccepted": "Жауап қабылданды!",
+    "lookAtScreen": "Негізгі экранға қараңыз…",
+    "answered": "Жауап берді"
   },
   "host": {
-    "title": "Host Screen",
-    "selectQuiz": "Select Difficulty",
-    "openLobby": "Open Lobby",
-    "back": "Back",
-    "startGame": "Start Quiz",
-    "startPractice": "Start with Practice",
-    "newGame": "New Game",
-    "scanQR": "Scan QR code with your phone to join",
-    "noPlayers": "No one has joined yet…",
-    "results": "Quiz Results",
-    "noPusher": "Pusher keys not set. Add environment variables — see README.",
-    "practiceComplete": "Practice round complete — now it's for real!",
-    "startQuiz": "Start Quiz"
+    "title": "Жүргізуші экраны",
+    "selectQuiz": "Қиындықты таңдаңыз",
+    "openLobby": "Лоббиді ашу",
+    "back": "Артқа",
+    "startGame": "Викторинаны бастау",
+    "startPractice": "Жаттығумен бастау",
+    "newGame": "Жаңа ойын",
+    "scanQR": "Қосылу үшін телефонмен QR кодын сканерлеңіз",
+    "noPlayers": "Әзірге ешкім қосылмады…",
+    "results": "Викторина нәтижелері",
+    "noPusher": "Pusher кілттері орнатылмаған. Орта айнымалыларын қосыңыз — README қараңыз.",
+    "practiceComplete": "Жаттығу раунды аяқталды — енді шын!",
+    "startQuiz": "Викторинаны бастау",
+    "playerHint": "Сіз ойыншысыз ба? Жоғарыдағы QR кодын телефонмен сканерлеңіз, бұл бетті ашпаңыз!"
   },
   "player": {
-    "enterName": "What's your name?",
-    "namePlaceholder": "Your name or nickname",
-    "join": "Join",
-    "checking": "Checking…",
-    "youAreIn": "You're in the game",
-    "scanQR": "Scan the QR code on screen to join the game.",
+    "enterName": "Сіздің атыңыз кім?",
+    "namePlaceholder": "Атыңыз немесе лақап атыңыз",
+    "join": "Қосылу",
+    "checking": "Тексереміз…",
+    "youAreIn": "Сіз ойындасыз",
+    "scanQR": "Ойынға қосылу үшін экрандағы QR кодын сканерлеңіз.",
+    "hint": {
+      "lookForQR": "Үлкен экранға қараңыз — жүргізуші 5 таңбалы ойын кодымен QR кодын көрсетуі керек.",
+      "areYouHost": "Сіз жүргізушісіз бе?",
+      "hostLink": "Жүргізуші бетін ашыңыз →"
+    },
     "errors": {
-      "nameMin": "Enter a name (at least 2 characters).",
-      "nameTaken": "This name is taken. Choose another.",
-      "gameClosed": "Game is in progress or closed for entry.",
-      "hostOffline": "Host not responding. Make sure the quiz is open on screen.",
-      "network": "Network error. Try again."
+      "nameMin": "Атыңызды енгізіңіз (кемінде 2 таңба).",
+      "nameTaken": "Бұл ат бос емес. Басқасын таңдаңыз.",
+      "gameClosed": "Ойын жүріп жатыр немесе кіру үшін жабық.",
+      "hostOffline": "Жүргізуші жауап бермейді. Викторина экранда ашық екеніне көз жеткізіңіз.",
+      "network": "Желі қатесі. Қайталап көріңіз."
     }
   },
   "settings": {
-    "title": "Settings",
+    "title": "Параметрлер",
     "autoAdvance": {
-      "label": "Next Question Transition",
-      "auto": "Automatic",
-      "manual": "Manual (button)"
+      "label": "Келесі сұраққа өту",
+      "auto": "Автоматты",
+      "manual": "Қолмен (түйме)"
     },
     "questionTime": {
-      "label": "Time per Question",
-      "seconds": "seconds"
+      "label": "Сұраққа уақыт",
+      "seconds": "секунд"
     },
     "questionsPerQuiz": {
-      "label": "Questions per Game"
+      "label": "Ойындағы сұрақтар"
     },
     "difficulty": {
-      "label": "Difficulty",
-      "easy": "Easy",
-      "medium": "Medium",
-      "hard": "Hard",
-      "mixed": "Mixed"
+      "label": "Қиындық",
+      "easy": "Оңай",
+      "medium": "Орташа",
+      "hard": "Қиын",
+      "mixed": "Аралас"
     },
     "theme": {
-      "label": "Theme",
-      "light": "Light",
-      "dark": "Dark",
-      "system": "System"
+      "label": "Тақырып",
+      "light": "Жарық",
+      "dark": "Қараңғы",
+      "system": "Жүйелік"
     },
     "sound": {
-      "label": "Sound",
-      "enabled": "On",
-      "disabled": "Off"
+      "label": "Дыбыс",
+      "enabled": "Қосулы",
+      "disabled": "Өшірулі"
     },
     "showExplanation": {
-      "label": "Show explanation after answer"
+      "label": "Жауаптан кейін түсіндірмені көрсету"
     },
     "showCorrectAnswer": {
-      "label": "Show correct answer"
+      "label": "Дұрыс жауапты көрсету"
     },
     "practiceQuestion": {
-      "label": "Practice question before game"
+      "label": "Ойын алдында жаттығу сұрағы"
     },
     "speedBonus": {
-      "label": "Points for speed"
+      "label": "Жылдамдыққа ұпай"
     },
     "language": {
-      "label": "Language"
+      "label": "Тіл"
     },
-    "save": "Save",
-    "saved": "Settings saved"
+    "save": "Сақтау",
+    "saved": "Параметрлер сақталды"
   },
   "profile": {
-    "title": "Profile",
-    "gamesPlayed": "Games Played",
-    "totalScore": "Total Score",
-    "correctAnswers": "Correct Answers",
-    "bestRank": "Best Rank",
-    "recentGames": "Recent Games",
-    "noGames": "You haven't played yet. Start your first game!",
-    "date": "Date",
-    "difficulty": "Difficulty",
-    "score": "Score",
-    "rank": "Rank"
+    "title": "Профиль",
+    "gamesPlayed": "Ойналған ойындар",
+    "totalScore": "Жалпы ұпай",
+    "correctAnswers": "Дұрыс жауаптар",
+    "bestRank": "Үздік орын",
+    "recentGames": "Соңғы ойындар",
+    "noGames": "Сіз әлі ойнаған жоқсыз. Бірінші ойынды бастаңыз!",
+    "date": "Күні",
+    "difficulty": "Қиындық",
+    "score": "Ұпай",
+    "rank": "Орын"
   },
   "auth": {
-    "signIn": "Sign In",
-    "signInWith": "Sign in with",
-    "signOut": "Sign Out",
+    "signIn": "Кіру",
+    "signInWith": "Арқылы кіру",
+    "signOut": "Шығу",
     "google": "Google",
     "yandex": "Yandex",
-    "guestNote": "Guests can play 1 game without signing in",
-    "signInBenefits": "Sign in to save game history and settings",
+    "guestNote": "Қонақтар кіруісіз 1 ойын ойнай алады",
+    "signInBenefits": "Ойындар тарихы мен параметрлерді сақтау үшін кіріңіз",
     "error": {
-      "title": "Sign In Error",
-      "default": "Could not sign in. Try another method.",
-      "accessDenied": "Access denied.",
-      "tryAgain": "Try Again"
+      "title": "Кіру қатесі",
+      "default": "Кіру мүмкін болмады. Басқа әдісті көріңіз.",
+      "accessDenied": "Қол жеткізу тыйым салынған.",
+      "tryAgain": "Қайталап көріңіз"
     }
   },
   "difficulty": {
-    "easy": "Easy",
-    "medium": "Medium",
-    "hard": "Hard",
-    "mixed": "Mixed"
+    "easy": "Оңай",
+    "medium": "Орташа",
+    "hard": "Қиын",
+    "mixed": "Аралас"
   },
   "common": {
-    "loading": "Loading…",
-    "error": "Error",
-    "retry": "Try Again",
-    "cancel": "Cancel",
-    "save": "Save",
-    "close": "Close"
+    "loading": "Жүктелуде…",
+    "error": "Қате",
+    "retry": "Қайталап көріңіз",
+    "cancel": "Болдырмау",
+    "save": "Сақтау",
+    "close": "Жабу"
+  },
+  "help": {
+    "title": "Қалай ойнау керек",
+    "subtitle": "Жүргізушілер мен ойыншылар үшін толық нұсқаулық",
+    "backToHome": "Басты бетке оралу",
+    "forHost": {
+      "title": "Жүргізуші үшін (проектор)",
+      "intro": "Жүргізуші ойынды үлкен экранда немесе проекторда іске қосады. Ноутбук немесе компьютер қажет.",
+      "step1": {
+        "title": "1. Жүргізуші бетін ашыңыз",
+        "description": "Сайтқа өтіп, «Ойынды бастау (жүргізуші)» түймесін басыңыз немесе /play/host тікелей ашыңыз. Қиындықты таңдау экранын көресіз."
+      },
+      "step2": {
+        "title": "2. Қиындықты таңдаңыз",
+        "description": "Деңгейді таңдаңыз: Оңай (танымал кейіпкерлер: Мұса, Дәуіт), Орташа (пайғамбарлар мен елшілер), Қиын (сарапшылар үшін), немесе Аралас (барлық деңгейлердің комбинациясы)."
+      },
+      "step3": {
+        "title": "3. Лоббиді ашыңыз",
+        "description": "«Лоббиді ашу» түймесін басыңыз. QR код пен ойын коды (5 таңба) пайда болады. Бұл экранды проекторда көрсетіңіз."
+      },
+      "step4": {
+        "title": "4. Ойыншыларды күтіңіз",
+        "description": "Ойыншылар QR кодын сканерлеп, есімдерін енгізген кезде, оларды лоббиде көресіз. Барлығы қосылғанша күтіңіз."
+      },
+      "step5": {
+        "title": "5. Ойынды бастаңыз",
+        "description": "«Викторинаны бастау» түймесін басыңыз. Бірінші сұрақ жаттығу (ұпайсыз), содан кейін 10 сұрақ, әрқайсысы 15 секунд."
+      },
+      "step6": {
+        "title": "6. Ойыннан кейін",
+        "description": "Нәтижелер автоматты түрде көрсетіледі. Сол немесе басқа ойыншылармен жаңа раунд үшін «Жаңа ойын» түймесін басыңыз."
+      }
+    },
+    "forPlayer": {
+      "title": "Ойыншылар үшін (телефон)",
+      "intro": "Ойыншылар телефондарымен қосылады. Қолданба қажет емес — тек браузер мен интернет.",
+      "step1": {
+        "title": "1. QR кодын сканерлеңіз",
+        "description": "Телефон камерасын үлкен экрандағы QR кодқа бағыттаңыз. Сілтемені ашу үшін хабарландыруды басыңыз."
+      },
+      "step2": {
+        "title": "2. Атыңызды енгізіңіз",
+        "description": "Атыңызды немесе лақап атыңызды енгізіңіз (кемінде 2 таңба). Рейтингте осылай көрінесіз."
+      },
+      "step3": {
+        "title": "3. Лоббиде күтіңіз",
+        "description": "«Сіз ойындасыз» деп көресіз және жүргізушінің ойынды бастауын күтесіз. Телефоныңызды дайын ұстаңыз!"
+      },
+      "step4": {
+        "title": "4. Сұрақтарға жауап беріңіз",
+        "description": "Сұрақ пайда болған кезде, төрт түсті түйменің бірін (A, B, C, D) басыңыз. Дұрыс жауап неғұрлым жылдам болса, соғұрлым көп ұпай!"
+      },
+      "step5": {
+        "title": "5. Нәтижелеріңізді көріңіз",
+        "description": "Әр сұрақтан кейін дұрыс жауап бердіңіз бе және рейтингтегі орныңызды көресіз. Қорытынды нәтижелер — соңында."
+      }
+    },
+    "scoring": {
+      "title": "Ұпай жүйесі",
+      "description": "Ұпайлар дұрыстық пен жылдамдыққа байланысты:",
+      "correct": "Дұрыс жауап: 500 ұпай",
+      "speed": "Жылдамдық бонусы: 500-ге дейін қосымша ұпай (неғұрлым жылдам, соғұрлым көп)",
+      "wrong": "Қате немесе өткізілген жауап: 0 ұпай",
+      "practice": "Жаттығу сұрағы: ұпайсыз"
+    },
+    "levels": {
+      "title": "Қиындық деңгейлері",
+      "easy": {
+        "title": "Оңай",
+        "description": "Барлығы білетін танымал Библия кейіпкерлері: Адам, Хауа, Нұх, Мұса, Дәуіт, Мәриям, Иса және басқалар."
+      },
+      "medium": {
+        "title": "Орташа",
+        "description": "Библияны білуді талап етеді: пайғамбарлар, елшілер және танымал әңгімелердегі екінші дәрежелі кейіпкерлер."
+      },
+      "hard": {
+        "title": "Қиын",
+        "description": "Библия сарапшылары үшін: аз танымал кейіпкерлер, мәтінді терең білуді талап етеді."
+      },
+      "mixed": {
+        "title": "Аралас",
+        "description": "Барлық деңгейлердің комбинациясы: 40% оңай, 40% орташа, 20% қиын сұрақтар."
+      }
+    },
+    "tips": {
+      "title": "Кеңестер",
+      "tip1": "Барлығы бір WiFi-ға қосылғанына немесе мобильді интернеті барына көз жеткізіңіз.",
+      "tip2": "Жүргізуші құрылғысы ойын кезінде ұйықтап қалмауы керек.",
+      "tip3": "Сұрақтар 24 сағат қайталанбайды — қайталаусыз бірнеше раунд ойнаңыз!",
+      "tip4": "Ажыратылсаңыз — QR кодын қайта сканерлеңіз, сол атпен қайта ораласыз."
+    },
+    "troubleshooting": {
+      "title": "Мәселелерді шешу",
+      "q1": {
+        "q": "QR кодын сканерледім, бірақ QR коды бар экранды көремін",
+        "a": "Жүргізуші бетін ашқан боларсыз. Ойыншылар проектордағы QR кодын сканерлеуі керек, ол ойыншы бетіне апарады. URL-де 5 таңбалы кодпен «?game=» болуы керек."
+      },
+      "q2": {
+        "q": "Ат бос емес",
+        "a": "Біреу осы атпен қосылған. Басқасын таңдаңыз немесе сан қосыңыз (мысалы, «Асан2»)."
+      },
+      "q3": {
+        "q": "Жүргізуші жауап бермейді",
+        "a": "Жүргізуші беті ашық және ұйықтамағанына көз жеткізіңіз. Ойын коды экранда көрсетілгенге сәйкес келуі керек."
+      },
+      "q4": {
+        "q": "Мені ажыратты",
+        "a": "QR кодын қайта сканерлеңіз. Сол атты қолдансаңыз, автоматты түрде ойынға ораласыз."
+      }
+    }
   }
 }

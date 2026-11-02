@@ -7,6 +7,7 @@
   "nav": {
     "play": "Play",
     "host": "Host",
+    "help": "Help",
     "donate": "Donate",
     "signIn": "Sign In",
     "signOut": "Sign Out",
@@ -21,6 +22,13 @@
       "description": "Interactive game for youth meetings, Sunday schools, and family nights. Scan the QR code — and you're in!",
       "ctaHost": "Start Game (Host)",
       "ctaJoin": "Join with Code"
+    },
+    "quickStart": {
+      "title": "Quick Start",
+      "host": "Host: open",
+      "player": "Players: scan QR and enter name",
+      "play": "Play: tap the correct answer!",
+      "helpLink": "Need more details? See the full guide"
     },
     "howItWorks": {
       "title": "How It Works",
@@ -172,7 +180,8 @@
     "results": "Quiz Results",
     "noPusher": "Pusher keys not set. Add environment variables — see README.",
     "practiceComplete": "Practice round complete — now it's for real!",
-    "startQuiz": "Start Quiz"
+    "startQuiz": "Start Quiz",
+    "playerHint": "Are you a player? Scan the QR code above with your phone, don't open this page!"
   },
   "player": {
     "enterName": "What's your name?",
@@ -181,6 +190,11 @@
     "checking": "Checking…",
     "youAreIn": "You're in the game",
     "scanQR": "Scan the QR code on screen to join the game.",
+    "hint": {
+      "lookForQR": "Look at the big screen — the host should be showing a QR code with a 5-character game code.",
+      "areYouHost": "Are you the host?",
+      "hostLink": "Open the host page instead →"
+    },
     "errors": {
       "nameMin": "Enter a name (at least 2 characters).",
       "nameTaken": "This name is taken. Choose another.",
@@ -280,5 +294,115 @@
     "cancel": "Cancel",
     "save": "Save",
     "close": "Close"
+  },
+  "help": {
+    "title": "How to Play",
+    "subtitle": "Complete guide for hosts and players",
+    "backToHome": "Back to Home",
+    "forHost": {
+      "title": "For the Host (Projector)",
+      "intro": "The host runs the game on a large screen or projector. One person from the team needs a laptop or computer.",
+      "step1": {
+        "title": "1. Open the Host Page",
+        "description": "Go to the site and click \"Start Game (Host)\" or open /play/host directly. You'll see the difficulty selection screen."
+      },
+      "step2": {
+        "title": "2. Choose Difficulty",
+        "description": "Select the difficulty level: Easy (famous characters like Moses, David), Medium (prophets and apostles), Hard (experts only), or Mixed (combination of all levels)."
+      },
+      "step3": {
+        "title": "3. Open the Lobby",
+        "description": "Click \"Open Lobby\". A QR code and game code (5 characters) will appear. Show this screen on the projector."
+      },
+      "step4": {
+        "title": "4. Wait for Players",
+        "description": "As players scan the QR code and enter their names, you'll see them appear in the lobby. Wait until everyone joins."
+      },
+      "step5": {
+        "title": "5. Start the Game",
+        "description": "Click \"Start Quiz\". The first question is a practice round (no points), then 10 questions follow, 15 seconds each."
+      },
+      "step6": {
+        "title": "6. After the Game",
+        "description": "Results are shown automatically. Click \"New Game\" to start another round with the same or different players."
+      }
+    },
+    "forPlayer": {
+      "title": "For Players (Phone)",
+      "intro": "Players join from their phones. No app needed — just a browser and internet.",
+      "step1": {
+        "title": "1. Scan the QR Code",
+        "description": "Point your phone camera at the QR code on the big screen. Tap the notification to open the link."
+      },
+      "step2": {
+        "title": "2. Enter Your Name",
+        "description": "Type your name or nickname (at least 2 characters). This is how you'll appear on the leaderboard."
+      },
+      "step3": {
+        "title": "3. Wait in the Lobby",
+        "description": "You'll see \"You're in the game\" and wait for the host to start. Keep your phone ready!"
+      },
+      "step4": {
+        "title": "4. Answer Questions",
+        "description": "When a question appears, tap one of the four colored buttons (A, B, C, D). Faster correct answers = more points!"
+      },
+      "step5": {
+        "title": "5. See Your Results",
+        "description": "After each question, you'll see if you were correct and your current ranking. Final results appear at the end."
+      }
+    },
+    "scoring": {
+      "title": "Scoring",
+      "description": "Points depend on correctness and speed:",
+      "correct": "Correct answer: 500 points",
+      "speed": "Speed bonus: up to 500 extra points (the faster, the more)",
+      "wrong": "Wrong or no answer: 0 points",
+      "practice": "Practice question: no points"
+    },
+    "levels": {
+      "title": "Difficulty Levels",
+      "easy": {
+        "title": "Easy",
+        "description": "Famous Bible characters that everyone knows: Adam, Eve, Noah, Moses, David, Mary, Jesus, and others."
+      },
+      "medium": {
+        "title": "Medium",
+        "description": "Requires some Bible knowledge: prophets, apostles, and supporting characters from well-known stories."
+      },
+      "hard": {
+        "title": "Hard",
+        "description": "For Bible experts: minor characters, less-known figures, and detailed knowledge required."
+      },
+      "mixed": {
+        "title": "Mixed",
+        "description": "Combination of all levels: 40% easy, 40% medium, 20% hard questions."
+      }
+    },
+    "tips": {
+      "title": "Tips",
+      "tip1": "Make sure everyone is connected to the same WiFi or has mobile internet.",
+      "tip2": "The host device should not go to sleep during the game.",
+      "tip3": "Questions don't repeat for 24 hours — play multiple rounds without seeing the same images!",
+      "tip4": "If you get disconnected, scan the QR code again — you'll rejoin with the same name."
+    },
+    "troubleshooting": {
+      "title": "Troubleshooting",
+      "q1": {
+        "q": "I scanned the QR code but see a QR code screen",
+        "a": "You might have opened the Host page. Players should scan the QR code shown on the projector, which leads to the Play page. The URL should contain \"?game=\" with a 5-character code."
+      },
+      "q2": {
+        "q": "My name is taken",
+        "a": "Someone already joined with that name. Choose a different name or add a number (like \"John2\")."
+      },
+      "q3": {
+        "q": "The host is not responding",
+        "a": "Make sure the host page is open and hasn't gone to sleep. The game code should match what you see on screen."
+      },
+      "q4": {
+        "q": "I got disconnected",
+        "a": "Scan the QR code again. If you used the same name, you'll automatically rejoin the game."
+      }
+    }
   }
 }

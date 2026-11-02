@@ -3,7 +3,7 @@
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import Image from "next/image";
-import { ChevronRight, Users, Zap, Trophy, Smartphone, Gift, Globe } from "lucide-react";
+import { ChevronRight, Users, Zap, Trophy, Smartphone, Gift, Globe, HelpCircle } from "lucide-react";
 
 const SAMPLE_SELFIES = [
   { src: "/images/selfie/s01.webp", alt: "Adam" },
@@ -29,6 +29,7 @@ export default function LandingPage() {
         </Link>
         <nav className="nav-links">
           <Link href="/play/host" className="nav-link">{nav("host")}</Link>
+          <Link href="/help" className="nav-link">{nav("help")}</Link>
           <Link href="#donate" className="nav-link">{nav("donate")}</Link>
           <Link href="/auth/signin" className="btn-outline">{nav("signIn")}</Link>
         </nav>
@@ -63,6 +64,31 @@ export default function LandingPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Quick Start */}
+      <section className="section">
+        <div className="quick-start">
+          <h2 className="quick-start-title">{t("quickStart.title")}</h2>
+          <div className="quick-start-steps">
+            <div className="quick-start-step">
+              <span className="step-num">1</span>
+              <span>{t("quickStart.host")} <Link href="/play/host" className="quick-start-link">/play/host</Link></span>
+            </div>
+            <div className="quick-start-step">
+              <span className="step-num">2</span>
+              <span>{t("quickStart.player")}</span>
+            </div>
+            <div className="quick-start-step">
+              <span className="step-num">3</span>
+              <span>{t("quickStart.play")}</span>
+            </div>
+          </div>
+          <Link href="/help" className="quick-start-link">
+            <HelpCircle size={16} style={{ verticalAlign: "middle", marginRight: 6 }} />
+            {t("quickStart.helpLink")}
+          </Link>
         </div>
       </section>
 
