@@ -1,407 +1,407 @@
 {
   "meta": {
-    "title": "Biblayin Viktorina",
-    "description": "Interaktiv viktorina eritasardneri yev yekeghetsayin hamar",
+    "title": "Աստվածաշնչի վիկտորինա · Գուշակիր հերոսին սելֆիով",
+    "description": "Ինտերակտիվ վիկտորինա երիտասարդների և եկեղեցիների համար — գուշակիր AI սելֆիներով",
     "domain": "youthconnect.church"
   },
   "nav": {
-    "play": "Khaghal",
-    "host": "Varich",
-    "help": "Ognutyun",
-    "donate": "Ajakcel",
-    "signIn": "Mutk gortsel",
-    "signOut": "Yelk",
-    "profile": "Anvari",
-    "settings": "Kargedrutyunner",
-    "history": "Khagheri patmutyun"
+    "play": "Խաղալ",
+    "host": "Վարիչ",
+    "help": "Օգնություն",
+    "donate": "Աջակցել",
+    "signIn": "Մուտք գործել",
+    "signOut": "Ելք",
+    "profile": "Անվարի",
+    "settings": "Կարգեդրություններ",
+    "history": "Խաղերի պատմություն"
   },
   "landing": {
     "hero": {
-      "title": "Biblayin Viktorina",
-      "subtitle": "Gushakir herosi selfi-ov",
-      "description": "Interaktiv khakh eritasardakan yev yekeghetsayin hamar. Skanirek QR-y yev daracek khakhum!",
-      "ctaHost": "Sksel khakhy (varich)",
-      "ctaJoin": "Miadzvel kodov"
+      "title": "Աստվածաշնչի վիկտորինա",
+      "subtitle": "Գուշակիր հերոսին սելֆիով",
+      "description": "Ինտերակտիվ խաղ երիտասարդական հավաքների, կիրակի դպրոցների և ընտանեկան երեկոների համար։ Սկանիրեք QR-կոդը — և դուք խաղում եք!",
+      "ctaHost": "Սկսել խաղը (վարիչ)",
+      "ctaJoin": "Միանալ կոդով"
     },
     "quickStart": {
-      "title": "Arag meknarky",
-      "host": "Varich: bacek",
-      "player": "Khakhacinner: skanirek QR yev grek anun",
-      "play": "Khakhacek: skhmeq chisht pataskhany!",
-      "helpLink": "Aveli shat manramasn? Tesek ughetsuytsy"
+      "title": "Արագ մեկնարկ",
+      "host": "Վարիչ։ բացեք",
+      "player": "Խաղացներ։ սկանիրեք QR և գրեք անուն",
+      "play": "Խաղացեք։ սեղմեք ճիշտ պատասխանը!",
+      "helpLink": "Ավելի մանրամասն։ Տեսեք ուղեցույցը"
     },
     "howItWorks": {
-      "title": "Inch pes e ashkhatumen",
+      "title": "Ինչ պես է աշխատում",
       "step1": {
-        "title": "Varichy bacum e khakhy",
-        "description": "Bacek /host notebook-um proyektorov yev entryek bardrutyan"
+        "title": "Վարիչը բացում է խաղը",
+        "description": "Բացեք /host նոութբուքում պրոեկտորով և ընտրեք բարդությունը"
       },
       "step2": {
-        "title": "Masnakitsner skanirum en QR-y",
-        "description": "Herakhoss, QR-kod yev 5 varkyanits heto lobbyum ek"
+        "title": "Մասնակիցները սկանիրում են QR-ը",
+        "description": "Հեռախոս, QR-կոդ — և 5 վարկյանից լոբբիում եք"
       },
       "step3": {
-        "title": "Khakhum enk yev mrtsaktsum",
-        "description": "10 harts, 15 varkyan yurakanchyury, miavorner aragutyan hamar"
+        "title": "Խաղում ենք և մրցակցում",
+        "description": "10 հարց, յուրաքանչյուրը 15 վարկյան, միավորներ արագության համար"
       }
     },
     "features": {
-      "title": "Hnaraavorutyunner",
+      "title": "Հնարավորություններ",
       "selfie": {
-        "title": "Biblayin herosneri selfiener",
-        "description": "Yezig AI-patkerner: gushakek kerpary teseranis"
+        "title": "Սելֆիներ աստվածաշնչի հերոսների",
+        "description": "Եզակի AI-պատկերներ։ գուշակեք կերպարը տեսարանից"
       },
       "realtime": {
-        "title": "Irakhan zhamanak multipleyer",
-        "description": "Minchev 100 khakhach miadzhamanak"
+        "title": "Իրական ժամանակ մուլտիպլեյեր",
+        "description": "Մինչև 100 խաղաչ միաժամանակ, ակնթարթային համադրություն"
       },
       "levels": {
-        "title": "3 bardrutyan makaradak",
-        "description": "Adamits minchev Tikhikos"
+        "title": "3 բարդության մակարդակ",
+        "description": "Ադամից մինչև Տիխիկոս — ընտրեք ձեր մակարդակը"
       },
       "noSignup": {
-        "title": "Arants grantsman",
-        "description": "Hyurerery khakhum en anmijapes"
+        "title": "Առանց գրանցման",
+        "description": "Հյուրերը խաղում են անմիջապես, մուտքը պատմության և կարգեդրությունների համար է"
       },
       "free": {
-        "title": "Anvanchar",
-        "description": "Och mi bazhanagrutyun"
+        "title": "Անվճար",
+        "description": "Ոչ մի բաժանորդագրություն, աշխատում է անվճար տարիֆով"
       },
       "mobile": {
-        "title": "Mobile-aratchin",
-        "description": "Optimizatsvats herakhossneri hamar"
+        "title": "Մոբիլ-առաջին",
+        "description": "Օպտիմալացված հեռախոսների և ցանկացած էկրանի համար"
       }
     },
     "levels": {
-      "title": "Bardrutyan makaradakner",
+      "title": "Բարդության մակարդակներ",
       "easy": {
-        "title": "Heshd",
-        "description": "Haytni heroser: Movsess, David, Noye, Mariam"
+        "title": "Հեշտ",
+        "description": "Հայտնի հերոսներ։ Մովսես, Դավիթ, Նոյե, Մարիամ"
       },
       "medium": {
-        "title": "Midjin",
-        "description": "Margarener yev araqyalner: Yesaya, Barnabas, Titos"
+        "title": "Միջին",
+        "description": "Մարգարեներ և առաքյալներ։ Եսայա, Բառնաբաս, Տիտոս"
       },
       "hard": {
-        "title": "Bardr",
-        "description": "Masnagetneri hamar: Akhitofel, Epafras, Nimfa"
+        "title": "Բարդր",
+        "description": "Մասնագետների համար։ Ախիտոֆել, Եպաֆրաս, Նիմֆա"
       }
     },
     "forWhom": {
-      "title": "Um hamar e ays khakhy",
-      "youth": "Eritasardakan tsarautyunner",
-      "sunday": "Kiraki dprocner",
-      "camps": "Kristoneakan chanavarakner",
-      "family": "Yentaniq erekoner",
-      "small": "Poqr khmber"
+      "title": "Ում համար է այս խաղը",
+      "youth": "Երիտասարդական ծառայություններ",
+      "sunday": "Կիրակի դպրոցներ",
+      "camps": "Քրիստոնեական ճանավարներ",
+      "family": "Ընտանեկան երեկոներ",
+      "small": "Փոքր խմբեր"
     },
     "gallery": {
-      "title": "Selfie patkerasrah",
-      "hint": "Karogh ek gushakil ov e?"
+      "title": "Սելֆի պատկերասրահ",
+      "hint": "Կարող եք գուշակիլ ով է?"
     },
     "donate": {
-      "title": "Ajakcel nakagitsin",
-      "description": "Khakhy anvanchar e. Dzer nveratutyunnery ognum en zargatsnel nakagitsy.",
-      "oneTime": "Miakarchar",
-      "monthly": "Amenbsya",
-      "crypto": "Kriptovalyuta",
+      "title": "Աջակցել նախագիծին",
+      "description": "Խաղը անվճար է բոլորի համար։ Ձեր նվիրատվությունները օգնում են զարգացնել նախագիծը։",
+      "oneTime": "Միակարճար նվիրատվություն",
+      "monthly": "Ամենամսյա",
+      "crypto": "Կրիպտովալյուտա",
       "boosty": "Boosty"
     },
     "faq": {
-      "title": "Hartseri pataskhanner",
+      "title": "Հարցերի պատասխաններ",
       "q1": {
-        "q": "Ays anvanchar e?",
-        "a": "Ayo, liatutamb anvanchar. Vercel yev Pusher anvanchar tarifner."
+        "q": "Այս անվճար է?",
+        "a": "Այո, լիատությամբ անվճար։ Մենք օգտագործում ենք Vercel-ի և Pusher-ի անվճար տարիֆները։"
       },
       "q2": {
-        "q": "Kansi khakhach karogh e masnakel?",
-        "a": "Minchev 100 miadzhamanak (Pusher sahmanapahutyun)."
+        "q": "Քանիս՞ խաղաց կարող է մասնակցել?",
+        "a": "Մինչև 100 միաժամանակ (Pusher սահմանափակություն)։ Ավելի մեծ միջոցառումների համար գրեք մեզ։"
       },
       "q3": {
-        "q": "Grantsman karikk ka?",
-        "a": "Voch! Hyurerery khakhum en anmijapes QR-kodov."
+        "q": "Գրանցման կարիք՞ կա?",
+        "a": "Ոչ! Հյուրերը խաղում են անմիջապես QR-կոդով։ Google/Yandex մուտքը միայն պատմություն և կարգեդրություններ պահպանելու համար է։"
       },
       "q4": {
-        "q": "Vor Biblayi targmanutyuny e ogtagorsvum?",
-        "a": "Herosneri anunnery hetevum en standart targmanutyunnery."
+        "q": "Որ Աստվածաշնչի թարգմանությունն է օգտագործվում?",
+        "a": "Հերոսների անունները հետևում են ստանդարտ թարգմանություններն յուրաքանչյուր լեզվի համար։"
       },
       "q5": {
-        "q": "Vorn e konfessional dirqoroshumy?",
-        "a": "Khakhy bolor protestant yekeghetsinerineri hamar e."
+        "q": "Որն է կոնֆեսիոնալ դիրքորոշումը?",
+        "a": "Խաղը բոլոր բողոքական եկեղեցիների համար է։ Հարցերը հիմնված են կանոնական Աստվածաշնչի տեքստի վրա։"
       },
       "q6": {
-        "q": "Karogh e ogtagorsvil yerekhanerov?",
-        "a": "Ayo! Boverandutyuny anvtang e bolor tariqinerineri hamar."
+        "q": "Կարող է օգտագործվել երեխաներով?",
+        "a": "Այո! Բովանդակությունը անվտանգ է բոլոր տարիքների համար։ Հեշտ մակարդակը հարմար է կիրակի դպրոցների համար։"
       }
     },
     "footer": {
-      "contact": "Kap",
+      "contact": "Կապ",
       "email": "hello@youthconnect.church",
-      "privacy": "Gaghtnikunatyan qaghakantutyun",
-      "terms": "Ogtagorsman paymannerov",
-      "copyright": "2024 YouthConnect. Bolor iravunknery pahpanvats en."
+      "privacy": "Գաղտնիության քաղաքականություն",
+      "terms": "Օգտագործման պայմաններ",
+      "copyright": "© 2024 YouthConnect. Բոլոր իրավունքները պահպանված են։"
     }
   },
   "game": {
-    "code": "Khakhi kod",
-    "players": "Khakhachner",
-    "question": "Harts",
-    "of": "-its",
-    "seconds": "vrk",
-    "practice": "Pordsakhan harts",
-    "practiceNote": "arants miavornerov",
-    "whoMadeSelfie": "Ov e arel ays selfin?",
-    "itIs": "Sa",
-    "correct": "Chisht!",
-    "incorrect": "Skhval",
-    "timeout": "Zhamanaky avartvela",
-    "noAnswer": "Pataskhan chka",
-    "correctAnswer": "Chisht pataskhan",
-    "points": "miavorner",
-    "correctAnswers": "Chisht",
-    "place": "tegh",
-    "nextIn": "Hadjord hartsy",
-    "resultsIn": "Ardyunknery",
-    "waitingHost": "Spasumen varichy sksi viktorinay",
-    "answerAccepted": "Pataskhany yndunvela!",
-    "lookAtScreen": "Nayeq glkhavorin ekranin",
-    "answered": "Pataskhanel e"
+    "code": "Խաղի կոդ",
+    "players": "Խաղացներ",
+    "question": "Հարց",
+    "of": "-ից",
+    "seconds": "վրկ",
+    "practice": "Փորձնական հարց",
+    "practiceNote": "առանց միավորների",
+    "whoMadeSelfie": "Ով է արել այս սելֆին?",
+    "itIs": "Սա",
+    "correct": "Ճիշտ!",
+    "incorrect": "Սխալ",
+    "timeout": "Պամանակը ավարտվել է",
+    "noAnswer": "Պատասխան չկա",
+    "correctAnswer": "Ճիշտ պատասխան",
+    "points": "միավորներ",
+    "correctAnswers": "Ճիշտ",
+    "place": "տեղ",
+    "nextIn": "Հաջորդ հարցը",
+    "resultsIn": "Արդյունքները",
+    "waitingHost": "Սպասում ենք վարիչի սկսի վիկտորինան…",
+    "answerAccepted": "Պատասխանը ընդունվել է!",
+    "lookAtScreen": "Նայեք գլխավոր էկրանին…",
+    "answered": "Պատասխանել է"
   },
   "host": {
-    "title": "Varichy ekran",
-    "selectQuiz": "Entryek bardrutyan",
-    "openLobby": "Bacek lobbiy",
-    "back": "Het",
-    "startGame": "Sksel viktorinay",
-    "startPractice": "Sksel pordsakhan harts",
-    "newGame": "Nor khakh",
-    "scanQR": "Skanirek QR-y herakhossov miadznyelu hamar",
-    "noPlayers": "Datarky voch oku chi miadzvel",
-    "results": "Viktorinai ardyunknery",
-    "noPusher": "Pusher banalineri kargedrvats chen. Avelatseq mijavayrayin paymannerov.",
-    "practiceComplete": "Pordsakhan raundsy avartvelya!",
-    "startQuiz": "Sksel viktorinay",
-    "playerHint": "Duq khakhach eq? Skanirek QR-y verevum herakhossov!"
+    "title": "Վարիչի էկրան",
+    "selectQuiz": "Ընտրեք բարդությունը",
+    "openLobby": "Բացեք լոբբին",
+    "back": "Հետ",
+    "startGame": "Սկսել վիկտորինան",
+    "startPractice": "Սկսել փորձնական հարցով",
+    "newGame": "Նոր խաղ",
+    "scanQR": "Սկանիրեք QR-կոդը հեռախոսով միանալու համար",
+    "noPlayers": "Դեռևս ոչ ոք չի միանալ…",
+    "results": "Վիկտորինայի արդյունքները",
+    "noPusher": "Pusher բանալիները կարգեդրված չեն։ Ավելացրեք միջավայրի փոփոխականներ — տեսեք README։",
+    "practiceComplete": "Փորձնական րաունդը ավարտվեց — հիմա իրական է!",
+    "startQuiz": "Սկսել վիկտորինան",
+    "playerHint": "Դուք խաղաց եք? Սկանիրեք QR-կոդը վերևում հեռախոսով, մի բացեք այս էջը!"
   },
   "player": {
-    "enterName": "Inch e dzer anunts?",
-    "namePlaceholder": "Dzer anun kam makanun",
-    "join": "Miadznel",
-    "checking": "Stugumen",
-    "youAreIn": "Duq khakhum eq",
-    "scanQR": "Skanirek QR-kody ekranin miadznyelu hamar khakhum.",
+    "enterName": "Ինչ է ձեր անունը?",
+    "namePlaceholder": "Ձեր անունը կամ մականունը",
+    "join": "Միանալ",
+    "checking": "Ստուգում ենք…",
+    "youAreIn": "Դուք խաղում եք",
+    "scanQR": "Սկանիրեք QR-կոդը էկրանին միանալու համար խաղում։",
     "hint": {
-      "lookForQR": "Nayeq mets ekranin - varichy pits tsuyts ta QR-kod 5 nshanovi kodov.",
-      "areYouHost": "Duq varich eq?",
-      "hostLink": "Bacek varichy edji"
+      "lookForQR": "Նայեք մեծ էկրանին — վարիչը պիտք ցույց տա QR-կոդ 5 նիշանով կոդով։",
+      "areYouHost": "Դուք վարիչ եք?",
+      "hostLink": "Բացեք վարիչի էջը →"
     },
     "errors": {
-      "nameMin": "Grek anun (nvazenakan 2 nshan).",
-      "nameTaken": "Ays anun@ artaken zatats e. Entryek urishn.",
-      "gameClosed": "Khakhy artaken entanum e kam pakvats e mutki hamar.",
-      "hostOffline": "Varichy chi pataskhanym. Hamozveq vor viktorinay batsvatsa ekranin.",
-      "network": "Tsantsi skhval. Krkneq pordzeq."
+      "nameMin": "Գրեք անուն (նվազագույնը 2 նիշան)։",
+      "nameTaken": "Այս անունը արդեն զբաղեցրած է։ Ընտրեք ուրիշը։",
+      "gameClosed": "Խաղը արդեն ընթանում է կամ փակված է մուտքի համար։",
+      "hostOffline": "Վարիչը չի պատասխանում։ Համոզվեք որ վիկտորինան բացված է էկրանին։",
+      "network": "Ցանցի սխալ։ Կրկնեք փորձեք։"
     }
   },
   "settings": {
-    "title": "Kargedrutyunner",
+    "title": "Կարգեդրություններ",
     "autoAdvance": {
-      "label": "Antsyman hadjord hartsiy",
-      "auto": "Inqnashkhat",
-      "manual": "Dzernakan (kochak)"
+      "label": "Անցում հաջորդ հարցին",
+      "auto": "Ինքնաշխատ",
+      "manual": "Ձեռքով (կոճակ)"
     },
     "questionTime": {
-      "label": "Zhpamanak yurakanchyur hartsiy",
-      "seconds": "varkyannerov"
+      "label": "Ժամանակը յուրաքանչյուր հարցի",
+      "seconds": "վարկյաններով"
     },
     "questionsPerQuiz": {
-      "label": "Hartsery yurakanchyur khakhum"
+      "label": "Հարցերը յուրաքանչյուր խաղում"
     },
     "difficulty": {
-      "label": "Bardrutyun",
-      "easy": "Heshd",
-      "medium": "Midjin",
-      "hard": "Bardr",
-      "mixed": "Kharnakhits"
+      "label": "Բարդություն",
+      "easy": "Հեշտ",
+      "medium": "Միջին",
+      "hard": "Բարդր",
+      "mixed": "Խառնախիս"
     },
     "theme": {
-      "label": "Tema",
-      "light": "Lusavor",
-      "dark": "Mut",
-      "system": "Hamargazayin"
+      "label": "Թեմա",
+      "light": "Լուսավոր",
+      "dark": "Մութ",
+      "system": "Համակարգային"
     },
     "sound": {
-      "label": "Dzayn",
-      "enabled": "Miatstsats",
-      "disabled": "Andarts"
+      "label": "Ձայն",
+      "enabled": "Միացված",
+      "disabled": "Անջատված"
     },
     "showExplanation": {
-      "label": "Tsuyts tal batsatrutyun pataskhanits heto"
+      "label": "Ցույց տալ բացատրությունը պատասխանից հետո"
     },
     "showCorrectAnswer": {
-      "label": "Tsuyts tal chisht pataskhany"
+      "label": "Ցույց տալ ճիշտ պատասխանը"
     },
     "practiceQuestion": {
-      "label": "Pordsakhan harts khakhits aradj"
+      "label": "Փորձնական հարց խաղից առաջ"
     },
     "speedBonus": {
-      "label": "Miavorner aragutyan hamar"
+      "label": "Միավորներ արագության համար"
     },
     "language": {
-      "label": "Lezu"
+      "label": "Լեզու"
     },
-    "save": "Pahhel",
-    "saved": "Kargedrutyunnery pahhvats en"
+    "save": "Պահպանել",
+    "saved": "Կարգեդրությունները պահպանված են"
   },
   "profile": {
-    "title": "Anvari",
-    "gamesPlayed": "Khakher khakhatsats",
-    "totalScore": "Endhanur miavor",
-    "correctAnswers": "Chisht pataskhanner",
-    "bestRank": "Lavagun tegh",
-    "recentGames": "Verginin khakher",
-    "noGames": "Duq derts chek khakhatsil. Skseq dzek aratchin khakhy!",
-    "date": "Amsativ",
-    "difficulty": "Bardrutyun",
-    "score": "Miavor",
-    "rank": "Tegh"
+    "title": "Անվարի",
+    "gamesPlayed": "Խաղեր խաղացած",
+    "totalScore": "Ընդհանուր միավոր",
+    "correctAnswers": "Ճիշտ պատասխաններ",
+    "bestRank": "Լավագույն տեղ",
+    "recentGames": "Վերջին խաղերը",
+    "noGames": "Դուք դեռ չեք խաղացել։ Սկսեք ձեր առաջին խաղը!",
+    "date": "Ամսաթիվ",
+    "difficulty": "Բարդություն",
+    "score": "Միավոր",
+    "rank": "Տեղ"
   },
   "auth": {
-    "signIn": "Mutk gortsel",
-    "signInWith": "Mutk gortsel",
-    "signOut": "Yelk",
+    "signIn": "Մուտք գործել",
+    "signInWith": "Մուտք գործել",
+    "signOut": "Ելք",
     "google": "Google",
     "yandex": "Yandex",
-    "guestNote": "Hyurery karhogh en khakhil 1 khakh arants mutki",
-    "signInBenefits": "Muteq patmutyun yev kargedrutyunner pahhelu hamar",
+    "guestNote": "Հյուրերը կարող են խաղալ 1 խաղ առանց մուտքի",
+    "signInBenefits": "Մուտք գործեք պատմություն և կարգեդրություններ պահպանելու համար",
     "error": {
-      "title": "Mutki skhval",
-      "default": "Chi hadshoghvil mutnel. Pordzeq urishn dzev.",
-      "accessDenied": "Mutky merdzvats e.",
-      "tryAgain": "Pordzel krkits"
+      "title": "Մուտքի սխալ",
+      "default": "Չի հաջողվել մուտք գործել։ Փորձեք ուրիշ ձև։",
+      "accessDenied": "Մուտքը մերժված է։",
+      "tryAgain": "Փորձել կրկից"
     }
   },
   "difficulty": {
-    "easy": "Heshd",
-    "medium": "Midjin",
-    "hard": "Bardr",
-    "mixed": "Kharnakhits"
+    "easy": "Հեշտ",
+    "medium": "Միջին",
+    "hard": "Բարդր",
+    "mixed": "Խառնախիս"
   },
   "common": {
-    "loading": "Bernumen",
-    "error": "Skhval",
-    "retry": "Pordzel krkits",
-    "cancel": "Cheghharkel",
-    "save": "Pahhel",
-    "close": "Pakil"
+    "loading": "Բեռնում է…",
+    "error": "Սխալ",
+    "retry": "Փորձել կրկից",
+    "cancel": "Չեղարկել",
+    "save": "Պահպանել",
+    "close": "Փակել"
   },
   "help": {
-    "title": "Inch pes khakhil",
-    "subtitle": "Liateks ughetsuytsy varichnerneri yev khakhachnerneri hamar",
-    "backToHome": "Veradardnal glkhavorna",
+    "title": "Ինչ պես խաղալ",
+    "subtitle": "Լիատեքս ուղեցույցը վարիչների և խաղացների համար",
+    "backToHome": "Վերադառնալ գլխավոր",
     "forHost": {
-      "title": "Varichy hamar (projektor)",
-      "intro": "Varichy gortsarkum e khakhy mets ekranin. Petk e notebook kam hamakargich.",
+      "title": "Վարիչի համար (պրոեկտոր)",
+      "intro": "Վարիչը գործարկում է խաղը մեծ էկրանին կամ պրոեկտորով։ Մեկ ոքին թիմը պետք է նոութբուք կամ համակարգիչ։",
       "step1": {
-        "title": "1. Bacek varichy edji",
-        "description": "Antsek kayqi yev skhmeq Sksel khakhy kam ughghakich bacek /play/host."
+        "title": "1. Բացեք վարիչի էջը",
+        "description": "Անցեք կայքի և սեղմեք «Սկսել խաղը (վարիչ)» կամ ուղղակի բացեք /play/host։ Դուք կտեսնեք բարդության ընտրության էկրանը։"
       },
       "step2": {
-        "title": "2. Entryek bardrutyan",
-        "description": "Entryek makaradaky: Heshd, Midjin, Bardr, kam Kharnakhits."
+        "title": "2. Ընտրեք բարդությունը",
+        "description": "Ընտրեք մակարդակը։ Հեշտ (հայտնի հերոսներ։ Մովսես, Դավիթ), Միջին (մարգարեներ և առաքյալներ), Բարդր (մասնագետների համար), կամ Խառնախիս (բոլոր մակարդակների համադրություն)։"
       },
       "step3": {
-        "title": "3. Bacek lobbiy",
-        "description": "Skhmeq Bacek lobbiy. QR-kod yev khakhi kody kerhayvi."
+        "title": "3. Բացեք լոբբին",
+        "description": "Սեղմեք «Բացեք լոբբին»։ QR-կոդը և խաղի կոդը (5 նիշան) կերհայվի։ Ցույց տվեք այս էկրանը պրոեկտորով։"
       },
       "step4": {
-        "title": "4. Spaseq khakhachnerneri",
-        "description": "Yerbor khakhachnery skanirum en QR-y yev grum en irents anunnery."
+        "title": "4. Սպասեք խաղացներին",
+        "description": "Երբ խաղացները սկանիրում են QR-կոդը և գրում են իրենց անունները, դուք կտեսնեք նրանց լոբբիում։ Սպասեք մինչև բոլորը միանան։"
       },
       "step5": {
-        "title": "5. Gortsarkeq khakhy",
-        "description": "Skhmeq Sksel viktorinay. Aratchin hartsy pordsakan e."
+        "title": "5. Գործարկեք խաղը",
+        "description": "Սեղմեք «Սկսել վիկտորինան»։ Առաջին հարցը փորձնական է (առանց միավորների), այնուհետև 10 հարց, յուրաքանչյուրը 15 վարկյան։"
       },
       "step6": {
-        "title": "6. Khakhits heto",
-        "description": "Ardyunknery tsuyts en tvumen inqnashkhat."
+        "title": "6. Խաղից հետո",
+        "description": "Արդյունքները ցույց են տրվում ինքնաշխատ։ Սեղմեք «Նոր խաղ» նոր րաունդի համար նույն կամ այլ խաղացներով։"
       }
     },
     "forPlayer": {
-      "title": "Khakhachnerneri hamar (herakhoss)",
-      "intro": "Khakhachnery miadznum en irents herakhossnerov. Havelats chi pahhyandjvum.",
+      "title": "Խաղացների համար (հեռախոս)",
+      "intro": "Խաղացները միանում են իրենց հեռախոսներով։ Հավելված չի պահանջվում — միայն բրաուզեր և ինտերնետ։",
       "step1": {
-        "title": "1. Skanirek QR-kody",
-        "description": "Ughghroreq dzer herakhossi tesakhtsighy QR-kodi vray mets ekranin."
+        "title": "1. Սկանիրեք QR-կոդը",
+        "description": "Ուղղորեք ձեր հեռախոսի տեսախցիկը QR-կոդի վրա մեծ էկրանին։ Սեղմեք ծանուցումն ընդառելու համար հղումը։"
       },
       "step2": {
-        "title": "2. Grek dzer anun",
-        "description": "Grek dzer anun kam makanun (nvazenaken 2 nshan)."
+        "title": "2. Գրեք ձեր անունը",
+        "description": "Գրեք ձեր անունը կամ մականունը (նվազագույնը 2 նիշան)։ Այսպես կերևավի ձեզ վարդակասրությունում։"
       },
       "step3": {
-        "title": "3. Spaseq lobbiuyum",
-        "description": "Duq ktesnek Duq khakhum eq yev kspaseq minchev varichy sksi khakhy."
+        "title": "3. Սպասեք լոբբիում",
+        "description": "Դուք կտեսնեք «Դուք խաղում եք» և կսպասեք մինչև վարիչը սկսի խաղը։ Պահեք ձեր հեռախոսը պատրաստացած!"
       },
       "step4": {
-        "title": "4. Pataskhaneq hartserin",
-        "description": "Yerb hartsy haytnyvi, skhmeq mek chunits chunits kochaknerov (A, B, C, D)."
+        "title": "4. Պատասխանեք հարցերին",
+        "description": "Երբ հարցը հայտնվի, սեղմեք չորս գունավոր կոճակներից մեկը (A, B, C, D)։ Չիշտ պատասխանը օրքան արագ, այնքան շատ միավոր!"
       },
       "step5": {
-        "title": "5. Teseq dzer ardyunknery",
-        "description": "Yurakanchyur hartsits heto duq ktesnek te chisht eq pataskhanel."
+        "title": "5. Տեսեք ձեր արդյունքները",
+        "description": "Յուրաքանչյուր հարցից հետո դուք կտեսնեք թե ճիշտ եք պատասխանել և ձեր տեղը վարդակասրությունում։ Վերջնական արդյունքները — վերջում։"
       }
     },
     "scoring": {
-      "title": "Miavornerov hamargarky",
-      "description": "Miavornerny kakhvats en chshtutyan yev aragutan hety:",
-      "correct": "Chisht pataskhan: 500 miavorner",
-      "speed": "Aragutyany bonus: minchev 500 lratsuts miavorner",
-      "wrong": "Skhval kam batstavats pataskhan: 0 miavorner",
-      "practice": "Pordsakhan harts: arants miavornerov"
+      "title": "Միավորներով համարգարկը",
+      "description": "Միավորները կախված են ճիշտության և արագության հետ։",
+      "correct": "Ճիշտ պատասխան։ 500 միավոր",
+      "speed": "Արագության բոնուս։ մինչև 500 լրացուցիչ միավոր (օրքան արագ, այնքան շատ)",
+      "wrong": "Սխալ կամ բացթողած պատասխան։ 0 միավոր",
+      "practice": "Փորձնական հարց։ առանց միավորների"
     },
     "levels": {
-      "title": "Bardrutyan makaradakner",
+      "title": "Բարդության մակարդակներ",
       "easy": {
-        "title": "Heshd",
-        "description": "Haytni Biblayi kerparnery vornc bolory giten: Adam, Yeva, Noye, Movsess, David."
+        "title": "Հեշտ",
+        "description": "Հայտնի աստվածաշնչի կերպարներ, որոնց բոլորը գիտեն։ Ադամ, Եվա, Նոյե, Մովսես, Դավիթ, Մարիամ, Հիսուս և ուրիշներ։"
       },
       "medium": {
-        "title": "Midjin",
-        "description": "Pahhyandjum e Biblayi imatsutyan: margarener, araqyalner."
+        "title": "Միջին",
+        "description": "Պահանջում է Աստվածաշնչի իմացության։ մարգարեներ, առաքյալներ և երկրորդական կերպարներ հայտնի պատմություններից։"
       },
       "hard": {
-        "title": "Bardr",
-        "description": "Biblayi masnagetneri hamar: qitch haytni kerparnery."
+        "title": "Բարդր",
+        "description": "Աստվածաշնչի մասնագետների համար։ քիչ հայտնի կերպարներ, պահանջում է տեքստի խորդանք իմացության։"
       },
       "mixed": {
-        "title": "Kharnakhits",
-        "description": "Bolor makaradakneri hamadrutyun: 40% heshd, 40% midjin, 20% bardr."
+        "title": "Խառնախիս",
+        "description": "Բոլոր մակարդակների համադրություն։ 40% հեշտ, 40% միջին, 20% բարդր հարցեր։"
       }
     },
     "tips": {
-      "title": "Khorurdner",
-      "tip1": "Hamozveq vor bolory kapvats en nuyn WiFi-in kam unen mobile internet.",
-      "tip2": "Varichy sarqy chi petk qnir khakhi entatsqum.",
-      "tip3": "Hartsery chi krknum 24 zham!",
-      "tip4": "Yete andarstsatveq - skanirek QR-kody krkits."
+      "title": "Խորհուրդներ",
+      "tip1": "Համոզվեք որ բոլորը կապված են նույն WiFi-ին կամ ունեն մոբիլ ինտերնետ։",
+      "tip2": "Վարիչի սարքը չի պետք քնի խաղի ընթացքում։",
+      "tip3": "Հարցերը չեն կրկնվում 24 ժամ — խաղացեք մի քանիսանունդ առանց կրկնումների!",
+      "tip4": "Եթե անջատվեցիք — սկանիրեք QR-կոդը կրկին, դուք կվերադառնաք նույն անունով։"
     },
     "troubleshooting": {
-      "title": "Hamatshakhakutyunneri lusumen",
+      "title": "Համատշախակությունների լուցում",
       "q1": {
-        "q": "Skaniretsil em QR-kody, bayts tesenel em ekran QR-kodov",
-        "a": "Havanabarev duq batsetsil eq varichy edji. Khakhachnery petk e skanireen QR-kody proyektorin."
+        "q": "Սկանիրեցի եմ QR-կոդը, բայց տեսնում եմ էկրան QR-կոդով",
+        "a": "Հավանաբար դուք բացեցիք եք վարիչի էջը։ Խաղացները պետք է սկանիրեն QR-կոդը պրոեկտորին, որը տանում է խաղացի էջին։ URL-ում պետք է լինի «?game=» 5 նիշանով կոդով։"
       },
       "q2": {
-        "q": "Anuny artaken zatats e",
-        "a": "Mekin artaken miadzvel e ays anunov. Entryek urishn anun."
+        "q": "Անունը արդեն զբաղեցրած է",
+        "a": "Մեկին արդեն միանալ է այս անունով։ Ընտրեք ուրիշ անուն կամ ավելացրեք թիվ (օրինակ։ «Հովհաննես2»)։"
       },
       "q3": {
-        "q": "Varichy chi pataskhanum",
-        "a": "Hamozveq vor varichy edji batsvatsa yev chi qnel."
+        "q": "Վարիչը չի պատասխանում",
+        "a": "Համոզվեք որ վարիչի էջը բացված է և չի քնել։ Խաղի կոդը պետք է համապատասխանի էկրանին ցույցվածին։"
       },
       "q4": {
-        "q": "Indz andarstsatsil en",
-        "a": "Skanirek QR-kody krkits. Yete ogtagorseq nuyn anun, duq inqnashkhat kveradardnaq khakh."
+        "q": "Ինձ անջատեցին",
+        "a": "Սկանիրեք QR-կոդը կրկին։ Եթե օգտագործեք նույն անունը, դուք ինքնաշխատ կվերադառնաք խաղ։"
       }
     }
   }
