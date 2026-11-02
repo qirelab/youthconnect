@@ -8,9 +8,11 @@ import { postHost } from "@/lib/api";
 import { 
   generateRandomQuiz, 
   getAvailableQuestionCount,
+  recordShownQuestions,
   QUESTION_DURATION, 
   REVEAL_DURATION, 
-  PRACTICE_INDEX 
+  PRACTICE_INDEX,
+  type GeneratedQuestion
 } from "@/lib/quiz-generator";
 import {
   CHANNEL,
@@ -37,14 +39,6 @@ function genCode(): string {
 
 function points(timeLeft: number, duration: number): number {
   return 500 + Math.round((500 * Math.max(0, timeLeft)) / duration);
-}
-
-interface GeneratedQuestion {
-  character: string;
-  options: string[];
-  correct: number;
-  image: string;
-  visualCue?: string;
 }
 
 export default function HostPage() {
@@ -190,6 +184,9 @@ export default function HostPage() {
       }
 
       await postHost(gameId, EVENTS.gameStarted, { total: questions.length });
+
+      // Записываем показанные вопросы в историю (для избежания повторов 24ч)
+      recordShownQuestions(questions, practiceQuestion);
 
       const rounds = practiceQuestion ? [PRACTICE_INDEX] : [];
       for (let i = 0; i < questions.length; i++) rounds.push(i);
@@ -361,6 +358,10 @@ export default function HostPage() {
             </div>
           )}
           <div className="join-url">{joinUrl}</div>
+          
+          <div className="player-hint" style={{ marginTop: 16 }}>
+            {t("playerHint")}
+          </div>
 
           <div className="players">
             {players.length === 0 ? (

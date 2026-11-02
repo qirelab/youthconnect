@@ -9,13 +9,15 @@ import {
   type CharacterEntry,
   type DifficultyLevel 
 } from "@/data/characters";
+import { getShownCharacters, addShownCharacters } from "./question-history";
 
 export const QUESTION_DURATION = 15; // seconds
 export const REVEAL_DURATION = 5; // seconds
 export const PRACTICE_INDEX = -1;
 
-// Map existing selfie images to characters (the 50 we have)
-// These are indexed by the original import order
+// Map existing selfie images to characters
+// Персонажи с селфи-картинками (s01-s50, исключая s33 — Седраха)
+// Седрах, Мисах и Авденаго неразличимы по селфи, поэтому исключены
 const EXISTING_SELFIES: Record<string, string> = {
   "Adam": "s01.webp",
   "Eve": "s02.webp",
@@ -49,7 +51,7 @@ const EXISTING_SELFIES: Record<string, string> = {
   "Jeremiah": "s30.webp",
   "Ezekiel": "s31.webp",
   "Daniel": "s32.webp",
-  "Shadrach": "s33.webp",
+  // "Shadrach": "s33.webp" — удалён, невозможно угадать по селфи
   "Esther": "s34.webp",
   "Nehemiah": "s35.webp",
   "Zechariah": "s36.webp",
@@ -241,34 +243,54 @@ function createQuestion(
 }
 
 // Generate a random quiz with specified difficulty and count
+// Избегает повторов вопросов, показанных за последние 24 часа
 export function generateRandomQuiz(
   difficulty?: DifficultyLevel,
-  questionCount: number = 10
+  questionCount: number = 10,
+  skipHistory: boolean = false
 ): { questions: GeneratedQuestion[]; practice: GeneratedQuestion | null } {
   const allWithImages = CHARACTERS.filter(
     c => c.kind === "unique" && EXISTING_SELFIES[c.en] !== undefined
   );
   
+  // Получаем недавно показанные персонажи (24ч)
+  const recentlyShown = skipHistory ? new Set<string>() : getShownCharacters();
+  
+  // Фильтруем персонажей: сначала те, кто не показывался недавно
+  const filterNotRecent = (chars: CharacterEntry[]) => 
+    chars.filter(c => !recentlyShown.has(c.en));
+  
   let selectedChars: CharacterEntry[] = [];
   
   if (!difficulty) {
-    // Mixed: ~40% easy, ~40% medium, ~20% hard, with backfill
-    const easy = shuffle(allWithImages.filter(c => c.level === "easy"));
-    const medium = shuffle(allWithImages.filter(c => c.level === "medium"));
-    const hard = shuffle(allWithImages.filter(c => c.level === "hard"));
+    // Mixed: ~40% easy, ~40% medium, ~20% hard, с приоритетом не показанных
+    const easyAll = shuffle(allWithImages.filter(c => c.level === "easy"));
+    const mediumAll = shuffle(allWithImages.filter(c => c.level === "medium"));
+    const hardAll = shuffle(allWithImages.filter(c => c.level === "hard"));
+    
+    // Сначала берём не показанных недавно
+    const easyFresh = filterNotRecent(easyAll);
+    const mediumFresh = filterNotRecent(mediumAll);
+    const hardFresh = filterNotRecent(hardAll);
     
     const targetEasy = Math.ceil(questionCount * 0.4);
     const targetMedium = Math.ceil(questionCount * 0.4);
     const targetHard = questionCount - targetEasy - targetMedium;
     
-    // Take what we can from each level
-    const fromEasy = easy.slice(0, targetEasy);
-    const fromMedium = medium.slice(0, targetMedium);
-    const fromHard = hard.slice(0, targetHard);
+    // Берём свежих, если не хватает — из всех
+    const fromEasy = easyFresh.slice(0, targetEasy).length >= targetEasy 
+      ? easyFresh.slice(0, targetEasy)
+      : [...easyFresh, ...easyAll.filter(c => !easyFresh.includes(c))].slice(0, targetEasy);
+    const fromMedium = mediumFresh.slice(0, targetMedium).length >= targetMedium
+      ? mediumFresh.slice(0, targetMedium)
+      : [...mediumFresh, ...mediumAll.filter(c => !mediumFresh.includes(c))].slice(0, targetMedium);
+    const fromHard = hardFresh.slice(0, targetHard).length >= targetHard
+      ? hardFresh.slice(0, targetHard)
+      : [...hardFresh, ...hardAll.filter(c => !hardFresh.includes(c))].slice(0, targetHard);
     
     selectedChars = [...fromEasy, ...fromMedium, ...fromHard];
     
-    // Backfill if we don't have enough
+    // Backfill если не хватает
     if (selectedChars.length < questionCount) {
       const used = new Set(selectedChars.map(c => c.en));
       const remaining = shuffle(allWithImages.filter(c => !used.has(c.en)));
@@ -276,14 +298,21 @@ export function generateRandomQuiz(
       selectedChars.push(...remaining.slice(0, needed));
     }
   } else {
-    // Single difficulty with backfill from other levels
-    const primary = shuffle(allWithImages.filter(c => c.level === difficulty));
-    selectedChars = primary.slice(0, questionCount);
+    // Single difficulty: приоритет не показанным
+    const primaryAll = shuffle(allWithImages.filter(c => c.level === difficulty));
+    const primaryFresh = filterNotRecent(primaryAll);
+    
+    // Сначала свежие, затем остальные
+    selectedChars = primaryFresh.length >= questionCount
+      ? primaryFresh.slice(0, questionCount)
+      : [...primaryFresh, ...primaryAll.filter(c => !primaryFresh.includes(c))].slice(0, questionCount);
     
     // Backfill from other levels if needed
     if (selectedChars.length < questionCount) {
       const used = new Set(selectedChars.map(c => c.en));
-      const others = shuffle(allWithImages.filter(c => c.level !== difficulty && !used.has(c.en)));
+      const othersFresh = filterNotRecent(allWithImages.filter(c => c.level !== difficulty && !used.has(c.en)));
+      const othersAll = allWithImages.filter(c => c.level !== difficulty && !used.has(c.en));
+      const others = shuffle([...othersFresh, ...othersAll.filter(c => !othersFresh.includes(c))]);
       const needed = questionCount - selectedChars.length;
       selectedChars.push(...others.slice(0, needed));
     }
@@ -298,15 +327,19 @@ export function generateRandomQuiz(
   );
   
   // Generate practice question from an easy character not in the quiz
-  const practicePool = allWithImages.filter(c => c.level === "easy" && !usedNames.has(c.en));
+  const practicePoolFresh = filterNotRecent(allWithImages.filter(c => c.level === "easy" && !usedNames.has(c.en)));
+  const practicePoolAll = allWithImages.filter(c => c.level === "easy" && !usedNames.has(c.en));
   let practice: GeneratedQuestion | null = null;
   
+  const practicePool = practicePoolFresh.length > 0 ? practicePoolFresh : practicePoolAll;
   if (practicePool.length > 0) {
     const practiceChar = practicePool[Math.floor(Math.random() * practicePool.length)];
     practice = createQuestion(practiceChar, usedNames);
-  } else if (allWithImages.length > 0) {
-    // Fallback: use any character not in quiz
-    const fallbackPool = allWithImages.filter(c => !usedNames.has(c.en));
+  } else {
+    // Fallback: any character not in quiz
+    const fallbackFresh = filterNotRecent(allWithImages.filter(c => !usedNames.has(c.en)));
+    const fallbackAll = allWithImages.filter(c => !usedNames.has(c.en));
+    const fallbackPool = fallbackFresh.length > 0 ? fallbackFresh : fallbackAll;
     if (fallbackPool.length > 0) {
       const practiceChar = fallbackPool[Math.floor(Math.random() * fallbackPool.length)];
       practice = createQuestion(practiceChar, usedNames);
@@ -314,6 +347,15 @@ export function generateRandomQuiz(
   }
   
   return { questions, practice };
+}
+
+// Записать показанные вопросы в историю (вызывается после начала игры)
+export function recordShownQuestions(questions: GeneratedQuestion[], practice: GeneratedQuestion | null): void {
+  const characters = questions.map(q => q.character);
+  if (practice) {
+    characters.push(practice.character);
+  }
+  addShownCharacters(characters);
 }
 
 // Export for use in settings
