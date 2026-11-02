@@ -1,284 +1,408 @@
 {
   "meta": {
-    "title": "Bible Quiz · Guess the Hero from Selfie",
-    "description": "Interactive quiz for youth and churches — guess Bible characters from AI-generated selfies",
+    "title": "Biblayin Viktorina",
+    "description": "Interaktiv viktorina eritasardneri yev yekeghetsayin hamar",
     "domain": "youthconnect.church"
   },
   "nav": {
-    "play": "Play",
-    "host": "Host",
-    "donate": "Donate",
-    "signIn": "Sign In",
-    "signOut": "Sign Out",
-    "profile": "Profile",
-    "settings": "Settings",
-    "history": "Game History"
+    "play": "Khaghal",
+    "host": "Varich",
+    "help": "Ognutyun",
+    "donate": "Ajakcel",
+    "signIn": "Mutk gortsel",
+    "signOut": "Yelk",
+    "profile": "Anvari",
+    "settings": "Kargedrutyunner",
+    "history": "Khagheri patmutyun"
   },
   "landing": {
     "hero": {
-      "title": "Bible Quiz",
-      "subtitle": "Guess the Hero from Selfie",
-      "description": "Interactive game for youth meetings, Sunday schools, and family nights. Scan the QR code — and you're in!",
-      "ctaHost": "Start Game (Host)",
-      "ctaJoin": "Join with Code"
+      "title": "Biblayin Viktorina",
+      "subtitle": "Gushakir herosi selfi-ov",
+      "description": "Interaktiv khakh eritasardakan yev yekeghetsayin hamar. Skanirek QR-y yev daracek khakhum!",
+      "ctaHost": "Sksel khakhy (varich)",
+      "ctaJoin": "Miadzvel kodov"
+    },
+    "quickStart": {
+      "title": "Arag meknarky",
+      "host": "Varich: bacek",
+      "player": "Khakhacinner: skanirek QR yev grek anun",
+      "play": "Khakhacek: skhmeq chisht pataskhany!",
+      "helpLink": "Aveli shat manramasn? Tesek ughetsuytsy"
     },
     "howItWorks": {
-      "title": "How It Works",
+      "title": "Inch pes e ashkhatumen",
       "step1": {
-        "title": "Host opens the game",
-        "description": "Open /host on a laptop with projector and choose difficulty"
+        "title": "Varichy bacum e khakhy",
+        "description": "Bacek /host notebook-um proyektorov yev entryek bardrutyan"
       },
       "step2": {
-        "title": "Players scan QR",
-        "description": "Phone, QR code — and in 5 seconds you're in the lobby"
+        "title": "Masnakitsner skanirum en QR-y",
+        "description": "Herakhoss, QR-kod yev 5 varkyanits heto lobbyum ek"
       },
       "step3": {
-        "title": "Play and compete",
-        "description": "10 questions, 15 seconds each, points for speed, live leaderboard"
+        "title": "Khakhum enk yev mrtsaktsum",
+        "description": "10 harts, 15 varkyan yurakanchyury, miavorner aragutyan hamar"
       }
     },
     "features": {
-      "title": "Features",
+      "title": "Hnaraavorutyunner",
       "selfie": {
-        "title": "Bible Character Selfies",
-        "description": "Unique AI images: guess the character from the scene"
+        "title": "Biblayin herosneri selfiener",
+        "description": "Yezig AI-patkerner: gushakek kerpary teseranis"
       },
       "realtime": {
-        "title": "Real-time Multiplayer",
-        "description": "Up to 100 players simultaneously, instant sync"
+        "title": "Irakhan zhamanak multipleyer",
+        "description": "Minchev 100 khakhach miadzhamanak"
       },
       "levels": {
-        "title": "3 Difficulty Levels",
-        "description": "From Adam to Tychicus — choose your level"
+        "title": "3 bardrutyan makaradak",
+        "description": "Adamits minchev Tikhikos"
       },
       "noSignup": {
-        "title": "No Registration",
-        "description": "Guests play instantly, sign in for history and settings"
+        "title": "Arants grantsman",
+        "description": "Hyurerery khakhum en anmijapes"
       },
       "free": {
-        "title": "Free",
-        "description": "No subscriptions, runs on free tier"
+        "title": "Anvanchar",
+        "description": "Och mi bazhanagrutyun"
       },
       "mobile": {
-        "title": "Mobile-first",
-        "description": "Optimized for phones and any screen"
+        "title": "Mobile-aratchin",
+        "description": "Optimizatsvats herakhossneri hamar"
       }
     },
     "levels": {
-      "title": "Difficulty Levels",
+      "title": "Bardrutyan makaradakner",
       "easy": {
-        "title": "Easy",
-        "description": "Famous heroes: Moses, David, Noah, Mary"
+        "title": "Heshd",
+        "description": "Haytni heroser: Movsess, David, Noye, Mariam"
       },
       "medium": {
-        "title": "Medium",
-        "description": "Prophets and apostles: Isaiah, Barnabas, Titus"
+        "title": "Midjin",
+        "description": "Margarener yev araqyalner: Yesaya, Barnabas, Titos"
       },
       "hard": {
-        "title": "Hard",
-        "description": "For experts: Ahithophel, Epaphras, Nympha"
+        "title": "Bardr",
+        "description": "Masnagetneri hamar: Akhitofel, Epafras, Nimfa"
       }
     },
     "forWhom": {
-      "title": "Who Is This For",
-      "youth": "Youth ministries",
-      "sunday": "Sunday schools",
-      "camps": "Christian camps",
-      "family": "Family nights",
-      "small": "Small groups"
+      "title": "Um hamar e ays khakhy",
+      "youth": "Eritasardakan tsarautyunner",
+      "sunday": "Kiraki dprocner",
+      "camps": "Kristoneakan chanavarakner",
+      "family": "Yentaniq erekoner",
+      "small": "Poqr khmber"
     },
     "gallery": {
-      "title": "Selfie Gallery",
-      "hint": "Can you guess who this is?"
+      "title": "Selfie patkerasrah",
+      "hint": "Karogh ek gushakil ov e?"
     },
     "donate": {
-      "title": "Support the Project",
-      "description": "The game is free for everyone. Your donations help develop the project, add new images and languages.",
-      "oneTime": "One-time Donation",
-      "monthly": "Monthly",
-      "crypto": "Cryptocurrency",
-      "boosty": "Boosty (for Russia)"
+      "title": "Ajakcel nakagitsin",
+      "description": "Khakhy anvanchar e. Dzer nveratutyunnery ognum en zargatsnel nakagitsy.",
+      "oneTime": "Miakarchar",
+      "monthly": "Amenbsya",
+      "crypto": "Kriptovalyuta",
+      "boosty": "Boosty"
     },
     "faq": {
-      "title": "FAQ",
+      "title": "Hartseri pataskhanner",
       "q1": {
-        "q": "Is this free?",
-        "a": "Yes, completely free. We use free tiers of Vercel and Pusher."
+        "q": "Ays anvanchar e?",
+        "a": "Ayo, liatutamb anvanchar. Vercel yev Pusher anvanchar tarifner."
       },
       "q2": {
-        "q": "How many players can participate?",
-        "a": "Up to 100 simultaneously (Pusher limit). For larger events, contact us."
+        "q": "Kansi khakhach karogh e masnakel?",
+        "a": "Minchev 100 miadzhamanak (Pusher sahmanapahutyun)."
       },
       "q3": {
-        "q": "Is registration required?",
-        "a": "No! Guests play instantly via QR code. Sign in with Google/Yandex only for saving history and settings."
+        "q": "Grantsman karikk ka?",
+        "a": "Voch! Hyurerery khakhum en anmijapes QR-kodov."
       },
       "q4": {
-        "q": "Which Bible translation is used?",
-        "a": "Character names follow standard translations for each language."
+        "q": "Vor Biblayi targmanutyuny e ogtagorsvum?",
+        "a": "Herosneri anunnery hetevum en standart targmanutyunnery."
       },
       "q5": {
-        "q": "What's the denominational stance?",
-        "a": "The game is for all Protestant churches. Questions are based on canonical Bible text."
+        "q": "Vorn e konfessional dirqoroshumy?",
+        "a": "Khakhy bolor protestant yekeghetsinerineri hamar e."
       },
       "q6": {
-        "q": "Can this be used with children?",
-        "a": "Yes! Content is safe for all ages. Easy level works great for Sunday school."
+        "q": "Karogh e ogtagorsvil yerekhanerov?",
+        "a": "Ayo! Boverandutyuny anvtang e bolor tariqinerineri hamar."
       }
     },
     "footer": {
-      "contact": "Contact",
+      "contact": "Kap",
       "email": "hello@youthconnect.church",
-      "privacy": "Privacy Policy",
-      "terms": "Terms of Use",
-      "copyright": "© 2024 YouthConnect. All rights reserved."
+      "privacy": "Gaghtnikunatyan qaghakantutyun",
+      "terms": "Ogtagorsman paymannerov",
+      "copyright": "2024 YouthConnect. Bolor iravunknery pahpanvats en."
     }
   },
   "game": {
-    "code": "Game Code",
-    "players": "Players",
-    "question": "Question",
-    "of": "of",
-    "seconds": "sec",
-    "practice": "Practice Question",
-    "practiceNote": "no points",
-    "whoMadeSelfie": "Who made this selfie?",
-    "itIs": "It's",
-    "correct": "Correct!",
-    "incorrect": "Incorrect",
-    "timeout": "Time's up",
-    "noAnswer": "No answer",
-    "correctAnswer": "Correct answer",
-    "points": "points",
-    "correctAnswers": "Correct",
-    "place": "place",
-    "nextIn": "Next question in",
-    "resultsIn": "Results in",
-    "waitingHost": "Waiting for host to start the quiz…",
-    "answerAccepted": "Answer accepted!",
-    "lookAtScreen": "Look at the main screen…",
-    "answered": "Answered"
+    "code": "Khakhi kod",
+    "players": "Khakhachner",
+    "question": "Harts",
+    "of": "-its",
+    "seconds": "vrk",
+    "practice": "Pordsakhan harts",
+    "practiceNote": "arants miavornerov",
+    "whoMadeSelfie": "Ov e arel ays selfin?",
+    "itIs": "Sa",
+    "correct": "Chisht!",
+    "incorrect": "Skhval",
+    "timeout": "Zhamanaky avartvela",
+    "noAnswer": "Pataskhan chka",
+    "correctAnswer": "Chisht pataskhan",
+    "points": "miavorner",
+    "correctAnswers": "Chisht",
+    "place": "tegh",
+    "nextIn": "Hadjord hartsy",
+    "resultsIn": "Ardyunknery",
+    "waitingHost": "Spasumen varichy sksi viktorinay",
+    "answerAccepted": "Pataskhany yndunvela!",
+    "lookAtScreen": "Nayeq glkhavorin ekranin",
+    "answered": "Pataskhanel e"
   },
   "host": {
-    "title": "Host Screen",
-    "selectQuiz": "Select Difficulty",
-    "openLobby": "Open Lobby",
-    "back": "Back",
-    "startGame": "Start Quiz",
-    "startPractice": "Start with Practice",
-    "newGame": "New Game",
-    "scanQR": "Scan QR code with your phone to join",
-    "noPlayers": "No one has joined yet…",
-    "results": "Quiz Results",
-    "noPusher": "Pusher keys not set. Add environment variables — see README.",
-    "practiceComplete": "Practice round complete — now it's for real!",
-    "startQuiz": "Start Quiz"
+    "title": "Varichy ekran",
+    "selectQuiz": "Entryek bardrutyan",
+    "openLobby": "Bacek lobbiy",
+    "back": "Het",
+    "startGame": "Sksel viktorinay",
+    "startPractice": "Sksel pordsakhan harts",
+    "newGame": "Nor khakh",
+    "scanQR": "Skanirek QR-y herakhossov miadznyelu hamar",
+    "noPlayers": "Datarky voch oku chi miadzvel",
+    "results": "Viktorinai ardyunknery",
+    "noPusher": "Pusher banalineri kargedrvats chen. Avelatseq mijavayrayin paymannerov.",
+    "practiceComplete": "Pordsakhan raundsy avartvelya!",
+    "startQuiz": "Sksel viktorinay",
+    "playerHint": "Duq khakhach eq? Skanirek QR-y verevum herakhossov!"
   },
   "player": {
-    "enterName": "What's your name?",
-    "namePlaceholder": "Your name or nickname",
-    "join": "Join",
-    "checking": "Checking…",
-    "youAreIn": "You're in the game",
-    "scanQR": "Scan the QR code on screen to join the game.",
+    "enterName": "Inch e dzer anunts?",
+    "namePlaceholder": "Dzer anun kam makanun",
+    "join": "Miadznel",
+    "checking": "Stugumen",
+    "youAreIn": "Duq khakhum eq",
+    "scanQR": "Skanirek QR-kody ekranin miadznyelu hamar khakhum.",
+    "hint": {
+      "lookForQR": "Nayeq mets ekranin - varichy pits tsuyts ta QR-kod 5 nshanovi kodov.",
+      "areYouHost": "Duq varich eq?",
+      "hostLink": "Bacek varichy edji"
+    },
     "errors": {
-      "nameMin": "Enter a name (at least 2 characters).",
-      "nameTaken": "This name is taken. Choose another.",
-      "gameClosed": "Game is in progress or closed for entry.",
-      "hostOffline": "Host not responding. Make sure the quiz is open on screen.",
-      "network": "Network error. Try again."
+      "nameMin": "Grek anun (nvazenakan 2 nshan).",
+      "nameTaken": "Ays anun@ artaken zatats e. Entryek urishn.",
+      "gameClosed": "Khakhy artaken entanum e kam pakvats e mutki hamar.",
+      "hostOffline": "Varichy chi pataskhanym. Hamozveq vor viktorinay batsvatsa ekranin.",
+      "network": "Tsantsi skhval. Krkneq pordzeq."
     }
   },
   "settings": {
-    "title": "Settings",
+    "title": "Kargedrutyunner",
     "autoAdvance": {
-      "label": "Next Question Transition",
-      "auto": "Automatic",
-      "manual": "Manual (button)"
+      "label": "Antsyman hadjord hartsiy",
+      "auto": "Inqnashkhat",
+      "manual": "Dzernakan (kochak)"
     },
     "questionTime": {
-      "label": "Time per Question",
-      "seconds": "seconds"
+      "label": "Zhpamanak yurakanchyur hartsiy",
+      "seconds": "varkyannerov"
     },
     "questionsPerQuiz": {
-      "label": "Questions per Game"
+      "label": "Hartsery yurakanchyur khakhum"
     },
     "difficulty": {
-      "label": "Difficulty",
-      "easy": "Easy",
-      "medium": "Medium",
-      "hard": "Hard",
-      "mixed": "Mixed"
+      "label": "Bardrutyun",
+      "easy": "Heshd",
+      "medium": "Midjin",
+      "hard": "Bardr",
+      "mixed": "Kharnakhits"
     },
     "theme": {
-      "label": "Theme",
-      "light": "Light",
-      "dark": "Dark",
-      "system": "System"
+      "label": "Tema",
+      "light": "Lusavor",
+      "dark": "Mut",
+      "system": "Hamargazayin"
     },
     "sound": {
-      "label": "Sound",
-      "enabled": "On",
-      "disabled": "Off"
+      "label": "Dzayn",
+      "enabled": "Miatstsats",
+      "disabled": "Andarts"
     },
     "showExplanation": {
-      "label": "Show explanation after answer"
+      "label": "Tsuyts tal batsatrutyun pataskhanits heto"
     },
     "showCorrectAnswer": {
-      "label": "Show correct answer"
+      "label": "Tsuyts tal chisht pataskhany"
     },
     "practiceQuestion": {
-      "label": "Practice question before game"
+      "label": "Pordsakhan harts khakhits aradj"
     },
     "speedBonus": {
-      "label": "Points for speed"
+      "label": "Miavorner aragutyan hamar"
     },
     "language": {
-      "label": "Language"
+      "label": "Lezu"
     },
-    "save": "Save",
-    "saved": "Settings saved"
+    "save": "Pahhel",
+    "saved": "Kargedrutyunnery pahhvats en"
   },
   "profile": {
-    "title": "Profile",
-    "gamesPlayed": "Games Played",
-    "totalScore": "Total Score",
-    "correctAnswers": "Correct Answers",
-    "bestRank": "Best Rank",
-    "recentGames": "Recent Games",
-    "noGames": "You haven't played yet. Start your first game!",
-    "date": "Date",
-    "difficulty": "Difficulty",
-    "score": "Score",
-    "rank": "Rank"
+    "title": "Anvari",
+    "gamesPlayed": "Khakher khakhatsats",
+    "totalScore": "Endhanur miavor",
+    "correctAnswers": "Chisht pataskhanner",
+    "bestRank": "Lavagun tegh",
+    "recentGames": "Verginin khakher",
+    "noGames": "Duq derts chek khakhatsil. Skseq dzek aratchin khakhy!",
+    "date": "Amsativ",
+    "difficulty": "Bardrutyun",
+    "score": "Miavor",
+    "rank": "Tegh"
   },
   "auth": {
-    "signIn": "Sign In",
-    "signInWith": "Sign in with",
-    "signOut": "Sign Out",
+    "signIn": "Mutk gortsel",
+    "signInWith": "Mutk gortsel",
+    "signOut": "Yelk",
     "google": "Google",
     "yandex": "Yandex",
-    "guestNote": "Guests can play 1 game without signing in",
-    "signInBenefits": "Sign in to save game history and settings",
+    "guestNote": "Hyurery karhogh en khakhil 1 khakh arants mutki",
+    "signInBenefits": "Muteq patmutyun yev kargedrutyunner pahhelu hamar",
     "error": {
-      "title": "Sign In Error",
-      "default": "Could not sign in. Try another method.",
-      "accessDenied": "Access denied.",
-      "tryAgain": "Try Again"
+      "title": "Mutki skhval",
+      "default": "Chi hadshoghvil mutnel. Pordzeq urishn dzev.",
+      "accessDenied": "Mutky merdzvats e.",
+      "tryAgain": "Pordzel krkits"
     }
   },
   "difficulty": {
-    "easy": "Easy",
-    "medium": "Medium",
-    "hard": "Hard",
-    "mixed": "Mixed"
+    "easy": "Heshd",
+    "medium": "Midjin",
+    "hard": "Bardr",
+    "mixed": "Kharnakhits"
   },
   "common": {
-    "loading": "Loading…",
-    "error": "Error",
-    "retry": "Try Again",
-    "cancel": "Cancel",
-    "save": "Save",
-    "close": "Close"
+    "loading": "Bernumen",
+    "error": "Skhval",
+    "retry": "Pordzel krkits",
+    "cancel": "Cheghharkel",
+    "save": "Pahhel",
+    "close": "Pakil"
+  },
+  "help": {
+    "title": "Inch pes khakhil",
+    "subtitle": "Liateks ughetsuytsy varichnerneri yev khakhachnerneri hamar",
+    "backToHome": "Veradardnal glkhavorna",
+    "forHost": {
+      "title": "Varichy hamar (projektor)",
+      "intro": "Varichy gortsarkum e khakhy mets ekranin. Petk e notebook kam hamakargich.",
+      "step1": {
+        "title": "1. Bacek varichy edji",
+        "description": "Antsek kayqi yev skhmeq Sksel khakhy kam ughghakich bacek /play/host."
+      },
+      "step2": {
+        "title": "2. Entryek bardrutyan",
+        "description": "Entryek makaradaky: Heshd, Midjin, Bardr, kam Kharnakhits."
+      },
+      "step3": {
+        "title": "3. Bacek lobbiy",
+        "description": "Skhmeq Bacek lobbiy. QR-kod yev khakhi kody kerhayvi."
+      },
+      "step4": {
+        "title": "4. Spaseq khakhachnerneri",
+        "description": "Yerbor khakhachnery skanirum en QR-y yev grum en irents anunnery."
+      },
+      "step5": {
+        "title": "5. Gortsarkeq khakhy",
+        "description": "Skhmeq Sksel viktorinay. Aratchin hartsy pordsakan e."
+      },
+      "step6": {
+        "title": "6. Khakhits heto",
+        "description": "Ardyunknery tsuyts en tvumen inqnashkhat."
+      }
+    },
+    "forPlayer": {
+      "title": "Khakhachnerneri hamar (herakhoss)",
+      "intro": "Khakhachnery miadznum en irents herakhossnerov. Havelats chi pahhyandjvum.",
+      "step1": {
+        "title": "1. Skanirek QR-kody",
+        "description": "Ughghroreq dzer herakhossi tesakhtsighy QR-kodi vray mets ekranin."
+      },
+      "step2": {
+        "title": "2. Grek dzer anun",
+        "description": "Grek dzer anun kam makanun (nvazenaken 2 nshan)."
+      },
+      "step3": {
+        "title": "3. Spaseq lobbiuyum",
+        "description": "Duq ktesnek Duq khakhum eq yev kspaseq minchev varichy sksi khakhy."
+      },
+      "step4": {
+        "title": "4. Pataskhaneq hartserin",
+        "description": "Yerb hartsy haytnyvi, skhmeq mek chunits chunits kochaknerov (A, B, C, D)."
+      },
+      "step5": {
+        "title": "5. Teseq dzer ardyunknery",
+        "description": "Yurakanchyur hartsits heto duq ktesnek te chisht eq pataskhanel."
+      }
+    },
+    "scoring": {
+      "title": "Miavornerov hamargarky",
+      "description": "Miavornerny kakhvats en chshtutyan yev aragutan hety:",
+      "correct": "Chisht pataskhan: 500 miavorner",
+      "speed": "Aragutyany bonus: minchev 500 lratsuts miavorner",
+      "wrong": "Skhval kam batstavats pataskhan: 0 miavorner",
+      "practice": "Pordsakhan harts: arants miavornerov"
+    },
+    "levels": {
+      "title": "Bardrutyan makaradakner",
+      "easy": {
+        "title": "Heshd",
+        "description": "Haytni Biblayi kerparnery vornc bolory giten: Adam, Yeva, Noye, Movsess, David."
+      },
+      "medium": {
+        "title": "Midjin",
+        "description": "Pahhyandjum e Biblayi imatsutyan: margarener, araqyalner."
+      },
+      "hard": {
+        "title": "Bardr",
+        "description": "Biblayi masnagetneri hamar: qitch haytni kerparnery."
+      },
+      "mixed": {
+        "title": "Kharnakhits",
+        "description": "Bolor makaradakneri hamadrutyun: 40% heshd, 40% midjin, 20% bardr."
+      }
+    },
+    "tips": {
+      "title": "Khorurdner",
+      "tip1": "Hamozveq vor bolory kapvats en nuyn WiFi-in kam unen mobile internet.",
+      "tip2": "Varichy sarqy chi petk qnir khakhi entatsqum.",
+      "tip3": "Hartsery chi krknum 24 zham!",
+      "tip4": "Yete andarstsatveq - skanirek QR-kody krkits."
+    },
+    "troubleshooting": {
+      "title": "Hamatshakhakutyunneri lusumen",
+      "q1": {
+        "q": "Skaniretsil em QR-kody, bayts tesenel em ekran QR-kodov",
+        "a": "Havanabarev duq batsetsil eq varichy edji. Khakhachnery petk e skanireen QR-kody proyektorin."
+      },
+      "q2": {
+        "q": "Anuny artaken zatats e",
+        "a": "Mekin artaken miadzvel e ays anunov. Entryek urishn anun."
+      },
+      "q3": {
+        "q": "Varichy chi pataskhanum",
+        "a": "Hamozveq vor varichy edji batsvatsa yev chi qnel."
+      },
+      "q4": {
+        "q": "Indz andarstsatsil en",
+        "a": "Skanirek QR-kody krkits. Yete ogtagorseq nuyn anun, duq inqnashkhat kveradardnaq khakh."
+      }
+    }
   }
 }

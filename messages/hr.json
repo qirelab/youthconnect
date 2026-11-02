@@ -1,284 +1,408 @@
 {
   "meta": {
-    "title": "Bible Quiz · Guess the Hero from Selfie",
-    "description": "Interactive quiz for youth and churches — guess Bible characters from AI-generated selfies",
+    "title": "Biblijski Kviz · Pogodi Junaka sa Selfieja",
+    "description": "Interaktivni kviz za mlade i crkve — pogodi biblijske likove s AI selfija",
     "domain": "youthconnect.church"
   },
   "nav": {
-    "play": "Play",
-    "host": "Host",
-    "donate": "Donate",
-    "signIn": "Sign In",
-    "signOut": "Sign Out",
-    "profile": "Profile",
-    "settings": "Settings",
-    "history": "Game History"
+    "play": "Igraj",
+    "host": "Voditelj",
+    "help": "Pomoć",
+    "donate": "Doniraj",
+    "signIn": "Prijava",
+    "signOut": "Odjava",
+    "profile": "Profil",
+    "settings": "Postavke",
+    "history": "Povijest Igara"
   },
   "landing": {
     "hero": {
-      "title": "Bible Quiz",
-      "subtitle": "Guess the Hero from Selfie",
-      "description": "Interactive game for youth meetings, Sunday schools, and family nights. Scan the QR code — and you're in!",
-      "ctaHost": "Start Game (Host)",
-      "ctaJoin": "Join with Code"
+      "title": "Biblijski Kviz",
+      "subtitle": "Pogodi Junaka sa Selfieja",
+      "description": "Interaktivna igra za mladežna okupljanja, nedjeljne škole i obiteljske večeri. Skeniraj QR kod — i unutra si!",
+      "ctaHost": "Započni Igru (Voditelj)",
+      "ctaJoin": "Pridruži se Kodom"
+    },
+    "quickStart": {
+      "title": "Brzi Početak",
+      "host": "Voditelj: otvori",
+      "player": "Igrači: skenirajte QR i unesite ime",
+      "play": "Igraj: dodirni točan odgovor!",
+      "helpLink": "Trebate više detalja? Pogledajte potpuni vodič"
     },
     "howItWorks": {
-      "title": "How It Works",
+      "title": "Kako Funkcionira",
       "step1": {
-        "title": "Host opens the game",
-        "description": "Open /host on a laptop with projector and choose difficulty"
+        "title": "Voditelj otvara igru",
+        "description": "Otvorite /host na laptopu s projektorom i odaberite težinu"
       },
       "step2": {
-        "title": "Players scan QR",
-        "description": "Phone, QR code — and in 5 seconds you're in the lobby"
+        "title": "Igrači skeniraju QR",
+        "description": "Telefon, QR kod — i za 5 sekundi ste u predvorju"
       },
       "step3": {
-        "title": "Play and compete",
-        "description": "10 questions, 15 seconds each, points for speed, live leaderboard"
+        "title": "Igrajte i natječite se",
+        "description": "10 pitanja, 15 sekundi svako, bodovi za brzinu, ljestvica uživo"
       }
     },
     "features": {
-      "title": "Features",
+      "title": "Značajke",
       "selfie": {
-        "title": "Bible Character Selfies",
-        "description": "Unique AI images: guess the character from the scene"
+        "title": "Selfiji Biblijskih Likova",
+        "description": "Jedinstvene AI slike: pogodi lika iz scene"
       },
       "realtime": {
-        "title": "Real-time Multiplayer",
-        "description": "Up to 100 players simultaneously, instant sync"
+        "title": "Multiplayer u Stvarnom Vremenu",
+        "description": "Do 100 igrača istovremeno, trenutna sinkronizacija"
       },
       "levels": {
-        "title": "3 Difficulty Levels",
-        "description": "From Adam to Tychicus — choose your level"
+        "title": "3 Razine Težine",
+        "description": "Od Adama do Tihika — odaberite svoju razinu"
       },
       "noSignup": {
-        "title": "No Registration",
-        "description": "Guests play instantly, sign in for history and settings"
+        "title": "Bez Registracije",
+        "description": "Gosti igraju odmah, prijavite se za povijest i postavke"
       },
       "free": {
-        "title": "Free",
-        "description": "No subscriptions, runs on free tier"
+        "title": "Besplatno",
+        "description": "Bez pretplata, radi na besplatnim planovima"
       },
       "mobile": {
-        "title": "Mobile-first",
-        "description": "Optimized for phones and any screen"
+        "title": "Za Mobilne",
+        "description": "Optimizirano za telefone i bilo koji ekran"
       }
     },
     "levels": {
-      "title": "Difficulty Levels",
+      "title": "Razine Težine",
       "easy": {
-        "title": "Easy",
-        "description": "Famous heroes: Moses, David, Noah, Mary"
+        "title": "Lako",
+        "description": "Slavni junaci: Mojsije, David, Noa, Marija"
       },
       "medium": {
-        "title": "Medium",
-        "description": "Prophets and apostles: Isaiah, Barnabas, Titus"
+        "title": "Srednje",
+        "description": "Proroci i apostoli: Izaija, Barnaba, Tit"
       },
       "hard": {
-        "title": "Hard",
-        "description": "For experts: Ahithophel, Epaphras, Nympha"
+        "title": "Teško",
+        "description": "Za stručnjake: Ahitofel, Epafras, Nimfa"
       }
     },
     "forWhom": {
-      "title": "Who Is This For",
-      "youth": "Youth ministries",
-      "sunday": "Sunday schools",
-      "camps": "Christian camps",
-      "family": "Family nights",
-      "small": "Small groups"
+      "title": "Za Koga Je Ovo",
+      "youth": "Mladežne grupe",
+      "sunday": "Nedjeljne škole",
+      "camps": "Kršćanski kampovi",
+      "family": "Obiteljske večeri",
+      "small": "Male grupe"
     },
     "gallery": {
-      "title": "Selfie Gallery",
-      "hint": "Can you guess who this is?"
+      "title": "Galerija Selfija",
+      "hint": "Možete li pogoditi tko je ovo?"
     },
     "donate": {
-      "title": "Support the Project",
-      "description": "The game is free for everyone. Your donations help develop the project, add new images and languages.",
-      "oneTime": "One-time Donation",
-      "monthly": "Monthly",
-      "crypto": "Cryptocurrency",
-      "boosty": "Boosty (for Russia)"
+      "title": "Podržite Projekt",
+      "description": "Igra je besplatna za sve. Vaše donacije pomažu u razvoju projekta, dodavanju novih slika i jezika.",
+      "oneTime": "Jednokratna Donacija",
+      "monthly": "Mjesečno",
+      "crypto": "Kriptovaluta",
+      "boosty": "Boosty (za Rusiju)"
     },
     "faq": {
-      "title": "FAQ",
+      "title": "ČPP",
       "q1": {
-        "q": "Is this free?",
-        "a": "Yes, completely free. We use free tiers of Vercel and Pusher."
+        "q": "Je li ovo besplatno?",
+        "a": "Da, potpuno besplatno. Koristimo besplatne planove Vercela i Pushera."
       },
       "q2": {
-        "q": "How many players can participate?",
-        "a": "Up to 100 simultaneously (Pusher limit). For larger events, contact us."
+        "q": "Koliko igrača može sudjelovati?",
+        "a": "Do 100 istovremeno (Pusher limit). Za veće događaje, kontaktirajte nas."
       },
       "q3": {
-        "q": "Is registration required?",
-        "a": "No! Guests play instantly via QR code. Sign in with Google/Yandex only for saving history and settings."
+        "q": "Treba li se registrirati?",
+        "a": "Ne! Gosti igraju odmah putem QR koda. Prijavite se s Google/Yandexom samo za spremanje povijesti i postavki."
       },
       "q4": {
-        "q": "Which Bible translation is used?",
-        "a": "Character names follow standard translations for each language."
+        "q": "Koji prijevod Biblije se koristi?",
+        "a": "Imena likova slijede standardne prijevode za svaki jezik."
       },
       "q5": {
-        "q": "What's the denominational stance?",
-        "a": "The game is for all Protestant churches. Questions are based on canonical Bible text."
+        "q": "Kakvo je denominacijsko stajalište?",
+        "a": "Igra je za sve protestantske crkve. Pitanja se temelje na kanonskom biblijskom tekstu."
       },
       "q6": {
-        "q": "Can this be used with children?",
-        "a": "Yes! Content is safe for all ages. Easy level works great for Sunday school."
+        "q": "Može li se koristiti s djecom?",
+        "a": "Da! Sadržaj je siguran za sve uzraste. Laka razina odlično funkcionira za nedjeljnu školu."
       }
     },
     "footer": {
-      "contact": "Contact",
+      "contact": "Kontakt",
       "email": "hello@youthconnect.church",
-      "privacy": "Privacy Policy",
-      "terms": "Terms of Use",
-      "copyright": "© 2024 YouthConnect. All rights reserved."
+      "privacy": "Pravila Privatnosti",
+      "terms": "Uvjeti Korištenja",
+      "copyright": "© 2024 YouthConnect. Sva prava pridržana."
     }
   },
   "game": {
-    "code": "Game Code",
-    "players": "Players",
-    "question": "Question",
-    "of": "of",
-    "seconds": "sec",
-    "practice": "Practice Question",
-    "practiceNote": "no points",
-    "whoMadeSelfie": "Who made this selfie?",
-    "itIs": "It's",
-    "correct": "Correct!",
-    "incorrect": "Incorrect",
-    "timeout": "Time's up",
-    "noAnswer": "No answer",
-    "correctAnswer": "Correct answer",
-    "points": "points",
-    "correctAnswers": "Correct",
-    "place": "place",
-    "nextIn": "Next question in",
-    "resultsIn": "Results in",
-    "waitingHost": "Waiting for host to start the quiz…",
-    "answerAccepted": "Answer accepted!",
-    "lookAtScreen": "Look at the main screen…",
-    "answered": "Answered"
+    "code": "Kod Igre",
+    "players": "Igrači",
+    "question": "Pitanje",
+    "of": "od",
+    "seconds": "sek",
+    "practice": "Probno Pitanje",
+    "practiceNote": "bez bodova",
+    "whoMadeSelfie": "Tko je napravio ovaj selfie?",
+    "itIs": "To je",
+    "correct": "Točno!",
+    "incorrect": "Netočno",
+    "timeout": "Vrijeme je isteklo",
+    "noAnswer": "Nema odgovora",
+    "correctAnswer": "Točan odgovor",
+    "points": "bodova",
+    "correctAnswers": "Točno",
+    "place": "mjesto",
+    "nextIn": "Sljedeće pitanje za",
+    "resultsIn": "Rezultati za",
+    "waitingHost": "Čekamo voditelja da započne kviz…",
+    "answerAccepted": "Odgovor prihvaćen!",
+    "lookAtScreen": "Gledajte glavni ekran…",
+    "answered": "Odgovoreno"
   },
   "host": {
-    "title": "Host Screen",
-    "selectQuiz": "Select Difficulty",
-    "openLobby": "Open Lobby",
-    "back": "Back",
-    "startGame": "Start Quiz",
-    "startPractice": "Start with Practice",
-    "newGame": "New Game",
-    "scanQR": "Scan QR code with your phone to join",
-    "noPlayers": "No one has joined yet…",
-    "results": "Quiz Results",
-    "noPusher": "Pusher keys not set. Add environment variables — see README.",
-    "practiceComplete": "Practice round complete — now it's for real!",
-    "startQuiz": "Start Quiz"
+    "title": "Ekran Voditelja",
+    "selectQuiz": "Odaberite Težinu",
+    "openLobby": "Otvori Predvorje",
+    "back": "Natrag",
+    "startGame": "Započni Kviz",
+    "startPractice": "Započni s Vježbom",
+    "newGame": "Nova Igra",
+    "scanQR": "Skenirajte QR kod telefonom za pridruživanje",
+    "noPlayers": "Još se nitko nije pridružio…",
+    "results": "Rezultati Kviza",
+    "noPusher": "Pusher ključevi nisu postavljeni. Dodajte varijable okruženja — pogledajte README.",
+    "practiceComplete": "Probna runda završena — sada ozbiljno!",
+    "startQuiz": "Započni Kviz",
+    "playerHint": "Vi ste igrač? Skenirajte QR kod iznad telefonom, ne otvarajte ovu stranicu!"
   },
   "player": {
-    "enterName": "What's your name?",
-    "namePlaceholder": "Your name or nickname",
-    "join": "Join",
-    "checking": "Checking…",
-    "youAreIn": "You're in the game",
-    "scanQR": "Scan the QR code on screen to join the game.",
+    "enterName": "Kako se zovete?",
+    "namePlaceholder": "Vaše ime ili nadimak",
+    "join": "Pridruži se",
+    "checking": "Provjeravam…",
+    "youAreIn": "U igri ste",
+    "scanQR": "Skenirajte QR kod na ekranu da se pridružite igri.",
+    "hint": {
+      "lookForQR": "Pogledajte veliki ekran — voditelj bi trebao prikazivati QR kod s 5-znamenkastim kodom igre.",
+      "areYouHost": "Vi ste voditelj?",
+      "hostLink": "Umjesto toga otvorite stranicu voditelja →"
+    },
     "errors": {
-      "nameMin": "Enter a name (at least 2 characters).",
-      "nameTaken": "This name is taken. Choose another.",
-      "gameClosed": "Game is in progress or closed for entry.",
-      "hostOffline": "Host not responding. Make sure the quiz is open on screen.",
-      "network": "Network error. Try again."
+      "nameMin": "Unesite ime (najmanje 2 znaka).",
+      "nameTaken": "Ovo ime je zauzeto. Odaberite drugo.",
+      "gameClosed": "Igra je u tijeku ili zatvorena za ulaz.",
+      "hostOffline": "Voditelj ne odgovara. Provjerite je li kviz otvoren na ekranu.",
+      "network": "Greška mreže. Pokušajte ponovno."
     }
   },
   "settings": {
-    "title": "Settings",
+    "title": "Postavke",
     "autoAdvance": {
-      "label": "Next Question Transition",
-      "auto": "Automatic",
-      "manual": "Manual (button)"
+      "label": "Prijelaz na Sljedeće Pitanje",
+      "auto": "Automatski",
+      "manual": "Ručno (gumb)"
     },
     "questionTime": {
-      "label": "Time per Question",
-      "seconds": "seconds"
+      "label": "Vrijeme po Pitanju",
+      "seconds": "sekundi"
     },
     "questionsPerQuiz": {
-      "label": "Questions per Game"
+      "label": "Pitanja po Igri"
     },
     "difficulty": {
-      "label": "Difficulty",
-      "easy": "Easy",
-      "medium": "Medium",
-      "hard": "Hard",
-      "mixed": "Mixed"
+      "label": "Težina",
+      "easy": "Lako",
+      "medium": "Srednje",
+      "hard": "Teško",
+      "mixed": "Miješano"
     },
     "theme": {
-      "label": "Theme",
-      "light": "Light",
-      "dark": "Dark",
-      "system": "System"
+      "label": "Tema",
+      "light": "Svijetla",
+      "dark": "Tamna",
+      "system": "Sustavna"
     },
     "sound": {
-      "label": "Sound",
-      "enabled": "On",
-      "disabled": "Off"
+      "label": "Zvuk",
+      "enabled": "Uključen",
+      "disabled": "Isključen"
     },
     "showExplanation": {
-      "label": "Show explanation after answer"
+      "label": "Prikaži objašnjenje nakon odgovora"
     },
     "showCorrectAnswer": {
-      "label": "Show correct answer"
+      "label": "Prikaži točan odgovor"
     },
     "practiceQuestion": {
-      "label": "Practice question before game"
+      "label": "Probno pitanje prije igre"
     },
     "speedBonus": {
-      "label": "Points for speed"
+      "label": "Bodovi za brzinu"
     },
     "language": {
-      "label": "Language"
+      "label": "Jezik"
     },
-    "save": "Save",
-    "saved": "Settings saved"
+    "save": "Spremi",
+    "saved": "Postavke spremljene"
   },
   "profile": {
-    "title": "Profile",
-    "gamesPlayed": "Games Played",
-    "totalScore": "Total Score",
-    "correctAnswers": "Correct Answers",
-    "bestRank": "Best Rank",
-    "recentGames": "Recent Games",
-    "noGames": "You haven't played yet. Start your first game!",
-    "date": "Date",
-    "difficulty": "Difficulty",
-    "score": "Score",
-    "rank": "Rank"
+    "title": "Profil",
+    "gamesPlayed": "Odigranih Igara",
+    "totalScore": "Ukupni Rezultat",
+    "correctAnswers": "Točnih Odgovora",
+    "bestRank": "Najbolje Mjesto",
+    "recentGames": "Nedavne Igre",
+    "noGames": "Još niste igrali. Započnite svoju prvu igru!",
+    "date": "Datum",
+    "difficulty": "Težina",
+    "score": "Rezultat",
+    "rank": "Mjesto"
   },
   "auth": {
-    "signIn": "Sign In",
-    "signInWith": "Sign in with",
-    "signOut": "Sign Out",
+    "signIn": "Prijava",
+    "signInWith": "Prijavite se s",
+    "signOut": "Odjava",
     "google": "Google",
     "yandex": "Yandex",
-    "guestNote": "Guests can play 1 game without signing in",
-    "signInBenefits": "Sign in to save game history and settings",
+    "guestNote": "Gosti mogu igrati 1 igru bez prijave",
+    "signInBenefits": "Prijavite se za spremanje povijesti igara i postavki",
     "error": {
-      "title": "Sign In Error",
-      "default": "Could not sign in. Try another method.",
-      "accessDenied": "Access denied.",
-      "tryAgain": "Try Again"
+      "title": "Greška Prijave",
+      "default": "Prijava nije uspjela. Pokušajte drugu metodu.",
+      "accessDenied": "Pristup odbijen.",
+      "tryAgain": "Pokušajte Ponovno"
     }
   },
   "difficulty": {
-    "easy": "Easy",
-    "medium": "Medium",
-    "hard": "Hard",
-    "mixed": "Mixed"
+    "easy": "Lako",
+    "medium": "Srednje",
+    "hard": "Teško",
+    "mixed": "Miješano"
   },
   "common": {
-    "loading": "Loading…",
-    "error": "Error",
-    "retry": "Try Again",
-    "cancel": "Cancel",
-    "save": "Save",
-    "close": "Close"
+    "loading": "Učitavanje…",
+    "error": "Greška",
+    "retry": "Pokušaj Ponovno",
+    "cancel": "Odustani",
+    "save": "Spremi",
+    "close": "Zatvori"
+  },
+  "help": {
+    "title": "Kako Igrati",
+    "subtitle": "Potpuni vodič za voditelje i igrače",
+    "backToHome": "Natrag na Početnu",
+    "forHost": {
+      "title": "Za Voditelja (Projektor)",
+      "intro": "Voditelj upravlja igrom na velikom ekranu ili projektoru. Jedna osoba iz tima treba laptop ili računalo.",
+      "step1": {
+        "title": "1. Otvorite Stranicu Voditelja",
+        "description": "Idite na web stranicu i kliknite \"Započni Igru (Voditelj)\" ili izravno otvorite /play/host. Vidjet ćete ekran za odabir težine."
+      },
+      "step2": {
+        "title": "2. Odaberite Težinu",
+        "description": "Odaberite razinu težine: Lako (poznati likovi poput Mojsija, Davida), Srednje (proroci i apostoli), Teško (samo za stručnjake), ili Miješano (kombinacija svih razina)."
+      },
+      "step3": {
+        "title": "3. Otvorite Predvorje",
+        "description": "Kliknite \"Otvori Predvorje\". Pojavit će se QR kod i kod igre (5 znakova). Prikažite ovaj ekran na projektoru."
+      },
+      "step4": {
+        "title": "4. Pričekajte Igrače",
+        "description": "Kako igrači skeniraju QR kod i unose svoja imena, vidjet ćete ih kako se pojavljuju u predvorju. Pričekajte dok se svi pridruže."
+      },
+      "step5": {
+        "title": "5. Započnite Igru",
+        "description": "Kliknite \"Započni Kviz\". Prvo pitanje je probna runda (bez bodova), zatim slijedi 10 pitanja, 15 sekundi svako."
+      },
+      "step6": {
+        "title": "6. Nakon Igre",
+        "description": "Rezultati se prikazuju automatski. Kliknite \"Nova Igra\" za početak nove runde s istim ili drugim igračima."
+      }
+    },
+    "forPlayer": {
+      "title": "Za Igrače (Telefon)",
+      "intro": "Igrači se pridružuju sa svojih telefona. Aplikacija nije potrebna — samo preglednik i internet.",
+      "step1": {
+        "title": "1. Skenirajte QR Kod",
+        "description": "Usmjerite kameru telefona na QR kod na velikom ekranu. Dodirnite obavijest da otvorite link."
+      },
+      "step2": {
+        "title": "2. Unesite Svoje Ime",
+        "description": "Upišite svoje ime ili nadimak (najmanje 2 znaka). Tako ćete se prikazivati na ljestvici."
+      },
+      "step3": {
+        "title": "3. Čekajte u Predvorju",
+        "description": "Vidjet ćete \"U igri ste\" i čekati da voditelj započne. Držite telefon spremnim!"
+      },
+      "step4": {
+        "title": "4. Odgovarajte na Pitanja",
+        "description": "Kada se pojavi pitanje, dodirnite jedan od četiri obojena gumba (A, B, C, D). Brži točni odgovori = više bodova!"
+      },
+      "step5": {
+        "title": "5. Pogledajte Svoje Rezultate",
+        "description": "Nakon svakog pitanja vidjet ćete jeste li odgovorili točno i svoju trenutnu poziciju. Konačni rezultati prikazuju se na kraju."
+      }
+    },
+    "scoring": {
+      "title": "Bodovanje",
+      "description": "Bodovi ovise o točnosti i brzini:",
+      "correct": "Točan odgovor: 500 bodova",
+      "speed": "Bonus za brzinu: do 500 dodatnih bodova (što brže, to više)",
+      "wrong": "Netočan ili bez odgovora: 0 bodova",
+      "practice": "Probno pitanje: bez bodova"
+    },
+    "levels": {
+      "title": "Razine Težine",
+      "easy": {
+        "title": "Lako",
+        "description": "Poznati biblijski likovi koje svi znaju: Adam, Eva, Noa, Mojsije, David, Marija, Isus i drugi."
+      },
+      "medium": {
+        "title": "Srednje",
+        "description": "Zahtijeva određeno poznavanje Biblije: proroci, apostoli i sporedni likovi iz poznatih priča."
+      },
+      "hard": {
+        "title": "Teško",
+        "description": "Za stručnjake Biblije: sporedni likovi, manje poznate osobe i potrebno je detaljno znanje."
+      },
+      "mixed": {
+        "title": "Miješano",
+        "description": "Kombinacija svih razina: 40% lakih, 40% srednjih, 20% teških pitanja."
+      }
+    },
+    "tips": {
+      "title": "Savjeti",
+      "tip1": "Provjerite jesu li svi spojeni na isti WiFi ili imaju mobilni internet.",
+      "tip2": "Uređaj voditelja ne bi trebao zaspati tijekom igre.",
+      "tip3": "Pitanja se ne ponavljaju 24 sata — igrajte više rundi bez ponavljanja istih slika!",
+      "tip4": "Ako se prekinete, ponovno skenirajte QR kod — pridružit ćete se s istim imenom."
+    },
+    "troubleshooting": {
+      "title": "Rješavanje Problema",
+      "q1": {
+        "q": "Skenirao sam QR kod ali vidim ekran s QR kodom",
+        "a": "Možda ste otvorili stranicu Voditelja. Igrači trebaju skenirati QR kod prikazan na projektoru, koji vodi na stranicu Igre. URL bi trebao sadržavati \"?game=\" s 5-znamenkastim kodom."
+      },
+      "q2": {
+        "q": "Moje ime je zauzeto",
+        "a": "Netko se već pridružio s tim imenom. Odaberite drugo ime ili dodajte broj (poput \"Ivan2\")."
+      },
+      "q3": {
+        "q": "Voditelj ne odgovara",
+        "a": "Provjerite je li stranica voditelja otvorena i nije zaspala. Kod igre bi trebao odgovarati onome što vidite na ekranu."
+      },
+      "q4": {
+        "q": "Veza je prekinuta",
+        "a": "Ponovno skenirajte QR kod. Ako ste koristili isto ime, automatski ćete se pridružiti igri."
+      }
+    }
   }
 }
